@@ -19,7 +19,7 @@ build (3.38 B/tok); exact
 counts exist only after tokenization and are recorded by that step, not this one.
 
     python scripts/corpus_report.py --label raw
-    python scripts/corpus_report.py --label final --clean data/clean
+    python scripts/corpus_report.py --label final --exclusions metrics/exclusions_2026-08-03.json
 """
 
 from __future__ import annotations
@@ -38,6 +38,7 @@ import sys
 import time
 from collections import Counter
 from datetime import datetime, timezone
+from functools import partial
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -46,6 +47,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from analyze_ocr import reasons, strip_edges  # noqa: E402
 from anachronism_audit import MODERN, PERIOD_CONTROL, YEAR, YEAR_CTX  # noqa: E402
+from clean_ocr import is_anachronism  # noqa: E402
 
 BYTES_PER_TOKEN = 3.38          # measured on the 5.40B build with the shipped tokenizer
 CONTEXT_CAP = 4                 # example snippets kept per modern marker
@@ -88,9 +90,11 @@ def uploader(fname: str) -> str:
     return "ia-other"
 
 
-def scan_files(paths: list[str]) -> dict:
+def scan_files(paths: list[str], strip_wl: bool = False) -> dict:
     """One worker's pass over its share of the corpus: char classes, length counters,
-    the anachronism battery, and per-file rows for the sidecar."""
+    the anachronism battery, and per-file rows for the sidecar. With `strip_wl` the
+    wl_ files lose their colophon lines first, mirroring what tokenization feeds the
+    models — the final pass measures the training corpus, not the directory."""
     agg = {
         "docs": 0, "bytes": 0, "chars": 0, "words": 0,
         "alpha": 0, "digit": 0, "ws": 0, "cyrillic": 0, "diacritic": 0,
@@ -109,6 +113,10 @@ def scan_files(paths: list[str]) -> dict:
         path = Path(p)
         raw = path.read_bytes()
         text = raw.decode("utf-8", errors="replace")
+        if strip_wl and path.name.startswith("wl_"):
+            text = "\n".join(ln for ln in text.split("\n")
+                             if not is_anachronism(ln))
+            raw = text.encode("utf-8")
         low = text.lower()
         n_bytes, n_chars = len(raw), len(text)
         n_words = len(text.split())
@@ -255,6 +263,9 @@ def main() -> None:
                     help="directory of corpus .txt files")
     ap.add_argument("--label", choices=("raw", "final"), required=True,
                     help="raw = frozen build before cleaning, final = after")
+    ap.add_argument("--exclusions", default=None,
+                    help="exclusion-list JSON; its documents are skipped and wl_ "
+                         "colophons stripped, so the pass measures the training corpus")
     ap.add_argument("--freeze-date", default="2026-08-03")
     ap.add_argument("--ocr-docs", type=int, default=400,
                     help="documents sampled per source for the OCR audit")
@@ -265,18 +276,25 @@ def main() -> None:
 
     t0 = time.time()
     files = sorted(Path(args.clean).glob("*.txt"))
+    if args.exclusions:
+        excluded = set(json.loads((REPO / args.exclusions)
+                                  .read_text(encoding="utf-8"))["ids"])
+        files = [f for f in files if f.stem not in excluded]
+        print(f"exclusions applied: {len(excluded):,} ids")
     if args.limit:
         files = files[: args.limit]
     if not files:
         raise SystemExit(f"no .txt files under {args.clean}")
     print(f"{len(files):,} files under {args.clean}, {args.workers} workers")
 
+    strip_wl = bool(args.exclusions)
     total = scan_files([])
     chunk = 2000
     chunks = [[str(f) for f in files[i:i + chunk]] for i in range(0, len(files), chunk)]
     with mp.Pool(args.workers) as pool:
         done = 0
-        for part in pool.imap_unordered(scan_files, chunks):
+        for part in pool.imap_unordered(partial(scan_files, strip_wl=strip_wl),
+                                        chunks):
             merge(total, part)
             done += 1
             if done % 20 == 0 or done == len(chunks):

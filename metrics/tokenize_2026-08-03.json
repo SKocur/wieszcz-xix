@@ -1,0 +1,38 @@
+{
+ "meta": {
+  "script": "scripts/tokenize_corpus.py",
+  "freeze_date": "2026-08-03",
+  "corpus_dir": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
+  "split": "metrics/doc_split_2026-08-03.json",
+  "tokenizer": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/tokenizer",
+  "eot_id": 0,
+  "script_sha256": "ccd2072d95576656",
+  "timestamp_utc": "2026-08-03T21:29:23+00:00",
+  "host": "MacBook-Pro-Szymon.local"
+ },
+ "train": {
+  "file": "tokens_frozen_6.68B.bin",
+  "documents": 291425,
+  "tokens": 6679992496,
+  "bytes": 13359984992,
+  "sha256": "a32c27e4632b12fa34e0a62604977779a59224d3e448c03e06152136ae44fa20",
+  "wl_colophon_lines_dropped": 927,
+  "wl_colophon_bytes_dropped": 22556,
+  "elapsed_seconds": 1124.5
+ },
+ "val": {
+  "file": "val_2026-08-03.bin",
+  "documents": 2944,
+  "tokens": 65964447,
+  "bytes": 131928894,
+  "sha256": "4e82fc5f27c568aef8e44ee7550659bd90943c87cead579d8cb32aede445a5fb",
+  "wl_colophon_lines_dropped": 9,
+  "wl_colophon_bytes_dropped": 207,
+  "elapsed_seconds": 16.2
+ },
+ "tokens_total": 6745956943,
+ "batch_tokens": 262144,
+ "epochs": 2,
+ "train_steps_exact": 50964.3,
+ "train_steps": 50964
+}
