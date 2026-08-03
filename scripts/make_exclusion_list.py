@@ -24,6 +24,16 @@ Four arms, and a corroboration matrix learned by reading the corpus (2026-08-03)
    every document the dedup pass marked dropped (the longest member of its cluster
    stays).
 
+Wolne Lektury files are a separate regime: content signals fail on them in both
+directions (WL modernizes orthography, its colophon always carries an ISBN, and its
+clean transcriptions have no OCR noise to defend against), so wl_ documents skip the
+content arms entirely and are excluded by *catalogue epoch* instead — the WL epoch
+sweep's post-1918 list (269 documents, essentially Leśmian's interwar volumes and
+Boy's essays) united with the hand-verified list from the first release audit, which
+catches what the epoch cannot: interwar *translations* of older works (Boy's Proust,
+Ubu Roi, Stendhal) that carry the original's epoch. Duplicates apply to wl_ as to
+everything else.
+
 Ids in the output are bare document ids (no .txt), matching the provenance ledger.
 
     python scripts/make_exclusion_list.py
@@ -55,12 +65,17 @@ def main() -> None:
     ap.add_argument("--audit", default="metrics/anachronism_audit_2026-08-03.json")
     ap.add_argument("--sweep", default="metrics/ia_collection_sweep_2026-08-03.json")
     ap.add_argument("--dedup", default="metrics/dedup_2026-08-03.json")
+    ap.add_argument("--wl-epochs", default="metrics/wl_epochs_2026-08-03.json")
+    ap.add_argument("--wl-carryover", default="metrics/post1918_exclusions.json",
+                    help="previous audit whose hand-verified wl_ exclusions carry over")
     ap.add_argument("--out", default="metrics/exclusions_2026-08-03.json")
     args = ap.parse_args()
 
     audit = json.loads((REPO / args.audit).read_text(encoding="utf-8"))
     sweep = json.loads((REPO / args.sweep).read_text(encoding="utf-8"))
     dedup = json.loads((REPO / args.dedup).read_text(encoding="utf-8"))
+    wl_epochs = json.loads((REPO / args.wl_epochs).read_text(encoding="utf-8"))
+    carryover = json.loads((REPO / args.wl_carryover).read_text(encoding="utf-8"))
 
     by_strong: set[str] = set()
     by_apparatus: set[str] = set()
@@ -70,11 +85,13 @@ def main() -> None:
 
     for doc_id, hits in audit["flags"].items():
         doc = doc_id.removesuffix(".txt")
+        if doc.startswith("wl_"):
+            continue
         share = orto_share(hits)
         ctx = hits.get("ctx_years", 0)
         if any(t in hits for t in STRONG):
             by_strong.add(doc)
-        if not doc.startswith("wl_") and any(t in hits for t in APPARATUS):
+        if any(t in hits for t in APPARATUS):
             by_apparatus.add(doc)
         if share >= 0.5 and any(t in hits for t in NOISY):
             by_noisy.add(doc)
@@ -85,29 +102,37 @@ def main() -> None:
                            "reason": "date phrases with period orthography — "
                                      "OCR-misread old dates?"}
 
+    by_wl = set(wl_epochs["post1918_ids"]) | {d for d in carryover["ids"]
+                                              if d.startswith("wl_")}
+
     by_prov = {d for d, info in sweep["docs"].items()
                if info["class"] == "ia_modern_scan"}
     by_dup = {d.removesuffix(".txt") for d in dedup["dropped"]}
 
-    ids = sorted(by_strong | by_apparatus | by_noisy | by_ctx | by_prov | by_dup)
+    ids = sorted(by_strong | by_apparatus | by_noisy | by_ctx | by_prov | by_dup
+                 | by_wl)
     review = {d: r for d, r in review.items() if d not in set(ids)}
 
     out = REPO / args.out
     out.write_text(json.dumps({
         "rule": {
             "strong_markers": STRONG,
-            "apparatus_markers": APPARATUS + ["(wl_ exempt)"],
+            "apparatus_markers": APPARATUS,
             "noisy_markers": NOISY + ["(require orto_share >= 0.5)"],
             "ctx_years": "excl. >=2 with orto>=0.8, or >=3 with orto>=0.2; "
                          ">=3 with orto<0.2 -> review",
+            "wl": "content arms skipped; excluded by catalogue epoch "
+                  "(Dwudziestolecie/Współczesność) + hand-verified carryover",
             "provenance_classes": ["ia_modern_scan"],
             "duplicates": "dedup dropped list (longest member of each cluster kept)",
-            "inputs": [args.audit, args.sweep, args.dedup],
+            "inputs": [args.audit, args.sweep, args.dedup,
+                       args.wl_epochs, args.wl_carryover],
         },
         "by_strong_markers": len(by_strong),
         "by_apparatus": len(by_apparatus),
         "by_noisy_corroborated": len(by_noisy),
         "by_ctx_years": len(by_ctx),
+        "by_wl": len(by_wl),
         "by_provenance": len(by_prov),
         "by_duplicates": len(by_dup),
         "excluded_total": len(ids),
@@ -120,6 +145,7 @@ def main() -> None:
     print(f"apparatus (no wl_)    : {len(by_apparatus):,}")
     print(f"noisy + orto >= 0.5   : {len(by_noisy):,}")
     print(f"ctx years corroborated: {len(by_ctx):,}")
+    print(f"wl epoch + carryover  : {len(by_wl):,}")
     print(f"provenance            : {len(by_prov):,}")
     print(f"duplicates            : {len(by_dup):,}")
     print(f"excluded total        : {len(ids):,}")
