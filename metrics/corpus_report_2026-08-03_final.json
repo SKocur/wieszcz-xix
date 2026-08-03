@@ -1,0 +1,516 @@
+{
+  "meta": {
+    "script": "scripts/corpus_report.py",
+    "label": "final",
+    "freeze_date": "2026-08-03",
+    "corpus_dir": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
+    "script_sha256": "aa94152b53d97337",
+    "timestamp_utc": "2026-08-03T21:41:17+00:00",
+    "host": "MacBook-Pro-Szymon.local",
+    "python": "3.14.0",
+    "args": {
+      "clean": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
+      "label": "final",
+      "exclusions": "metrics/exclusions_2026-08-03.json",
+      "freeze_date": "2026-08-03",
+      "ocr_docs": 2000,
+      "workers": 8,
+      "limit": 0
+    },
+    "bytes_per_token_calibration": 3.38,
+    "elapsed_seconds": 659.7
+  },
+  "counts": {
+    "documents": 294369,
+    "bytes": 22772707880,
+    "chars": 21443079649,
+    "words": 3168367614,
+    "est_tokens": 6737487538,
+    "per_source": {
+      "ia": {
+        "documents": 291655,
+        "bytes": 22604507719,
+        "chars": 21287758250,
+        "words": 3144342765,
+        "est_tokens": 6687724177,
+        "share_bytes": 0.992614
+      },
+      "wl": {
+        "documents": 2714,
+        "bytes": 168200161,
+        "chars": 155321399,
+        "words": 24024849,
+        "est_tokens": 49763361,
+        "share_bytes": 0.007386
+      }
+    },
+    "per_uploader": {
+      "jbc.bj.uj.edu.pl": {
+        "documents": 264838,
+        "bytes": 17901375948,
+        "est_tokens": 5296265073,
+        "share_bytes": 0.786089
+      },
+      "google-books": {
+        "documents": 2057,
+        "bytes": 1336900905,
+        "est_tokens": 395532812,
+        "share_bytes": 0.058706
+      },
+      "ia-other": {
+        "documents": 1716,
+        "bytes": 1014121272,
+        "est_tokens": 300035879,
+        "share_bytes": 0.044532
+      },
+      "bc.wbp.lodz.pl": {
+        "documents": 11947,
+        "bytes": 757554857,
+        "est_tokens": 224128656,
+        "share_bytes": 0.033266
+      },
+      "rcin.org.pl": {
+        "documents": 3877,
+        "bytes": 689660804,
+        "est_tokens": 204041658,
+        "share_bytes": 0.030285
+      },
+      "bc.radom.pl": {
+        "documents": 2773,
+        "bytes": 288817156,
+        "est_tokens": 85448863,
+        "share_bytes": 0.012683
+      },
+      "kpbc.umk.pl": {
+        "documents": 1181,
+        "bytes": 217690838,
+        "est_tokens": 64405573,
+        "share_bytes": 0.009559
+      },
+      "dlibra.umcs.lublin.pl": {
+        "documents": 1291,
+        "bytes": 172768264,
+        "est_tokens": 51114871,
+        "share_bytes": 0.007587
+      },
+      "wolne-lektury": {
+        "documents": 2714,
+        "bytes": 168200161,
+        "est_tokens": 49763361,
+        "share_bytes": 0.007386
+      },
+      "dlibra.kul.pl": {
+        "documents": 1662,
+        "bytes": 155384224,
+        "est_tokens": 45971664,
+        "share_bytes": 0.006823
+      },
+      "dbc.wroc.pl": {
+        "documents": 104,
+        "bytes": 37229247,
+        "est_tokens": 11014570,
+        "share_bytes": 0.001635
+      },
+      "pbc.gda.pl": {
+        "documents": 204,
+        "bytes": 30793616,
+        "est_tokens": 9110537,
+        "share_bytes": 0.001352
+      },
+      "nlm.nih.gov": {
+        "documents": 4,
+        "bytes": 1777254,
+        "est_tokens": 525815,
+        "share_bytes": 7.8e-05
+      },
+      "umich.edu": {
+        "documents": 1,
+        "bytes": 433334,
+        "est_tokens": 128205,
+        "share_bytes": 1.9e-05
+      }
+    }
+  },
+  "doc_length_bytes": {
+    "n": 294369,
+    "mean": 77361.09400106668,
+    "min": 37,
+    "max": 8614547,
+    "p1": 582,
+    "p5": 9130,
+    "p10": 14572,
+    "p25": 30512,
+    "p50": 53308,
+    "p75": 92416,
+    "p90": 125381,
+    "p95": 155442,
+    "p99": 576067,
+    "histogram": {
+      "[32,64)": 3,
+      "[64,128)": 7,
+      "[128,256)": 208,
+      "[256,512)": 2205,
+      "[512,1024)": 1873,
+      "[1024,2048)": 1292,
+      "[2048,4096)": 2611,
+      "[4096,8192)": 4760,
+      "[8192,16384)": 22736,
+      "[16384,32768)": 46480,
+      "[32768,65536)": 86247,
+      "[65536,131072)": 100136,
+      "[131072,262144)": 18958,
+      "[262144,524288)": 3476,
+      "[524288,1048576)": 2260,
+      "[1048576,2097152)": 868,
+      "[2097152,4194304)": 188,
+      "[4194304,8388608)": 60,
+      "[8388608,16777216)": 1
+    }
+  },
+  "chars": {
+    "alpha_share": 0.804844131929755,
+    "digit_share": 0.008016567014338193,
+    "whitespace_share": 0.15378226131589182,
+    "diacritic_share": 0.05700536923841559,
+    "cyrillic_share": 6.976255390954361e-05,
+    "other_share": 0.033357039740015006,
+    "per_doc_alpha_ratio": {
+      "n": 294369,
+      "mean": 0.9505912500223013,
+      "min": 0.0,
+      "max": 1.0,
+      "p1": 0.9180718636885318,
+      "p5": 0.9328138633550456,
+      "p10": 0.9383009117263981,
+      "p25": 0.9460566067737319,
+      "p50": 0.9521963059436419,
+      "p75": 0.9569989722507708,
+      "p90": 0.9610027855153204,
+      "p95": 0.9632547319445913,
+      "p99": 0.9676427638152333,
+      "histogram": {
+        "0.00": 1,
+        "0.72": 1,
+        "0.76": 1,
+        "0.79": 1,
+        "0.80": 1,
+        "0.81": 1,
+        "0.82": 5,
+        "0.83": 4,
+        "0.84": 7,
+        "0.85": 16,
+        "0.86": 20,
+        "0.87": 60,
+        "0.88": 140,
+        "0.89": 347,
+        "0.90": 831,
+        "0.91": 2118,
+        "0.92": 6832,
+        "0.93": 25698,
+        "0.94": 80108,
+        "0.95": 139814,
+        "0.96": 37261,
+        "0.97": 1089,
+        "0.98": 10,
+        "0.99": 1,
+        "1.00": 2
+      }
+    }
+  },
+  "anachronisms": {
+    "modern_markers": {
+      "internet": {
+        "docs": 35,
+        "occurrences": 35
+      },
+      "smartfon": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "komputer": {
+        "docs": 1,
+        "occurrences": 1
+      },
+      "telewiz": {
+        "docs": 1,
+        "occurrences": 1
+      },
+      "telefon komórk": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "digitized by": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "www.": {
+        "docs": 796,
+        "occurrences": 7988
+      },
+      "http": {
+        "docs": 3021,
+        "occurrences": 221071
+      },
+      "hitler": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "gestapo": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "nkwd": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "kołchoz": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "kolchoz": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "faszyzm": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "faszyst": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "międzywojenn": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "miedzywojenn": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "copyright": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "wszelkie prawa zastrze": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "mikrofilm": {
+        "docs": 0,
+        "occurrences": 0
+      }
+    },
+    "period_control": {
+      "telefon": {
+        "docs": 71648,
+        "occurrences": 181729
+      },
+      "automobil": {
+        "docs": 13444,
+        "occurrences": 27586
+      },
+      "aeroplan": {
+        "docs": 6254,
+        "occurrences": 13457
+      },
+      "samochod": {
+        "docs": 9918,
+        "occurrences": 18290
+      },
+      "samochód": {
+        "docs": 3175,
+        "occurrences": 4918
+      },
+      "samolot": {
+        "docs": 4522,
+        "occurrences": 9113
+      },
+      "lotnisk": {
+        "docs": 546,
+        "occurrences": 671
+      },
+      "czołg": {
+        "docs": 7015,
+        "occurrences": 10406
+      },
+      "bolszewi": {
+        "docs": 4056,
+        "occurrences": 17563
+      },
+      "sowiet": {
+        "docs": 4037,
+        "occurrences": 8591
+      },
+      "radjo": {
+        "docs": 386,
+        "occurrences": 559
+      },
+      "radiow": {
+        "docs": 539,
+        "occurrences": 733
+      }
+    },
+    "docs_with_ctx_years": 8037,
+    "ctx_year_decade_histogram": {
+      "1920": 1702,
+      "1930": 672,
+      "1940": 1440,
+      "1950": 734,
+      "1960": 1245,
+      "1970": 803,
+      "1980": 696,
+      "1990": 1585,
+      "2000": 499,
+      "2010": 44,
+      "2020": 25,
+      "2030": 17,
+      "2040": 33,
+      "2050": 48,
+      "2060": 19,
+      "2070": 30,
+      "2080": 15,
+      "2090": 16
+    },
+    "docs_with_bare_years": 101753,
+    "bare_year_decade_histogram": {
+      "1920": 9461,
+      "1930": 6130,
+      "1940": 8256,
+      "1950": 7953,
+      "1960": 8087,
+      "1970": 7619,
+      "1980": 8251,
+      "1990": 9689,
+      "2000": 91195,
+      "2010": 6385,
+      "2020": 5950,
+      "2030": 4685,
+      "2040": 5199,
+      "2050": 6086,
+      "2060": 5728,
+      "2070": 5126,
+      "2080": 6084,
+      "2090": 5088
+    },
+    "contexts": {
+      "internet": [
+        {
+          "doc": "ia_IA41545307_0040.txt",
+          "ctx": " wyrazy serdecznej wdzięczności.  ive  igitize  D  d by the Internet Arch  Is/1A41545307  org/detai  Ive  /larch  https  r  rei "
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0015_NDIGCZAS026470_81004138.txt",
+          "ctx": " na wojsko i na województwa czyli Hercules furęns, chcąc ad internetionem delere nomen zgromadzonych ztak wielu województw civiu"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0059_NDIGCZAS026703_81116071.txt",
+          "ctx": "niów wynosi obecnie 60, i to jest maximum, przy którem chce Internet pozoitać, dopóki stosu ki ekono miczne kraju się nie poleps"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0082_NDIGCZAS026703_79768897.txt",
+          "ctx": " miejsce zamówienia dla państwa austryackiego Direktion der internetionalem Waaron-Ausstellung  E Oferta pieców. Du  Polecam 300"
+        }
+      ],
+      "smartfon": [],
+      "komputer": [
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1886_102.txt",
+          "ctx": "ia 20 maja 1886 do Prezy. dyum c. k. D;rekevi lasów i dowen Komputer tenu uprawnionych  i kwi tnin 1872 ' FE  atr ainil poda  ca"
+        }
+      ],
+      "telewiz": [
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1903_099.txt",
+          "ctx": "rzekł się wszelkich warunków co do wizyty króla, i gdy król telewizytę na pokojach Ojca św., Ojciec św. natychmiast z radością "
+        }
+      ],
+      "telefon komórk": [],
+      "digitized by": [],
+      "www.": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Dziennik_Lodzki_1887_nr224_5122.txt",
+          "ctx": " Połączenie telefoniczne ze Składem i Kantorem.  swr E E wc www. mea GEE EEE EEE E EIEEE EEE O e OE EC 3 E EITE yn E3 GIEŁDA"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj1910nr011_a_4667.txt",
+          "ctx": "mski zegarek z tego materyału z damskim  Drobne ogłoszenia. WWW. W. WCC  brem świadectwem, nauczycielki, nauczycieli, frebla"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj1911_nr047a_5305.txt",
+          "ctx": "lutniści, którzy nie byli na  WP cO w oooooocóóóóóóóóóóówwcowww._ZClOw E  maskaradzie, mogli je jeszcze obejrzyć.  Sala prób"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Tydzien1875nr13a_5867.txt",
+          "ctx": "edakcyi i w ho amamna SRANANNP RÓD PAPA NPA FRAME  uovuwwowuwww.  aa aaa aa aa ataladaY |  BYKA ETI Fa zada A Bernarda Seneń"
+        }
+      ],
+      "http": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj1898nr221_4089.txt",
+          "ctx": "iu (czytać wygodame wti  t paps Ar Pii  tla jt = dog Łomy,  HTTP ter e  ‘avParyż, 27 września, Mw być WZA rozkaz telepyafków"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0010_NDIGCZAS040468_110460804.txt",
+          "ctx": "TE rg Deg 1 > a GP Zei m E sza GE EE BJJ EA Zw VER JUL LEHE HTTP EPO a Ten RR z PRE I Kar Let ai R e a kra Wa Dé x Wa  Se  j"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0004_NDIGCZAS037272_102085163.txt",
+          "ctx": "icy znajduje się w seryi V.  - EP PRAIA EM IKAR c OET NA >, HTTP E E T A A YA  WE  wiaty w około : północno i południowo zac"
+        },
+        {
+          "doc": "ia_bibliotekanauko00ossogoog.txt",
+          "ctx": ". i Pawlikowski Gwalbórt i  I  szek de Pankif Prymaa Atcylńshttp lwowski i Totocki AUred hrabia 10 'Praedrsyinirski Mikołaj "
+        }
+      ],
+      "hitler": [],
+      "gestapo": [],
+      "nkwd": [],
+      "kołchoz": [],
+      "kolchoz": [],
+      "faszyzm": [],
+      "faszyst": [],
+      "międzywojenn": [],
+      "miedzywojenn": [],
+      "copyright": [],
+      "wszelkie prawa zastrze": [],
+      "mikrofilm": []
+    }
+  },
+  "ocr_suspicion": {
+    "documents_sampled_per_source": 2000,
+    "ia": {
+      "documents": 2000,
+      "words": 20461812,
+      "suspicious": 352294,
+      "rate": 0.017217145773795597,
+      "by_reason": {
+        "symbol": 0.012457938720187635,
+        "midcaps": 0.0031696117626337297,
+        "digit_mix": 0.0016919322687550839,
+        "no_vowel": 0.00024616588208317035
+      },
+      "median_doc_rate": 0.015828350334154064,
+      "p90_doc_rate": 0.0328296811961079,
+      "max_doc_rate": 0.11515940143135979
+    },
+    "wl": {
+      "documents": 2000,
+      "words": 16515666,
+      "suspicious": 42483,
+      "rate": 0.0025722850050370356,
+      "by_reason": {
+        "symbol": 0.0017602680993912083,
+        "midcaps": 0.0004102165786108777,
+        "no_vowel": 0.0003995600298528682,
+        "digit_mix": 7.265828698642852e-06
+      },
+      "median_doc_rate": 0.0,
+      "p90_doc_rate": 0.007936507936507936,
+      "max_doc_rate": 0.7719298245614035
+    }
+  },
+  "duplication": {
+    "status": "pending",
+    "note": "measured by the dedup step for this build; the final pass should reference its report"
+  }
+}

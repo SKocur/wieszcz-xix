@@ -1,0 +1,10 @@
+{
+  "source": "runpod network volume wieszcz-xix:/workspace/data/clean/tokens.bin",
+  "source_bytes": 10804858322,
+  "source_tokens": 5402429161,
+  "val_fraction": 0.01,
+  "val_bytes": 108048582,
+  "val_tokens": 54024291,
+  "sha256": "5967254d308422b86eeeb6cf9f9e4022c457941125800626d419ddb2d53f7c2d",
+  "note": "last 1% of tokens.bin \u2014 the exact held-out split train.py used for the 350M/100M runs"
+}

@@ -1,0 +1,15 @@
+{
+  "tokens_total": 5402429161,
+  "documents_total": 219957,
+  "boundary_token_index": 5352383447,
+  "internet_archive": {
+    "documents": 216965,
+    "tokens": 5352383447,
+    "share": 0.990736
+  },
+  "wolne_lektury": {
+    "documents": 2992,
+    "tokens": 50045714,
+    "share": 0.009264
+  }
+}

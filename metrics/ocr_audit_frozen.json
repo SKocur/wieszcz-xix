@@ -1,0 +1,32 @@
+{
+  "documents_sampled_per_source": 400,
+  "internet_archive": {
+    "words": 4416316,
+    "suspicious": 71920,
+    "rate": 0.016285066557737263,
+    "by_reason": {
+      "symbol": 0.011918078325916896,
+      "midcaps": 0.0028976640258532227,
+      "digit_mix": 0.001604051883968448,
+      "no_vowel": 0.00019178881221361876
+    },
+    "median_doc_rate": 0.016040955631399317,
+    "p90_doc_rate": 0.03225806451612903,
+    "max_doc_rate": 0.1218405703175632
+  },
+  "wolne_lektury": {
+    "words": 3155603,
+    "suspicious": 10242,
+    "rate": 0.0032456554262370774,
+    "by_reason": {
+      "symbol": 0.0025183776286180487,
+      "no_vowel": 0.00036664941692602016,
+      "midcaps": 0.0003615790706245367,
+      "digit_mix": 1.9013798630562843e-06
+    },
+    "median_doc_rate": 0.0,
+    "p90_doc_rate": 0.008849557522123894,
+    "max_doc_rate": 0.6578947368421053
+  },
+  "true_corruption_estimate": 0.01304
+}

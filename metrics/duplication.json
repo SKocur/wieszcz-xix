@@ -1,0 +1,33 @@
+{
+  "tokens_file": "data/clean/tokens.bin",
+  "documents": 219957,
+  "tokens": 5402209204,
+  "perms": 64,
+  "shingle_tokens": 5,
+  "jaccard_threshold": 0.8,
+  "seed": 1337,
+  "lsh_bands": 8,
+  "lsh_rows": 8,
+  "exact_duplicate_groups": 228,
+  "exact_redundant_documents": 230,
+  "exact_redundant_tokens": 7617246,
+  "exact_redundant_pct": 0.141,
+  "near_duplicate_clusters": 373,
+  "near_redundant_documents": 387,
+  "near_redundant_tokens": 23453185,
+  "near_redundant_pct": 0.434,
+  "candidate_pairs_checked": 684,
+  "largest_clusters": [
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "wall_s": 123.6
+}
