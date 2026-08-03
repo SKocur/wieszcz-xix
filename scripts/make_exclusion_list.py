@@ -68,6 +68,8 @@ def main() -> None:
     ap.add_argument("--wl-epochs", default="metrics/wl_epochs_2026-08-03.json")
     ap.add_argument("--wl-carryover", default="metrics/post1918_exclusions.json",
                     help="previous audit whose hand-verified wl_ exclusions carry over")
+    ap.add_argument("--manual", default="metrics/manual_exclusions_2026-08-03.json",
+                    help="hand-audit additions: empty files and read-verified leaks")
     ap.add_argument("--out", default="metrics/exclusions_2026-08-03.json")
     args = ap.parse_args()
 
@@ -76,6 +78,7 @@ def main() -> None:
     dedup = json.loads((REPO / args.dedup).read_text(encoding="utf-8"))
     wl_epochs = json.loads((REPO / args.wl_epochs).read_text(encoding="utf-8"))
     carryover = json.loads((REPO / args.wl_carryover).read_text(encoding="utf-8"))
+    manual = json.loads((REPO / args.manual).read_text(encoding="utf-8"))
 
     by_strong: set[str] = set()
     by_apparatus: set[str] = set()
@@ -108,9 +111,10 @@ def main() -> None:
     by_prov = {d for d, info in sweep["docs"].items()
                if info["class"] == "ia_modern_scan"}
     by_dup = {d.removesuffix(".txt") for d in dedup["dropped"]}
+    by_manual = set(manual["ids"])
 
     ids = sorted(by_strong | by_apparatus | by_noisy | by_ctx | by_prov | by_dup
-                 | by_wl)
+                 | by_wl | by_manual)
     review = {d: r for d, r in review.items() if d not in set(ids)}
 
     out = REPO / args.out
@@ -125,8 +129,9 @@ def main() -> None:
                   "(Dwudziestolecie/Współczesność) + hand-verified carryover",
             "provenance_classes": ["ia_modern_scan"],
             "duplicates": "dedup dropped list (longest member of each cluster kept)",
+            "manual": "hand-audit additions: empty files, read-verified leaks",
             "inputs": [args.audit, args.sweep, args.dedup,
-                       args.wl_epochs, args.wl_carryover],
+                       args.wl_epochs, args.wl_carryover, args.manual],
         },
         "by_strong_markers": len(by_strong),
         "by_apparatus": len(by_apparatus),
@@ -135,6 +140,7 @@ def main() -> None:
         "by_wl": len(by_wl),
         "by_provenance": len(by_prov),
         "by_duplicates": len(by_dup),
+        "by_manual": len(by_manual),
         "excluded_total": len(ids),
         "review_count": len(review),
         "review": review,
@@ -146,6 +152,7 @@ def main() -> None:
     print(f"noisy + orto >= 0.5   : {len(by_noisy):,}")
     print(f"ctx years corroborated: {len(by_ctx):,}")
     print(f"wl epoch + carryover  : {len(by_wl):,}")
+    print(f"manual (hand audit)   : {len(by_manual):,}")
     print(f"provenance            : {len(by_prov):,}")
     print(f"duplicates            : {len(by_dup):,}")
     print(f"excluded total        : {len(ids):,}")
