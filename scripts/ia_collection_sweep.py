@@ -17,9 +17,14 @@ listed, whatever their collection.
 
 Results append to a JSONL as they arrive and a rerun skips documents already present,
 so an interrupted sweep resumes instead of restarting; the summary JSON is compacted
-from the JSONL at the end.
+from the JSONL at the end. A previous sweep's summary seeds the cache (`--seed`), so
+auditing a frozen corpus directory (`--txt-dir`) only queries identifiers the earlier
+sweep never saw — the API is asked about each identifier once, ever.
 
-    python scripts/ia_collection_sweep.py
+    python scripts/ia_collection_sweep.py                       # ledger of the HF build
+    python scripts/ia_collection_sweep.py --txt-dir data/clean \
+        --seed metrics/ia_collection_sweep.json \
+        --out metrics/ia_collection_sweep_2026-08-03.json
 """
 
 from __future__ import annotations
@@ -72,21 +77,33 @@ def classify(collections: list[str], identifier: str) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="metrics/ia_collection_sweep.json")
+    ap.add_argument("--txt-dir", default=None,
+                    help="take identifiers from a corpus directory of ia_*.txt files "
+                         "instead of the provenance ledger")
+    ap.add_argument("--seed", default=None,
+                    help="summary JSON of a previous sweep; its documents are "
+                         "treated as already checked")
     ap.add_argument("--workers", type=int, default=12)
     args = ap.parse_args()
 
-    rows = list(csv.DictReader(gzip.open(LEDGER, "rt")))
-    targets = [(r["document_id"], r["source_identifier"]) for r in rows
-               if r["source"] == "internet_archive"
-               and not PL_LIBRARY.match(r["document_id"])]
+    if args.txt_dir:
+        targets = [(f.stem, f.stem[3:]) for f in sorted(Path(args.txt_dir).glob("ia_*.txt"))
+                   if not PL_LIBRARY.match(f.stem)]
+    else:
+        rows = list(csv.DictReader(gzip.open(LEDGER, "rt")))
+        targets = [(r["document_id"], r["source_identifier"]) for r in rows
+                   if r["source"] == "internet_archive"
+                   and not PL_LIBRARY.match(r["document_id"])]
 
-    jsonl = REPO / (args.out + "l")
     docs: dict[str, dict] = {}
+    if args.seed:
+        docs.update(json.load(open(REPO / args.seed, encoding="utf-8"))["docs"])
+    jsonl = REPO / (args.out + "l")
     if jsonl.exists():
         for line in jsonl.read_text(encoding="utf-8").splitlines():
             rec = json.loads(line)
             docs[rec.pop("doc_id")] = rec
-        targets = [t for t in targets if t[0] not in docs]
+    targets = [t for t in targets if t[0] not in docs]
     print(f"{len(targets):,} non-library documents to check "
           f"({len(docs):,} already done)", flush=True)
 
