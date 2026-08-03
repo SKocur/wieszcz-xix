@@ -1,0 +1,27 @@
+{
+  "run": "wieszcz_350m_2026-07-25",
+  "seed": 1337,
+  "config": "configs/wieszcz_350m.json",
+  "n_params_millions": 349.1,
+  "corpus_tokens": 5402429161,
+  "val_tokens": 54024291,
+  "tokenizer": {
+    "vocab.json": "3ffdbadcd361df3ef545ab7f68fd691faef052ee51803d98c170734dc4fb5508",
+    "merges.txt": "61807d4e3bdb4154af911462e6f536d902f885ed678f0d8a38bd9fd4d0f9c847"
+  },
+  "provenance": {
+    "generated": false,
+    "written": "2026-07-27",
+    "why": "This run predates manifest generation in train.py, so the file is written by hand.",
+    "fields_from": {
+      "corpus_tokens": "the 'Corpus:' line of metrics/wieszcz_350m_2026-07-25.out",
+      "val_tokens": "the same line",
+      "n_params_millions": "the 'Model:' line of the same log, and confirmed by instantiating configs/wieszcz_350m.json",
+      "seed": "train.py's default; the run was launched without --seed",
+      "tokenizer": "hashed from tokenizer/ on 2026-07-27 and verified byte-identical to the copy on the training pod while that pod was still running"
+    },
+    "not_recorded": [
+      "tokens_bin_bytes: the frozen tokens.bin is 10804858322 bytes on the network volume today, which matches corpus_tokens x 2, but nothing links that file to this run at the time it ran"
+    ]
+  }
+}

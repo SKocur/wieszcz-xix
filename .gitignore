@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Secrets (API keys live here — never commit)
+.env
+
+# Data and artifacts (never commit the corpus or weights)
+data/raw/
+data/clean/*
+# ...but the validation-split manifest is provenance, not data: it records which exact
+# bytes of tokens.bin the held-out set is, so an evaluation can be traced to its input.
+!data/clean/val_tail.json
+# Duplication scan: the cluster list is small and worth versioning, the per-document
+# arrays are 100 MB of MinHash signatures, regenerable in two minutes from tokens.bin.
+data/duplication/*.npz
+data/rejected.jsonl
+data/ia_cursor.json
+data/crawl.log
+tokenizer/*.json
+tokenizer/*.model
+tokenizer/*.txt
+checkpoints/
+checkpoints_v1_20m/
+# Weight bundles live at the umbrella level (../models); this path is a symlink there.
+models
+output/*
+# ...except the ladder sample set the paper's appendix points at: it records which weights
+# (by hash) produced which text, including the bias examples the ethics section quotes.
+!output/samples_ladder_2026-07-29.md
+*.pt
+*.bin
+*.safetensors
+wandb/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+# Sweep resume log; the summary JSON is the versioned record
+metrics/ia_collection_sweep.jsonl

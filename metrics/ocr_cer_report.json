@@ -1,0 +1,69 @@
+{
+  "passages_scored": 11,
+  "passages_unreconstructable": 9,
+  "unreconstructable_rate": 0.45,
+  "characters": 4434,
+  "character_errors": 30,
+  "cer": 0.00677,
+  "words": 658,
+  "word_errors": 31,
+  "wer": 0.04711,
+  "per_passage": [
+    {
+      "id": "p02",
+      "cer": 0.0024390243902439024,
+      "wer": 0.016666666666666666
+    },
+    {
+      "id": "p03",
+      "cer": 0.01507537688442211,
+      "wer": 0.125
+    },
+    {
+      "id": "p05",
+      "cer": 0.007407407407407408,
+      "wer": 0.046875
+    },
+    {
+      "id": "p08",
+      "cer": 0.0025,
+      "wer": 0.015873015873015872
+    },
+    {
+      "id": "p09",
+      "cer": 0.004962779156327543,
+      "wer": 0.03773584905660377
+    },
+    {
+      "id": "p10",
+      "cer": 0.0024813895781637717,
+      "wer": 0.016129032258064516
+    },
+    {
+      "id": "p12",
+      "cer": 0.0,
+      "wer": 0.0
+    },
+    {
+      "id": "p13",
+      "cer": 0.0125,
+      "wer": 0.07547169811320754
+    },
+    {
+      "id": "p14",
+      "cer": 0.0,
+      "wer": 0.0
+    },
+    {
+      "id": "p17",
+      "cer": 0.0049504950495049506,
+      "wer": 0.031746031746031744
+    },
+    {
+      "id": "p19",
+      "cer": 0.022222222222222223,
+      "wer": 0.1724137931034483
+    }
+  ],
+  "protocol": "Reference reconstructed from context by one annotator; no page images were available. Whitespace collapsed before scoring, so line breaks from page layout are not counted as errors."
+}

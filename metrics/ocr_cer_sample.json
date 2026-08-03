@@ -1,0 +1,171 @@
+{
+  "seed": 1337,
+  "passage_chars": 400,
+  "items": [
+    {
+      "id": "p00",
+      "doc": "ia_000001.txt",
+      "raw": "się dopuścił dał innym zgorszenie i wywołał ogólne między ludem oburzenie; słuszna też i stanowcza kara nań spadła. Lecz i z drugiej strony odczuł on wielkość swego upadku, a wchodząc sam w siebie, ze wstydem i głębokim żalem bił się często w piersi, wznosił ręce ku niebu, a wylewając z oczu potoki jakże mogłem tak głęboko, tak strasznie głęboko upaść! “ okazy W\" ał, nie pochodziły bynajmniej z bojaźni",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "dropped span before 'jakze mogłem'; the clause that opened the quotation is gone"
+    },
+    {
+      "id": "p01",
+      "doc": "ia_019724.txt",
+      "raw": "wszystko bez widocznego skutku. Dnia 23. maja przybyło z. młodemi swemi kilka wróbli, które się gnieździły w skrzynkach umieszczonych na ścianach plebanii otoczonej ogrodem i na stodole , one to uwolniły mnie od wszelkiej pracy i oczyściły dokładnie moje krzaki różane. Stare zbierały jak najskrzętniej mszyce z pączków, gałązek i liści i wtykały je w szeroko rozwarte s Waa aa a = OOPP E N E a e CE",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "trailing run of noise replaces the end of the sentence"
+    },
+    {
+      "id": "p02",
+      "doc": "ia_039448.txt",
+      "raw": "nie jest dziś przez nich energicznie broniony. W każdym razie zajęcie Zajczaru przez serbów nie jest nieprawdopodobne: już we wtorek podsunęli się oni blizko pod to miasto. Nowy też duch wstępuje w wojownicze stronnictwo serbskie. Jenerał Czerniajew wysłał do Belgradu pułkownika Montverde, z oznajmieniem że turków niezadługo z kraju wypędzi, dawne pozycje odzyska i pole walki przeniesie znowu na terrytorjam",
+      "ref": "nie jest dziś przez nich energicznie broniony. W każdym razie zajęcie Zajczaru przez serbów nie jest nieprawdopodobne: już we wtorek podsunęli się oni blizko pod to miasto. Nowy też duch wstępuje w wojownicze stronnictwo serbskie. Jenerał Czerniajew wysłał do Belgradu pułkownika Montverde, z oznajmieniem że turków niezadługo z kraju wypędzi, dawne pozycje odzyska i pole walki przeniesie znowu na terrytorjum",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p03",
+      "doc": "ia_059172.txt",
+      "raw": "lwowski przeciw Rosyanom galicyjskim 0 zdradę: stanu, z publicznem oskarżeniem poddanych rosyjskich i z wydaniem gończych listów o aresztowaniu w. granicach Rosyi osób będących w rosyjskiej służbie rządowej, — i to bez wstępnych dyplomatycznych per traktacyj, które są w takich razach obowiązują” cemi, — wszystko to nie jest niczem innem, jak umyślnem ubliżeniem godności i powadze państwa rosyjskiego.",
+      "ref": "lwowski przeciw Rosyanom galicyjskim o zdradę stanu, z publicznem oskarżeniem poddanych rosyjskich i z wydaniem gończych listów o aresztowaniu w granicach Rosyi osób będących w rosyjskiej służbie rządowej, — i to bez wstępnych dyplomatycznych pertraktacyj, które są w takich razach obowiązującemi, — wszystko to nie jest niczem innem, jak umyślnem ubliżeniem godności i powadze państwa rosyjskiego.",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p04",
+      "doc": "ia_078896.txt",
+      "raw": "pana Franciszka Sobola c, k.g notaryusza w Kozowie. C. k. sąd krajowy krajowy we Lwowie zawiadamia z miejsca pobytu niawiadomego Leopolda hr. Starzeńskiego, że na prośbę Michała Pyszyńskiego jako sekwastra sądowego dóbr Lubsza i Jajkowce w celu doreczenia zwróconej uchwały l. 4925/88 jak i uchwał następnych w spranego we Lwowie przeciw Leopoldowi hr. ct. wydać się mających ustanowił na jego koszt",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "'w spranego we Lwowie przeciw Leopoldowi hr. ct.' is scrambled beyond reading"
+    },
+    {
+      "id": "p05",
+      "doc": "ia_098620.txt",
+      "raw": "wyjść z sali, wzywał ich Prim na pół uprzejmie, na pół groźnie, by w sali pozostali. Oświadczył 1m przytem, że gdyby nadal w tej nieprzyjacielskiej postawie pozostać mieli, to będzie ich musiał uważać za nieprzyjaciół, a wtedy siłę siłą, żelazo żelazem odeprzeć potrafi Castelar odpowiedział na to, że on i jego zwolennicy dobrą rudą dadzą się nakłonić, ale nigdy groźbami. Gdy republikanie opuścili salę",
+      "ref": "wyjść z sali, wzywał ich Prim na pół uprzejmie, na pół groźnie, by w sali pozostali. Oświadczył im przytem, że gdyby nadal w tej nieprzyjacielskiej postawie pozostać mieli, to będzie ich musiał uważać za nieprzyjaciół, a wtedy siłę siłą, żelazo żelazem odeprzeć potrafi. Castelar odpowiedział na to, że on i jego zwolennicy dobrą radą dadzą się nakłonić, ale nigdy groźbami. Gdy republikanie opuścili salę",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p06",
+      "doc": "ia_118344.txt",
+      "raw": "zeszyt NI arja Dulçbianka: \"ARE kw T Torzy08: + * WE Udzisł kobiet w niowieście. 298m\"? t Poznański: życiu polityczne Zofia Poznańska: Graj mi zpań. Kronika SP i „cka: Niewieście dusze (fraWanda D°\" ggear Wilde: Mistrz mą- He St Lack: ak gwoim panie waj W nowym tym O robi starannej Pr. eyi, okazują wiele ruchii obudzić szerokie za zdołały też dla pisma * i „Pogląd na ŚW wiedzy, sztuce i filozofi",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "table of contents dissolved into fragments; almost no running text survives"
+    },
+    {
+      "id": "p07",
+      "doc": "ia_138068.txt",
+      "raw": "w komedyi. Tragedya albowiem tylko maluje nam ideały, komedya zaś, jeżeli ma być dobra, portretować wyłącznie powinna; a o ileż łatwićj jest być tłumaW sztukach Kożzebuego, mierny nawet artysta, potrafi odegrać ich role i podobać się często moŻe; -— w drammatach jednak Szekspira, Lessingå; Szyllera, Wiktora Hugo i innych; w o- razach jakiemi wzbogacili scenę Rasyn i Kornel nie wolno jest wysiąpić",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "'tłumaW sztukach' drops the end of one clause and the start of the next"
+    },
+    {
+      "id": "p08",
+      "doc": "ia_157792.txt",
+      "raw": "nabawił, więc jej to wszystko powinien nagrodzić. Młody gospodarz poddał się chętnie temu wyrokowi. Gdy zaś biedna wdowa całą historyę opowiedziała, jako się w nocy modliła i jako się jasny robaczek pojawił wtedy rzekł sędzia: W tem jest palec Boży; Pan Bóg was widocznie ratował. Gospodarz mocno wzruszony, rzekł ze łzami: „Bóg zaiste jest ojcem wdów i sierót, a oraz ich mścicielem!.. Przebaczcie,",
+      "ref": "nabawił, więc jej to wszystko powinien nagrodzić. Młody gospodarz poddał się chętnie temu wyrokowi. Gdy zaś biedna wdowa całą historyę opowiedziała, jako się w nocy modliła i jako się jasny robaczek pojawił, wtedy rzekł sędzia: W tem jest palec Boży; Pan Bóg was widocznie ratował. Gospodarz mocno wzruszony, rzekł ze łzami: „Bóg zaiste jest ojcem wdów i sierót, a oraz ich mścicielem!.. Przebaczcie,",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p09",
+      "doc": "ia_177516.txt",
+      "raw": "Basols. — Gazeta urzędowa madrycka z dnia 4 października, wyjaśnia powody projektu prawa oznaczającego etat armji czynnćj na 70.000 ludzi. Madryt 6 Października. Sprawa dyrektora dziennika Leon Espaniol: zajmowała dziś kortezów przez cały czas posiedzenia. Minister sprawiedliwości i łaski, tudzież minister spraw wewnętrznych, nie chcieli przyjąć na siebie odpowiedzialności za to aresztowanie, zwalając",
+      "ref": "Basols. — Gazeta urzędowa madrycka z dnia 4 października, wyjaśnia powody projektu prawa oznaczającego etat armji czynnéj na 70.000 ludzi. Madryt 6 Października. Sprawa dyrektora dziennika Leon Espaniol zajmowała dziś kortezów przez cały czas posiedzenia. Minister sprawiedliwości i łaski, tudzież minister spraw wewnętrznych, nie chcieli przyjąć na siebie odpowiedzialności za to aresztowanie, zwalając",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p10",
+      "doc": "ia_197240.txt",
+      "raw": "kilkakrotnego wołania gminy do wysokich Władz o ratunek, siedzi sobie p. wójt Maślanka w spokoju, jak u P. Jezusa za piecem, bo Władze nie chcą widzieć, nie chcą słyszeć?! Podobno jest jakaś ustawa, że urzędnika, któremu zarzucono zbrodnię, zawiesza się w urzędowaniu, dopóki sprawa nie zostanie sądownie rozstrzygnięta a p. wójt Maślanka otrzymał z e. k. Prokuratoryi akt oskarżenia o zbrodnię oszustwa",
+      "ref": "kilkakrotnego wołania gminy do wysokich Władz o ratunek, siedzi sobie p. wójt Maślanka w spokoju, jak u P. Jezusa za piecem, bo Władze nie chcą widzieć, nie chcą słyszeć?! Podobno jest jakaś ustawa, że urzędnika, któremu zarzucono zbrodnię, zawiesza się w urzędowaniu, dopóki sprawa nie zostanie sądownie rozstrzygnięta a p. wójt Maślanka otrzymał z c. k. Prokuratoryi akt oskarżenia o zbrodnię oszustwa",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p11",
+      "doc": "ia_216964.txt",
+      "raw": "znacznie świątynię, to też została przerobiona, według p)a: cza, z zachowaniem wewnętrznej budowy i kapli — 270 — 1801 biskup Kosakowski poświęcił ukończoną budowę w sty- lu klasycznym Palladia. Inne kościoły wyglądały prawie tak samo, jak dziś, z wyjątkiem uniwersyteckiego kościoła św. Jana (założony przez Wł. Jagiełłę w r. 1388 i ukończony w r. 1426). Kościół ten był zasłonięty od ulicy",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "'wedlug p)a: cza' undetermined; running text interrupted by page furniture"
+    },
+    {
+      "id": "p12",
+      "doc": "ia_000001.txt",
+      "raw": "czynów i modlitwy krzyż! a będzie on najpiękniejszą ozdobą na grobie ukochanych osób!“ Proście więc Boga, aby łaskę i miłosierdzie okazał nad duszą zmarłej. Proście nietylko dziś lecz, jak najczęściej, proście w domu, proście na cmentarzu, proście w kościele przy ofierze Mszy św., proście, ponieważ Pismo św. mówi: „Święta i zbawienna jest myśl modlić się za umarłe, aby byli od grzechów rozwiązani.",
+      "ref": "czynów i modlitwy krzyż! a będzie on najpiękniejszą ozdobą na grobie ukochanych osób!“ Proście więc Boga, aby łaskę i miłosierdzie okazał nad duszą zmarłej. Proście nietylko dziś lecz, jak najczęściej, proście w domu, proście na cmentarzu, proście w kościele przy ofierze Mszy św., proście, ponieważ Pismo św. mówi: „Święta i zbawienna jest myśl modlić się za umarłe, aby byli od grzechów rozwiązani.",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p13",
+      "doc": "ia_019724.txt",
+      "raw": "Budowle, stojące w pobliżu drzew, tak były przepełnione gąsienicami, że mieszkańcy zmuszeni byli je opuścić. Na szczęście nie są zdolne do odbywania dalekich wędrówek. Brudnica nieparka, pozostająca w pokrewieństwie z naszym jedwabnikiem (bombyx mori), jest niszczy: cielem lasów bardzo groźnym, bardzo też uzasadnionem jest wezwanie do niszezenia tego szkodnika, aby klęska nie przybrała grożniejszyeh",
+      "ref": "Budowle, stojące w pobliżu drzew, tak były przepełnione gąsienicami, że mieszkańcy zmuszeni byli je opuścić. Na szczęście nie są zdolne do odbywania dalekich wędrówek. Brudnica nieparka, pozostająca w pokrewieństwie z naszym jedwabnikiem (bombyx mori), jest niszczycielem lasów bardzo groźnym, bardzo też uzasadnionem jest wezwanie do niszczenia tego szkodnika, aby klęska nie przybrała groźniejszych",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p14",
+      "doc": "ia_039448.txt",
+      "raw": "się przed naszemi linjami, ale zmuszeni przez nasze wojska do walki na otwartem polu, zostali na głowę pobici i w chaotycznej ucieczce cofnęli się aż do Katunu na terrytorjum tureckiem. Cała przestrzeń od Św. Stefana do Morawy zajęta. Kilkuset ludzi zabitych i rannych leży na placu; turcy rzucali ich w ucieczce, zostawiając też serbom artylerję i amunicję. Wojska serbskie, znużone przez sześć dni walki,",
+      "ref": "się przed naszemi linjami, ale zmuszeni przez nasze wojska do walki na otwartem polu, zostali na głowę pobici i w chaotycznej ucieczce cofnęli się aż do Katunu na terrytorjum tureckiem. Cała przestrzeń od Św. Stefana do Morawy zajęta. Kilkuset ludzi zabitych i rannych leży na placu; turcy rzucali ich w ucieczce, zostawiając też serbom artylerję i amunicję. Wojska serbskie, znużone przez sześć dni walki,",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p15",
+      "doc": "ia_059172.txt",
+      "raw": "do Wiednia. pozwalać”. Postawa Austryi względem Rosyi przybrała ostatniemi czasy jakiś wyzywający charakter. Przesławny proces lwowski przeciw Rosyanom galicyjskim 0 zdradę: stanu, z publicznem oskarżeniem poddanych rosyjskich i z wydaniem gończych listów o aresztowaniu w. granicach Rosyi osób będących w rosyjskiej służbie rządowej, — i to bez wstępnych dyplomatycznych per traktacyj, które są w takich",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "orphan fragment 'pozwalac.' carried in from another column"
+    },
+    {
+      "id": "p16",
+      "doc": "ia_078896.txt",
+      "raw": "wzywa do siebie. ‘Clag dalszy nastąpi). Było już | į nauki uzupełniającej dla młodzieży dor | 2. Koszta utrzymania szkoły wydz on żeńskiej w Tarnowie, ponosić będź o do utrzymania tej szkoły dotychcza stó” wiązane i w tym samym co dotychć? pić sta Tarnowa po nad prestacye prawa” , gi | browolne na rzecz tej szkoły dotyć O go corocznie kwotę 1060 złr. na płacę S woj! | cieli zreorganizowanej szkoły",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "two columns interleaved with fragments of a third"
+    },
+    {
+      "id": "p17",
+      "doc": "ia_098620.txt",
+      "raw": "asygnaty z terminem czteromiesięcznym otrzymają trzy asygnat kontroli. Prolongacja udzi-lana będzie w banku narodowym i w jej filiach. — Pomnąć jednak należy, iż nie można dawać tych asygnat kontroli osobom obcym tak jak kupony, ponieważ Wypłata nastąpić może tylko do rąk właściciela. Świeży duży jęczmień według jakości 38—42 tal. za 1875 fnt. Okowity 16 tal. — Gdańsk 7. paźdz (Ceny z kolei.) Pszenica",
+      "ref": "asygnaty z terminem czteromiesięcznym otrzymają trzy asygnat kontroli. Prolongacja udzielana będzie w banku narodowym i w jej filiach. — Pomnąć jednak należy, iż nie można dawać tych asygnat kontroli osobom obcym tak jak kupony, ponieważ wypłata nastąpić może tylko do rąk właściciela. Świeży duży jęczmień według jakości 38—42 tal. za 1875 fnt. Okowity 16 tal. — Gdańsk 7. paźdz (Ceny z kolei.) Pszenica",
+      "unreconstructable": false,
+      "note": ""
+    },
+    {
+      "id": "p18",
+      "doc": "ia_118344.txt",
+      "raw": "Stramiłowej, i Rothkehl, syn zarządcy dóbr Wi-|w tem piśmie w ostatnich „dniach wiadomość, szenki, wszyscy Czterej uczniowie I klasy szkoły jakoby Rada szkolna krajowa polecić miała realnej we Lwowie i wszyscy mieszkający na je- dyrekcyi gimnazynm polskiego w Stanisławodnej stancyi, otrzymawszy z końcem półrocza „dwój- | wie wyszukanie odpowiedniego lokalu na gikę“, postanowili solidarnie emigrować",
+      "ref": null,
+      "unreconstructable": true,
+      "note": "two unrelated articles woven line by line"
+    },
+    {
+      "id": "p19",
+      "doc": "ia_138068.txt",
+      "raw": "że on skoro obejmie tron serbski, więcćj poświęci się pomyśności kraju, albowiem los jego ijego rodziny, już jest zapewniony przez ogromny majątek który on posiada, i że on miepotrzebuje szukać w zbieraniu nowych bogactw wynadgrodzenia za niepewność utrzymaoia się na tronie, co dotych= czas przynajmnićj pomimo zapewnionego prawem dziedzictwa tronu, okazało się bardzo chwiejącem i zmiennem. Stronnictwo",
+      "ref": "że on skoro obejmie tron serbski, więcéj poświęci się pomyślności kraju, albowiem los jego i jego rodziny, już jest zapewniony przez ogromny majątek który on posiada, i że on nie potrzebuje szukać w zbieraniu nowych bogactw wynadgrodzenia za niepewność utrzymania się na tronie, co dotychczas przynajmniéj pomimo zapewnionego prawem dziedzictwa tronu, okazało się bardzo chwiejącem i zmiennem. Stronnictwo",
+      "unreconstructable": false,
+      "note": ""
+    }
+  ],
+  "annotation": {
+    "annotator": "single annotator, no page images available",
+    "rule": "Period orthography is not an error. blizko, Jenerał, terrytorjum, obowiązującemi, niczem, przynajmniéj and similar forms are correct for the period and are left alone; only misrecognitions are corrected.",
+    "date": "2026-07-29"
+  }
+}
