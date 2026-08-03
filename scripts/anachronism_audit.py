@@ -12,31 +12,35 @@ with hand-read contexts rejected the plausible-sounding candidates: *stalin* (th
 press reviews a brochure by "K. Stalin"), *czołg* ("Rozwój i znaczenie czołgów",
 Warszawa 1918), *lotnisko* (a 1911 flight report), *samolot* (Żuławski 1911; "Siedem
 samolotów włoskich nad Wiedniem", 1918), *bolszewik/sowiet* (current affairs of
-1917-18), *milicja obywatelska* (attested 1886 and the 1915 Warsaw militia), and
-*pzpr/nazis/zsrr/rwpg* (dominated by OCR capital-soup and word-fragment noise). The
-period-legitimate ones now sit in the control battery. The same sweep confirmed
-low-noise markers the battery had been missing — interwar/PRL vocabulary (hitler,
-gestapo, nkwd, kołchoz, faszyzm, międzywojenny, the phrase "Rzeczpospolita Ludowa")
-and edition apparatus (copyright, wszelkie prawa zastrzeżone, ISBN followed by
-digits, domena publiczna, mikrofilm) — apparatus that
+1917-18), *milicja obywatelska* (attested 1886 and the 1915 Warsaw militia),
+*rzeczpospolita ludowa* in any wording (the 1918 press reports daily on the
+Ukrainian People's Republic, and "polska rzeczpospolita ludowa" itself is the
+language of 1905-07 revolutionary agitation and of Daszyński's November-1918
+government — 26 years before the PRL), and *pzpr/nazis/zsrr/rwpg* (dominated by OCR
+capital-soup and word-fragment noise). The period-legitimate ones now sit in the
+control battery. The same sweep confirmed low-noise markers the battery had been
+missing — interwar/PRL vocabulary (hitler, gestapo, nkwd, kołchoz, faszyzm,
+międzywojenny) and edition apparatus (copyright, wszelkie prawa zastrzeżone,
+ISBN followed by digits, domena publiczna, mikrofilm) — apparatus that
 line-level cleaning removes from *lines* but which marks the whole *document* as a
 modern edition. *radjo/radiow* moved from markers to controls: wireless telegraphy is
 period ("Stacja radjotelegraficzna", 1915) and broadcast-era hits ride along with the
 other markers.
 
-Two document-level features enter the flags as *candidates* — the exclusion rule must
-corroborate them, never exclude on them alone. The post-reform orthography share —
-words in -cja/-sja/-zja against period -cya/-sya/-zya — separates modern print from
-period print (hand-checked: a 1983 theatre programme and a 1972 Wańkowicz score
-0.88-1.00, period prints 0.00-0.02) and is the only signal that catches modern
-ephemera carrying no web boilerplate and no dates; but some 1910s publishers already
-used Kryński's -ja spelling (Gazeta Łódzka 1915: 0.98), so it corroborates rather
-than convicts. It also protects against the opposite error: OCR misreads mediaeval
-dates as 19xx (an Orgelbrand volume shows "w r. 1989" for 1289 — 87 false ctx-years
-on a legitimate document), and a period-orthography score is the tell. Filename years
-≥1919 are candidates too: for IA-native identifiers they are publication years
-(tygodnikillustro1923unse), for bc.radom-style numeric ids they are catalogue
-numbers, so they feed the provenance sweep instead of excluding directly.
+Two document-level features are recorded on flagged documents for the exclusion rule
+to corroborate with — they never flag or exclude on their own. The post-reform
+orthography share — words in -cja/-sja/-zja against period -cya/-sya/-zya —
+separates modern editions from Galician print (a 1983 theatre programme and a 1972
+Wańkowicz score 0.88-1.00, Galician papers 0.00-0.02), but the full-corpus run
+showed Kryński's -ja spelling is the *norm* in 1905-18 Congress-Poland press (72k
+documents ≥0.8 modern share), so it can only corroborate, never convict. Its real
+value is directional: a high share backs up a marker or ctx-year hit, and a *period*
+share protects against OCR misreading mediaeval dates as 19xx (an Orgelbrand volume
+shows "w r. 1989" for 1289 — 87 false ctx-years on a legitimate document). Filename
+years ≥1919 are recorded the same way: for IA-native identifiers they are
+publication years (tygodnikillustro1923unse), for bc.radom-style numeric ids they
+are catalogue numbers, so they feed the provenance sweep instead of excluding
+directly.
 
 Reads either the parquet shards built by `build_hf_dataset.py` (release audit) or a
 directory of cleaned `.txt` files (corpus audit before tokenization).
@@ -85,7 +89,6 @@ MODERN_RE = {
     "druga_wojna_światowa":
         re.compile(r"(?:drugiej|drugą|druga|\bii)\s+wojn\w*\s+światow", re.I),
     "domena_publiczna": re.compile(r"domen\w*\s+publiczn", re.I),
-    "rzeczpospolita_ludowa": re.compile(r"rzecz\w*pospolit\w*\s+ludow", re.I),
 }
 YEAR = re.compile(r"(?<!\d)(?:19[2-9]\d|20\d\d)(?!\d)")
 YEAR_CTX = re.compile(r"(?:\b(?:r\.|roku|rok|w\s+r\.)\s{1,2}(19[2-9]\d|20\d\d)(?!\d)"
@@ -148,14 +151,12 @@ def scan_document(agg: dict, doc_id: str, text: str) -> None:
         hits["ctx_years"] = len(ctx)
         hits["ctx_year_examples"] = sorted(set(ctx))[:8]
 
-    # candidate features: either can flag a document on its own (modern ephemera
-    # carry no web boilerplate and no dates), but the exclusion rule corroborates
-    om = len(ORTO_MODERN.findall(text))
-    op = len(ORTO_PERIOD.findall(text))
-    share = om / (om + op) if om + op else 0.0
-    if hits or (om >= 20 and share >= 0.8):
-        hits["orto_modern"] = om
-        hits["orto_period"] = op
+    if hits:
+        # corroborating features only, never flags of their own: the full-corpus run
+        # showed Kryński's -ja spelling is the NORM in 1905-18 Congress-Poland press
+        # (72k documents ≥0.8 modern share), so orthography cannot convict alone
+        hits["orto_modern"] = len(ORTO_MODERN.findall(text))
+        hits["orto_period"] = len(ORTO_PERIOD.findall(text))
         fy = [int(y) for y in FNAME_YEAR.findall(doc_id) if int(y) >= 1919]
         if fy:
             hits["fname_years"] = fy
