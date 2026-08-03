@@ -1,0 +1,513 @@
+{
+  "meta": {
+    "script": "scripts/corpus_report.py",
+    "label": "raw",
+    "freeze_date": "2026-08-03",
+    "corpus_dir": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
+    "git_commit": "bee7447",
+    "timestamp_utc": "2026-08-03T12:58:57+00:00",
+    "host": "MacBook-Pro-Szymon.local",
+    "python": "3.14.0",
+    "args": {
+      "clean": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
+      "label": "raw",
+      "freeze_date": "2026-08-03",
+      "ocr_docs": 400,
+      "workers": 8,
+      "limit": 0
+    },
+    "bytes_per_token_calibration": 3.38,
+    "elapsed_seconds": 595.2
+  },
+  "counts": {
+    "documents": 298102,
+    "bytes": 23350428099,
+    "chars": 21985421143,
+    "words": 3248747397,
+    "est_tokens": 6908410680,
+    "per_source": {
+      "ia": {
+        "documents": 295110,
+        "bytes": 23175180430,
+        "chars": 21823564772,
+        "words": 3223731628,
+        "est_tokens": 6856562257,
+        "share_bytes": 0.992495
+      },
+      "wl": {
+        "documents": 2992,
+        "bytes": 175247669,
+        "chars": 161856371,
+        "words": 25015769,
+        "est_tokens": 51848423,
+        "share_bytes": 0.007505
+      }
+    },
+    "per_uploader": {
+      "jbc.bj.uj.edu.pl": {
+        "documents": 266331,
+        "bytes": 18105344071,
+        "est_tokens": 5356610672,
+        "share_bytes": 0.775375
+      },
+      "google-books": {
+        "documents": 2133,
+        "bytes": 1398277332,
+        "est_tokens": 413691518,
+        "share_bytes": 0.059882
+      },
+      "ia-other": {
+        "documents": 1840,
+        "bytes": 1073024560,
+        "est_tokens": 317462888,
+        "share_bytes": 0.045953
+      },
+      "rcin.org.pl": {
+        "documents": 5117,
+        "bytes": 855482067,
+        "est_tokens": 253101203,
+        "share_bytes": 0.036637
+      },
+      "bc.wbp.lodz.pl": {
+        "documents": 11998,
+        "bytes": 761477096,
+        "est_tokens": 225289082,
+        "share_bytes": 0.032611
+      },
+      "bc.radom.pl": {
+        "documents": 2786,
+        "bytes": 296240304,
+        "est_tokens": 87645060,
+        "share_bytes": 0.012687
+      },
+      "kpbc.umk.pl": {
+        "documents": 1435,
+        "bytes": 252218921,
+        "est_tokens": 74620983,
+        "share_bytes": 0.010801
+      },
+      "wolne-lektury": {
+        "documents": 2992,
+        "bytes": 175247669,
+        "est_tokens": 51848423,
+        "share_bytes": 0.007505
+      },
+      "dlibra.umcs.lublin.pl": {
+        "documents": 1304,
+        "bytes": 174504674,
+        "est_tokens": 51628602,
+        "share_bytes": 0.007473
+      },
+      "dlibra.kul.pl": {
+        "documents": 1681,
+        "bytes": 157854152,
+        "est_tokens": 46702412,
+        "share_bytes": 0.00676
+      },
+      "pbc.gda.pl": {
+        "documents": 375,
+        "bytes": 60850098,
+        "est_tokens": 18002988,
+        "share_bytes": 0.002606
+      },
+      "dbc.wroc.pl": {
+        "documents": 105,
+        "bytes": 37696567,
+        "est_tokens": 11152830,
+        "share_bytes": 0.001614
+      },
+      "nlm.nih.gov": {
+        "documents": 4,
+        "bytes": 1777254,
+        "est_tokens": 525815,
+        "share_bytes": 7.6e-05
+      },
+      "umich.edu": {
+        "documents": 1,
+        "bytes": 433334,
+        "est_tokens": 128205,
+        "share_bytes": 1.9e-05
+      }
+    }
+  },
+  "doc_length_bytes": {
+    "n": 298102,
+    "mean": 78330.33021918673,
+    "min": 0,
+    "max": 8614547,
+    "p1": 578,
+    "p5": 9014,
+    "p10": 14548,
+    "p25": 30513,
+    "p50": 53581,
+    "p75": 92679,
+    "p90": 126987,
+    "p95": 158065,
+    "p99": 589006,
+    "histogram": {
+      "[0.5,1)": 32,
+      "[32,64)": 4,
+      "[64,128)": 8,
+      "[128,256)": 213,
+      "[256,512)": 2232,
+      "[512,1024)": 1983,
+      "[1024,2048)": 1390,
+      "[2048,4096)": 2675,
+      "[4096,8192)": 4816,
+      "[8192,16384)": 22846,
+      "[16384,32768)": 46947,
+      "[32768,65536)": 86791,
+      "[65536,131072)": 100997,
+      "[131072,262144)": 19848,
+      "[262144,524288)": 3765,
+      "[524288,1048576)": 2385,
+      "[1048576,2097152)": 902,
+      "[2097152,4194304)": 204,
+      "[4194304,8388608)": 63,
+      "[8388608,16777216)": 1
+    }
+  },
+  "chars": {
+    "alpha_share": 0.8048142628659037,
+    "digit_share": 0.007984807607649292,
+    "whitespace_share": 0.15381022715030734,
+    "diacritic_share": 0.05706998364229606,
+    "cyrillic_share": 7.161404777098383e-05,
+    "other_share": 0.03339070237613961,
+    "per_doc_alpha_ratio": {
+      "n": 298102,
+      "mean": 0.9504818832081554,
+      "min": 0.0,
+      "max": 1.0,
+      "p1": 0.9179239589619795,
+      "p5": 0.93276740237691,
+      "p10": 0.9382716049382716,
+      "p25": 0.9460491625310173,
+      "p50": 0.9521839955697079,
+      "p75": 0.9570022808732486,
+      "p90": 0.9610088287582487,
+      "p95": 0.963264845337548,
+      "p99": 0.9676484789956543,
+      "histogram": {
+        "0.00": 33,
+        "0.72": 1,
+        "0.76": 1,
+        "0.79": 1,
+        "0.80": 1,
+        "0.81": 1,
+        "0.82": 5,
+        "0.83": 4,
+        "0.84": 8,
+        "0.85": 18,
+        "0.86": 21,
+        "0.87": 62,
+        "0.88": 144,
+        "0.89": 349,
+        "0.90": 847,
+        "0.91": 2154,
+        "0.92": 6953,
+        "0.93": 26044,
+        "0.94": 81201,
+        "0.95": 141328,
+        "0.96": 37808,
+        "0.97": 1105,
+        "0.98": 10,
+        "0.99": 1,
+        "1.00": 2
+      }
+    }
+  },
+  "anachronisms": {
+    "modern_markers": {
+      "internet": {
+        "docs": 42,
+        "occurrences": 43
+      },
+      "smartfon": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "komputer": {
+        "docs": 4,
+        "occurrences": 4
+      },
+      "telewiz": {
+        "docs": 73,
+        "occurrences": 173
+      },
+      "radiow": {
+        "docs": 716,
+        "occurrences": 1088
+      },
+      "radjo": {
+        "docs": 427,
+        "occurrences": 715
+      },
+      "telefon komórk": {
+        "docs": 0,
+        "occurrences": 0
+      },
+      "digitized by": {
+        "docs": 38,
+        "occurrences": 7255
+      },
+      "www.": {
+        "docs": 1130,
+        "occurrences": 9608
+      },
+      "http": {
+        "docs": 4169,
+        "occurrences": 279184
+      }
+    },
+    "period_control": {
+      "telefon": {
+        "docs": 72719,
+        "occurrences": 185009
+      },
+      "automobil": {
+        "docs": 13825,
+        "occurrences": 28678
+      },
+      "aeroplan": {
+        "docs": 6391,
+        "occurrences": 13956
+      },
+      "samochod": {
+        "docs": 10395,
+        "occurrences": 20022
+      },
+      "samochód": {
+        "docs": 3493,
+        "occurrences": 5787
+      }
+    },
+    "docs_with_ctx_years": 8690,
+    "ctx_year_decade_histogram": {
+      "1920": 3466,
+      "1930": 1896,
+      "1940": 2690,
+      "1950": 2642,
+      "1960": 1457,
+      "1970": 916,
+      "1980": 777,
+      "1990": 1657,
+      "2000": 565,
+      "2010": 50,
+      "2020": 25,
+      "2030": 19,
+      "2040": 37,
+      "2050": 48,
+      "2060": 22,
+      "2070": 34,
+      "2080": 17,
+      "2090": 18
+    },
+    "docs_with_bare_years": 103318,
+    "bare_year_decade_histogram": {
+      "1920": 12802,
+      "1930": 8679,
+      "1940": 10982,
+      "1950": 11733,
+      "1960": 8655,
+      "1970": 8008,
+      "1980": 8589,
+      "1990": 9913,
+      "2000": 92811,
+      "2010": 6618,
+      "2020": 6125,
+      "2030": 4836,
+      "2040": 5399,
+      "2050": 6249,
+      "2060": 5910,
+      "2070": 5285,
+      "2080": 6247,
+      "2090": 5215
+    },
+    "contexts": {
+      "internet": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Godzina_Polski1917nr328bc_42523.txt",
+          "ctx": "czas nawet pomimo prze- g wrogów. wyjdziemy zwycięsko zi W  Internet acja w sejmie -wrgierskta.  posiedzeniu sejmu poseł Władysł"
+        },
+        {
+          "doc": "ia_IA41545307_0040.txt",
+          "ctx": " wyrazy serdecznej wdzięczności.  ive  igitize  D  d by the Internet Arch  Is/1A41545307  org/detai  Ive  /larch  https  r  rei "
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0015_NDIGCZAS026470_81004138.txt",
+          "ctx": " na wojsko i na województwa czyli Hercules furęns, chcąc ad internetionem delere nomen zgromadzonych ztak wielu województw civiu"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0026_NDIGCZAS035218_113227396.txt",
+          "ctx": " śmiesznych  LACJi wyborczych i humorystycznych kombinacyi Winternet i d ZSB Ká haty: ? ak przed jedenastu laty, stóimy wobec dy"
+        }
+      ],
+      "smartfon": [],
+      "komputer": [
+        {
+          "doc": "ia_bc.radom.pl.08-3712.txt",
+          "ctx": ", że wykręcisz powyższy nr telefoniczny i po zgłoszeniu się komputera i wysłuchaniu kilkusekundo-  wej informacji po angielsku w"
+        },
+        {
+          "doc": "ia_dwiekrolowebonai0000kras.txt",
+          "ctx": "monarchini pośród doraźnych spraw jej przeciwników, niejako komputer na zachwaszczonej (ale jakże barwnej i jakże bujnej) grządc"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1886_102.txt",
+          "ctx": "ia 20 maja 1886 do Prezy. dyum c. k. D;rekevi lasów i dowen Komputer tenu uprawnionych  i kwi tnin 1872 ' FE  atr ainil poda  ca"
+        },
+        {
+          "doc": "ia_karafkalafontain0000wank.txt",
+          "ctx": "iąt pism swoich wybrańców. Potem już pozostanie tylko praca komputera, który podsumuje ilości głosów, jakie „padły na poszczegól"
+        }
+      ],
+      "telewiz": [
+        {
+          "doc": "ia_dwiekrolowebonai0000kras.txt",
+          "ctx": "śmy monarchinię w przepysznym kostiumowo i aktorsko serialu telewizyjnym. Zwłaszcza ostatni, agonalny odcinek cyklu, tym różny "
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1903_099.txt",
+          "ctx": "rzekł się wszelkich warunków co do wizyty króla, i gdy król telewizytę na pokojach Ojca św., Ojciec św. natychmiast z radością "
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS077470_1938_013.txt",
+          "ctx": "staroświecki :  19.00 „Pan Fuge-  „Pierwsza krajowa audycja telewizyjma“ ze Lwowa  U SOBOTA, DN. 2.1V  5 Słuchowisko dla dzieci"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS077470_1938_016.txt",
+          "ctx": "wygodny w kolorze brgzówym 1 czarnym.  |  Największa słacja telewizyjna na świecie  W tych dniach na Wieży Eiffel w Paryżu zain"
+        }
+      ],
+      "radiow": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Dziennik_Lodzki_1888_nr144a_6352.txt",
+          "ctx": "E po  larbi Borkowskiego, nabytej przez zarząd | cj jęe, 2% radiowo t Gdziały asanla la | grożąca wieczorem, która jednakże po"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.G_L_1915_10_27_nr284_Wyd_wieczorowe_2742.txt",
+          "ctx": "azję zetknięcia się z Gużą gromadą niemieckich -nauczycieli Radiowych, a, spotkawszy się w następstwie a zozmaitymi nauczyciel"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.GazetaPabianicka_1914no20a_72392.txt",
+          "ctx": "h spí  7 Sz dej ściera s S V f W Zagłębiu i w okolicach A O RADIOWE R fabryki i kopalnie francusi REJ giy RAS WY  i zlolem pot"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Nowa_Gazeta_Lodzka_1913_nr101a_50236.txt",
+          "ctx": "dzenie zamknięto przy okrzykach ahurra“,  Drawth w roi wię bradiowakiej,  POZNAN. W-sprawie sensacyjnego mor derstwa hr, Mielż"
+        }
+      ],
+      "radjo": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.G_L_1915_03_22_nr68_Wyd_wieczorowe_2383.txt",
+          "ctx": "dośnie, albowiem przywożą gazety i ustne wiadomośgi, Stacja radjotelegraficzna komunikuje  się z Krakowem, Wiedniem i z niemi"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.G_L_1917_nr087_5730.txt",
+          "ctx": "umunii.  Pegłeski o pośrednictwie szwazjcarskiem,  Agencja „Radjo* donosi z Nowega Jorkis Utrzymują się tu aporczywie pos gic"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.GazetaLodzka1918no183_49793.txt",
+          "ctx": ", że te doniesienia s3 Wysoko pr.esadzQr8,  Nowe połączenie radjotalegraficzne,  Pomiędzy rządem hclenderskim z jed-  nej str"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.GazetaLodzka1918no189_49799.txt",
+          "ctx": "jarzma bolszewickiego.  Turcja opuszcza Maukaz.  Jak donosi radjotelegraficzna stacja z. zgodziła się ma awakuację Kau-  azi."
+        }
+      ],
+      "telefon komórk": [],
+      "digitized by": [
+        {
+          "doc": "ia_bub_gb_5E8ZAQAAIAAJ.txt",
+          "ctx": "jesz  sę pan bez potrzeby, to bardzo brzydko, ja nie chcę   Digitized by Googic   7   tego! Niech mi pan Edmand obieca, że więcej po"
+        },
+        {
+          "doc": "ia_bub_gb_EJRbAAAAcAAJ.txt",
+          "ctx": "o mnie głosem  jak gdyby ukryć chciała swoje pomieszanie:   Digitized by Góogl   ( 11 )   « Niewiedziałam , £ e i Pan nieskąpi** poc"
+        },
+        {
+          "doc": "ia_bub_gb_JpRbAAAAcAAJ.txt",
+          "ctx": "jej lekko-  myślności doczekać mi się nie frudno. Za-   »   Digitized by Google   C « )   Patiów się dobrze Matyldo, że nie tak  łat"
+        },
+        {
+          "doc": "ia_bub_gb_R29VAAAAcAAJ.txt",
+          "ctx": "o późniey za główny zarzut  w zaskarżaniu cnoty Jadyfigi.   Digitized by   ( II )   Mogą spokoYiiością, wrócił do cyca ,  i w rozmai"
+        }
+      ],
+      "www.": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Dziennik_Lodzki_1887_nr224_5122.txt",
+          "ctx": " Połączenie telefoniczne ze Składem i Kantorem.  swr E E wc www. mea GEE EEE EEE E EIEEE EEE O e OE EC 3 E EITE yn E3 GIEŁDA"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Dziesieciolecie_Kropli_Mleka_w_Lodzi_1904_1913a_88741.txt",
+          "ctx": "  Zajęcie  Znak statystyczny  Kieszonka  biurowa olsztyn pl www.wa olsztyn рі  DZIESIĘCIOLECIE  SKREŚLILI D-rzy TADEUSZ MOGI"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1916_nr224a_67625.txt",
+          "ctx": "e wykazuje  Zbiory Tewarzystwa ubezpieczo-  MASON ORAWZICE  WWW. 139911  od 10—2ej.  OTOES Rhe D ea  BEA  miesieczne Kurs tr"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj1910nr011_a_4667.txt",
+          "ctx": "mski zegarek z tego materyału z damskim  Drobne ogłoszenia. WWW. W. WCC  brem świadectwem, nauczycielki, nauczycieli, frebla"
+        }
+      ],
+      "http": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj1898nr221_4089.txt",
+          "ctx": "iu (czytać wygodame wti  t paps Ar Pii  tla jt = dog Łomy,  HTTP ter e  ‘avParyż, 27 września, Mw być WZA rozkaz telepyafków"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0010_NDIGCZAS040468_110460804.txt",
+          "ctx": "TE rg Deg 1 > a GP Zei m E sza GE EE BJJ EA Zw VER JUL LEHE HTTP EPO a Ten RR z PRE I Kar Let ai R e a kra Wa Dé x Wa  Se  j"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0004_NDIGCZAS037272_102085163.txt",
+          "ctx": "icy znajduje się w seryi V.  - EP PRAIA EM IKAR c OET NA >, HTTP E E T A A YA  WE  wiaty w około : północno i południowo zac"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0005_NDIGCZAS033547_96622589.txt",
+          "ctx": "m po  Łańcut 1845 roku. Jan Nepomucen Deszkiewicz.  OWEN TZ HTTP E PYTASZ PROTONY = w  Redaktor TOMASZ KULCZYCKI. "
+        }
+      ]
+    }
+  },
+  "ocr_suspicion": {
+    "documents_sampled_per_source": 400,
+    "ia": {
+      "documents": 400,
+      "words": 4559783,
+      "suspicious": 85383,
+      "rate": 0.018725233196404303,
+      "by_reason": {
+        "symbol": 0.013585514924723392,
+        "midcaps": 0.003336342979479506,
+        "digit_mix": 0.0019139068679364785,
+        "no_vowel": 0.00032106791046854644
+      },
+      "median_doc_rate": 0.016288832913518052,
+      "p90_doc_rate": 0.032114544572075715,
+      "max_doc_rate": 0.07316239316239316
+    },
+    "wl": {
+      "documents": 400,
+      "words": 3929563,
+      "suspicious": 8514,
+      "rate": 0.0021666531367482847,
+      "by_reason": {
+        "symbol": 0.0014569050044496042,
+        "midcaps": 0.0004471235096625248,
+        "no_vowel": 0.00026313358508312505,
+        "digit_mix": 4.326180799238999e-06
+      },
+      "median_doc_rate": 0.0,
+      "p90_doc_rate": 0.006339796632497633,
+      "max_doc_rate": 0.6578947368421053
+    }
+  },
+  "duplication": {
+    "status": "pending",
+    "note": "measured by the dedup step for this build; the final pass should reference its report"
+  }
+}

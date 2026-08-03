@@ -1,6 +1,6 @@
 """Freeze a corpus build: record the consumed file list, or verify a copy against it.
 
-The v1 freeze did not write down which files it consumed, and the provenance ledger had
+The 5.40B build's freeze did not write down which files it consumed, and the provenance ledger had
 to be reconstructed afterwards from mtimes against the tokenization log — the paper's
 limitations section calls that out and prescribes this script: at freeze time, write the
 authoritative manifest (relative path, byte size and SHA-256 of every document); from
@@ -10,7 +10,7 @@ years later — is checked against the manifest, not against hope.
 Generate (run where the corpus lives, e.g. the crawler VPS):
 
     python scripts/corpus_freeze.py generate --corpus ~/wieszcz-xix/data/clean \
-        --out ~/wieszcz-xix/data/freeze_v2_manifest.sha256
+        --out ~/wieszcz-xix/data/freeze_2026-08-03_manifest.sha256
 
 Verify (run on any copy; exits non-zero on any mismatch):
 

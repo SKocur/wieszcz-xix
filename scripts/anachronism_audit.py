@@ -32,8 +32,6 @@ import json
 import re
 from pathlib import Path
 
-import pyarrow.parquet as pq
-
 REPO = Path(__file__).resolve().parent.parent
 
 # substring match on lowercased text, so Polish inflection is covered by the stem
@@ -46,6 +44,8 @@ YEAR_CTX = re.compile(r"(?:\b(?:r\.|roku|rok|w\s+r\.)\s{1,2}(19[2-9]\d|20\d\d)(?
 
 
 def main() -> None:
+    import pyarrow.parquet as pq
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(REPO.parent / "dataset/wieszcz-xix-corpus/data"),
                     help="directory of train-*.parquet shards")
