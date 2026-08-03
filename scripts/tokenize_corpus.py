@@ -161,7 +161,7 @@ def main() -> None:
         "batch_tokens": BATCH_TOKENS,
         "epochs": EPOCHS,
         "train_steps_exact": round(steps, 2),
-        "train_steps": int(round(steps)),
+        "train_steps": -(-train_info["tokens"] * EPOCHS // BATCH_TOKENS),
     }
     out = REPO / f"metrics/tokenize_{args.freeze_date}.json"
     out.write_text(json.dumps(report, ensure_ascii=False, indent=1) + "\n",
