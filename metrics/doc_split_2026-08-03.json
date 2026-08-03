@@ -5,8 +5,8 @@
   "val_frac": 0.01,
   "corpus_dir": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
   "exclusions": "metrics/exclusions_2026-08-03.json",
-  "git_commit": "4d79bbb",
-  "timestamp_utc": "2026-08-03T15:38:31+00:00",
+  "script_sha256": "4ae09e477f0770e5",
+  "timestamp_utc": "2026-08-03T16:13:01+00:00",
   "host": "MacBook-Pro-Szymon.local"
  },
  "documents_total": 298102,

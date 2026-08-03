@@ -41,5 +41,5 @@ wandb/
 .idea/
 .vscode/
 # Sweep resume log; the summary JSON is the versioned record
-metrics/ia_collection_sweep.jsonl
+metrics/ia_collection_sweep*.jsonl
 .venv/

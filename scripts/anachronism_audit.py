@@ -62,11 +62,11 @@ from __future__ import annotations
 
 import argparse
 import glob
+import hashlib
 import json
 import multiprocessing as mp
 import re
 import socket
-import subprocess
 import time
 from collections import Counter
 from datetime import datetime, timezone
@@ -241,18 +241,14 @@ def main() -> None:
                  for t in (0.5, 0.8, 0.9)}
     fname_docs = sum(1 for h in flagged.values() if "fname_years" in h)
 
-    try:
-        git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO,
-                             capture_output=True, text=True).stdout.strip()
-    except OSError:
-        git = None
+    script_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()[:16]
 
     report = {
         "meta": {
             "script": "scripts/anachronism_audit.py",
             "mode": "txt-dir" if args.txt_dir else "parquet",
             "source": args.txt_dir or args.data,
-            "git_commit": git,
+            "script_sha256": script_sha,
             "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "host": socket.gethostname(),
             "elapsed_seconds": round(time.time() - t0, 1),

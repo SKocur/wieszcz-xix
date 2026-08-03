@@ -18,10 +18,10 @@ from __future__ import annotations
 import argparse
 import csv
 import gzip
+import hashlib
 import json
 import random
 import socket
-import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -65,11 +65,7 @@ def main() -> None:
     val_set = set(val)
     train = [f for f in kept if f not in val_set]
 
-    try:
-        git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO,
-                             capture_output=True, text=True).stdout.strip()
-    except OSError:
-        git = None
+    script_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()[:16]
 
     report = {
         "meta": {
@@ -77,7 +73,7 @@ def main() -> None:
             "seed": SEED, "val_frac": args.val_frac,
             "corpus_dir": str(args.clean),
             "exclusions": args.exclusions,
-            "git_commit": git,
+            "script_sha256": script_sha,
             "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "host": socket.gethostname(),
         },

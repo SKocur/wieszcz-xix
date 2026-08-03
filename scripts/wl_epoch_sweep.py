@@ -19,9 +19,9 @@ hand-verified WL list from the first release audit, which caught those by conten
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import socket
-import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -72,11 +72,7 @@ def main() -> None:
     for e in epochs.values():
         counts[e or "(none)"] = counts.get(e or "(none)", 0) + 1
 
-    try:
-        git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO,
-                             capture_output=True, text=True).stdout.strip()
-    except OSError:
-        git = None
+    script_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()[:16]
 
     out = REPO / args.out
     out.write_text(json.dumps({
@@ -84,7 +80,7 @@ def main() -> None:
             "script": "scripts/wl_epoch_sweep.py",
             "api": API,
             "post1918_epochs": sorted(POST1918),
-            "git_commit": git,
+            "script_sha256": script_sha,
             "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "host": socket.gethostname(),
         },

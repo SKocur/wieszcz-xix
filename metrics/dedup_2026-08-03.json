@@ -2,10 +2,10 @@
  "meta": {
   "script": "scripts/dedup_corpus.py",
   "corpus_dir": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
-  "git_commit": "42f3460",
-  "timestamp_utc": "2026-08-03T15:21:22+00:00",
+  "script_sha256": "e4494ffa8ab21c0e",
+  "timestamp_utc": "2026-08-03T16:12:55+00:00",
   "host": "MacBook-Pro-Szymon.local",
-  "elapsed_seconds": 238.2,
+  "elapsed_seconds": 215.6,
   "perms": 64,
   "shingle_words": 5,
   "lsh_bands": 8,

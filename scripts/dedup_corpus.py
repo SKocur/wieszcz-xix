@@ -25,7 +25,6 @@ import hashlib
 import json
 import multiprocessing as mp
 import socket
-import subprocess
 import time
 import zlib
 from collections import defaultdict
@@ -200,17 +199,13 @@ def main() -> None:
                 dropped_bytes += nbytes[i]
         out_clusters.append({"kind": kind, "keep": names[keep], "members": members})
 
-    try:
-        git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO,
-                             capture_output=True, text=True).stdout.strip()
-    except OSError:
-        git = None
+    script_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()[:16]
 
     report = {
         "meta": {
             "script": "scripts/dedup_corpus.py",
             "corpus_dir": str(args.clean),
-            "git_commit": git,
+            "script_sha256": script_sha,
             "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "host": socket.gethostname(),
             "elapsed_seconds": round(time.time() - t0, 1),

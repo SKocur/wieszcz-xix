@@ -644,16 +644,6 @@
    "orto_share": 0.032,
    "reason": "date phrases with period orthography — OCR-misread old dates?"
   },
-  "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1916_165": {
-   "ctx_years": 3,
-   "orto_share": 0.041,
-   "reason": "date phrases with period orthography — OCR-misread old dates?"
-  },
-  "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1916_200": {
-   "ctx_years": 4,
-   "orto_share": 0.044,
-   "reason": "date phrases with period orthography — OCR-misread old dates?"
-  },
   "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_156_PP": {
    "ctx_years": 4,
    "orto_share": 0.086,
@@ -662,6 +652,16 @@
   "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_443_PP": {
    "ctx_years": 3,
    "orto_share": 0.056,
+   "reason": "date phrases with period orthography — OCR-misread old dates?"
+  },
+  "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1916_165": {
+   "ctx_years": 3,
+   "orto_share": 0.041,
+   "reason": "date phrases with period orthography — OCR-misread old dates?"
+  },
+  "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1916_200": {
+   "ctx_years": 4,
+   "orto_share": 0.044,
    "reason": "date phrases with period orthography — OCR-misread old dates?"
   },
   "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1917_009": {
@@ -939,11 +939,6 @@
    "orto_share": 0.01,
    "reason": "date phrases with period orthography — OCR-misread old dates?"
   },
-  "ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1892_100": {
-   "ctx_years": 3,
-   "orto_share": 0.187,
-   "reason": "date phrases with period orthography — OCR-misread old dates?"
-  },
   "ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1899_202": {
    "ctx_years": 3,
    "orto_share": 0.03,
@@ -952,6 +947,11 @@
   "ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1902_084": {
    "ctx_years": 3,
    "orto_share": 0.037,
+   "reason": "date phrases with period orthography — OCR-misread old dates?"
+  },
+  "ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1892_100": {
+   "ctx_years": 3,
+   "orto_share": 0.187,
    "reason": "date phrases with period orthography — OCR-misread old dates?"
   },
   "ia_jbc.bj.uj.edu.pl.NDIGCZAS017572_1910_001": {

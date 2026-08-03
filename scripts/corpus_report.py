@@ -27,13 +27,13 @@ from __future__ import annotations
 import argparse
 import csv
 import gzip
+import hashlib
 import io
 import json
 import multiprocessing as mp
 import platform
 import re
 import socket
-import subprocess
 import sys
 import time
 from collections import Counter
@@ -298,11 +298,7 @@ def main() -> None:
              "share_bytes": round(b / total["bytes"], 6)}
         for up, b in total["per_uploader"].most_common()}
 
-    try:
-        git = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO,
-                             capture_output=True, text=True).stdout.strip()
-    except OSError:
-        git = None
+    script_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()[:16]
 
     report = {
         "meta": {
@@ -310,7 +306,7 @@ def main() -> None:
             "label": args.label,
             "freeze_date": args.freeze_date,
             "corpus_dir": str(args.clean),
-            "git_commit": git,
+            "script_sha256": script_sha,
             "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "host": socket.gethostname(),
             "python": platform.python_version(),

@@ -4,8 +4,8 @@
     "label": "raw",
     "freeze_date": "2026-08-03",
     "corpus_dir": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/clean",
-    "git_commit": "bee7447",
-    "timestamp_utc": "2026-08-03T12:58:57+00:00",
+    "script_sha256": "db312358f40ee8f2",
+    "timestamp_utc": "2026-08-03T16:00:00+00:00",
     "host": "MacBook-Pro-Szymon.local",
     "python": "3.14.0",
     "args": {
@@ -17,7 +17,7 @@
       "limit": 0
     },
     "bytes_per_token_calibration": 3.38,
-    "elapsed_seconds": 595.2
+    "elapsed_seconds": 752.1
   },
   "counts": {
     "documents": 298102,
@@ -235,14 +235,6 @@
         "docs": 73,
         "occurrences": 173
       },
-      "radiow": {
-        "docs": 716,
-        "occurrences": 1088
-      },
-      "radjo": {
-        "docs": 427,
-        "occurrences": 715
-      },
       "telefon komórk": {
         "docs": 0,
         "occurrences": 0
@@ -258,6 +250,54 @@
       "http": {
         "docs": 4169,
         "occurrences": 279184
+      },
+      "hitler": {
+        "docs": 331,
+        "occurrences": 1371
+      },
+      "gestapo": {
+        "docs": 82,
+        "occurrences": 193
+      },
+      "nkwd": {
+        "docs": 60,
+        "occurrences": 82
+      },
+      "kołchoz": {
+        "docs": 64,
+        "occurrences": 193
+      },
+      "kolchoz": {
+        "docs": 1,
+        "occurrences": 2
+      },
+      "faszyzm": {
+        "docs": 72,
+        "occurrences": 140
+      },
+      "faszyst": {
+        "docs": 103,
+        "occurrences": 236
+      },
+      "międzywojenn": {
+        "docs": 32,
+        "occurrences": 47
+      },
+      "miedzywojenn": {
+        "docs": 1,
+        "occurrences": 1
+      },
+      "copyright": {
+        "docs": 641,
+        "occurrences": 772
+      },
+      "wszelkie prawa zastrze": {
+        "docs": 248,
+        "occurrences": 257
+      },
+      "mikrofilm": {
+        "docs": 7,
+        "occurrences": 17
       }
     },
     "period_control": {
@@ -280,6 +320,34 @@
       "samochód": {
         "docs": 3493,
         "occurrences": 5787
+      },
+      "samolot": {
+        "docs": 4814,
+        "occurrences": 10966
+      },
+      "lotnisk": {
+        "docs": 730,
+        "occurrences": 1158
+      },
+      "czołg": {
+        "docs": 7371,
+        "occurrences": 11356
+      },
+      "bolszewi": {
+        "docs": 4361,
+        "occurrences": 19674
+      },
+      "sowiet": {
+        "docs": 4310,
+        "occurrences": 9368
+      },
+      "radjo": {
+        "docs": 427,
+        "occurrences": 715
+      },
+      "radiow": {
+        "docs": 716,
+        "occurrences": 1088
       }
     },
     "docs_with_ctx_years": 8690,
@@ -335,12 +403,12 @@
           "ctx": " wyrazy serdecznej wdzięczności.  ive  igitize  D  d by the Internet Arch  Is/1A41545307  org/detai  Ive  /larch  https  r  rei "
         },
         {
-          "doc": "ia_jbc.bj.uj.edu.pl.0015_NDIGCZAS026470_81004138.txt",
-          "ctx": " na wojsko i na województwa czyli Hercules furęns, chcąc ad internetionem delere nomen zgromadzonych ztak wielu województw civiu"
-        },
-        {
           "doc": "ia_jbc.bj.uj.edu.pl.0026_NDIGCZAS035218_113227396.txt",
           "ctx": " śmiesznych  LACJi wyborczych i humorystycznych kombinacyi Winternet i d ZSB Ká haty: ? ak przed jedenastu laty, stóimy wobec dy"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0015_NDIGCZAS026470_81004138.txt",
+          "ctx": " na wojsko i na województwa czyli Hercules furęns, chcąc ad internetionem delere nomen zgromadzonych ztak wielu województw civiu"
         }
       ],
       "smartfon": [],
@@ -380,42 +448,6 @@
           "ctx": "wygodny w kolorze brgzówym 1 czarnym.  |  Największa słacja telewizyjna na świecie  W tych dniach na Wieży Eiffel w Paryżu zain"
         }
       ],
-      "radiow": [
-        {
-          "doc": "ia_bc.wbp.lodz.pl.Dziennik_Lodzki_1888_nr144a_6352.txt",
-          "ctx": "E po  larbi Borkowskiego, nabytej przez zarząd | cj jęe, 2% radiowo t Gdziały asanla la | grożąca wieczorem, która jednakże po"
-        },
-        {
-          "doc": "ia_bc.wbp.lodz.pl.G_L_1915_10_27_nr284_Wyd_wieczorowe_2742.txt",
-          "ctx": "azję zetknięcia się z Gużą gromadą niemieckich -nauczycieli Radiowych, a, spotkawszy się w następstwie a zozmaitymi nauczyciel"
-        },
-        {
-          "doc": "ia_bc.wbp.lodz.pl.GazetaPabianicka_1914no20a_72392.txt",
-          "ctx": "h spí  7 Sz dej ściera s S V f W Zagłębiu i w okolicach A O RADIOWE R fabryki i kopalnie francusi REJ giy RAS WY  i zlolem pot"
-        },
-        {
-          "doc": "ia_bc.wbp.lodz.pl.Nowa_Gazeta_Lodzka_1913_nr101a_50236.txt",
-          "ctx": "dzenie zamknięto przy okrzykach ahurra“,  Drawth w roi wię bradiowakiej,  POZNAN. W-sprawie sensacyjnego mor derstwa hr, Mielż"
-        }
-      ],
-      "radjo": [
-        {
-          "doc": "ia_bc.wbp.lodz.pl.G_L_1915_03_22_nr68_Wyd_wieczorowe_2383.txt",
-          "ctx": "dośnie, albowiem przywożą gazety i ustne wiadomośgi, Stacja radjotelegraficzna komunikuje  się z Krakowem, Wiedniem i z niemi"
-        },
-        {
-          "doc": "ia_bc.wbp.lodz.pl.G_L_1917_nr087_5730.txt",
-          "ctx": "umunii.  Pegłeski o pośrednictwie szwazjcarskiem,  Agencja „Radjo* donosi z Nowega Jorkis Utrzymują się tu aporczywie pos gic"
-        },
-        {
-          "doc": "ia_bc.wbp.lodz.pl.GazetaLodzka1918no183_49793.txt",
-          "ctx": ", że te doniesienia s3 Wysoko pr.esadzQr8,  Nowe połączenie radjotalegraficzne,  Pomiędzy rządem hclenderskim z jed-  nej str"
-        },
-        {
-          "doc": "ia_bc.wbp.lodz.pl.GazetaLodzka1918no189_49799.txt",
-          "ctx": "jarzma bolszewickiego.  Turcja opuszcza Maukaz.  Jak donosi radjotelegraficzna stacja z. zgodziła się ma awakuację Kau-  azi."
-        }
-      ],
       "telefon komórk": [],
       "digitized by": [
         {
@@ -449,8 +481,8 @@
           "ctx": "e wykazuje  Zbiory Tewarzystwa ubezpieczo-  MASON ORAWZICE  WWW. 139911  od 10—2ej.  OTOES Rhe D ea  BEA  miesieczne Kurs tr"
         },
         {
-          "doc": "ia_bc.wbp.lodz.pl.Rozwoj1910nr011_a_4667.txt",
-          "ctx": "mski zegarek z tego materyału z damskim  Drobne ogłoszenia. WWW. W. WCC  brem świadectwem, nauczycielki, nauczycieli, frebla"
+          "doc": "ia_bc.radom.pl.dziennik_dep-1814-29dod.txt",
+          "ctx": "ziemskich Cheucinekich dida St) | skich od wyż wymienionych WWW. Jgnacego i Katarzyny Dembinskich Małżonków: 8]  y wspomnion"
         }
       ],
       "http": [
@@ -459,16 +491,208 @@
           "ctx": "iu (czytać wygodame wti  t paps Ar Pii  tla jt = dog Łomy,  HTTP ter e  ‘avParyż, 27 września, Mw być WZA rozkaz telepyafków"
         },
         {
-          "doc": "ia_jbc.bj.uj.edu.pl.0010_NDIGCZAS040468_110460804.txt",
-          "ctx": "TE rg Deg 1 > a GP Zei m E sza GE EE BJJ EA Zw VER JUL LEHE HTTP EPO a Ten RR z PRE I Kar Let ai R e a kra Wa Dé x Wa  Se  j"
-        },
-        {
           "doc": "ia_jbc.bj.uj.edu.pl.0004_NDIGCZAS037272_102085163.txt",
           "ctx": "icy znajduje się w seryi V.  - EP PRAIA EM IKAR c OET NA >, HTTP E E T A A YA  WE  wiaty w około : północno i południowo zac"
         },
         {
           "doc": "ia_jbc.bj.uj.edu.pl.0005_NDIGCZAS033547_96622589.txt",
           "ctx": "m po  Łańcut 1845 roku. Jan Nepomucen Deszkiewicz.  OWEN TZ HTTP E PYTASZ PROTONY = w  Redaktor TOMASZ KULCZYCKI. "
+        },
+        {
+          "doc": "ia_bibliotekanauko00ossogoog.txt",
+          "ctx": ". i Pawlikowski Gwalbórt i  I  szek de Pankif Prymaa Atcylńshttp lwowski i Totocki AUred hrabia 10 'Praedrsyinirski Mikołaj "
+        }
+      ],
+      "hitler": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.NowyKurjerLodzki1914_nr107_92088.txt",
+          "ctx": "dresem: albo Moskwa Piotrowskie Wo-  W Łodzi: skład zpiecz. Hitlera „Kosmos” (ul. Piotrkowska).  Czy doprawdy?  Pani jeszcze n"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj_1902_no111a_81415.txt",
+          "ctx": " używany, z latarką acety-  pesa dla uczniów,  Składowa 31. Hitler, 665—10— 7pv Npbjekt i pomo.nik fiyzyerski potrzebny  wt do"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr345a_67511.txt",
+          "ctx": "słerjum spraw zauranieznych dla rzek ej sekretarza stanu  Sehitler  dówińdułe się, że skład Lulearskiej.  delegacji pokojowej "
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS035218_113016457.txt",
+          "ctx": "ach, wosn cer Knabe sich an dem Unterrichie gleichaltiger Sthitler bethaili-  damskich E. Billing przy ulicy Leszno Nr Z.  Pot"
+        }
+      ],
+      "gestapo": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.NowyKurjerLodzki1911nr093a_86453.txt",
+          "ctx": " ZŁ KE E SI BARAN ipe | AS E A eN a Boży SIĘ A ZO EEG CZY © GESTAPO DAR Pó poż s ks EyA i  długoletni prokurent Domu Bankowego "
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0016_NDIGCZAS018617_72155930.txt",
+          "ctx": "< ty I tow. Bromboszez, po przebyciu kilku miesięcy w kaźni Gestapo na Monteluppich w Krakowie, zostaje zwolniony.  Przystępuje"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0256_NDIGCZAS018617_72137213.txt",
+          "ctx": "pól najgorsze hyło pole | znaczone dla nowoprzybyłych ofiar Gestapo.  Na polu trzecim, jako polu wyniszczenia,  Mimochodem Varc"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002004_08_2.txt",
+          "ctx": "a zwroty kosztów załadowania — 5.567 „ grzywny pieniężna od gestapo => 408 n Sprzedane druki . - 158  __.Z odsetek od kredytów "
+        }
+      ],
+      "nkwd": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj1900nr79_3734.txt",
+          "ctx": "— Lewin * z Uzdiejska.  Baa  FBUŁYWRRNNYDDUNERDENNDORYRNYRNRNKWDRNUCNY  J. olski  Poleca na nadchodzące święta:  Wyborowe od"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0007_NDIGCZAS028740_82315371.txt",
+          "ctx": "odują, są główną przyczyną że teń sposób dziś jeszcze, stosunkwd istniejących cukrowni, mało u nas jest upowszechniony, co t"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0043_NDIGCZAS046690_114094810.txt",
+          "ctx": "ickiego, -cieszy się, że Amerykanie obejma za-  WKU UMA [Il NKWD  Z drugiej strony jeźlibyśmy obrali posłów do Kongresu demo"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0120_NDIGCZAS035218_98081026.txt",
+          "ctx": "ęciliśmy temu artykułowi szczególniejszą uwagę, i wyrabiamy NKWDŁO Glicerynowe, które pod każdym względem można nązwać dosko"
+        }
+      ],
+      "kołchoz": [
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS018617_72155927.txt",
+          "ctx": "kuje tam pełnię obywatelstwa,  spółdzielni (jeśli pominiemy kołchozy, które jednak mają znamiona spółdzielczości wy* twórców ro"
+        },
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_001_250218.txt",
+          "ctx": "zień, lagrów, | *raunicji i granatów. W pogotowiu znajdują  kołchozów i obozów koncentracyjnych, przyznać sobie majątki i posia"
+        },
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_004_250221.txt",
+          "ctx": "nia indywidualnej gospodarki prywatnej na rzecz sowieckiego kołchozu.  Tym się też tłumaczy zlikwidowanie Instytutu Naukowego G"
+        },
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_007_250222.txt",
+          "ctx": "okuczliwie odczuwać. `  Zmuszanie chłopów do wstępowania do kołchozó  w  indywidualne domiary podatkowe, wysokie stawki przymus"
+        }
+      ],
+      "kolchoz": [
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_067_250268.txt",
+          "ctx": "ie nawet korzystać z protek cji rządowej. Ale to nie będzie kolchoz moskiewski, do którego się zmuszą”. podkreślić, że opinia t"
+        }
+      ],
+      "faszyzm": [
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0008_NDIGCZAS033909_99240602.txt",
+          "ctx": "ała kryzys, pod jej skrzydłami zrodził się nowotwór, zwany „faszyzmem“, rozszerzający się we Włoszech, będąc bezpośrednim powod"
+        },
+        {
+          "doc": "ia_dbc.wroc.pl.rkps_13153_1.txt",
+          "ctx": "wu na nie - zamierzam opanować rzędy  - wprowadzić w Polsce Faszyzm, jeżeli, nie wyrażną wproat ayitaturg równie  | Joen się zu"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS018617_72155927.txt",
+          "ctx": "siał w Europie uciec się do ostatecznego Środka ratunku, do faszyzmu ! do woiny. W ten sposób swe bankruc\"  a Z w R O ONA nn nw"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0253_NDIGCZAS034808_95631767.txt",
+          "ctx": "e orga- 3  nizując „komitet obrony narodonie organizowanie „faszyzmu“, jakby mu to chętaie impuitować  łagodzenie sporów partyj"
+        }
+      ],
+      "faszyst": [
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0008_NDIGCZAS033909_99240602.txt",
+          "ctx": "Król rozprawił się z obłudną taktyką, stosowaną w państwach faszystowskich i Rosji Sowieckiej.  » +.. Socjaliści krzyczeli, że "
+        },
+        {
+          "doc": "ia_dlibra.kul.pl.27049_V-8760_Rola--R--11--nr-24--.txt",
+          "ctx": "ujących strzelców litewskich, to jest organizację młodzieży faszystowskiej. Na ulicach Kowna widać było liczne furmanki, na któ"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS018617_72155927.txt",
+          "ctx": "  m M M M a  RZĄD LONDYNSKI  tadykalnych nastrojów w Labour faszystowskiej Hiszpanii itp.  wsbółpraca 4 współżycie nat dów, a w"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0016_NDIGCZAS018617_72155930.txt",
+          "ctx": "ie przez narody demo kratyczne stosunków dyplomatycznych `z faszystowskim rządem w Hiszpanii.  Parę miesięcy temu nasz Miski, z"
+        }
+      ],
+      "międzywojenn": [
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS018617_72155927.txt",
+          "ctx": "rcze, polityczne i moralne kapitalizmu. Chroniczny kryzys w międzywojennym czasie, nędza niemal wszystkich wskutek nadmiaru niemal w"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0016_NDIGCZAS018617_72155930.txt",
+          "ctx": "y atoli ustępuje przed konkretną rzeczywisłością.  W latach międzywojennych walkę tę było prowadzić trudniej. Spójrzmy na  Łodzi soc"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS050071_1918_007.txt",
+          "ctx": "ie, będzie gra wojenna d aadanża taktyczne.  Aby w okresach międzywojennych, które mogą być dość długie, jak tego mieliśmy przykład "
+        },
+        {
+          "doc": "ia_karafkalafontain0000wank.txt",
+          "ctx": "e ma jego nazwiska w opasłym tomie Prozaicy dwudziestolecia międzywojennego pod redakcją Bolesława Farona (Wiedza Powszechna, 1972),"
+        }
+      ],
+      "miedzywojenn": [
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_199_250449.txt",
+          "ctx": "ądy w Europie zachodniej. My zaś: dobrze pamiętamy z czasów miedzywojennych, co to znaczy zależność gospodarcza i polityczna od moca"
+        }
+      ],
+      "copyright": [
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Taniec_Milosci_syg198727KZ_zmniejszony_45724.txt",
+          "ctx": "ASKI  LWÓW . WARSZAWA . POZNAŃ  WSZELKIE PRAWA ZASTRZEZONE. COPYRIGHT BY WYDAWNICTWO »KULTURA I SZTUKA« LWÓW (POLAND)  TANIEC MIŁ"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Titanic_St_Lempicki_syg3075CDD_31778.txt",
+          "ctx": "ra Butt podaje panna Marya Young, która była jedną z osta-  Copyright Harris & Ewing. s MAJ. ARCHIBALD BUTT Specyalny wysłannik p"
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0004_NDIGCZAS046690_114094437.txt",
+          "ctx": "h miast odpowiadamy natychmiast FQ2—%  CAVEATS, TRADE MARKS COPYRIGHTS.  CAN I OBTAIN Te For a  4 PATEN mpt answer and an honest "
+        },
+        {
+          "doc": "ia_jbc.bj.uj.edu.pl.0005_NDIGCZAS046690_114094439.txt",
+          "ctx": "EJ (Mr.20— 9.) j  f dogoc zońci |=„=\"\"RR WH, A  GAVEATS, TR COPYRIGHTS.  IDE MARKS  tions strictly confidential. + A Handbook of "
+        }
+      ],
+      "wszelkie prawa zastrze": [
+        {
+          "doc": "ia_bc.radom.pl.kuchner_tajemnica_zycia.txt",
+          "ctx": "E O AAA POLSKI INSTYTUT WYDAWNICZY W KATOWICACH  ————L—L——  Wszelkie prawa zastrzeżone.  s — po  SPIS RZECZY.  Strona AWK 6, bo PES ORONNENEE "
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj_1914_nr130_9998.txt",
+          "ctx": "AU A REETTA ZE Yin PASP pt A LN mappe, a WET  DYD  E e sę» (Wszelkie prawa zastrzeżone), i o ros (Ciąg dalszy — patrz W129)  x JUż zbierały si"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Rozwoj_1914_nr141_10009.txt",
+          "ctx": "ARTUR GRUSZECKI,  KLEJNOT KORONY POLSKIEJ,  sdi wielicka.  (Wszelkie prawa zastrzeżone).  | i— Jeśli podżupek skręci kark tej sprawie... to bę"
+        },
+        {
+          "doc": "ia_bc.wbp.lodz.pl.Taniec_Milosci_syg198727KZ_zmniejszony_45724.txt",
+          "ctx": "YSIĄCA PRZEŁOŻYŁ MARJAN ZBARASKI  LWÓW . WARSZAWA . POZNAŃ  WSZELKIE PRAWA ZASTRZEZONE. COPYRIGHT BY WYDAWNICTWO »KULTURA I SZTUKA« LWÓW (POLA"
+        }
+      ],
+      "mikrofilm": [
+        {
+          "doc": "ia_karafkalafontain0000wank.txt",
+          "ctx": "w uniwersalizm. Z pomocą spieszą już nowe postacie książki (mikrofilm, mikro-  'fiszka), przepływ informacji w postaci odbitki or"
+        },
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_045_250244.txt",
+          "ctx": "cjalne aparaty fotograficzne mniej  sze od pudełka zapałek, mikrofilmy ukryte w |maszynce do golenia, fałszywe dokumenty  „Gorzel"
+        },
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_169_250413.txt",
+          "ctx": "4 451 a a aa  e w m ŘŮŘ  pożarów bibliotek Wynaleziono więc mikrofilm, które-  go celem jest spreparowanie słowa pi-| pożarem. Le"
+        },
+        {
+          "doc": "ia_kpbc.umk.pl.ArchEmig_POPC_C42_04_nr_188_250438.txt",
+          "ctx": "wiadu amerykańskiego w| p. Van Zeeland, minister  zawarte w mikrofilmach ukrytych w papierosach oraz pieniądze, aparaty fotografi"
         }
       ]
     }
