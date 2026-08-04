@@ -1,0 +1,33 @@
+{
+ "meta": {
+  "script": "scripts/entropy_baseline.py",
+  "train": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/tokens_frozen_6.69B.bin",
+  "val": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/data/val_2026-08-03.bin",
+  "vocab": 8000,
+  "script_sha256": "7bd474c192adac85",
+  "timestamp_utc": "2026-08-04T09:04:55+00:00",
+  "host": "MacBook-Pro-Szymon.local",
+  "elapsed_seconds": 236.0
+ },
+ "train_tokens": 6689593236,
+ "unigram_entropy_nats": 7.3927,
+ "bigram_conditional_entropy_nats": 5.319,
+ "val_tokens": 56363707,
+ "val_ce_under_train_unigram_nats": 7.3777,
+ "val_bytes_per_token": 3.3557,
+ "xz_val": {
+  "ia": {
+   "documents": 2744,
+   "bytes": 186871161,
+   "xz_bytes": 56914688,
+   "bits_per_byte": 2.4365
+  },
+  "wl": {
+   "documents": 20,
+   "bytes": 2267427,
+   "xz_bytes": 699936,
+   "bits_per_byte": 2.4695
+  }
+ },
+ "xz_val_nats_per_token": 5.6682
+}
