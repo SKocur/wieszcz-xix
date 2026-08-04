@@ -176,6 +176,25 @@ def cmd_put(args) -> None:
     print(f"uploaded {args.key} ({size:,} bytes, size verified)")
 
 
+def cmd_rm(args) -> None:
+    s3 = client()
+    if not args.prefix:
+        s3.delete_object(Bucket=VOLUME_ID, Key=args.key)
+        print(f"deleted {args.key}")
+        return
+    if not args.yes:
+        sys.exit("--prefix deletes everything under the prefix; add --yes to confirm")
+    paginator = s3.get_paginator("list_objects_v2")
+    count = freed = 0
+    for page in paginator.paginate(Bucket=VOLUME_ID, Prefix=args.key):
+        for obj in page.get("Contents", []):
+            s3.delete_object(Bucket=VOLUME_ID, Key=obj["Key"])
+            count += 1
+            freed += obj["Size"]
+            print(f"\r  deleted {count} objects, {human(freed)}", end="", flush=True)
+    print(f"\ndeleted {count} objects under {args.key} ({human(freed)})")
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -202,6 +221,14 @@ def main() -> None:
     p_put.add_argument("src")
     p_put.add_argument("key")
     p_put.set_defaults(func=cmd_put)
+
+    p_rm = sub.add_parser("rm", help="delete one key, or a whole prefix with --prefix")
+    p_rm.add_argument("key")
+    p_rm.add_argument("--prefix", action="store_true",
+                      help="treat the argument as a prefix and delete everything under it")
+    p_rm.add_argument("--yes", action="store_true",
+                      help="required for --prefix: confirm bulk deletion")
+    p_rm.set_defaults(func=cmd_rm)
 
     args = p.parse_args()
     args.func(args)
