@@ -16,6 +16,7 @@ layout in older notes was the 349M's and no longer exists.
     python scripts/volume_s3.py stat data/clean/tokens.bin
     python scripts/volume_s3.py get data/clean/tokens.bin out.bin --tail 108048582
     python scripts/volume_s3.py get wieszcz-xix/checkpoints/<run>/final.pt ckpt.pt
+    python scripts/volume_s3.py put data/tokens_frozen_6.69B.bin data/tokens_frozen_6.69B.bin
 
 The endpoint returns a spurious 403 now and then; the same call succeeds on a retry, so
 treat a single failure as noise rather than as a credential problem.
@@ -50,6 +51,7 @@ def load_env() -> None:
 
 def client():
     import boto3
+    from botocore.config import Config
 
     load_env()
     access = os.environ.get("RUNPOD_S3_ACCESS_KEY")
@@ -63,6 +65,7 @@ def client():
     return boto3.client(
         "s3", region_name=DATACENTER, endpoint_url=ENDPOINT,
         aws_access_key_id=access, aws_secret_access_key=secret,
+        config=Config(retries={"max_attempts": 10, "mode": "adaptive"}),
     )
 
 
@@ -137,6 +140,42 @@ def cmd_get(args) -> None:
     print(f"\nwrote {out} ({written:,} bytes)")
 
 
+def cmd_put(args) -> None:
+    """Multipart upload with a size check afterwards; the multipart ETag is not an
+    md5, so equality of byte counts is the verification the endpoint offers."""
+    from boto3.s3.transfer import TransferConfig
+
+    src = Path(args.src)
+    size = src.stat().st_size
+    s3 = client()
+    done = 0
+
+    def progress(n: int) -> None:
+        nonlocal done
+        done += n
+        print(f"\r  {human(done)} / {human(size)}", end="", flush=True)
+
+    s3.upload_file(
+        str(src), VOLUME_ID, args.key,
+        Config=TransferConfig(multipart_chunksize=32 << 20, max_concurrency=2),
+        Callback=progress,
+    )
+    print()
+    remote = None
+    for attempt in range(4):
+        try:
+            remote = s3.head_object(Bucket=VOLUME_ID, Key=args.key)["ContentLength"]
+            break
+        except Exception:  # noqa: BLE001 — the endpoint's spurious 403
+            if attempt == 3:
+                raise
+            import time
+            time.sleep(3 * (attempt + 1))
+    if remote != size:
+        sys.exit(f"size mismatch after upload: local {size:,}, remote {remote:,}")
+    print(f"uploaded {args.key} ({size:,} bytes, size verified)")
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -158,6 +197,11 @@ def main() -> None:
     p_get.add_argument("--offset", type=int, help="start byte of a range read")
     p_get.add_argument("--length", type=int, help="number of bytes to read from --offset")
     p_get.set_defaults(func=cmd_get)
+
+    p_put = sub.add_parser("put", help="upload a file (multipart)")
+    p_put.add_argument("src")
+    p_put.add_argument("key")
+    p_put.set_defaults(func=cmd_put)
 
     args = p.parse_args()
     args.func(args)
