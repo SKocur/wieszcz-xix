@@ -18,6 +18,8 @@ import argparse
 import hashlib
 import json
 import math
+import platform
+import sys
 import time
 from pathlib import Path
 
@@ -352,10 +354,16 @@ def get_device() -> str:
 
 @torch.no_grad()
 def estimate_loss(model, data, cfg, device, iters=20):
+    """Fixed, evenly spaced windows: every eval scores the same text, so the val curve
+    is comparable across steps and runs, and evaluation consumes no training RNG."""
     model.eval()
+    block, bs = cfg["block_size"], cfg["batch_size"]
+    starts = np.linspace(0, len(data) - block - 1, iters * bs).astype(np.int64)
     losses = []
-    for _ in range(iters):
-        x, y = get_batch(data, cfg, device)
+    for it in range(iters):
+        ix = starts[it * bs:(it + 1) * bs]
+        x = torch.stack([torch.from_numpy(data[i: i + block].astype(np.int64)) for i in ix]).to(device)
+        y = torch.stack([torch.from_numpy(data[i + 1: i + 1 + block].astype(np.int64)) for i in ix]).to(device)
         with torch.autocast(device_type=device, dtype=torch.bfloat16, enabled=device == "cuda"):
             _, loss = model(x, y)
         losses.append(loss.item())
@@ -413,10 +421,15 @@ def save_ckpt(path: Path, raw_model, muon, adamw, step: int, cfg: dict) -> None:
             "adamw": adamw.state_dict(),
             "step": step,
             "cfg": cfg,
+            "rng": {"torch": torch.get_rng_state(),
+                    "cuda": (torch.cuda.get_rng_state_all()
+                             if torch.cuda.is_available() else None)},
         },
         tmp,
     )
     tmp.replace(path)
+    print(f"           ckpt {path.name} @ step {step} "
+          f"sha256 {file_sha256(path)[:16]}")
 
 
 def main() -> None:
@@ -424,17 +437,39 @@ def main() -> None:
     parser.add_argument("--config", required=True)
     parser.add_argument("--resume", help="checkpoint to continue from")
     parser.add_argument("--seed", type=int, default=None, help="override cfg['seed']")
+    parser.add_argument("--data", help="training token stream (uint16 .bin)")
+    parser.add_argument("--val-data", help="validation token stream (uint16 .bin); "
+                                           "with --data, nothing is sliced off the "
+                                           "training stream")
+    parser.add_argument("--max-steps", type=int, default=None,
+                        help="override cfg['max_steps'] (the decay-branch resume "
+                             "runs a shorter schedule than the main pass)")
+    parser.add_argument("--run-suffix", default="",
+                        help="appended to the run name; a decay branch gets its own "
+                             "checkpoint dir and CSV lineage instead of appending "
+                             "to the main run's")
     args = parser.parse_args()
     cfg = json.loads(Path(args.config).read_text())
+    if args.max_steps is not None:
+        cfg["max_steps"] = args.max_steps
 
     device = get_device()
     seed = args.seed if args.seed is not None else cfg.get("seed", 1337)
     torch.manual_seed(seed)
-    data = build_token_cache()
-    n_val = max(cfg["block_size"] + 1, int(len(data) * 0.01))
-    train_data, val_data = data[:-n_val], data[-n_val:]
+    if args.data:
+        train_data = np.memmap(args.data, dtype=np.uint16, mode="r")
+        if not args.val_data:
+            raise SystemExit("--data requires --val-data: the held-out stream "
+                             "is a separate file, not a slice")
+        val_data = np.memmap(args.val_data, dtype=np.uint16, mode="r")
+        data = train_data
+    else:
+        data = build_token_cache()
+        n_val = max(cfg["block_size"] + 1, int(len(data) * 0.01))
+        train_data, val_data = data[:-n_val], data[-n_val:]
     precision = "bf16 + FlashAttention" if device == "cuda" else "fp32 (no bf16/FA kernel)"
-    print(f"Corpus: {len(data):,} tokens ({len(val_data):,} val) | device: {device} | {precision}")
+    print(f"Corpus: {len(train_data):,} train tokens ({len(val_data):,} val) | "
+          f"device: {device} | {precision}")
 
     model = GPT(cfg).to(device)
     n_params = sum(p.numel() for p in model.parameters()) / 1e6
@@ -460,6 +495,12 @@ def main() -> None:
             muon.load_state_dict(ckpt["muon"])
             adamw.load_state_dict(ckpt["adamw"])
             extra = "with optimizer state"
+            if "rng" in ckpt:
+                torch.set_rng_state(ckpt["rng"]["torch"].cpu())
+                if ckpt["rng"]["cuda"] is not None and torch.cuda.is_available():
+                    torch.cuda.set_rng_state_all(
+                        [s.cpu() for s in ckpt["rng"]["cuda"]])
+                extra += " and RNG state"
         else:
             extra = "WEIGHTS ONLY - optimizer momentum restarts, expect a brief loss bump"
         print(f"Resuming from {args.resume} at step {start_step:,} ({extra})")
@@ -470,26 +511,36 @@ def main() -> None:
             )
 
     global CKPT_DIR
-    run = run_name(args.config, bool(args.resume), seed)
+    run = run_name(args.config, bool(args.resume), seed) + args.run_suffix
     CKPT_DIR = CKPT_DIR / run          # per-run, so concurrent runs never clobber each other
     CKPT_DIR.mkdir(parents=True, exist_ok=True)
     tokens_per_step = cfg["batch_size"] * grad_accum * cfg["block_size"]
     steps_per_epoch = max(1, len(train_data) // tokens_per_step)
     ckpt_every_epoch = bool(cfg.get("ckpt_every_epoch"))
     train_log = MetricsLogger(METRICS_DIR / f"{run}_train.csv",
-                              ["step", "tokens", "elapsed_s", "loss", "grad_norm", "lr_mult"])
+                              ["step", "tokens", "elapsed_s", "unix_ts", "loss",
+                               "grad_norm", "lr_mult", "tok_s"])
     val_log = MetricsLogger(METRICS_DIR / f"{run}_val.csv",
-                            ["step", "tokens", "elapsed_s", "val_loss"])
-    # Provenance that cannot be reconstructed afterwards, including a tokens.bin fingerprint.
+                            ["step", "tokens", "elapsed_s", "unix_ts", "val_loss"])
+    # Provenance that cannot be reconstructed afterwards, including data fingerprints.
+    data_path = Path(args.data) if args.data else TOKENS_CACHE
     (METRICS_DIR / f"{run}_manifest.json").write_text(json.dumps({
         "run": run, "seed": seed, "config": args.config, "config_values": cfg,
         "n_params_millions": round(n_params, 3),
-        "corpus_tokens": int(len(data)), "val_tokens": int(len(val_data)),
-        "tokens_bin_bytes": int(TOKENS_CACHE.stat().st_size) if TOKENS_CACHE.exists() else None,
+        "train_tokens": int(len(train_data)), "val_tokens": int(len(val_data)),
+        "data": {"train": str(data_path), "train_sha256": file_sha256(data_path),
+                 "val": args.val_data,
+                 "val_sha256": file_sha256(Path(args.val_data)) if args.val_data else None},
         "tokenizer": {f: file_sha256(TOKENIZER_DIR / f) for f in ("vocab.json", "merges.txt")},
+        "train_py_sha256": file_sha256(Path(__file__)),
+        "env": {"python": sys.version.split()[0], "torch": torch.__version__,
+                "cuda": torch.version.cuda, "device": device,
+                "device_name": (torch.cuda.get_device_name(0)
+                                if device == "cuda" else platform.processor())},
         "resume": args.resume, "started_unix": time.time(),
     }, indent=2))
     t0 = time.time()
+    last_log_step, last_log_t = start_step, t0
     # Branch point for another epoch: a post-decay checkpoint is annealed into a sharp
     # minimum and resumes badly. Fixed name, so rotation never reclaims it.
     decay_start = None
@@ -518,10 +569,15 @@ def main() -> None:
         adamw.step()
 
         if step % cfg["log_every"] == 0:
+            now = time.time()
+            tok_s = (step - last_log_step) * tokens_per_step / max(1e-9, now - last_log_t)
+            last_log_step, last_log_t = step, now
             print(f"step {step:>6} | loss {loss_val:.4f} | grad_norm {grad_norm:.3f}"
-                  f" | lr x{mult:.3f}")
-            train_log.log(step=step, tokens=step * tokens_per_step, elapsed_s=f"{time.time() - t0:.1f}",
-                          loss=f"{loss_val:.4f}", grad_norm=f"{grad_norm:.3f}", lr_mult=f"{mult:.4f}")
+                  f" | lr x{mult:.3f} | {tok_s/1e3:,.0f}k tok/s")
+            train_log.log(step=step, tokens=step * tokens_per_step, elapsed_s=f"{now - t0:.1f}",
+                          unix_ts=f"{now:.1f}", loss=f"{loss_val:.4f}",
+                          grad_norm=f"{grad_norm:.3f}", lr_mult=f"{mult:.4f}",
+                          tok_s=f"{tok_s:.0f}")
         if step == start_step + 10 and device == "cuda":   # once memory has stabilized
             print(f"           VRAM: {torch.cuda.max_memory_allocated() / 1e9:.1f} GB used"
                   f" / {torch.cuda.max_memory_reserved() / 1e9:.1f} GB reserved")
@@ -529,9 +585,13 @@ def main() -> None:
             vl = estimate_loss(model, val_data, cfg, device, cfg.get("eval_iters", 20))
             print(f"           val loss {vl:.4f}")
             val_log.log(step=step, tokens=step * tokens_per_step, elapsed_s=f"{time.time() - t0:.1f}",
-                        val_loss=f"{vl:.4f}")
+                        unix_ts=f"{time.time():.1f}", val_loss=f"{vl:.4f}")
         if decay_start is not None and step == decay_start:
             save_ckpt(CKPT_DIR / "predecay.pt", raw_model, muon, adamw, step, cfg)
+        # The one-epoch branch point: the decay_start a run with a one-epoch budget
+        # would have. Fixed name for the same reason as predecay.pt.
+        if cfg.get("branch_ckpt_step") is not None and step == cfg["branch_ckpt_step"]:
+            save_ckpt(CKPT_DIR / "stable_branch.pt", raw_model, muon, adamw, step, cfg)
         if step > 0 and step % cfg["ckpt_every"] == 0:
             save_ckpt(CKPT_DIR / f"step{step}.pt", raw_model, muon, adamw, step, cfg)
             prune_ckpts(cfg.get("keep_last"), cfg.get("keep_every"))
