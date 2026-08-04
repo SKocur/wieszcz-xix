@@ -6,33 +6,33 @@
   "split": "metrics/doc_split_2026-08-03.json",
   "tokenizer": "/Users/skocur/VSCodeProjects/wieszcz/wieszcz-xix/tokenizer",
   "eot_id": 0,
-  "script_sha256": "ccd2072d95576656",
-  "timestamp_utc": "2026-08-03T21:29:23+00:00",
+  "script_sha256": "9afc50eb8b6e6846",
+  "timestamp_utc": "2026-08-04T07:09:25+00:00",
   "host": "MacBook-Pro-Szymon.local"
  },
  "train": {
-  "file": "tokens_frozen_6.68B.bin",
-  "documents": 291425,
-  "tokens": 6679992496,
-  "bytes": 13359984992,
-  "sha256": "a32c27e4632b12fa34e0a62604977779a59224d3e448c03e06152136ae44fa20",
-  "wl_colophon_lines_dropped": 927,
-  "wl_colophon_bytes_dropped": 22556,
-  "elapsed_seconds": 1124.5
+  "file": "tokens_frozen_6.69B.bin",
+  "documents": 291605,
+  "tokens": 6689593236,
+  "bytes": 13379186472,
+  "sha256": "f6567e63305ca20e35ee272871a5fdce98552ac418fe82b1a9741cf5a9f5a082",
+  "wl_colophon_lines_dropped": 929,
+  "wl_colophon_bytes_dropped": 22602,
+  "elapsed_seconds": 1315.9
  },
  "val": {
   "file": "val_2026-08-03.bin",
-  "documents": 2944,
-  "tokens": 65964447,
-  "bytes": 131928894,
-  "sha256": "4e82fc5f27c568aef8e44ee7550659bd90943c87cead579d8cb32aede445a5fb",
-  "wl_colophon_lines_dropped": 9,
-  "wl_colophon_bytes_dropped": 207,
-  "elapsed_seconds": 16.2
+  "documents": 2764,
+  "tokens": 56363707,
+  "bytes": 112727414,
+  "sha256": "e9ca748bf42d0439cf1d6267c2549414f834ec2e8b3152e002e173eba6e1c91e",
+  "wl_colophon_lines_dropped": 7,
+  "wl_colophon_bytes_dropped": 161,
+  "elapsed_seconds": 13.1
  },
  "tokens_total": 6745956943,
  "batch_tokens": 262144,
  "epochs": 2,
- "train_steps_exact": 50964.3,
- "train_steps": 50964
+ "train_steps_exact": 51037.55,
+ "train_steps": 51038
 }

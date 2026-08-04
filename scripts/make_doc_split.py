@@ -38,6 +38,11 @@ def main() -> None:
                     help="per-file byte counts from the corpus report")
     ap.add_argument("--out", default="metrics/doc_split_2026-08-03.json")
     ap.add_argument("--val-frac", type=float, default=0.01)
+    ap.add_argument("--leakage", nargs="+", default=None,
+                    help="split-leakage reports (each iteration's); validation "
+                         "documents above --max-containment in any of them "
+                         "return to the training side")
+    ap.add_argument("--max-containment", type=float, default=0.5)
     args = ap.parse_args()
 
     excluded = set(json.loads((REPO / args.exclusions)
@@ -62,6 +67,16 @@ def main() -> None:
             "bytes": sum(nbytes.get(f, 0) for f in pool),
             "val_bytes": sum(nbytes.get(f, 0) for f in pool[:n_val]),
         }
+    leaked: list[str] = []
+    if args.leakage:
+        cont: dict[str, float] = {}
+        for rep in args.leakage:
+            for d, c in json.loads((REPO / rep).read_text(encoding="utf-8"))[
+                    "containment_by_doc"].items():
+                cont[d] = max(cont.get(d, 0.0), c)
+        leaked = sorted(d for d in val
+                        if cont.get(d, 0.0) >= args.max_containment)
+        val = [d for d in val if d not in set(leaked)]
     val_set = set(val)
     train = [f for f in kept if f not in val_set]
 
@@ -81,6 +96,9 @@ def main() -> None:
         "documents_excluded": len(files) - len(kept),
         "documents_kept": len(kept),
         "per_source": per_source,
+        "leakage_filter": {"report": args.leakage,
+                           "max_containment": args.max_containment,
+                           "returned_to_train": leaked} if args.leakage else None,
         "train_documents": len(train),
         "val_documents": len(val),
         "val_bytes_share": round(
