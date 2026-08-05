@@ -285,7 +285,9 @@ pgrep -f 'nvidia-smi.*-l 60' >/dev/null 2>&1 || \
   setsid bash -c "nvidia-smi --query-gpu=timestamp,utilization.gpu,memory.used,power.draw,temperature.gpu --format=csv -l 60 >> gpu_${STEM}.csv 2>/dev/null" < /dev/null > /dev/null 2>&1 &
 # setsid: training must outlive this SSH session.
 # expandable_segments:True reclaims fragmented reserved memory; fp32 inductor buffers OOM'd without it.
-# PYTHONUNBUFFERED=1: block-buffered stdout leaves train.out empty for ages under `tail -f`.
+# PYTHONUNBUFFERED=1: block-buffered stdout leaves train.out empty for ages under 'tail -f'.
+# (No backticks inside this heredoc: the delimiter is unquoted, so a backtick pair
+# becomes a command substitution expanded on the Mac at launch time.)
 setsid bash -c "PYTHONUNBUFFERED=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True python src/train.py --config $CONFIG --seed $SEED --data $MOUNT/$DATA_BIN --val-data $MOUNT/$VAL_BIN \$RESUME > train_${STEM}.out 2>&1" < /dev/null &
 sleep 8
 echo "--- first lines of train_${STEM}.out ---"; head -20 train_${STEM}.out || true
