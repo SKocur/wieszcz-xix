@@ -117,15 +117,23 @@ def main() -> None:
     rows = list(csv.DictReader(io.StringIO(s3_text(s3, train_obj["Key"]))))
     if not rows:
         sys.exit(f"{run}_train.csv is empty")
+
+    def col(row: dict, key: str) -> float | None:
+        v = row.get(key)
+        return None if v in (None, "") else float(v)
+
     last = rows[-1]
     now = time.time()
     step = int(last["step"])
-    age_min = (now - float(last["unix_ts"])) / 60
+    # Older CSVs predate the unix_ts column; the object's mtime moves on every
+    # append, so it works as the freshness signal for any era.
+    last_ts = col(last, "unix_ts") or train_obj["LastModified"].timestamp()
+    age_min = (now - last_ts) / 60
 
     max_steps = n_params = device = started = None
     try:
         man = json.loads(s3_text(s3, f"{REPO_PREFIX}metrics/{run}_manifest.json"))
-        max_steps = man["config_values"]["max_steps"]
+        max_steps = man.get("config_values", {}).get("max_steps")
         n_params = man.get("n_params_millions")
         device = (man.get("env") or {}).get("device_name")
         started = man.get("started_unix")
@@ -141,10 +149,11 @@ def main() -> None:
     except Exception:
         pass
 
+    tkey = "unix_ts" if col(last, "unix_ts") is not None else "elapsed_s"
     k = min(20, len(rows) - 1)
     sps = 0.0
-    if k >= 1:
-        dt = float(last["unix_ts"]) - float(rows[-1 - k]["unix_ts"])
+    if k >= 1 and col(last, tkey) is not None and col(rows[-1 - k], tkey) is not None:
+        dt = col(last, tkey) - col(rows[-1 - k], tkey)
         ds = step - int(rows[-1 - k]["step"])
         sps = ds / dt if dt > 0 else 0.0
 
@@ -160,10 +169,11 @@ def main() -> None:
         print(" | ".join(meta_bits))
     prog = f" / {max_steps:,} ({step / (max_steps - 1) * 100:.1f}%)" if max_steps else ""
     print(f"step   {step:,}{prog}")
-    print(f"loss   {float(last['loss']):.4f} | grad_norm {last['grad_norm']}"
-          f" | lr x{last['lr_mult']}{val_s}")
-    print(f"speed  {float(last['tok_s']) / 1e3:,.0f}k tok/s | {sps:.2f} steps/s"
-          f" | last row {age_min:.1f} min ago")
+    print(f"loss   {float(last['loss']):.4f} | grad_norm {last.get('grad_norm', '?')}"
+          f" | lr x{last.get('lr_mult', '?')}{val_s}")
+    tok_s = col(last, "tok_s")
+    speed = f"{tok_s / 1e3:,.0f}k tok/s | " if tok_s is not None else ""
+    print(f"speed  {speed}{sps:.2f} steps/s | last row {age_min:.1f} min ago")
     if max_steps and sps > 0 and step < max_steps - 1:
         eta_s = (max_steps - 1 - step) / sps
         line = f"eta    {eta_s / 3600:.1f} h -> {local(now + eta_s)}"
