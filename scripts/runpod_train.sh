@@ -218,6 +218,7 @@ fi
 echo; echo "== syncing local code -> pod =="
 # --no-owner --no-group: MooseFS rejects chown, and plain `rsync -a` then exits 23.
 rsync -az --no-owner --no-group --exclude data --exclude .venv --exclude checkpoints --exclude '*.pt' \
+  --exclude models --exclude output --exclude .git --exclude __pycache__ --exclude metrics \
   -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p $SSH_PORT" \
   "$REPO_ROOT/" "root@$SSH_HOST:$MOUNT/wieszcz-xix/"
 
