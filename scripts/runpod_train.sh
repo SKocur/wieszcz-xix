@@ -18,13 +18,15 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DATACENTER="EU-RO-1"           # network volumes are region-locked; must match the volume
 VOLUME_NAME="wieszcz-xix"      # created by runpod_prep.sh, looked up by name below
 
-GPU_TYPE="NVIDIA GeForce RTX 5090"   # 32 GB, sm_120. Override with --gpu; see --gpus for prices.
-GPU_COUNT=1
+GPU_TYPE="NVIDIA RTX PRO 4500 Blackwell"   # 32 GB, sm_120. One card type for the whole
+GPU_COUNT=1                                # ladder; override with --gpu, prices via --gpus.
 # cu1281, not cu1290: RunPod gates a cu12.9 image off a 12.8-driver host.
 TRAIN_IMAGE="runpod/pytorch:1.1.0-cu1281-torch291-ubuntu2204"
 CONTAINER_DISK_GB=40           # CUDA image + pip + torch.compile cache
 MOUNT="/workspace"
-CONFIG="configs/wieszcz_350m.json"
+CONFIG="configs/wieszcz_47m_6b7.json"
+DATA_BIN="data/tokens_frozen_6.69B.bin"    # at the volume root, beside the repo copy
+VAL_BIN="data/val_2026-08-03.bin"
 SEED=1337                      # train.py's default; named here so it reaches the resume glob
 FORCE=0                        # launch even if another train.py is already on the pod
 
@@ -204,11 +206,19 @@ for j in $(seq 1 30); do
 done
 [ "$ssh_up" = 1 ] || die "sshd never came up"
 
+# Account-level keys only cover the machine that launched the pod; the VPS monitor
+# needs its own door for stall diagnosis (pgrep / nvidia-smi / tail train_*.out).
+if [ -n "${MONITOR_PUBKEY:-}" ]; then
+  "${SSHP[@]}" "mkdir -p /root/.ssh && grep -qF '$MONITOR_PUBKEY' /root/.ssh/authorized_keys 2>/dev/null || printf '%s\n' '$MONITOR_PUBKEY' >> /root/.ssh/authorized_keys"
+  echo "monitor pubkey authorized on the pod"
+fi
+
 # ----------------------------- 3. push local code onto the pod ---------------------
 # The volume's repo copy came from the VPS and predates local changes.
 echo; echo "== syncing local code -> pod =="
 # --no-owner --no-group: MooseFS rejects chown, and plain `rsync -a` then exits 23.
 rsync -az --no-owner --no-group --exclude data --exclude .venv --exclude checkpoints --exclude '*.pt' \
+  --exclude models --exclude output --exclude .git --exclude __pycache__ --exclude metrics \
   -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p $SSH_PORT" \
   "$REPO_ROOT/" "root@$SSH_HOST:$MOUNT/wieszcz-xix/"
 
@@ -237,8 +247,9 @@ python -c "import tokenizers, numpy, tqdm" || { echo "FATAL: deps import failed 
 echo "deps OK"
 
 # check before the GPU starts billing
-test -s data/clean/tokens.bin || { echo "FATAL: data/clean/tokens.bin missing, run prep"; exit 1; }
-echo "tokens.bin: \$(ls -lh data/clean/tokens.bin | awk '{print \$5}')"
+test -s $MOUNT/$DATA_BIN || { echo "FATAL: $MOUNT/$DATA_BIN missing"; exit 1; }
+test -s $MOUNT/$VAL_BIN  || { echo "FATAL: $MOUNT/$VAL_BIN missing"; exit 1; }
+echo "train bin: \$(ls -lh $MOUNT/$DATA_BIN | awk '{print \$5}')  val bin: \$(ls -lh $MOUNT/$VAL_BIN | awk '{print \$5}')"
 
 # Pods are reused, so a second launch would put two runs on one GPU with interleaved checkpoints.
 if pgrep -f 'src/train.py' >/dev/null 2>&1; then
@@ -268,10 +279,16 @@ if [ -n "\$LATEST" ]; then echo "resuming from \$LATEST"; RESUME="--resume \$LAT
 if [ -z "\$LATEST" ]; then RESUME=""; else RESUME="--resume \$LATEST"; fi
 
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
+# Hardware trace for the paper: utilization/VRAM/power once a minute, appended on
+# the volume so pod restarts continue the same file.
+pgrep -f 'nvidia-smi.*-l 60' >/dev/null 2>&1 || \
+  setsid bash -c "nvidia-smi --query-gpu=timestamp,utilization.gpu,memory.used,power.draw,temperature.gpu --format=csv -l 60 >> gpu_${STEM}.csv 2>/dev/null" < /dev/null > /dev/null 2>&1 &
 # setsid: training must outlive this SSH session.
 # expandable_segments:True reclaims fragmented reserved memory; fp32 inductor buffers OOM'd without it.
-# PYTHONUNBUFFERED=1: block-buffered stdout leaves train.out empty for ages under `tail -f`.
-setsid bash -c "PYTHONUNBUFFERED=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True python src/train.py --config $CONFIG --seed $SEED \$RESUME > train_${STEM}.out 2>&1" < /dev/null &
+# PYTHONUNBUFFERED=1: block-buffered stdout leaves train.out empty for ages under 'tail -f'.
+# (No backticks inside this heredoc: the delimiter is unquoted, so a backtick pair
+# becomes a command substitution expanded on the Mac at launch time.)
+setsid bash -c "PYTHONUNBUFFERED=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True python src/train.py --config $CONFIG --seed $SEED --data $MOUNT/$DATA_BIN --val-data $MOUNT/$VAL_BIN \$RESUME > train_${STEM}.out 2>&1" < /dev/null &
 sleep 8
 echo "--- first lines of train_${STEM}.out ---"; head -20 train_${STEM}.out || true
 echo "--- training PID(s) ---"; pgrep -af 'src/train.py' || true
