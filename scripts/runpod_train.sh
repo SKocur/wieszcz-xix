@@ -204,6 +204,13 @@ for j in $(seq 1 30); do
 done
 [ "$ssh_up" = 1 ] || die "sshd never came up"
 
+# Account-level keys only cover the machine that launched the pod; the VPS monitor
+# needs its own door for stall diagnosis (pgrep / nvidia-smi / tail train_*.out).
+if [ -n "${MONITOR_PUBKEY:-}" ]; then
+  "${SSHP[@]}" "mkdir -p /root/.ssh && grep -qF '$MONITOR_PUBKEY' /root/.ssh/authorized_keys 2>/dev/null || printf '%s\n' '$MONITOR_PUBKEY' >> /root/.ssh/authorized_keys"
+  echo "monitor pubkey authorized on the pod"
+fi
+
 # ----------------------------- 3. push local code onto the pod ---------------------
 # The volume's repo copy came from the VPS and predates local changes.
 echo; echo "== syncing local code -> pod =="
