@@ -1,0 +1,58 @@
+{
+  "run": "wieszcz_47m_6b7_2026-08-05_s1337",
+  "seed": 1337,
+  "config": "configs/wieszcz_47m_6b7.json",
+  "config_values": {
+    "vocab_size": 8000,
+    "block_size": 1024,
+    "n_layer": 12,
+    "n_head": 9,
+    "n_kv_head": 3,
+    "n_embd": 576,
+    "multiple_of": 64,
+    "dropout": 0.0,
+    "rope_theta": 10000,
+    "seed": 1337,
+    "batch_size": 64,
+    "grad_accum": 4,
+    "muon_lr": 0.015,
+    "lr": 0.0003,
+    "min_lr": 3e-05,
+    "warmup": 3000,
+    "max_steps": 51038,
+    "branch_ckpt_step": 22968,
+    "schedule": "wsd",
+    "decay_frac": 0.1,
+    "log_every": 20,
+    "eval_every": 250,
+    "eval_iters": 20,
+    "ckpt_every": 250,
+    "ckpt_every_epoch": true,
+    "keep_last": 4,
+    "keep_every": 5000,
+    "compile": true
+  },
+  "n_params_millions": 47.105,
+  "train_tokens": 6689593236,
+  "val_tokens": 56363707,
+  "data": {
+    "train": "/workspace/data/tokens_frozen_6.69B.bin",
+    "train_sha256": "f6567e63305ca20e35ee272871a5fdce98552ac418fe82b1a9741cf5a9f5a082",
+    "val": "/workspace/data/val_2026-08-03.bin",
+    "val_sha256": "e9ca748bf42d0439cf1d6267c2549414f834ec2e8b3152e002e173eba6e1c91e"
+  },
+  "tokenizer": {
+    "vocab.json": "3ffdbadcd361df3ef545ab7f68fd691faef052ee51803d98c170734dc4fb5508",
+    "merges.txt": "61807d4e3bdb4154af911462e6f536d902f885ed678f0d8a38bd9fd4d0f9c847"
+  },
+  "train_py_sha256": "d97b860c424578ef0d9d383b330670bdb83cfa7933938f5e16ee5856585983e4",
+  "env": {
+    "python": "3.12.13",
+    "torch": "2.9.1+cu128",
+    "cuda": "12.8",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX PRO 4500 Blackwell"
+  },
+  "resume": null,
+  "started_unix": 1785918632.843932
+}

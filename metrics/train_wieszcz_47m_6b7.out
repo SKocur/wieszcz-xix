@@ -1,0 +1,2971 @@
+Corpus: 6,689,593,236 train tokens (56,363,707 val) | device: cuda | bf16 + FlashAttention
+Model: 47.1M params | GQA 9q/3kv | Muon+AdamW
+step      0 | loss 9.1176 | grad_norm 6.748 | lr x0.000 | 0k tok/s
+           val loss 9.1188
+           VRAM: 23.3 GB used / 23.5 GB reserved
+step     20 | loss 9.0339 | grad_norm 6.201 | lr x0.007 | 120k tok/s
+step     40 | loss 8.8192 | grad_norm 5.293 | lr x0.014 | 208k tok/s
+step     60 | loss 8.5412 | grad_norm 3.887 | lr x0.020 | 207k tok/s
+step     80 | loss 8.2853 | grad_norm 2.146 | lr x0.027 | 206k tok/s
+step    100 | loss 8.0853 | grad_norm 1.176 | lr x0.034 | 206k tok/s
+step    120 | loss 7.9348 | grad_norm 1.053 | lr x0.040 | 206k tok/s
+step    140 | loss 7.7684 | grad_norm 1.326 | lr x0.047 | 205k tok/s
+step    160 | loss 7.6027 | grad_norm 1.572 | lr x0.054 | 206k tok/s
+step    180 | loss 7.4480 | grad_norm 1.718 | lr x0.060 | 206k tok/s
+step    200 | loss 7.2484 | grad_norm 2.553 | lr x0.067 | 205k tok/s
+step    220 | loss 6.9632 | grad_norm 2.337 | lr x0.074 | 205k tok/s
+step    240 | loss 6.8364 | grad_norm 2.772 | lr x0.080 | 205k tok/s
+           val loss 6.7050
+           ckpt step250.pt @ step 250 sha256 3e803ca3f0d15ffd
+step    260 | loss 6.6540 | grad_norm 2.846 | lr x0.087 | 177k tok/s
+step    280 | loss 6.4936 | grad_norm 2.628 | lr x0.094 | 205k tok/s
+step    300 | loss 6.3438 | grad_norm 2.997 | lr x0.100 | 206k tok/s
+step    320 | loss 6.2698 | grad_norm 3.495 | lr x0.107 | 206k tok/s
+step    340 | loss 6.1061 | grad_norm 3.669 | lr x0.114 | 206k tok/s
+step    360 | loss 5.9801 | grad_norm 4.530 | lr x0.120 | 206k tok/s
+step    380 | loss 5.7995 | grad_norm 4.024 | lr x0.127 | 206k tok/s
+step    400 | loss 5.6831 | grad_norm 4.661 | lr x0.134 | 205k tok/s
+step    420 | loss 5.5975 | grad_norm 4.126 | lr x0.140 | 206k tok/s
+step    440 | loss 5.4946 | grad_norm 4.333 | lr x0.147 | 205k tok/s
+step    460 | loss 5.3804 | grad_norm 4.264 | lr x0.154 | 205k tok/s
+step    480 | loss 5.3001 | grad_norm 2.849 | lr x0.160 | 205k tok/s
+step    500 | loss 5.1825 | grad_norm 3.322 | lr x0.167 | 205k tok/s
+           val loss 5.1893
+           ckpt step500.pt @ step 500 sha256 841cd9ac42378b03
+step    520 | loss 5.1415 | grad_norm 2.792 | lr x0.174 | 179k tok/s
+step    540 | loss 5.0923 | grad_norm 2.608 | lr x0.180 | 205k tok/s
+step    560 | loss 4.9629 | grad_norm 2.717 | lr x0.187 | 205k tok/s
+step    580 | loss 4.9758 | grad_norm 2.621 | lr x0.194 | 205k tok/s
+step    600 | loss 4.8717 | grad_norm 2.224 | lr x0.200 | 205k tok/s
+step    620 | loss 4.8151 | grad_norm 2.028 | lr x0.207 | 205k tok/s
+step    640 | loss 4.8430 | grad_norm 2.116 | lr x0.214 | 205k tok/s
+step    660 | loss 4.7323 | grad_norm 1.779 | lr x0.220 | 205k tok/s
+step    680 | loss 4.7487 | grad_norm 2.279 | lr x0.227 | 205k tok/s
+step    700 | loss 4.6498 | grad_norm 1.671 | lr x0.234 | 205k tok/s
+step    720 | loss 4.6490 | grad_norm 1.474 | lr x0.240 | 205k tok/s
+step    740 | loss 4.5544 | grad_norm 1.385 | lr x0.247 | 205k tok/s
+           val loss 4.5695
+           ckpt step750.pt @ step 750 sha256 c177cf1516874590
+step    760 | loss 4.5437 | grad_norm 1.349 | lr x0.254 | 177k tok/s
+step    780 | loss 4.4992 | grad_norm 1.257 | lr x0.260 | 206k tok/s
+step    800 | loss 4.4948 | grad_norm 1.371 | lr x0.267 | 206k tok/s
+step    820 | loss 4.5022 | grad_norm 1.221 | lr x0.274 | 205k tok/s
+step    840 | loss 4.4199 | grad_norm 1.322 | lr x0.280 | 206k tok/s
+step    860 | loss 4.3976 | grad_norm 1.289 | lr x0.287 | 205k tok/s
+step    880 | loss 4.3288 | grad_norm 1.145 | lr x0.294 | 206k tok/s
+step    900 | loss 4.3535 | grad_norm 1.229 | lr x0.300 | 205k tok/s
+step    920 | loss 4.3041 | grad_norm 1.043 | lr x0.307 | 205k tok/s
+step    940 | loss 4.3011 | grad_norm 0.962 | lr x0.314 | 205k tok/s
+step    960 | loss 4.2864 | grad_norm 0.916 | lr x0.320 | 205k tok/s
+step    980 | loss 4.3134 | grad_norm 0.906 | lr x0.327 | 206k tok/s
+step   1000 | loss 4.2282 | grad_norm 0.878 | lr x0.334 | 205k tok/s
+           val loss 4.2453
+           ckpt step1000.pt @ step 1000 sha256 092a319ec0d79163
+step   1020 | loss 4.2486 | grad_norm 0.883 | lr x0.340 | 177k tok/s
+step   1040 | loss 4.2113 | grad_norm 0.896 | lr x0.347 | 205k tok/s
+step   1060 | loss 4.1145 | grad_norm 0.837 | lr x0.354 | 205k tok/s
+step   1080 | loss 4.2399 | grad_norm 0.799 | lr x0.360 | 205k tok/s
+step   1100 | loss 4.1733 | grad_norm 0.770 | lr x0.367 | 206k tok/s
+step   1120 | loss 4.1221 | grad_norm 0.717 | lr x0.374 | 205k tok/s
+step   1140 | loss 4.0727 | grad_norm 0.686 | lr x0.380 | 205k tok/s
+step   1160 | loss 4.0264 | grad_norm 0.607 | lr x0.387 | 205k tok/s
+step   1180 | loss 4.1443 | grad_norm 0.731 | lr x0.394 | 205k tok/s
+step   1200 | loss 4.0291 | grad_norm 0.618 | lr x0.400 | 206k tok/s
+step   1220 | loss 4.0685 | grad_norm 0.655 | lr x0.407 | 205k tok/s
+step   1240 | loss 4.0174 | grad_norm 0.601 | lr x0.414 | 206k tok/s
+           val loss 4.0589
+           ckpt step1250.pt @ step 1250 sha256 e3ec237d3f284f67
+step   1260 | loss 4.0804 | grad_norm 0.657 | lr x0.420 | 179k tok/s
+step   1280 | loss 4.0420 | grad_norm 0.650 | lr x0.427 | 205k tok/s
+step   1300 | loss 3.9974 | grad_norm 0.652 | lr x0.434 | 205k tok/s
+step   1320 | loss 4.0439 | grad_norm 0.565 | lr x0.440 | 205k tok/s
+step   1340 | loss 4.0688 | grad_norm 0.593 | lr x0.447 | 205k tok/s
+step   1360 | loss 3.9817 | grad_norm 0.567 | lr x0.454 | 205k tok/s
+step   1380 | loss 3.9550 | grad_norm 0.494 | lr x0.460 | 205k tok/s
+step   1400 | loss 3.9347 | grad_norm 0.577 | lr x0.467 | 205k tok/s
+step   1420 | loss 3.9377 | grad_norm 0.518 | lr x0.474 | 205k tok/s
+step   1440 | loss 3.9629 | grad_norm 0.524 | lr x0.480 | 205k tok/s
+step   1460 | loss 3.8840 | grad_norm 0.525 | lr x0.487 | 205k tok/s
+step   1480 | loss 4.0053 | grad_norm 0.495 | lr x0.494 | 206k tok/s
+step   1500 | loss 3.9386 | grad_norm 0.472 | lr x0.500 | 205k tok/s
+           val loss 3.9366
+           ckpt step1500.pt @ step 1500 sha256 3479d69b0073c305
+step   1520 | loss 3.9386 | grad_norm 0.446 | lr x0.507 | 176k tok/s
+step   1540 | loss 3.9032 | grad_norm 0.444 | lr x0.514 | 205k tok/s
+step   1560 | loss 3.9366 | grad_norm 0.462 | lr x0.520 | 205k tok/s
+step   1580 | loss 3.8985 | grad_norm 0.509 | lr x0.527 | 205k tok/s
+step   1600 | loss 3.8648 | grad_norm 0.480 | lr x0.534 | 205k tok/s
+step   1620 | loss 3.9074 | grad_norm 0.479 | lr x0.540 | 205k tok/s
+step   1640 | loss 3.8715 | grad_norm 0.411 | lr x0.547 | 205k tok/s
+step   1660 | loss 3.8219 | grad_norm 0.440 | lr x0.554 | 205k tok/s
+step   1680 | loss 3.8449 | grad_norm 0.415 | lr x0.560 | 205k tok/s
+step   1700 | loss 3.8646 | grad_norm 0.395 | lr x0.567 | 205k tok/s
+step   1720 | loss 3.7940 | grad_norm 0.384 | lr x0.574 | 206k tok/s
+step   1740 | loss 3.8839 | grad_norm 0.409 | lr x0.580 | 205k tok/s
+           val loss 3.8502
+           ckpt step1750.pt @ step 1750 sha256 2fccfbdc18ba4828
+step   1760 | loss 3.8394 | grad_norm 0.391 | lr x0.587 | 176k tok/s
+step   1780 | loss 3.8680 | grad_norm 0.404 | lr x0.594 | 206k tok/s
+step   1800 | loss 3.8169 | grad_norm 0.358 | lr x0.600 | 205k tok/s
+step   1820 | loss 3.8687 | grad_norm 0.387 | lr x0.607 | 206k tok/s
+step   1840 | loss 3.7929 | grad_norm 0.375 | lr x0.614 | 205k tok/s
+step   1860 | loss 3.8333 | grad_norm 0.371 | lr x0.620 | 206k tok/s
+step   1880 | loss 3.7957 | grad_norm 0.380 | lr x0.627 | 206k tok/s
+step   1900 | loss 3.8348 | grad_norm 0.343 | lr x0.634 | 205k tok/s
+step   1920 | loss 3.7771 | grad_norm 0.379 | lr x0.640 | 205k tok/s
+step   1940 | loss 3.8678 | grad_norm 0.364 | lr x0.647 | 205k tok/s
+step   1960 | loss 3.7648 | grad_norm 0.350 | lr x0.654 | 205k tok/s
+step   1980 | loss 3.8296 | grad_norm 0.345 | lr x0.660 | 205k tok/s
+step   2000 | loss 3.8052 | grad_norm 0.348 | lr x0.667 | 205k tok/s
+           val loss 3.7826
+           ckpt step2000.pt @ step 2000 sha256 cb9280d02a9139da
+step   2020 | loss 3.7723 | grad_norm 0.357 | lr x0.674 | 176k tok/s
+step   2040 | loss 3.7999 | grad_norm 0.351 | lr x0.680 | 205k tok/s
+step   2060 | loss 3.7735 | grad_norm 0.321 | lr x0.687 | 205k tok/s
+step   2080 | loss 3.6950 | grad_norm 0.344 | lr x0.694 | 205k tok/s
+step   2100 | loss 3.7682 | grad_norm 0.339 | lr x0.700 | 206k tok/s
+step   2120 | loss 3.7182 | grad_norm 0.337 | lr x0.707 | 205k tok/s
+step   2140 | loss 3.7646 | grad_norm 0.286 | lr x0.714 | 205k tok/s
+step   2160 | loss 3.7424 | grad_norm 0.278 | lr x0.720 | 206k tok/s
+step   2180 | loss 3.7122 | grad_norm 0.311 | lr x0.727 | 205k tok/s
+step   2200 | loss 3.7224 | grad_norm 0.312 | lr x0.734 | 205k tok/s
+step   2220 | loss 3.7331 | grad_norm 0.320 | lr x0.740 | 205k tok/s
+step   2240 | loss 3.6655 | grad_norm 0.295 | lr x0.747 | 205k tok/s
+           val loss 3.7297
+           ckpt step2250.pt @ step 2250 sha256 5b41f6fa44b38321
+step   2260 | loss 3.5823 | grad_norm 0.298 | lr x0.754 | 177k tok/s
+step   2280 | loss 3.6690 | grad_norm 0.309 | lr x0.760 | 205k tok/s
+step   2300 | loss 3.7111 | grad_norm 0.318 | lr x0.767 | 205k tok/s
+step   2320 | loss 3.6956 | grad_norm 0.290 | lr x0.774 | 205k tok/s
+step   2340 | loss 3.6732 | grad_norm 0.284 | lr x0.780 | 205k tok/s
+step   2360 | loss 3.6347 | grad_norm 0.291 | lr x0.787 | 205k tok/s
+step   2380 | loss 3.6359 | grad_norm 0.258 | lr x0.794 | 205k tok/s
+step   2400 | loss 3.7096 | grad_norm 0.290 | lr x0.800 | 205k tok/s
+step   2420 | loss 3.6584 | grad_norm 0.298 | lr x0.807 | 205k tok/s
+step   2440 | loss 3.7048 | grad_norm 0.283 | lr x0.814 | 205k tok/s
+step   2460 | loss 3.6072 | grad_norm 0.268 | lr x0.820 | 205k tok/s
+step   2480 | loss 3.7251 | grad_norm 0.249 | lr x0.827 | 204k tok/s
+step   2500 | loss 3.7185 | grad_norm 0.262 | lr x0.834 | 204k tok/s
+           val loss 3.6876
+           ckpt step2500.pt @ step 2500 sha256 bbbf2dedc5fae71e
+step   2520 | loss 3.6625 | grad_norm 0.284 | lr x0.840 | 177k tok/s
+step   2540 | loss 3.6722 | grad_norm 0.293 | lr x0.847 | 204k tok/s
+step   2560 | loss 3.6494 | grad_norm 0.264 | lr x0.854 | 205k tok/s
+step   2580 | loss 3.5358 | grad_norm 0.237 | lr x0.860 | 204k tok/s
+step   2600 | loss 3.6509 | grad_norm 0.245 | lr x0.867 | 204k tok/s
+step   2620 | loss 3.6637 | grad_norm 0.250 | lr x0.874 | 204k tok/s
+step   2640 | loss 3.6849 | grad_norm 0.254 | lr x0.880 | 204k tok/s
+step   2660 | loss 3.6569 | grad_norm 0.254 | lr x0.887 | 204k tok/s
+step   2680 | loss 3.6263 | grad_norm 0.244 | lr x0.894 | 204k tok/s
+step   2700 | loss 3.6485 | grad_norm 0.245 | lr x0.900 | 204k tok/s
+step   2720 | loss 3.6289 | grad_norm 0.238 | lr x0.907 | 205k tok/s
+step   2740 | loss 3.6462 | grad_norm 0.245 | lr x0.914 | 205k tok/s
+           val loss 3.6517
+           ckpt step2750.pt @ step 2750 sha256 69b69cb1a973175b
+step   2760 | loss 3.6482 | grad_norm 0.230 | lr x0.920 | 177k tok/s
+step   2780 | loss 3.5675 | grad_norm 0.241 | lr x0.927 | 205k tok/s
+step   2800 | loss 3.6329 | grad_norm 0.247 | lr x0.934 | 205k tok/s
+step   2820 | loss 3.6948 | grad_norm 0.223 | lr x0.940 | 205k tok/s
+step   2840 | loss 3.6588 | grad_norm 0.219 | lr x0.947 | 205k tok/s
+step   2860 | loss 3.6586 | grad_norm 0.226 | lr x0.954 | 204k tok/s
+step   2880 | loss 3.6279 | grad_norm 0.233 | lr x0.960 | 205k tok/s
+step   2900 | loss 3.6135 | grad_norm 0.215 | lr x0.967 | 205k tok/s
+step   2920 | loss 3.6443 | grad_norm 0.230 | lr x0.974 | 205k tok/s
+step   2940 | loss 3.6363 | grad_norm 0.215 | lr x0.980 | 205k tok/s
+step   2960 | loss 3.6680 | grad_norm 0.221 | lr x0.987 | 205k tok/s
+step   2980 | loss 3.6406 | grad_norm 0.230 | lr x0.994 | 205k tok/s
+step   3000 | loss 3.5548 | grad_norm 0.211 | lr x1.000 | 205k tok/s
+           val loss 3.6185
+           ckpt step3000.pt @ step 3000 sha256 240b7315155eb6dc
+step   3020 | loss 3.6146 | grad_norm 0.216 | lr x1.000 | 178k tok/s
+step   3040 | loss 3.6383 | grad_norm 0.206 | lr x1.000 | 205k tok/s
+step   3060 | loss 3.5690 | grad_norm 0.235 | lr x1.000 | 205k tok/s
+step   3080 | loss 3.5914 | grad_norm 0.193 | lr x1.000 | 205k tok/s
+step   3100 | loss 3.5990 | grad_norm 0.212 | lr x1.000 | 205k tok/s
+step   3120 | loss 3.6158 | grad_norm 0.214 | lr x1.000 | 205k tok/s
+step   3140 | loss 3.5987 | grad_norm 0.215 | lr x1.000 | 205k tok/s
+step   3160 | loss 3.5878 | grad_norm 0.211 | lr x1.000 | 205k tok/s
+step   3180 | loss 3.5683 | grad_norm 0.222 | lr x1.000 | 205k tok/s
+step   3200 | loss 3.5689 | grad_norm 0.223 | lr x1.000 | 205k tok/s
+step   3220 | loss 3.5535 | grad_norm 0.186 | lr x1.000 | 205k tok/s
+step   3240 | loss 3.5283 | grad_norm 0.202 | lr x1.000 | 205k tok/s
+           val loss 3.5849
+           ckpt step3250.pt @ step 3250 sha256 4168168678c51f0f
+step   3260 | loss 3.5311 | grad_norm 0.182 | lr x1.000 | 177k tok/s
+step   3280 | loss 3.5644 | grad_norm 0.207 | lr x1.000 | 205k tok/s
+step   3300 | loss 3.5877 | grad_norm 0.175 | lr x1.000 | 205k tok/s
+step   3320 | loss 3.5446 | grad_norm 0.187 | lr x1.000 | 205k tok/s
+step   3340 | loss 3.5830 | grad_norm 0.196 | lr x1.000 | 205k tok/s
+step   3360 | loss 3.5487 | grad_norm 0.199 | lr x1.000 | 205k tok/s
+step   3380 | loss 3.5631 | grad_norm 0.187 | lr x1.000 | 205k tok/s
+step   3400 | loss 3.6357 | grad_norm 0.184 | lr x1.000 | 205k tok/s
+step   3420 | loss 3.5397 | grad_norm 0.188 | lr x1.000 | 204k tok/s
+step   3440 | loss 3.5689 | grad_norm 0.175 | lr x1.000 | 205k tok/s
+step   3460 | loss 3.5293 | grad_norm 0.194 | lr x1.000 | 205k tok/s
+step   3480 | loss 3.4588 | grad_norm 0.180 | lr x1.000 | 205k tok/s
+step   3500 | loss 3.5335 | grad_norm 0.191 | lr x1.000 | 204k tok/s
+           val loss 3.5537
+           ckpt step3500.pt @ step 3500 sha256 46ccdd29ce3af086
+step   3520 | loss 3.5028 | grad_norm 0.177 | lr x1.000 | 176k tok/s
+step   3540 | loss 3.5397 | grad_norm 0.185 | lr x1.000 | 205k tok/s
+step   3560 | loss 3.5223 | grad_norm 0.169 | lr x1.000 | 205k tok/s
+step   3580 | loss 3.5056 | grad_norm 0.176 | lr x1.000 | 205k tok/s
+step   3600 | loss 3.5897 | grad_norm 0.174 | lr x1.000 | 204k tok/s
+step   3620 | loss 3.5658 | grad_norm 0.174 | lr x1.000 | 204k tok/s
+step   3640 | loss 3.4302 | grad_norm 0.171 | lr x1.000 | 204k tok/s
+step   3660 | loss 3.5223 | grad_norm 0.165 | lr x1.000 | 204k tok/s
+step   3680 | loss 3.4854 | grad_norm 0.176 | lr x1.000 | 204k tok/s
+step   3700 | loss 3.5021 | grad_norm 0.176 | lr x1.000 | 204k tok/s
+step   3720 | loss 3.5098 | grad_norm 0.158 | lr x1.000 | 205k tok/s
+step   3740 | loss 3.5066 | grad_norm 0.168 | lr x1.000 | 204k tok/s
+           val loss 3.5290
+           ckpt step3750.pt @ step 3750 sha256 a6b1a289513f5f09
+step   3760 | loss 3.5181 | grad_norm 0.179 | lr x1.000 | 176k tok/s
+step   3780 | loss 3.4743 | grad_norm 0.171 | lr x1.000 | 204k tok/s
+step   3800 | loss 3.4814 | grad_norm 0.179 | lr x1.000 | 204k tok/s
+step   3820 | loss 3.5210 | grad_norm 0.174 | lr x1.000 | 204k tok/s
+step   3840 | loss 3.4996 | grad_norm 0.152 | lr x1.000 | 204k tok/s
+step   3860 | loss 3.4498 | grad_norm 0.172 | lr x1.000 | 205k tok/s
+step   3880 | loss 3.5027 | grad_norm 0.172 | lr x1.000 | 205k tok/s
+step   3900 | loss 3.4945 | grad_norm 0.167 | lr x1.000 | 205k tok/s
+step   3920 | loss 3.4935 | grad_norm 0.158 | lr x1.000 | 205k tok/s
+step   3940 | loss 3.5385 | grad_norm 0.168 | lr x1.000 | 205k tok/s
+step   3960 | loss 3.4863 | grad_norm 0.169 | lr x1.000 | 205k tok/s
+step   3980 | loss 3.5080 | grad_norm 0.156 | lr x1.000 | 205k tok/s
+step   4000 | loss 3.5191 | grad_norm 0.167 | lr x1.000 | 205k tok/s
+           val loss 3.5057
+           ckpt step4000.pt @ step 4000 sha256 ca3505c7f5be0436
+step   4020 | loss 3.5228 | grad_norm 0.178 | lr x1.000 | 176k tok/s
+step   4040 | loss 3.4191 | grad_norm 0.170 | lr x1.000 | 205k tok/s
+step   4060 | loss 3.5128 | grad_norm 0.170 | lr x1.000 | 205k tok/s
+step   4080 | loss 3.4839 | grad_norm 0.157 | lr x1.000 | 205k tok/s
+step   4100 | loss 3.4963 | grad_norm 0.160 | lr x1.000 | 205k tok/s
+step   4120 | loss 3.4333 | grad_norm 0.152 | lr x1.000 | 205k tok/s
+step   4140 | loss 3.4631 | grad_norm 0.168 | lr x1.000 | 205k tok/s
+step   4160 | loss 3.4485 | grad_norm 0.149 | lr x1.000 | 205k tok/s
+step   4180 | loss 3.4878 | grad_norm 0.166 | lr x1.000 | 205k tok/s
+step   4200 | loss 3.5208 | grad_norm 0.156 | lr x1.000 | 205k tok/s
+step   4220 | loss 3.4352 | grad_norm 0.162 | lr x1.000 | 205k tok/s
+step   4240 | loss 3.4259 | grad_norm 0.157 | lr x1.000 | 205k tok/s
+           val loss 3.4884
+           ckpt step4250.pt @ step 4250 sha256 277ff7216c2e592d
+step   4260 | loss 3.4631 | grad_norm 0.141 | lr x1.000 | 175k tok/s
+step   4280 | loss 3.4374 | grad_norm 0.154 | lr x1.000 | 205k tok/s
+step   4300 | loss 3.4078 | grad_norm 0.160 | lr x1.000 | 204k tok/s
+step   4320 | loss 3.3982 | grad_norm 0.157 | lr x1.000 | 204k tok/s
+step   4340 | loss 3.4678 | grad_norm 0.156 | lr x1.000 | 204k tok/s
+step   4360 | loss 3.5045 | grad_norm 0.177 | lr x1.000 | 205k tok/s
+step   4380 | loss 3.5152 | grad_norm 0.149 | lr x1.000 | 205k tok/s
+step   4400 | loss 3.4347 | grad_norm 0.154 | lr x1.000 | 204k tok/s
+step   4420 | loss 3.4860 | grad_norm 0.153 | lr x1.000 | 204k tok/s
+step   4440 | loss 3.4368 | grad_norm 0.173 | lr x1.000 | 205k tok/s
+step   4460 | loss 3.4403 | grad_norm 0.158 | lr x1.000 | 205k tok/s
+step   4480 | loss 3.4778 | grad_norm 0.174 | lr x1.000 | 205k tok/s
+step   4500 | loss 3.4350 | grad_norm 0.157 | lr x1.000 | 205k tok/s
+           val loss 3.4726
+           ckpt step4500.pt @ step 4500 sha256 d2df090091d88a7b
+step   4520 | loss 3.3971 | grad_norm 0.164 | lr x1.000 | 178k tok/s
+step   4540 | loss 3.5226 | grad_norm 0.156 | lr x1.000 | 205k tok/s
+step   4560 | loss 3.4152 | grad_norm 0.148 | lr x1.000 | 205k tok/s
+step   4580 | loss 3.4137 | grad_norm 0.155 | lr x1.000 | 205k tok/s
+step   4600 | loss 3.4650 | grad_norm 0.142 | lr x1.000 | 204k tok/s
+step   4620 | loss 3.4205 | grad_norm 0.153 | lr x1.000 | 204k tok/s
+step   4640 | loss 3.4948 | grad_norm 0.151 | lr x1.000 | 204k tok/s
+step   4660 | loss 3.4765 | grad_norm 0.162 | lr x1.000 | 205k tok/s
+step   4680 | loss 3.4747 | grad_norm 0.157 | lr x1.000 | 205k tok/s
+step   4700 | loss 3.4529 | grad_norm 0.153 | lr x1.000 | 205k tok/s
+step   4720 | loss 3.3864 | grad_norm 0.150 | lr x1.000 | 204k tok/s
+step   4740 | loss 3.4803 | grad_norm 0.140 | lr x1.000 | 204k tok/s
+           val loss 3.4580
+           ckpt step4750.pt @ step 4750 sha256 1c468e072dbaf6ef
+step   4760 | loss 3.3897 | grad_norm 0.145 | lr x1.000 | 177k tok/s
+step   4780 | loss 3.4552 | grad_norm 0.140 | lr x1.000 | 204k tok/s
+step   4800 | loss 3.4649 | grad_norm 0.130 | lr x1.000 | 204k tok/s
+step   4820 | loss 3.4280 | grad_norm 0.147 | lr x1.000 | 204k tok/s
+step   4840 | loss 3.4381 | grad_norm 0.144 | lr x1.000 | 204k tok/s
+step   4860 | loss 3.4123 | grad_norm 0.157 | lr x1.000 | 204k tok/s
+step   4880 | loss 3.4429 | grad_norm 0.149 | lr x1.000 | 204k tok/s
+step   4900 | loss 3.3886 | grad_norm 0.141 | lr x1.000 | 204k tok/s
+step   4920 | loss 3.4334 | grad_norm 0.144 | lr x1.000 | 204k tok/s
+step   4940 | loss 3.3910 | grad_norm 0.152 | lr x1.000 | 204k tok/s
+step   4960 | loss 3.4222 | grad_norm 0.142 | lr x1.000 | 204k tok/s
+step   4980 | loss 3.4276 | grad_norm 0.147 | lr x1.000 | 204k tok/s
+step   5000 | loss 3.4608 | grad_norm 0.140 | lr x1.000 | 204k tok/s
+           val loss 3.4435
+           ckpt step5000.pt @ step 5000 sha256 80930c7eab5f1ac1
+step   5020 | loss 3.3788 | grad_norm 0.149 | lr x1.000 | 176k tok/s
+step   5040 | loss 3.4489 | grad_norm 0.157 | lr x1.000 | 205k tok/s
+step   5060 | loss 3.4061 | grad_norm 0.143 | lr x1.000 | 205k tok/s
+step   5080 | loss 3.4478 | grad_norm 0.145 | lr x1.000 | 205k tok/s
+step   5100 | loss 3.4064 | grad_norm 0.147 | lr x1.000 | 205k tok/s
+step   5120 | loss 3.4075 | grad_norm 0.144 | lr x1.000 | 205k tok/s
+step   5140 | loss 3.3866 | grad_norm 0.139 | lr x1.000 | 205k tok/s
+step   5160 | loss 3.4277 | grad_norm 0.134 | lr x1.000 | 205k tok/s
+step   5180 | loss 3.4152 | grad_norm 0.144 | lr x1.000 | 205k tok/s
+step   5200 | loss 3.4016 | grad_norm 0.133 | lr x1.000 | 205k tok/s
+step   5220 | loss 3.4411 | grad_norm 0.153 | lr x1.000 | 205k tok/s
+step   5240 | loss 3.3869 | grad_norm 0.150 | lr x1.000 | 205k tok/s
+           val loss 3.4325
+           ckpt step5250.pt @ step 5250 sha256 360b0e9cc98dd532
+step   5260 | loss 3.4240 | grad_norm 0.140 | lr x1.000 | 177k tok/s
+step   5280 | loss 3.4561 | grad_norm 0.132 | lr x1.000 | 205k tok/s
+step   5300 | loss 3.4036 | grad_norm 0.142 | lr x1.000 | 205k tok/s
+step   5320 | loss 3.4766 | grad_norm 0.146 | lr x1.000 | 205k tok/s
+step   5340 | loss 3.4659 | grad_norm 0.140 | lr x1.000 | 205k tok/s
+step   5360 | loss 3.4424 | grad_norm 0.136 | lr x1.000 | 205k tok/s
+step   5380 | loss 3.3677 | grad_norm 0.130 | lr x1.000 | 205k tok/s
+step   5400 | loss 3.4071 | grad_norm 0.148 | lr x1.000 | 205k tok/s
+step   5420 | loss 3.4260 | grad_norm 0.144 | lr x1.000 | 205k tok/s
+step   5440 | loss 3.4187 | grad_norm 0.128 | lr x1.000 | 204k tok/s
+step   5460 | loss 3.4005 | grad_norm 0.132 | lr x1.000 | 205k tok/s
+step   5480 | loss 3.3937 | grad_norm 0.140 | lr x1.000 | 205k tok/s
+step   5500 | loss 3.3681 | grad_norm 0.149 | lr x1.000 | 205k tok/s
+           val loss 3.4217
+           ckpt step5500.pt @ step 5500 sha256 48ed23d9b3ee4e0a
+step   5520 | loss 3.3856 | grad_norm 0.137 | lr x1.000 | 177k tok/s
+step   5540 | loss 3.4182 | grad_norm 0.136 | lr x1.000 | 204k tok/s
+step   5560 | loss 3.4096 | grad_norm 0.130 | lr x1.000 | 204k tok/s
+step   5580 | loss 3.3645 | grad_norm 0.139 | lr x1.000 | 204k tok/s
+step   5600 | loss 3.4031 | grad_norm 0.136 | lr x1.000 | 204k tok/s
+step   5620 | loss 3.4460 | grad_norm 0.143 | lr x1.000 | 205k tok/s
+step   5640 | loss 3.3675 | grad_norm 0.135 | lr x1.000 | 204k tok/s
+step   5660 | loss 3.3430 | grad_norm 0.125 | lr x1.000 | 205k tok/s
+step   5680 | loss 3.4014 | grad_norm 0.141 | lr x1.000 | 205k tok/s
+step   5700 | loss 3.4464 | grad_norm 0.133 | lr x1.000 | 205k tok/s
+step   5720 | loss 3.3242 | grad_norm 0.129 | lr x1.000 | 205k tok/s
+step   5740 | loss 3.3876 | grad_norm 0.142 | lr x1.000 | 205k tok/s
+           val loss 3.4117
+           ckpt step5750.pt @ step 5750 sha256 6e147a082517624a
+step   5760 | loss 3.4032 | grad_norm 0.140 | lr x1.000 | 177k tok/s
+step   5780 | loss 3.3935 | grad_norm 0.135 | lr x1.000 | 205k tok/s
+step   5800 | loss 3.3794 | grad_norm 0.136 | lr x1.000 | 205k tok/s
+step   5820 | loss 3.4079 | grad_norm 0.132 | lr x1.000 | 204k tok/s
+step   5840 | loss 3.3795 | grad_norm 0.132 | lr x1.000 | 204k tok/s
+step   5860 | loss 3.3462 | grad_norm 0.135 | lr x1.000 | 204k tok/s
+step   5880 | loss 3.3928 | grad_norm 0.130 | lr x1.000 | 204k tok/s
+step   5900 | loss 3.4504 | grad_norm 0.144 | lr x1.000 | 205k tok/s
+step   5920 | loss 3.3668 | grad_norm 0.143 | lr x1.000 | 205k tok/s
+step   5940 | loss 3.3781 | grad_norm 0.127 | lr x1.000 | 205k tok/s
+step   5960 | loss 3.3429 | grad_norm 0.132 | lr x1.000 | 205k tok/s
+step   5980 | loss 3.4205 | grad_norm 0.138 | lr x1.000 | 205k tok/s
+step   6000 | loss 3.4450 | grad_norm 0.133 | lr x1.000 | 205k tok/s
+           val loss 3.4028
+           ckpt step6000.pt @ step 6000 sha256 de1ab0ef402dee48
+step   6020 | loss 3.3699 | grad_norm 0.128 | lr x1.000 | 176k tok/s
+step   6040 | loss 3.2791 | grad_norm 0.137 | lr x1.000 | 205k tok/s
+step   6060 | loss 3.4114 | grad_norm 0.147 | lr x1.000 | 204k tok/s
+step   6080 | loss 3.3642 | grad_norm 0.137 | lr x1.000 | 204k tok/s
+step   6100 | loss 3.4022 | grad_norm 0.135 | lr x1.000 | 205k tok/s
+step   6120 | loss 3.3941 | grad_norm 0.131 | lr x1.000 | 205k tok/s
+step   6140 | loss 3.4119 | grad_norm 0.134 | lr x1.000 | 204k tok/s
+step   6160 | loss 3.3749 | grad_norm 0.132 | lr x1.000 | 205k tok/s
+step   6180 | loss 3.3696 | grad_norm 0.132 | lr x1.000 | 204k tok/s
+step   6200 | loss 3.4073 | grad_norm 0.131 | lr x1.000 | 204k tok/s
+step   6220 | loss 3.3379 | grad_norm 0.134 | lr x1.000 | 205k tok/s
+step   6240 | loss 3.3822 | grad_norm 0.132 | lr x1.000 | 204k tok/s
+           val loss 3.3944
+           ckpt step6250.pt @ step 6250 sha256 e917182de225ad91
+step   6260 | loss 3.3005 | grad_norm 0.135 | lr x1.000 | 175k tok/s
+step   6280 | loss 3.3703 | grad_norm 0.133 | lr x1.000 | 205k tok/s
+step   6300 | loss 3.3673 | grad_norm 0.134 | lr x1.000 | 205k tok/s
+step   6320 | loss 3.3359 | grad_norm 0.137 | lr x1.000 | 205k tok/s
+step   6340 | loss 3.3851 | grad_norm 0.123 | lr x1.000 | 205k tok/s
+step   6360 | loss 3.3361 | grad_norm 0.126 | lr x1.000 | 205k tok/s
+step   6380 | loss 3.3442 | grad_norm 0.128 | lr x1.000 | 204k tok/s
+step   6400 | loss 3.3825 | grad_norm 0.139 | lr x1.000 | 205k tok/s
+step   6420 | loss 3.3433 | grad_norm 0.128 | lr x1.000 | 205k tok/s
+step   6440 | loss 3.3346 | grad_norm 0.126 | lr x1.000 | 205k tok/s
+step   6460 | loss 3.2688 | grad_norm 0.119 | lr x1.000 | 204k tok/s
+step   6480 | loss 3.3315 | grad_norm 0.126 | lr x1.000 | 205k tok/s
+step   6500 | loss 3.3661 | grad_norm 0.135 | lr x1.000 | 204k tok/s
+           val loss 3.3873
+           ckpt step6500.pt @ step 6500 sha256 53c23d65c9be24a9
+step   6520 | loss 3.3465 | grad_norm 0.130 | lr x1.000 | 176k tok/s
+step   6540 | loss 3.3687 | grad_norm 0.140 | lr x1.000 | 205k tok/s
+step   6560 | loss 3.3437 | grad_norm 0.134 | lr x1.000 | 205k tok/s
+step   6580 | loss 3.4186 | grad_norm 0.131 | lr x1.000 | 205k tok/s
+step   6600 | loss 3.3365 | grad_norm 0.147 | lr x1.000 | 205k tok/s
+step   6620 | loss 3.4278 | grad_norm 0.129 | lr x1.000 | 205k tok/s
+step   6640 | loss 3.3088 | grad_norm 0.129 | lr x1.000 | 205k tok/s
+step   6660 | loss 3.3636 | grad_norm 0.130 | lr x1.000 | 204k tok/s
+step   6680 | loss 3.3837 | grad_norm 0.123 | lr x1.000 | 205k tok/s
+step   6700 | loss 3.3716 | grad_norm 0.134 | lr x1.000 | 205k tok/s
+step   6720 | loss 3.3197 | grad_norm 0.131 | lr x1.000 | 205k tok/s
+step   6740 | loss 3.3585 | grad_norm 0.128 | lr x1.000 | 205k tok/s
+           val loss 3.3786
+           ckpt step6750.pt @ step 6750 sha256 b1f4f6a1f306a94c
+step   6760 | loss 3.3970 | grad_norm 0.128 | lr x1.000 | 176k tok/s
+step   6780 | loss 3.3733 | grad_norm 0.132 | lr x1.000 | 204k tok/s
+step   6800 | loss 3.3128 | grad_norm 0.129 | lr x1.000 | 204k tok/s
+step   6820 | loss 3.3496 | grad_norm 0.119 | lr x1.000 | 203k tok/s
+step   6840 | loss 3.3471 | grad_norm 0.127 | lr x1.000 | 203k tok/s
+step   6860 | loss 3.2688 | grad_norm 0.129 | lr x1.000 | 204k tok/s
+step   6880 | loss 3.2900 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   6900 | loss 3.3395 | grad_norm 0.126 | lr x1.000 | 204k tok/s
+step   6920 | loss 3.3396 | grad_norm 0.136 | lr x1.000 | 204k tok/s
+step   6940 | loss 3.3167 | grad_norm 0.126 | lr x1.000 | 204k tok/s
+step   6960 | loss 3.3631 | grad_norm 0.125 | lr x1.000 | 204k tok/s
+step   6980 | loss 3.3941 | grad_norm 0.130 | lr x1.000 | 204k tok/s
+step   7000 | loss 3.3982 | grad_norm 0.137 | lr x1.000 | 204k tok/s
+           val loss 3.3727
+           ckpt step7000.pt @ step 7000 sha256 01b4d0cf7356fc5b
+step   7020 | loss 3.3009 | grad_norm 0.127 | lr x1.000 | 179k tok/s
+step   7040 | loss 3.3785 | grad_norm 0.126 | lr x1.000 | 203k tok/s
+step   7060 | loss 3.3601 | grad_norm 0.131 | lr x1.000 | 203k tok/s
+step   7080 | loss 3.3322 | grad_norm 0.130 | lr x1.000 | 203k tok/s
+step   7100 | loss 3.3147 | grad_norm 0.122 | lr x1.000 | 203k tok/s
+step   7120 | loss 3.3299 | grad_norm 0.129 | lr x1.000 | 203k tok/s
+step   7140 | loss 3.3306 | grad_norm 0.122 | lr x1.000 | 203k tok/s
+step   7160 | loss 3.3721 | grad_norm 0.140 | lr x1.000 | 203k tok/s
+step   7180 | loss 3.3041 | grad_norm 0.121 | lr x1.000 | 203k tok/s
+step   7200 | loss 3.3155 | grad_norm 0.121 | lr x1.000 | 203k tok/s
+step   7220 | loss 3.2811 | grad_norm 0.125 | lr x1.000 | 203k tok/s
+step   7240 | loss 3.3193 | grad_norm 0.126 | lr x1.000 | 203k tok/s
+           val loss 3.3664
+           ckpt step7250.pt @ step 7250 sha256 b4b24c280da1d996
+step   7260 | loss 3.3400 | grad_norm 0.131 | lr x1.000 | 178k tok/s
+step   7280 | loss 3.3319 | grad_norm 0.129 | lr x1.000 | 203k tok/s
+step   7300 | loss 3.3863 | grad_norm 0.130 | lr x1.000 | 203k tok/s
+step   7320 | loss 3.2944 | grad_norm 0.120 | lr x1.000 | 203k tok/s
+step   7340 | loss 3.3788 | grad_norm 0.125 | lr x1.000 | 203k tok/s
+step   7360 | loss 3.3522 | grad_norm 0.119 | lr x1.000 | 203k tok/s
+step   7380 | loss 3.4170 | grad_norm 0.130 | lr x1.000 | 203k tok/s
+step   7400 | loss 3.3264 | grad_norm 0.127 | lr x1.000 | 203k tok/s
+step   7420 | loss 3.3512 | grad_norm 0.127 | lr x1.000 | 203k tok/s
+step   7440 | loss 3.3167 | grad_norm 0.127 | lr x1.000 | 203k tok/s
+step   7460 | loss 3.3616 | grad_norm 0.125 | lr x1.000 | 202k tok/s
+step   7480 | loss 3.2885 | grad_norm 0.132 | lr x1.000 | 203k tok/s
+step   7500 | loss 3.3331 | grad_norm 0.124 | lr x1.000 | 203k tok/s
+           val loss 3.3606
+           ckpt step7500.pt @ step 7500 sha256 cef7bb12d0ad42f8
+step   7520 | loss 3.3420 | grad_norm 0.121 | lr x1.000 | 178k tok/s
+step   7540 | loss 3.3011 | grad_norm 0.124 | lr x1.000 | 203k tok/s
+step   7560 | loss 3.3015 | grad_norm 0.120 | lr x1.000 | 203k tok/s
+step   7580 | loss 3.2826 | grad_norm 0.128 | lr x1.000 | 203k tok/s
+step   7600 | loss 3.3205 | grad_norm 0.117 | lr x1.000 | 203k tok/s
+step   7620 | loss 3.3660 | grad_norm 0.129 | lr x1.000 | 203k tok/s
+step   7640 | loss 3.3549 | grad_norm 0.121 | lr x1.000 | 203k tok/s
+step   7660 | loss 3.3025 | grad_norm 0.122 | lr x1.000 | 203k tok/s
+step   7680 | loss 3.3220 | grad_norm 0.121 | lr x1.000 | 203k tok/s
+step   7700 | loss 3.3421 | grad_norm 0.126 | lr x1.000 | 203k tok/s
+step   7720 | loss 3.2251 | grad_norm 0.123 | lr x1.000 | 203k tok/s
+step   7740 | loss 3.3368 | grad_norm 0.129 | lr x1.000 | 203k tok/s
+           val loss 3.3550
+           ckpt step7750.pt @ step 7750 sha256 128bee2b9039c1de
+step   7760 | loss 3.3124 | grad_norm 0.126 | lr x1.000 | 177k tok/s
+step   7780 | loss 3.3542 | grad_norm 0.117 | lr x1.000 | 203k tok/s
+step   7800 | loss 3.3523 | grad_norm 0.128 | lr x1.000 | 203k tok/s
+step   7820 | loss 3.3223 | grad_norm 0.118 | lr x1.000 | 203k tok/s
+step   7840 | loss 3.2625 | grad_norm 0.124 | lr x1.000 | 203k tok/s
+step   7860 | loss 3.3375 | grad_norm 0.126 | lr x1.000 | 203k tok/s
+step   7880 | loss 3.3207 | grad_norm 0.126 | lr x1.000 | 203k tok/s
+step   7900 | loss 3.2799 | grad_norm 0.119 | lr x1.000 | 203k tok/s
+step   7920 | loss 3.3182 | grad_norm 0.135 | lr x1.000 | 203k tok/s
+step   7940 | loss 3.3285 | grad_norm 0.122 | lr x1.000 | 203k tok/s
+step   7960 | loss 3.3410 | grad_norm 0.134 | lr x1.000 | 203k tok/s
+step   7980 | loss 3.3365 | grad_norm 0.123 | lr x1.000 | 203k tok/s
+step   8000 | loss 3.3580 | grad_norm 0.119 | lr x1.000 | 203k tok/s
+           val loss 3.3489
+           ckpt step8000.pt @ step 8000 sha256 314a18ca0346c894
+step   8020 | loss 3.3500 | grad_norm 0.122 | lr x1.000 | 178k tok/s
+step   8040 | loss 3.3567 | grad_norm 0.129 | lr x1.000 | 203k tok/s
+step   8060 | loss 3.2706 | grad_norm 0.126 | lr x1.000 | 203k tok/s
+step   8080 | loss 3.3303 | grad_norm 0.113 | lr x1.000 | 203k tok/s
+step   8100 | loss 3.3390 | grad_norm 0.120 | lr x1.000 | 204k tok/s
+step   8120 | loss 3.3400 | grad_norm 0.126 | lr x1.000 | 205k tok/s
+step   8140 | loss 3.2908 | grad_norm 0.115 | lr x1.000 | 205k tok/s
+step   8160 | loss 3.2642 | grad_norm 0.133 | lr x1.000 | 204k tok/s
+step   8180 | loss 3.3468 | grad_norm 0.124 | lr x1.000 | 204k tok/s
+step   8200 | loss 3.3492 | grad_norm 0.123 | lr x1.000 | 204k tok/s
+step   8220 | loss 3.3401 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   8240 | loss 3.2875 | grad_norm 0.121 | lr x1.000 | 204k tok/s
+           val loss 3.3441
+           ckpt step8250.pt @ step 8250 sha256 738ef9022f01dd65
+step   8260 | loss 3.3003 | grad_norm 0.119 | lr x1.000 | 175k tok/s
+step   8280 | loss 3.2810 | grad_norm 0.125 | lr x1.000 | 204k tok/s
+step   8300 | loss 3.3343 | grad_norm 0.130 | lr x1.000 | 203k tok/s
+step   8320 | loss 3.2959 | grad_norm 0.123 | lr x1.000 | 204k tok/s
+step   8340 | loss 3.3250 | grad_norm 0.120 | lr x1.000 | 204k tok/s
+step   8360 | loss 3.3412 | grad_norm 0.118 | lr x1.000 | 204k tok/s
+step   8380 | loss 3.3046 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step   8400 | loss 3.3238 | grad_norm 0.128 | lr x1.000 | 204k tok/s
+step   8420 | loss 3.3025 | grad_norm 0.117 | lr x1.000 | 205k tok/s
+step   8440 | loss 3.2958 | grad_norm 0.116 | lr x1.000 | 205k tok/s
+step   8460 | loss 3.3347 | grad_norm 0.123 | lr x1.000 | 204k tok/s
+step   8480 | loss 3.3468 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   8500 | loss 3.3162 | grad_norm 0.125 | lr x1.000 | 204k tok/s
+           val loss 3.3400
+           ckpt step8500.pt @ step 8500 sha256 f454388fec65fde7
+step   8520 | loss 3.4235 | grad_norm 0.126 | lr x1.000 | 178k tok/s
+step   8540 | loss 3.3541 | grad_norm 0.124 | lr x1.000 | 204k tok/s
+step   8560 | loss 3.2534 | grad_norm 0.120 | lr x1.000 | 204k tok/s
+step   8580 | loss 3.1935 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step   8600 | loss 3.2736 | grad_norm 0.125 | lr x1.000 | 204k tok/s
+step   8620 | loss 3.3454 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step   8640 | loss 3.3362 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step   8660 | loss 3.3123 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step   8680 | loss 3.2457 | grad_norm 0.118 | lr x1.000 | 204k tok/s
+step   8700 | loss 3.2786 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   8720 | loss 3.3436 | grad_norm 0.124 | lr x1.000 | 204k tok/s
+step   8740 | loss 3.2922 | grad_norm 0.131 | lr x1.000 | 205k tok/s
+           val loss 3.3356
+           ckpt step8750.pt @ step 8750 sha256 ea514c13931a1969
+step   8760 | loss 3.3080 | grad_norm 0.114 | lr x1.000 | 177k tok/s
+step   8780 | loss 3.2959 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   8800 | loss 3.2633 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   8820 | loss 3.3765 | grad_norm 0.129 | lr x1.000 | 205k tok/s
+step   8840 | loss 3.3383 | grad_norm 0.124 | lr x1.000 | 205k tok/s
+step   8860 | loss 3.3266 | grad_norm 0.120 | lr x1.000 | 205k tok/s
+step   8880 | loss 3.3217 | grad_norm 0.120 | lr x1.000 | 204k tok/s
+step   8900 | loss 3.2609 | grad_norm 0.117 | lr x1.000 | 205k tok/s
+step   8920 | loss 3.2707 | grad_norm 0.123 | lr x1.000 | 204k tok/s
+step   8940 | loss 3.2402 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   8960 | loss 3.3285 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step   8980 | loss 3.2700 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step   9000 | loss 3.2888 | grad_norm 0.115 | lr x1.000 | 204k tok/s
+           val loss 3.3309
+           ckpt step9000.pt @ step 9000 sha256 6b451fb69294d9df
+step   9020 | loss 3.3362 | grad_norm 0.121 | lr x1.000 | 177k tok/s
+step   9040 | loss 3.3176 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step   9060 | loss 3.2320 | grad_norm 0.115 | lr x1.000 | 205k tok/s
+step   9080 | loss 3.3709 | grad_norm 0.118 | lr x1.000 | 205k tok/s
+step   9100 | loss 3.2907 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step   9120 | loss 3.2382 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step   9140 | loss 3.3084 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   9160 | loss 3.2914 | grad_norm 0.113 | lr x1.000 | 204k tok/s
+step   9180 | loss 3.3566 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step   9200 | loss 3.2998 | grad_norm 0.119 | lr x1.000 | 203k tok/s
+step   9220 | loss 3.3457 | grad_norm 0.122 | lr x1.000 | 203k tok/s
+step   9240 | loss 3.2811 | grad_norm 0.107 | lr x1.000 | 203k tok/s
+           val loss 3.3269
+           ckpt step9250.pt @ step 9250 sha256 231be5248d6632b5
+step   9260 | loss 3.2471 | grad_norm 0.113 | lr x1.000 | 176k tok/s
+step   9280 | loss 3.2581 | grad_norm 0.118 | lr x1.000 | 205k tok/s
+step   9300 | loss 3.3355 | grad_norm 0.119 | lr x1.000 | 205k tok/s
+step   9320 | loss 3.2677 | grad_norm 0.118 | lr x1.000 | 204k tok/s
+step   9340 | loss 3.3144 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step   9360 | loss 3.2680 | grad_norm 0.113 | lr x1.000 | 204k tok/s
+step   9380 | loss 3.3525 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step   9400 | loss 3.2821 | grad_norm 0.109 | lr x1.000 | 204k tok/s
+step   9420 | loss 3.3159 | grad_norm 0.122 | lr x1.000 | 204k tok/s
+step   9440 | loss 3.2607 | grad_norm 0.113 | lr x1.000 | 205k tok/s
+step   9460 | loss 3.3065 | grad_norm 0.119 | lr x1.000 | 204k tok/s
+step   9480 | loss 3.3080 | grad_norm 0.118 | lr x1.000 | 204k tok/s
+step   9500 | loss 3.3174 | grad_norm 0.120 | lr x1.000 | 204k tok/s
+           val loss 3.3226
+           ckpt step9500.pt @ step 9500 sha256 8cccebb76ed9d2eb
+step   9520 | loss 3.3629 | grad_norm 0.119 | lr x1.000 | 178k tok/s
+step   9540 | loss 3.2411 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step   9560 | loss 3.3010 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step   9580 | loss 3.2533 | grad_norm 0.115 | lr x1.000 | 205k tok/s
+step   9600 | loss 3.2880 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step   9620 | loss 3.2964 | grad_norm 0.117 | lr x1.000 | 204k tok/s
+step   9640 | loss 3.3356 | grad_norm 0.116 | lr x1.000 | 205k tok/s
+step   9660 | loss 3.2968 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step   9680 | loss 3.2807 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step   9700 | loss 3.3261 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step   9720 | loss 3.2314 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step   9740 | loss 3.2233 | grad_norm 0.114 | lr x1.000 | 205k tok/s
+           val loss 3.3193
+           ckpt step9750.pt @ step 9750 sha256 0b1de95753bdb318
+step   9760 | loss 3.3142 | grad_norm 0.120 | lr x1.000 | 175k tok/s
+step   9780 | loss 3.2459 | grad_norm 0.115 | lr x1.000 | 204k tok/s
+step   9800 | loss 3.3499 | grad_norm 0.115 | lr x1.000 | 204k tok/s
+step   9820 | loss 3.2891 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step   9840 | loss 3.3464 | grad_norm 0.118 | lr x1.000 | 205k tok/s
+step   9860 | loss 3.2800 | grad_norm 0.111 | lr x1.000 | 205k tok/s
+step   9880 | loss 3.3075 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step   9900 | loss 3.2803 | grad_norm 0.117 | lr x1.000 | 205k tok/s
+step   9920 | loss 3.3089 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step   9940 | loss 3.2625 | grad_norm 0.118 | lr x1.000 | 204k tok/s
+step   9960 | loss 3.3034 | grad_norm 0.120 | lr x1.000 | 204k tok/s
+step   9980 | loss 3.3178 | grad_norm 0.115 | lr x1.000 | 204k tok/s
+step  10000 | loss 3.2615 | grad_norm 0.117 | lr x1.000 | 205k tok/s
+           val loss 3.3153
+           ckpt step10000.pt @ step 10000 sha256 e62c8c95047cd738
+step  10020 | loss 3.3455 | grad_norm 0.113 | lr x1.000 | 177k tok/s
+step  10040 | loss 3.2899 | grad_norm 0.118 | lr x1.000 | 205k tok/s
+step  10060 | loss 3.2449 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  10080 | loss 3.3034 | grad_norm 0.123 | lr x1.000 | 204k tok/s
+step  10100 | loss 3.2922 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  10120 | loss 3.3087 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step  10140 | loss 3.2806 | grad_norm 0.122 | lr x1.000 | 205k tok/s
+step  10160 | loss 3.2785 | grad_norm 0.120 | lr x1.000 | 205k tok/s
+step  10180 | loss 3.2976 | grad_norm 0.120 | lr x1.000 | 205k tok/s
+step  10200 | loss 3.2968 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step  10220 | loss 3.3388 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  10240 | loss 3.2567 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+           val loss 3.3117
+           ckpt step10250.pt @ step 10250 sha256 355cb9c98d1624f4
+step  10260 | loss 3.3368 | grad_norm 0.115 | lr x1.000 | 175k tok/s
+step  10280 | loss 3.3790 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step  10300 | loss 3.2610 | grad_norm 0.113 | lr x1.000 | 205k tok/s
+step  10320 | loss 3.3376 | grad_norm 0.120 | lr x1.000 | 205k tok/s
+step  10340 | loss 3.3219 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step  10360 | loss 3.2583 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step  10380 | loss 3.3054 | grad_norm 0.115 | lr x1.000 | 204k tok/s
+step  10400 | loss 3.2576 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  10420 | loss 3.2995 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  10440 | loss 3.2626 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step  10460 | loss 3.2982 | grad_norm 0.119 | lr x1.000 | 205k tok/s
+step  10480 | loss 3.3106 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  10500 | loss 3.2586 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+           val loss 3.3082
+           ckpt step10500.pt @ step 10500 sha256 1fa2f7d37c3c88b1
+step  10520 | loss 3.2767 | grad_norm 0.113 | lr x1.000 | 178k tok/s
+step  10540 | loss 3.3400 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step  10560 | loss 3.3497 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  10580 | loss 3.2945 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step  10600 | loss 3.2690 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step  10620 | loss 3.2959 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  10640 | loss 3.2722 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step  10660 | loss 3.2748 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  10680 | loss 3.2985 | grad_norm 0.113 | lr x1.000 | 204k tok/s
+step  10700 | loss 3.2816 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step  10720 | loss 3.2691 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  10740 | loss 3.2714 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+           val loss 3.3056
+           ckpt step10750.pt @ step 10750 sha256 fbe10ea6bd4da6bf
+step  10760 | loss 3.2022 | grad_norm 0.113 | lr x1.000 | 178k tok/s
+step  10780 | loss 3.2944 | grad_norm 0.115 | lr x1.000 | 205k tok/s
+step  10800 | loss 3.2896 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  10820 | loss 3.3309 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  10840 | loss 3.2532 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  10860 | loss 3.2048 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  10880 | loss 3.3022 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  10900 | loss 3.2722 | grad_norm 0.111 | lr x1.000 | 205k tok/s
+step  10920 | loss 3.3102 | grad_norm 0.115 | lr x1.000 | 204k tok/s
+step  10940 | loss 3.2885 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  10960 | loss 3.3037 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  10980 | loss 3.1774 | grad_norm 0.113 | lr x1.000 | 204k tok/s
+step  11000 | loss 3.3076 | grad_norm 0.115 | lr x1.000 | 205k tok/s
+           val loss 3.3026
+           ckpt step11000.pt @ step 11000 sha256 b36c47ea539d2fd0
+step  11020 | loss 3.3318 | grad_norm 0.108 | lr x1.000 | 178k tok/s
+step  11040 | loss 3.2992 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step  11060 | loss 3.2231 | grad_norm 0.113 | lr x1.000 | 205k tok/s
+step  11080 | loss 3.2618 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  11100 | loss 3.2592 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  11120 | loss 3.2638 | grad_norm 0.109 | lr x1.000 | 204k tok/s
+step  11140 | loss 3.2269 | grad_norm 0.106 | lr x1.000 | 204k tok/s
+step  11160 | loss 3.3248 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  11180 | loss 3.2335 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  11200 | loss 3.2311 | grad_norm 0.113 | lr x1.000 | 204k tok/s
+step  11220 | loss 3.2912 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  11240 | loss 3.3055 | grad_norm 0.111 | lr x1.000 | 205k tok/s
+           val loss 3.2989
+           ckpt step11250.pt @ step 11250 sha256 53530972a329f5ed
+step  11260 | loss 3.2635 | grad_norm 0.104 | lr x1.000 | 178k tok/s
+step  11280 | loss 3.2885 | grad_norm 0.111 | lr x1.000 | 205k tok/s
+step  11300 | loss 3.2860 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  11320 | loss 3.2632 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  11340 | loss 3.3241 | grad_norm 0.108 | lr x1.000 | 205k tok/s
+step  11360 | loss 3.2410 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  11380 | loss 3.2550 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  11400 | loss 3.2364 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  11420 | loss 3.3121 | grad_norm 0.113 | lr x1.000 | 204k tok/s
+step  11440 | loss 3.3254 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  11460 | loss 3.2401 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step  11480 | loss 3.2763 | grad_norm 0.117 | lr x1.000 | 205k tok/s
+step  11500 | loss 3.2723 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+           val loss 3.2967
+           ckpt step11500.pt @ step 11500 sha256 71e80bd792c85f0e
+step  11520 | loss 3.2514 | grad_norm 0.112 | lr x1.000 | 177k tok/s
+step  11540 | loss 3.2593 | grad_norm 0.120 | lr x1.000 | 204k tok/s
+step  11560 | loss 3.2524 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  11580 | loss 3.3001 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step  11600 | loss 3.3091 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step  11620 | loss 3.2629 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  11640 | loss 3.2577 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  11660 | loss 3.3061 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  11680 | loss 3.2297 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  11700 | loss 3.3037 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  11720 | loss 3.3202 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  11740 | loss 3.3334 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+           val loss 3.2940
+           ckpt step11750.pt @ step 11750 sha256 3f17f310227c5b6d
+step  11760 | loss 3.2539 | grad_norm 0.108 | lr x1.000 | 178k tok/s
+step  11780 | loss 3.2927 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  11800 | loss 3.2443 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  11820 | loss 3.2415 | grad_norm 0.115 | lr x1.000 | 205k tok/s
+step  11840 | loss 3.2937 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  11860 | loss 3.3048 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  11880 | loss 3.2795 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  11900 | loss 3.3249 | grad_norm 0.103 | lr x1.000 | 205k tok/s
+step  11920 | loss 3.2468 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  11940 | loss 3.2574 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  11960 | loss 3.2567 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  11980 | loss 3.3338 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  12000 | loss 3.2688 | grad_norm 0.109 | lr x1.000 | 204k tok/s
+           val loss 3.2903
+           ckpt step12000.pt @ step 12000 sha256 2366a4e9d844be12
+step  12020 | loss 3.2547 | grad_norm 0.108 | lr x1.000 | 178k tok/s
+step  12040 | loss 3.2824 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  12060 | loss 3.2748 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  12080 | loss 3.2659 | grad_norm 0.109 | lr x1.000 | 204k tok/s
+step  12100 | loss 3.2321 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  12120 | loss 3.1719 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  12140 | loss 3.2465 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  12160 | loss 3.1892 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  12180 | loss 3.2253 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  12200 | loss 3.2305 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  12220 | loss 3.3070 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  12240 | loss 3.2496 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+           val loss 3.2885
+           ckpt step12250.pt @ step 12250 sha256 05eb5a879828b972
+step  12260 | loss 3.2309 | grad_norm 0.110 | lr x1.000 | 178k tok/s
+step  12280 | loss 3.2929 | grad_norm 0.116 | lr x1.000 | 204k tok/s
+step  12300 | loss 3.2162 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  12320 | loss 3.2818 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step  12340 | loss 3.2460 | grad_norm 0.112 | lr x1.000 | 204k tok/s
+step  12360 | loss 3.2878 | grad_norm 0.108 | lr x1.000 | 205k tok/s
+step  12380 | loss 3.3287 | grad_norm 0.114 | lr x1.000 | 204k tok/s
+step  12400 | loss 3.2979 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  12420 | loss 3.3366 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  12440 | loss 3.2614 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  12460 | loss 3.2585 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  12480 | loss 3.2813 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  12500 | loss 3.2732 | grad_norm 0.114 | lr x1.000 | 205k tok/s
+           val loss 3.2867
+           ckpt step12500.pt @ step 12500 sha256 530f60289abd0868
+step  12520 | loss 3.2832 | grad_norm 0.107 | lr x1.000 | 178k tok/s
+step  12540 | loss 3.2705 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  12560 | loss 3.3109 | grad_norm 0.109 | lr x1.000 | 204k tok/s
+step  12580 | loss 3.2692 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  12600 | loss 3.2572 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  12620 | loss 3.2110 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  12640 | loss 3.1955 | grad_norm 0.109 | lr x1.000 | 204k tok/s
+step  12660 | loss 3.2234 | grad_norm 0.113 | lr x1.000 | 204k tok/s
+step  12680 | loss 3.2251 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  12700 | loss 3.2705 | grad_norm 0.106 | lr x1.000 | 204k tok/s
+step  12720 | loss 3.2250 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  12740 | loss 3.2916 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+           val loss 3.2828
+           ckpt step12750.pt @ step 12750 sha256 2b11228b4c213dfc
+step  12760 | loss 3.2193 | grad_norm 0.103 | lr x1.000 | 177k tok/s
+step  12780 | loss 3.2247 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  12800 | loss 3.2441 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  12820 | loss 3.2624 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  12840 | loss 3.2325 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  12860 | loss 3.2564 | grad_norm 0.111 | lr x1.000 | 205k tok/s
+step  12880 | loss 3.2329 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  12900 | loss 3.2984 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  12920 | loss 3.2623 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  12940 | loss 3.2356 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  12960 | loss 3.2212 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  12980 | loss 3.3071 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  13000 | loss 3.2547 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+           val loss 3.2807
+           ckpt step13000.pt @ step 13000 sha256 78da1dc380342752
+step  13020 | loss 3.2510 | grad_norm 0.115 | lr x1.000 | 177k tok/s
+step  13040 | loss 3.3265 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  13060 | loss 3.2253 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  13080 | loss 3.2834 | grad_norm 0.101 | lr x1.000 | 205k tok/s
+step  13100 | loss 3.2200 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  13120 | loss 3.2040 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  13140 | loss 3.3159 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  13160 | loss 3.1856 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  13180 | loss 3.2581 | grad_norm 0.110 | lr x1.000 | 204k tok/s
+step  13200 | loss 3.2803 | grad_norm 0.106 | lr x1.000 | 204k tok/s
+step  13220 | loss 3.2678 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  13240 | loss 3.2381 | grad_norm 0.108 | lr x1.000 | 205k tok/s
+           val loss 3.2787
+           ckpt step13250.pt @ step 13250 sha256 b685279e9d587209
+step  13260 | loss 3.1832 | grad_norm 0.103 | lr x1.000 | 178k tok/s
+step  13280 | loss 3.2621 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  13300 | loss 3.2220 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  13320 | loss 3.2434 | grad_norm 0.103 | lr x1.000 | 205k tok/s
+step  13340 | loss 3.3157 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  13360 | loss 3.2219 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  13380 | loss 3.1934 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  13400 | loss 3.2954 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  13420 | loss 3.2045 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  13440 | loss 3.3181 | grad_norm 0.111 | lr x1.000 | 205k tok/s
+step  13460 | loss 3.2109 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  13480 | loss 3.2433 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  13500 | loss 3.2714 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+           val loss 3.2774
+           ckpt step13500.pt @ step 13500 sha256 1c2341f80e93c370
+step  13520 | loss 3.2786 | grad_norm 0.104 | lr x1.000 | 175k tok/s
+step  13540 | loss 3.2580 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  13560 | loss 3.2625 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  13580 | loss 3.2733 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  13600 | loss 3.2153 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  13620 | loss 3.2243 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  13640 | loss 3.2694 | grad_norm 0.099 | lr x1.000 | 205k tok/s
+step  13660 | loss 3.2572 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  13680 | loss 3.2140 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  13700 | loss 3.1846 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  13720 | loss 3.2776 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  13740 | loss 3.2025 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+           val loss 3.2746
+           ckpt step13750.pt @ step 13750 sha256 10f2b21ed162b5f7
+step  13760 | loss 3.2287 | grad_norm 0.099 | lr x1.000 | 177k tok/s
+step  13780 | loss 3.2332 | grad_norm 0.112 | lr x1.000 | 205k tok/s
+step  13800 | loss 3.2545 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  13820 | loss 3.1897 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  13840 | loss 3.2787 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  13860 | loss 3.2409 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  13880 | loss 3.2085 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  13900 | loss 3.1728 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  13920 | loss 3.2552 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  13940 | loss 3.2263 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  13960 | loss 3.2470 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  13980 | loss 3.2201 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  14000 | loss 3.2484 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+           val loss 3.2722
+           ckpt step14000.pt @ step 14000 sha256 d9a09b8ed7e0c30a
+step  14020 | loss 3.2607 | grad_norm 0.109 | lr x1.000 | 177k tok/s
+step  14040 | loss 3.2062 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  14060 | loss 3.2963 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  14080 | loss 3.1867 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  14100 | loss 3.3014 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  14120 | loss 3.2513 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  14140 | loss 3.2637 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  14160 | loss 3.2786 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  14180 | loss 3.2833 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  14200 | loss 3.2475 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  14220 | loss 3.2584 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  14240 | loss 3.2795 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+           val loss 3.2705
+           ckpt step14250.pt @ step 14250 sha256 089a102030a174b3
+step  14260 | loss 3.2362 | grad_norm 0.101 | lr x1.000 | 177k tok/s
+step  14280 | loss 3.2129 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  14300 | loss 3.2807 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  14320 | loss 3.2004 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  14340 | loss 3.2189 | grad_norm 0.103 | lr x1.000 | 205k tok/s
+step  14360 | loss 3.1971 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  14380 | loss 3.2146 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  14400 | loss 3.2545 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+step  14420 | loss 3.3112 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  14440 | loss 3.2367 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  14460 | loss 3.2845 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  14480 | loss 3.2187 | grad_norm 0.099 | lr x1.000 | 205k tok/s
+step  14500 | loss 3.2443 | grad_norm 0.107 | lr x1.000 | 204k tok/s
+           val loss 3.2682
+           ckpt step14500.pt @ step 14500 sha256 a8c3daa8af1a3a1a
+step  14520 | loss 3.2297 | grad_norm 0.106 | lr x1.000 | 178k tok/s
+step  14540 | loss 3.2453 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  14560 | loss 3.2456 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  14580 | loss 3.2444 | grad_norm 0.101 | lr x1.000 | 205k tok/s
+step  14600 | loss 3.2782 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  14620 | loss 3.2245 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  14640 | loss 3.2203 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  14660 | loss 3.2975 | grad_norm 0.115 | lr x1.000 | 204k tok/s
+step  14680 | loss 3.3140 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  14700 | loss 3.2421 | grad_norm 0.101 | lr x1.000 | 205k tok/s
+step  14720 | loss 3.1497 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  14740 | loss 3.1794 | grad_norm 0.103 | lr x1.000 | 205k tok/s
+           val loss 3.2660
+           ckpt step14750.pt @ step 14750 sha256 14903259f0eb22d3
+step  14760 | loss 3.2418 | grad_norm 0.097 | lr x1.000 | 176k tok/s
+step  14780 | loss 3.2674 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  14800 | loss 3.2770 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  14820 | loss 3.2307 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  14840 | loss 3.2625 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  14860 | loss 3.1742 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  14880 | loss 3.1897 | grad_norm 0.101 | lr x1.000 | 205k tok/s
+step  14900 | loss 3.2662 | grad_norm 0.110 | lr x1.000 | 205k tok/s
+step  14920 | loss 3.2431 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  14940 | loss 3.2248 | grad_norm 0.107 | lr x1.000 | 205k tok/s
+step  14960 | loss 3.2295 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  14980 | loss 3.3126 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  15000 | loss 3.2411 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+           val loss 3.2644
+           ckpt step15000.pt @ step 15000 sha256 a85bb6653f183ec4
+step  15020 | loss 3.2587 | grad_norm 0.109 | lr x1.000 | 177k tok/s
+step  15040 | loss 3.2345 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  15060 | loss 3.2110 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  15080 | loss 3.2060 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  15100 | loss 3.2280 | grad_norm 0.100 | lr x1.000 | 203k tok/s
+step  15120 | loss 3.2296 | grad_norm 0.096 | lr x1.000 | 203k tok/s
+step  15140 | loss 3.1823 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  15160 | loss 3.2656 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  15180 | loss 3.2257 | grad_norm 0.104 | lr x1.000 | 203k tok/s
+step  15200 | loss 3.2456 | grad_norm 0.100 | lr x1.000 | 203k tok/s
+step  15220 | loss 3.2410 | grad_norm 0.099 | lr x1.000 | 203k tok/s
+step  15240 | loss 3.2427 | grad_norm 0.102 | lr x1.000 | 203k tok/s
+           val loss 3.2619
+           ckpt step15250.pt @ step 15250 sha256 38083fb433e3a078
+step  15260 | loss 3.2558 | grad_norm 0.104 | lr x1.000 | 179k tok/s
+step  15280 | loss 3.2989 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  15300 | loss 3.2651 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  15320 | loss 3.3036 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  15340 | loss 3.2191 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  15360 | loss 3.1827 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  15380 | loss 3.1924 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  15400 | loss 3.2004 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  15420 | loss 3.2440 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  15440 | loss 3.2683 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  15460 | loss 3.2919 | grad_norm 0.105 | lr x1.000 | 204k tok/s
+step  15480 | loss 3.1963 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  15500 | loss 3.2031 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+           val loss 3.2608
+           ckpt step15500.pt @ step 15500 sha256 4364f81b34fe7fd9
+step  15520 | loss 3.2427 | grad_norm 0.106 | lr x1.000 | 176k tok/s
+step  15540 | loss 3.2470 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  15560 | loss 3.1726 | grad_norm 0.103 | lr x1.000 | 205k tok/s
+step  15580 | loss 3.2458 | grad_norm 0.109 | lr x1.000 | 205k tok/s
+step  15600 | loss 3.3071 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  15620 | loss 3.2313 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  15640 | loss 3.2091 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  15660 | loss 3.2269 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  15680 | loss 3.1860 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  15700 | loss 3.2103 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  15720 | loss 3.2035 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  15740 | loss 3.2191 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+           val loss 3.2585
+           ckpt step15750.pt @ step 15750 sha256 62acf44307026aa7
+step  15760 | loss 3.2284 | grad_norm 0.102 | lr x1.000 | 178k tok/s
+step  15780 | loss 3.2177 | grad_norm 0.104 | lr x1.000 | 203k tok/s
+step  15800 | loss 3.2424 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  15820 | loss 3.2387 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  15840 | loss 3.2606 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  15860 | loss 3.2358 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  15880 | loss 3.2218 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  15900 | loss 3.1439 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  15920 | loss 3.1906 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  15940 | loss 3.2604 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  15960 | loss 3.1935 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  15980 | loss 3.2651 | grad_norm 0.101 | lr x1.000 | 205k tok/s
+step  16000 | loss 3.1646 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+           val loss 3.2564
+           ckpt step16000.pt @ step 16000 sha256 4b1d51042a9c4827
+step  16020 | loss 3.2426 | grad_norm 0.099 | lr x1.000 | 178k tok/s
+step  16040 | loss 3.2733 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  16060 | loss 3.2467 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  16080 | loss 3.1719 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  16100 | loss 3.2180 | grad_norm 0.104 | lr x1.000 | 204k tok/s
+step  16120 | loss 3.2586 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  16140 | loss 3.2579 | grad_norm 0.102 | lr x1.000 | 204k tok/s
+step  16160 | loss 3.2477 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  16180 | loss 3.2191 | grad_norm 0.111 | lr x1.000 | 204k tok/s
+step  16200 | loss 3.2688 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  16220 | loss 3.2233 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  16240 | loss 3.1943 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+           val loss 3.2552
+           ckpt step16250.pt @ step 16250 sha256 a017bb3e8d7ab0ba
+step  16260 | loss 3.2156 | grad_norm 0.100 | lr x1.000 | 176k tok/s
+step  16280 | loss 3.2238 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  16300 | loss 3.1704 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  16320 | loss 3.2156 | grad_norm 0.099 | lr x1.000 | 205k tok/s
+step  16340 | loss 3.2279 | grad_norm 0.106 | lr x1.000 | 204k tok/s
+step  16360 | loss 3.3129 | grad_norm 0.106 | lr x1.000 | 204k tok/s
+step  16380 | loss 3.2423 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  16400 | loss 3.2124 | grad_norm 0.099 | lr x1.000 | 205k tok/s
+step  16420 | loss 3.2894 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  16440 | loss 3.2642 | grad_norm 0.101 | lr x1.000 | 205k tok/s
+step  16460 | loss 3.1854 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  16480 | loss 3.1671 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  16500 | loss 3.2392 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+           val loss 3.2527
+           ckpt step16500.pt @ step 16500 sha256 524ba87da88f6e9a
+step  16520 | loss 3.2475 | grad_norm 0.096 | lr x1.000 | 176k tok/s
+step  16540 | loss 3.1827 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  16560 | loss 3.2542 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  16580 | loss 3.2076 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  16600 | loss 3.2043 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  16620 | loss 3.1818 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  16640 | loss 3.2229 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  16660 | loss 3.2405 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  16680 | loss 3.1377 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  16700 | loss 3.1797 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  16720 | loss 3.2508 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  16740 | loss 3.2178 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+           val loss 3.2509
+           ckpt step16750.pt @ step 16750 sha256 19b20ef1e78d3892
+step  16760 | loss 3.2402 | grad_norm 0.103 | lr x1.000 | 176k tok/s
+step  16780 | loss 3.2653 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  16800 | loss 3.2331 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  16820 | loss 3.1874 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  16840 | loss 3.2614 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  16860 | loss 3.2071 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  16880 | loss 3.2475 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  16900 | loss 3.2578 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  16920 | loss 3.2385 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  16940 | loss 3.2668 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  16960 | loss 3.2385 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  16980 | loss 3.2232 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  17000 | loss 3.2202 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+           val loss 3.2497
+           ckpt step17000.pt @ step 17000 sha256 37f9b757e9f58c40
+step  17020 | loss 3.1819 | grad_norm 0.095 | lr x1.000 | 176k tok/s
+step  17040 | loss 3.2508 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  17060 | loss 3.2001 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  17080 | loss 3.1550 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  17100 | loss 3.2666 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  17120 | loss 3.2444 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  17140 | loss 3.2644 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  17160 | loss 3.2152 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  17180 | loss 3.2032 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  17200 | loss 3.1845 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  17220 | loss 3.2793 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  17240 | loss 3.2039 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+           val loss 3.2480
+           ckpt step17250.pt @ step 17250 sha256 7849bfc800293513
+step  17260 | loss 3.2150 | grad_norm 0.097 | lr x1.000 | 178k tok/s
+step  17280 | loss 3.2663 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  17300 | loss 3.2052 | grad_norm 0.099 | lr x1.000 | 205k tok/s
+step  17320 | loss 3.2267 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  17340 | loss 3.2381 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  17360 | loss 3.2474 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  17380 | loss 3.1817 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  17400 | loss 3.2390 | grad_norm 0.108 | lr x1.000 | 204k tok/s
+step  17420 | loss 3.2151 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  17440 | loss 3.2180 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  17460 | loss 3.2529 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  17480 | loss 3.2433 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  17500 | loss 3.2502 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+           val loss 3.2465
+           ckpt step17500.pt @ step 17500 sha256 2ea920eed11cf54c
+step  17520 | loss 3.1547 | grad_norm 0.098 | lr x1.000 | 178k tok/s
+step  17540 | loss 3.2674 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  17560 | loss 3.1928 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  17580 | loss 3.2583 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  17600 | loss 3.2217 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  17620 | loss 3.1888 | grad_norm 0.105 | lr x1.000 | 205k tok/s
+step  17640 | loss 3.1962 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  17660 | loss 3.2322 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  17680 | loss 3.1641 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  17700 | loss 3.2195 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  17720 | loss 3.1334 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  17740 | loss 3.1977 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+           val loss 3.2454
+           ckpt step17750.pt @ step 17750 sha256 20f4731f476a03f4
+step  17760 | loss 3.1818 | grad_norm 0.096 | lr x1.000 | 175k tok/s
+step  17780 | loss 3.2177 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  17800 | loss 3.2118 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  17820 | loss 3.2266 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  17840 | loss 3.2557 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  17860 | loss 3.2226 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  17880 | loss 3.1779 | grad_norm 0.103 | lr x1.000 | 204k tok/s
+step  17900 | loss 3.2014 | grad_norm 0.099 | lr x1.000 | 205k tok/s
+step  17920 | loss 3.2261 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  17940 | loss 3.2285 | grad_norm 0.101 | lr x1.000 | 205k tok/s
+step  17960 | loss 3.1752 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  17980 | loss 3.2546 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  18000 | loss 3.2288 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+           val loss 3.2443
+           ckpt step18000.pt @ step 18000 sha256 d97523b25b5df0db
+step  18020 | loss 3.2429 | grad_norm 0.095 | lr x1.000 | 176k tok/s
+step  18040 | loss 3.2246 | grad_norm 0.100 | lr x1.000 | 204k tok/s
+step  18060 | loss 3.1814 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  18080 | loss 3.2173 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  18100 | loss 3.2451 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  18120 | loss 3.1783 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  18140 | loss 3.2434 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  18160 | loss 3.2565 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  18180 | loss 3.2314 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  18200 | loss 3.2193 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  18220 | loss 3.2207 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  18240 | loss 3.1915 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+           val loss 3.2427
+           ckpt step18250.pt @ step 18250 sha256 3aa4dac52a6dc6aa
+step  18260 | loss 3.1298 | grad_norm 0.091 | lr x1.000 | 177k tok/s
+step  18280 | loss 3.2135 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  18300 | loss 3.1601 | grad_norm 0.101 | lr x1.000 | 204k tok/s
+step  18320 | loss 3.2349 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  18340 | loss 3.2334 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  18360 | loss 3.1979 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  18380 | loss 3.1735 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  18400 | loss 3.2114 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  18420 | loss 3.1372 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  18440 | loss 3.2030 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  18460 | loss 3.2365 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  18480 | loss 3.2726 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  18500 | loss 3.2188 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+           val loss 3.2417
+           ckpt step18500.pt @ step 18500 sha256 e4c1e3157ff678d7
+step  18520 | loss 3.2492 | grad_norm 0.089 | lr x1.000 | 175k tok/s
+step  18540 | loss 3.2052 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  18560 | loss 3.2047 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  18580 | loss 3.1945 | grad_norm 0.106 | lr x1.000 | 205k tok/s
+step  18600 | loss 3.2637 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  18620 | loss 3.2078 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  18640 | loss 3.2129 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  18660 | loss 3.2367 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  18680 | loss 3.1908 | grad_norm 0.098 | lr x1.000 | 205k tok/s
+step  18700 | loss 3.1869 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  18720 | loss 3.1626 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  18740 | loss 3.1413 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+           val loss 3.2403
+           ckpt step18750.pt @ step 18750 sha256 9b4a35bc2250499c
+step  18760 | loss 3.2853 | grad_norm 0.095 | lr x1.000 | 178k tok/s
+step  18780 | loss 3.1107 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  18800 | loss 3.2247 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  18820 | loss 3.2418 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+step  18840 | loss 3.2065 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  18860 | loss 3.2357 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  18880 | loss 3.1985 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  18900 | loss 3.2297 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  18920 | loss 3.1935 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  18940 | loss 3.2112 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  18960 | loss 3.2684 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  18980 | loss 3.1816 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  19000 | loss 3.2201 | grad_norm 0.096 | lr x1.000 | 204k tok/s
+           val loss 3.2387
+           ckpt step19000.pt @ step 19000 sha256 e739d2f46b70e413
+step  19020 | loss 3.2080 | grad_norm 0.096 | lr x1.000 | 176k tok/s
+step  19040 | loss 3.1674 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  19060 | loss 3.1798 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  19080 | loss 3.2498 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  19100 | loss 3.1983 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  19120 | loss 3.1775 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  19140 | loss 3.2216 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  19160 | loss 3.1834 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  19180 | loss 3.1558 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  19200 | loss 3.1996 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  19220 | loss 3.1849 | grad_norm 0.104 | lr x1.000 | 205k tok/s
+step  19240 | loss 3.1709 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+           val loss 3.2378
+           ckpt step19250.pt @ step 19250 sha256 940e9211c5f3e476
+step  19260 | loss 3.2067 | grad_norm 0.093 | lr x1.000 | 175k tok/s
+step  19280 | loss 3.2111 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  19300 | loss 3.2438 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  19320 | loss 3.1622 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  19340 | loss 3.1555 | grad_norm 0.101 | lr x1.000 | 203k tok/s
+step  19360 | loss 3.2030 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  19380 | loss 3.1471 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  19400 | loss 3.1570 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  19420 | loss 3.2174 | grad_norm 0.099 | lr x1.000 | 204k tok/s
+step  19440 | loss 3.2315 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  19460 | loss 3.1803 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  19480 | loss 3.2662 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  19500 | loss 3.1791 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+           val loss 3.2359
+           ckpt step19500.pt @ step 19500 sha256 0b493fe7108e788b
+step  19520 | loss 3.1728 | grad_norm 0.094 | lr x1.000 | 176k tok/s
+step  19540 | loss 3.2020 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  19560 | loss 3.2238 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  19580 | loss 3.1749 | grad_norm 0.102 | lr x1.000 | 205k tok/s
+step  19600 | loss 3.2376 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  19620 | loss 3.2275 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  19640 | loss 3.2204 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  19660 | loss 3.2418 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  19680 | loss 3.1948 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  19700 | loss 3.2414 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  19720 | loss 3.2209 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  19740 | loss 3.1905 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+           val loss 3.2347
+           ckpt step19750.pt @ step 19750 sha256 07a7d2d88f6a27d1
+step  19760 | loss 3.2348 | grad_norm 0.093 | lr x1.000 | 178k tok/s
+step  19780 | loss 3.1686 | grad_norm 0.100 | lr x1.000 | 205k tok/s
+step  19800 | loss 3.2299 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  19820 | loss 3.2127 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  19840 | loss 3.2412 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  19860 | loss 3.1655 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  19880 | loss 3.1832 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  19900 | loss 3.2994 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  19920 | loss 3.2015 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  19940 | loss 3.1908 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  19960 | loss 3.2084 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  19980 | loss 3.2614 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  20000 | loss 3.2483 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+           val loss 3.2340
+           ckpt step20000.pt @ step 20000 sha256 1f083833a0ed891a
+step  20020 | loss 3.1718 | grad_norm 0.092 | lr x1.000 | 175k tok/s
+step  20040 | loss 3.1605 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  20060 | loss 3.1889 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  20080 | loss 3.1711 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  20100 | loss 3.2234 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  20120 | loss 3.3161 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  20140 | loss 3.1856 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  20160 | loss 3.2288 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  20180 | loss 3.2396 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  20200 | loss 3.1554 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  20220 | loss 3.1919 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  20240 | loss 3.2407 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+           val loss 3.2323
+           ckpt step20250.pt @ step 20250 sha256 71607b6dca9803b3
+step  20260 | loss 3.1983 | grad_norm 0.092 | lr x1.000 | 175k tok/s
+step  20280 | loss 3.2305 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  20300 | loss 3.2113 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  20320 | loss 3.2771 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  20340 | loss 3.2295 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  20360 | loss 3.1659 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  20380 | loss 3.1703 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  20400 | loss 3.2582 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  20420 | loss 3.2683 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  20440 | loss 3.2082 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  20460 | loss 3.1709 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  20480 | loss 3.1744 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  20500 | loss 3.1844 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+           val loss 3.2309
+           ckpt step20500.pt @ step 20500 sha256 cf65b175601026a1
+step  20520 | loss 3.1713 | grad_norm 0.090 | lr x1.000 | 175k tok/s
+step  20540 | loss 3.2248 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  20560 | loss 3.2068 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  20580 | loss 3.2466 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  20600 | loss 3.2069 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  20620 | loss 3.1738 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  20640 | loss 3.1936 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  20660 | loss 3.2304 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  20680 | loss 3.1770 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  20700 | loss 3.1842 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  20720 | loss 3.1640 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  20740 | loss 3.1910 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+           val loss 3.2303
+           ckpt step20750.pt @ step 20750 sha256 517d5fda30526b96
+step  20760 | loss 3.2551 | grad_norm 0.094 | lr x1.000 | 174k tok/s
+step  20780 | loss 3.2315 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  20800 | loss 3.1903 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  20820 | loss 3.1253 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  20840 | loss 3.1899 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  20860 | loss 3.1572 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  20880 | loss 3.2378 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  20900 | loss 3.1738 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  20920 | loss 3.2082 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  20940 | loss 3.2218 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  20960 | loss 3.2282 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  20980 | loss 3.2405 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  21000 | loss 3.2396 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+           val loss 3.2291
+           ckpt step21000.pt @ step 21000 sha256 9bad95c4c0f83f13
+step  21020 | loss 3.1310 | grad_norm 0.090 | lr x1.000 | 175k tok/s
+step  21040 | loss 3.2720 | grad_norm 0.098 | lr x1.000 | 204k tok/s
+step  21060 | loss 3.2102 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  21080 | loss 3.2167 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  21100 | loss 3.1747 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  21120 | loss 3.2230 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  21140 | loss 3.2438 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  21160 | loss 3.2166 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  21180 | loss 3.2014 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  21200 | loss 3.2307 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  21220 | loss 3.2308 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  21240 | loss 3.2783 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+           val loss 3.2284
+           ckpt step21250.pt @ step 21250 sha256 dc92f3705601784d
+step  21260 | loss 3.1566 | grad_norm 0.092 | lr x1.000 | 179k tok/s
+step  21280 | loss 3.1258 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  21300 | loss 3.1612 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  21320 | loss 3.2396 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  21340 | loss 3.1443 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  21360 | loss 3.2242 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  21380 | loss 3.1878 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  21400 | loss 3.2467 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  21420 | loss 3.2264 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  21440 | loss 3.2146 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  21460 | loss 3.1426 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  21480 | loss 3.1628 | grad_norm 0.097 | lr x1.000 | 204k tok/s
+step  21500 | loss 3.1693 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+           val loss 3.2267
+           ckpt step21500.pt @ step 21500 sha256 7b5b8d5238bbece0
+step  21520 | loss 3.2161 | grad_norm 0.086 | lr x1.000 | 176k tok/s
+step  21540 | loss 3.1928 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  21560 | loss 3.1700 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  21580 | loss 3.1960 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  21600 | loss 3.2121 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  21620 | loss 3.1592 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  21640 | loss 3.2082 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  21660 | loss 3.1263 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  21680 | loss 3.1648 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  21700 | loss 3.1964 | grad_norm 0.087 | lr x1.000 | 203k tok/s
+step  21720 | loss 3.2071 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  21740 | loss 3.2672 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+           val loss 3.2265
+           ckpt step21750.pt @ step 21750 sha256 fd06f8aa3d190e6d
+step  21760 | loss 3.2391 | grad_norm 0.094 | lr x1.000 | 177k tok/s
+step  21780 | loss 3.1560 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  21800 | loss 3.2220 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  21820 | loss 3.2388 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  21840 | loss 3.2480 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  21860 | loss 3.1810 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  21880 | loss 3.2135 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  21900 | loss 3.1038 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  21920 | loss 3.2369 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  21940 | loss 3.2185 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  21960 | loss 3.1939 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  21980 | loss 3.1898 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  22000 | loss 3.1253 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+           val loss 3.2255
+           ckpt step22000.pt @ step 22000 sha256 06a79f2113ec6b12
+step  22020 | loss 3.1029 | grad_norm 0.086 | lr x1.000 | 176k tok/s
+step  22040 | loss 3.1664 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  22060 | loss 3.1478 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  22080 | loss 3.1037 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  22100 | loss 3.1783 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  22120 | loss 3.1539 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  22140 | loss 3.1634 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  22160 | loss 3.2256 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  22180 | loss 3.2689 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  22200 | loss 3.1914 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  22220 | loss 3.2056 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  22240 | loss 3.1858 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+           val loss 3.2238
+           ckpt step22250.pt @ step 22250 sha256 0a760917458ec35d
+step  22260 | loss 3.2296 | grad_norm 0.095 | lr x1.000 | 178k tok/s
+step  22280 | loss 3.1821 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  22300 | loss 3.1806 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  22320 | loss 3.2581 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  22340 | loss 3.2096 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  22360 | loss 3.2721 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  22380 | loss 3.1466 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  22400 | loss 3.1898 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  22420 | loss 3.1400 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  22440 | loss 3.2363 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  22460 | loss 3.1610 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  22480 | loss 3.1277 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  22500 | loss 3.1963 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+           val loss 3.2223
+           ckpt step22500.pt @ step 22500 sha256 c604db687dcbd7f6
+step  22520 | loss 3.2152 | grad_norm 0.085 | lr x1.000 | 175k tok/s
+step  22540 | loss 3.1946 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  22560 | loss 3.1995 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  22580 | loss 3.2401 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  22600 | loss 3.1417 | grad_norm 0.094 | lr x1.000 | 204k tok/s
+step  22620 | loss 3.1621 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  22640 | loss 3.1788 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  22660 | loss 3.1712 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  22680 | loss 3.2142 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  22700 | loss 3.2043 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  22720 | loss 3.1592 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  22740 | loss 3.2630 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+           val loss 3.2221
+           ckpt step22750.pt @ step 22750 sha256 e8f4905a2a61a3bb
+step  22760 | loss 3.1717 | grad_norm 0.093 | lr x1.000 | 177k tok/s
+step  22780 | loss 3.2188 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  22800 | loss 3.2311 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  22820 | loss 3.2009 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  22840 | loss 3.1737 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  22860 | loss 3.2491 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  22880 | loss 3.1954 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  22900 | loss 3.1661 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  22920 | loss 3.1623 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  22940 | loss 3.1809 | grad_norm 0.092 | lr x1.000 | 204k tok/s
+step  22960 | loss 3.1796 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+           ckpt stable_branch.pt @ step 22968 sha256 9ce0c842f162e423
+step  22980 | loss 3.1687 | grad_norm 0.089 | lr x1.000 | 191k tok/s
+step  23000 | loss 3.2093 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+           val loss 3.2203
+           ckpt step23000.pt @ step 23000 sha256 2a885d0467e603bd
+step  23020 | loss 3.2854 | grad_norm 0.092 | lr x1.000 | 177k tok/s
+step  23040 | loss 3.2573 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  23060 | loss 3.1849 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  23080 | loss 3.2222 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  23100 | loss 3.1953 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  23120 | loss 3.2161 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  23140 | loss 3.1710 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  23160 | loss 3.1934 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  23180 | loss 3.2152 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  23200 | loss 3.2109 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  23220 | loss 3.2028 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  23240 | loss 3.2037 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+           val loss 3.2197
+           ckpt step23250.pt @ step 23250 sha256 74cef375f7bf3f76
+step  23260 | loss 3.2201 | grad_norm 0.092 | lr x1.000 | 177k tok/s
+step  23280 | loss 3.1338 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  23300 | loss 3.1692 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  23320 | loss 3.2021 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  23340 | loss 3.1913 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  23360 | loss 3.1897 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  23380 | loss 3.2081 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  23400 | loss 3.2299 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  23420 | loss 3.1514 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  23440 | loss 3.1475 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  23460 | loss 3.2444 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  23480 | loss 3.1947 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  23500 | loss 3.2308 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+           val loss 3.2179
+           ckpt step23500.pt @ step 23500 sha256 b794702cf62d97f5
+step  23520 | loss 3.1668 | grad_norm 0.095 | lr x1.000 | 176k tok/s
+step  23540 | loss 3.1450 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  23560 | loss 3.1098 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  23580 | loss 3.1757 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  23600 | loss 3.1816 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  23620 | loss 3.1845 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  23640 | loss 3.2281 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  23660 | loss 3.2582 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  23680 | loss 3.1658 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  23700 | loss 3.1265 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  23720 | loss 3.1603 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  23740 | loss 3.1230 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+           val loss 3.2176
+           ckpt step23750.pt @ step 23750 sha256 a1628fbd1530010f
+step  23760 | loss 3.1739 | grad_norm 0.087 | lr x1.000 | 177k tok/s
+step  23780 | loss 3.2162 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  23800 | loss 3.2229 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  23820 | loss 3.2233 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  23840 | loss 3.2125 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  23860 | loss 3.1265 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  23880 | loss 3.1850 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  23900 | loss 3.2228 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  23920 | loss 3.1926 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  23940 | loss 3.2273 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  23960 | loss 3.1525 | grad_norm 0.094 | lr x1.000 | 205k tok/s
+step  23980 | loss 3.1891 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  24000 | loss 3.2526 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+           val loss 3.2164
+           ckpt step24000.pt @ step 24000 sha256 270c6d08a408708a
+step  24020 | loss 3.2120 | grad_norm 0.088 | lr x1.000 | 176k tok/s
+step  24040 | loss 3.1817 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  24060 | loss 3.2072 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  24080 | loss 3.2386 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  24100 | loss 3.1703 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  24120 | loss 3.1945 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  24140 | loss 3.1789 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  24160 | loss 3.1929 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  24180 | loss 3.2101 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  24200 | loss 3.1843 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  24220 | loss 3.1887 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+step  24240 | loss 3.1971 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+           val loss 3.2151
+           ckpt step24250.pt @ step 24250 sha256 e789e8ec3598127b
+step  24260 | loss 3.2017 | grad_norm 0.085 | lr x1.000 | 175k tok/s
+step  24280 | loss 3.3089 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  24300 | loss 3.2004 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  24320 | loss 3.1977 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  24340 | loss 3.2544 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  24360 | loss 3.1519 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  24380 | loss 3.1430 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  24400 | loss 3.1657 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  24420 | loss 3.1626 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  24440 | loss 3.2259 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  24460 | loss 3.2220 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  24480 | loss 3.1696 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  24500 | loss 3.1925 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+           val loss 3.2148
+           ckpt step24500.pt @ step 24500 sha256 fb7b33b211a24049
+step  24520 | loss 3.2650 | grad_norm 0.089 | lr x1.000 | 176k tok/s
+step  24540 | loss 3.1920 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  24560 | loss 3.2409 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  24580 | loss 3.1865 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  24600 | loss 3.1896 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  24620 | loss 3.1685 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  24640 | loss 3.1907 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  24660 | loss 3.1509 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  24680 | loss 3.1761 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  24700 | loss 3.2257 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  24720 | loss 3.1072 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  24740 | loss 3.1576 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+           val loss 3.2135
+           ckpt step24750.pt @ step 24750 sha256 a79eece7b22c6ba3
+step  24760 | loss 3.2000 | grad_norm 0.088 | lr x1.000 | 177k tok/s
+step  24780 | loss 3.2319 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  24800 | loss 3.1540 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  24820 | loss 3.1230 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  24840 | loss 3.1619 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  24860 | loss 3.1753 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  24880 | loss 3.1584 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  24900 | loss 3.1984 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  24920 | loss 3.1458 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  24940 | loss 3.1618 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  24960 | loss 3.1857 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  24980 | loss 3.1831 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  25000 | loss 3.2289 | grad_norm 0.091 | lr x1.000 | 204k tok/s
+           val loss 3.2123
+           ckpt step25000.pt @ step 25000 sha256 44abaa29799ec290
+step  25020 | loss 3.1694 | grad_norm 0.092 | lr x1.000 | 175k tok/s
+step  25040 | loss 3.2201 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  25060 | loss 3.2346 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  25080 | loss 3.1435 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25100 | loss 3.1866 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  25120 | loss 3.1912 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  25140 | loss 3.2047 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  25160 | loss 3.2109 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  25180 | loss 3.2205 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25200 | loss 3.1701 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25220 | loss 3.1973 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  25240 | loss 3.1849 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+           val loss 3.2124
+           ckpt step25250.pt @ step 25250 sha256 685cd1e9fe1d5843
+step  25260 | loss 3.1661 | grad_norm 0.084 | lr x1.000 | 177k tok/s
+step  25280 | loss 3.1811 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25300 | loss 3.1774 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  25320 | loss 3.1729 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  25340 | loss 3.1728 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  25360 | loss 3.2098 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  25380 | loss 3.1785 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  25400 | loss 3.1633 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  25420 | loss 3.2127 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  25440 | loss 3.1932 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  25460 | loss 3.2452 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  25480 | loss 3.1801 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25500 | loss 3.1323 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+           val loss 3.2112
+           ckpt step25500.pt @ step 25500 sha256 0fff358e0d596624
+           ckpt epoch1.pt @ step 25518 sha256 666de3027b5d49af
+step  25520 | loss 3.1989 | grad_norm 0.088 | lr x1.000 | 164k tok/s
+step  25540 | loss 3.2343 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+step  25560 | loss 3.1427 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25580 | loss 3.1632 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25600 | loss 3.1505 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  25620 | loss 3.1779 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  25640 | loss 3.1841 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  25660 | loss 3.2231 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  25680 | loss 3.2436 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  25700 | loss 3.2372 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  25720 | loss 3.1412 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  25740 | loss 3.1880 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+           val loss 3.2097
+           ckpt step25750.pt @ step 25750 sha256 58585c5726203cdf
+step  25760 | loss 3.1870 | grad_norm 0.085 | lr x1.000 | 175k tok/s
+step  25780 | loss 3.2134 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  25800 | loss 3.1579 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  25820 | loss 3.1660 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  25840 | loss 3.1359 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25860 | loss 3.2243 | grad_norm 0.090 | lr x1.000 | 205k tok/s
+step  25880 | loss 3.2133 | grad_norm 0.096 | lr x1.000 | 205k tok/s
+step  25900 | loss 3.1693 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  25920 | loss 3.2216 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  25940 | loss 3.1901 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  25960 | loss 3.1464 | grad_norm 0.091 | lr x1.000 | 205k tok/s
+step  25980 | loss 3.1623 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  26000 | loss 3.1700 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+           val loss 3.2089
+           ckpt step26000.pt @ step 26000 sha256 37e7487988229b44
+step  26020 | loss 3.2482 | grad_norm 0.090 | lr x1.000 | 178k tok/s
+step  26040 | loss 3.1394 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  26060 | loss 3.2186 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  26080 | loss 3.1517 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  26100 | loss 3.1923 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  26120 | loss 3.1833 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  26140 | loss 3.1056 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  26160 | loss 3.1527 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  26180 | loss 3.1936 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  26200 | loss 3.1693 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  26220 | loss 3.1913 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  26240 | loss 3.1850 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+           val loss 3.2081
+           ckpt step26250.pt @ step 26250 sha256 e78029eeb01912c3
+step  26260 | loss 3.1913 | grad_norm 0.086 | lr x1.000 | 176k tok/s
+step  26280 | loss 3.1812 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  26300 | loss 3.1839 | grad_norm 0.093 | lr x1.000 | 204k tok/s
+step  26320 | loss 3.1297 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  26340 | loss 3.1359 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  26360 | loss 3.2399 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  26380 | loss 3.1989 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  26400 | loss 3.1394 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  26420 | loss 3.1367 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  26440 | loss 3.1853 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  26460 | loss 3.1914 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  26480 | loss 3.1802 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  26500 | loss 3.1707 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+           val loss 3.2063
+           ckpt step26500.pt @ step 26500 sha256 dbaddea6ddc4e731
+step  26520 | loss 3.2238 | grad_norm 0.087 | lr x1.000 | 180k tok/s
+step  26540 | loss 3.1465 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  26560 | loss 3.1990 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  26580 | loss 3.2571 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  26600 | loss 3.1838 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  26620 | loss 3.1375 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  26640 | loss 3.2196 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  26660 | loss 3.1411 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  26680 | loss 3.2115 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  26700 | loss 3.1644 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  26720 | loss 3.1572 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  26740 | loss 3.1986 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+           val loss 3.2074
+           ckpt step26750.pt @ step 26750 sha256 f61e459cf3c8dfc8
+step  26760 | loss 3.1363 | grad_norm 0.086 | lr x1.000 | 181k tok/s
+step  26780 | loss 3.1520 | grad_norm 0.088 | lr x1.000 | 204k tok/s
+step  26800 | loss 3.1397 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  26820 | loss 3.2074 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  26840 | loss 3.1519 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  26860 | loss 3.1534 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  26880 | loss 3.1832 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  26900 | loss 3.1942 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  26920 | loss 3.2014 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  26940 | loss 3.1725 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  26960 | loss 3.2236 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  26980 | loss 3.1540 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  27000 | loss 3.1681 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+           val loss 3.2059
+           ckpt step27000.pt @ step 27000 sha256 8b020550f8b0c100
+step  27020 | loss 3.1734 | grad_norm 0.084 | lr x1.000 | 177k tok/s
+step  27040 | loss 3.1849 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  27060 | loss 3.2344 | grad_norm 0.095 | lr x1.000 | 204k tok/s
+step  27080 | loss 3.2533 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  27100 | loss 3.1098 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  27120 | loss 3.1359 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  27140 | loss 3.1782 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  27160 | loss 3.1866 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  27180 | loss 3.1363 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  27200 | loss 3.1453 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  27220 | loss 3.2042 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  27240 | loss 3.2214 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+           val loss 3.2052
+           ckpt step27250.pt @ step 27250 sha256 7824358676476f66
+step  27260 | loss 3.1926 | grad_norm 0.080 | lr x1.000 | 177k tok/s
+step  27280 | loss 3.2313 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  27300 | loss 3.1653 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  27320 | loss 3.2646 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  27340 | loss 3.2016 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  27360 | loss 3.1956 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  27380 | loss 3.1885 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  27400 | loss 3.1593 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  27420 | loss 3.1044 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  27440 | loss 3.1809 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  27460 | loss 3.1560 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  27480 | loss 3.2133 | grad_norm 0.093 | lr x1.000 | 205k tok/s
+step  27500 | loss 3.1725 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+           val loss 3.2037
+           ckpt step27500.pt @ step 27500 sha256 840856cc2fac398d
+step  27520 | loss 3.2132 | grad_norm 0.090 | lr x1.000 | 178k tok/s
+step  27540 | loss 3.1290 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  27560 | loss 3.2382 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  27580 | loss 3.1887 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  27600 | loss 3.1856 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  27620 | loss 3.1771 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  27640 | loss 3.1891 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  27660 | loss 3.1616 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  27680 | loss 3.1816 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  27700 | loss 3.2548 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  27720 | loss 3.1760 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  27740 | loss 3.1679 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+           val loss 3.2031
+           ckpt step27750.pt @ step 27750 sha256 97494b20d61ce40c
+step  27760 | loss 3.2138 | grad_norm 0.083 | lr x1.000 | 176k tok/s
+step  27780 | loss 3.1677 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  27800 | loss 3.1876 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  27820 | loss 3.1349 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  27840 | loss 3.1722 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  27860 | loss 3.2228 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+step  27880 | loss 3.2168 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  27900 | loss 3.1815 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  27920 | loss 3.1212 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  27940 | loss 3.1863 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  27960 | loss 3.1976 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  27980 | loss 3.2302 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  28000 | loss 3.1518 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+           val loss 3.2027
+           ckpt step28000.pt @ step 28000 sha256 b4294cb9eb28e377
+step  28020 | loss 3.1561 | grad_norm 0.081 | lr x1.000 | 178k tok/s
+step  28040 | loss 3.1933 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  28060 | loss 3.1878 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  28080 | loss 3.2325 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  28100 | loss 3.1560 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28120 | loss 3.1830 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  28140 | loss 3.1446 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  28160 | loss 3.1513 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28180 | loss 3.1408 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  28200 | loss 3.1664 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  28220 | loss 3.0989 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  28240 | loss 3.1850 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+           val loss 3.2017
+           ckpt step28250.pt @ step 28250 sha256 a9d7ed7076ba47ef
+step  28260 | loss 3.1897 | grad_norm 0.084 | lr x1.000 | 177k tok/s
+step  28280 | loss 3.1916 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  28300 | loss 3.2248 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  28320 | loss 3.2157 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  28340 | loss 3.1726 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  28360 | loss 3.1877 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28380 | loss 3.1140 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  28400 | loss 3.2275 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28420 | loss 3.2441 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28440 | loss 3.1241 | grad_norm 0.092 | lr x1.000 | 205k tok/s
+step  28460 | loss 3.2191 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  28480 | loss 3.2036 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28500 | loss 3.1775 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+           val loss 3.2009
+           ckpt step28500.pt @ step 28500 sha256 cb349db90f0d4680
+step  28520 | loss 3.1937 | grad_norm 0.085 | lr x1.000 | 180k tok/s
+step  28540 | loss 3.1969 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  28560 | loss 3.2122 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  28580 | loss 3.2553 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  28600 | loss 3.1617 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  28620 | loss 3.1023 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28640 | loss 3.2100 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  28660 | loss 3.1001 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28680 | loss 3.1803 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  28700 | loss 3.1899 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28720 | loss 3.2038 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28740 | loss 3.1427 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+           val loss 3.1997
+           ckpt step28750.pt @ step 28750 sha256 efba78097d119d30
+step  28760 | loss 3.2367 | grad_norm 0.084 | lr x1.000 | 179k tok/s
+step  28780 | loss 3.1809 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  28800 | loss 3.1900 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  28820 | loss 3.1860 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  28840 | loss 3.1225 | grad_norm 0.095 | lr x1.000 | 205k tok/s
+step  28860 | loss 3.1701 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  28880 | loss 3.1187 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  28900 | loss 3.2361 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  28920 | loss 3.1930 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  28940 | loss 3.2468 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  28960 | loss 3.1064 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  28980 | loss 3.1936 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  29000 | loss 3.1465 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+           val loss 3.1988
+           ckpt step29000.pt @ step 29000 sha256 38f02252832fc872
+step  29020 | loss 3.2643 | grad_norm 0.083 | lr x1.000 | 176k tok/s
+step  29040 | loss 3.2107 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  29060 | loss 3.2047 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  29080 | loss 3.1905 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  29100 | loss 3.1816 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  29120 | loss 3.1713 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  29140 | loss 3.2119 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  29160 | loss 3.1782 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  29180 | loss 3.1909 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  29200 | loss 3.1636 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  29220 | loss 3.0326 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  29240 | loss 3.1806 | grad_norm 0.089 | lr x1.000 | 205k tok/s
+           val loss 3.1992
+           ckpt step29250.pt @ step 29250 sha256 6e237bac59cbad83
+step  29260 | loss 3.1711 | grad_norm 0.079 | lr x1.000 | 175k tok/s
+step  29280 | loss 3.1881 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  29300 | loss 3.1323 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  29320 | loss 3.2144 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  29340 | loss 3.1196 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  29360 | loss 3.1856 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  29380 | loss 3.1367 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  29400 | loss 3.2064 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  29420 | loss 3.1424 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  29440 | loss 3.1367 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  29460 | loss 3.2018 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  29480 | loss 3.1203 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  29500 | loss 3.2099 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+           val loss 3.1986
+           ckpt step29500.pt @ step 29500 sha256 1c1c37837220b200
+step  29520 | loss 3.1912 | grad_norm 0.080 | lr x1.000 | 177k tok/s
+step  29540 | loss 3.1670 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  29560 | loss 3.1716 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  29580 | loss 3.1889 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  29600 | loss 3.1576 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  29620 | loss 3.2000 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  29640 | loss 3.1919 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  29660 | loss 3.2169 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  29680 | loss 3.1500 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  29700 | loss 3.1648 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  29720 | loss 3.1512 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  29740 | loss 3.1290 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+           val loss 3.1982
+           ckpt step29750.pt @ step 29750 sha256 867d360c44d33a06
+step  29760 | loss 3.1753 | grad_norm 0.084 | lr x1.000 | 178k tok/s
+step  29780 | loss 3.2104 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  29800 | loss 3.1683 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  29820 | loss 3.2033 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  29840 | loss 3.1348 | grad_norm 0.081 | lr x1.000 | 203k tok/s
+step  29860 | loss 3.1563 | grad_norm 0.088 | lr x1.000 | 205k tok/s
+step  29880 | loss 3.1245 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  29900 | loss 3.1325 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  29920 | loss 3.2285 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  29940 | loss 3.1477 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  29960 | loss 3.1734 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  29980 | loss 3.0722 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  30000 | loss 3.0913 | grad_norm 0.086 | lr x1.000 | 203k tok/s
+           val loss 3.1974
+           ckpt step30000.pt @ step 30000 sha256 2f7c576ec43a093b
+step  30020 | loss 3.0942 | grad_norm 0.080 | lr x1.000 | 180k tok/s
+step  30040 | loss 3.1790 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  30060 | loss 3.1916 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  30080 | loss 3.1994 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  30100 | loss 3.1549 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  30120 | loss 3.2451 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  30140 | loss 3.1602 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  30160 | loss 3.1469 | grad_norm 0.082 | lr x1.000 | 203k tok/s
+step  30180 | loss 3.1118 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  30200 | loss 3.1959 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  30220 | loss 3.1588 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  30240 | loss 3.1941 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+           val loss 3.1968
+           ckpt step30250.pt @ step 30250 sha256 d50a61f330b6b6f8
+step  30260 | loss 3.1738 | grad_norm 0.082 | lr x1.000 | 176k tok/s
+step  30280 | loss 3.1511 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  30300 | loss 3.1973 | grad_norm 0.087 | lr x1.000 | 204k tok/s
+step  30320 | loss 3.1909 | grad_norm 0.086 | lr x1.000 | 204k tok/s
+step  30340 | loss 3.1710 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  30360 | loss 3.1632 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  30380 | loss 3.1869 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  30400 | loss 3.1254 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  30420 | loss 3.1946 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  30440 | loss 3.2391 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  30460 | loss 3.2033 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  30480 | loss 3.1412 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  30500 | loss 3.1297 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+           val loss 3.1957
+           ckpt step30500.pt @ step 30500 sha256 ce3f2c1122adbbfe
+step  30520 | loss 3.1155 | grad_norm 0.081 | lr x1.000 | 179k tok/s
+step  30540 | loss 3.1657 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  30560 | loss 3.1026 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  30580 | loss 3.2380 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  30600 | loss 3.1706 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  30620 | loss 3.2038 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  30640 | loss 3.1585 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  30660 | loss 3.1863 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  30680 | loss 3.1906 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  30700 | loss 3.1062 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  30720 | loss 3.1725 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  30740 | loss 3.1894 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+           val loss 3.1947
+           ckpt step30750.pt @ step 30750 sha256 2a286ca873b0a239
+step  30760 | loss 3.1378 | grad_norm 0.080 | lr x1.000 | 177k tok/s
+step  30780 | loss 3.1911 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  30800 | loss 3.2501 | grad_norm 0.097 | lr x1.000 | 205k tok/s
+step  30820 | loss 3.1606 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  30840 | loss 3.1096 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  30860 | loss 3.1467 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  30880 | loss 3.2062 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  30900 | loss 3.1175 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  30920 | loss 3.1827 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  30940 | loss 3.1856 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  30960 | loss 3.2183 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  30980 | loss 3.2170 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  31000 | loss 3.1620 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+           val loss 3.1942
+           ckpt step31000.pt @ step 31000 sha256 6ebbfe6c4d5c27b3
+step  31020 | loss 3.1782 | grad_norm 0.085 | lr x1.000 | 176k tok/s
+step  31040 | loss 3.2025 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  31060 | loss 3.1813 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31080 | loss 3.1231 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  31100 | loss 3.1425 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  31120 | loss 3.1804 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  31140 | loss 3.2060 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  31160 | loss 3.2624 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  31180 | loss 3.1830 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  31200 | loss 3.2028 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  31220 | loss 3.1848 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  31240 | loss 3.1937 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+           val loss 3.1929
+           ckpt step31250.pt @ step 31250 sha256 f08aaacc64847711
+step  31260 | loss 3.1510 | grad_norm 0.080 | lr x1.000 | 175k tok/s
+step  31280 | loss 3.1704 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  31300 | loss 3.1496 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  31320 | loss 3.1300 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  31340 | loss 3.1643 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  31360 | loss 3.1619 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  31380 | loss 3.1347 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31400 | loss 3.2014 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31420 | loss 3.1878 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31440 | loss 3.1730 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  31460 | loss 3.1081 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  31480 | loss 3.1790 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  31500 | loss 3.1990 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+           val loss 3.1930
+           ckpt step31500.pt @ step 31500 sha256 d604de9fbec65370
+step  31520 | loss 3.1815 | grad_norm 0.079 | lr x1.000 | 176k tok/s
+step  31540 | loss 3.1651 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  31560 | loss 3.1727 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  31580 | loss 3.0837 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31600 | loss 3.1698 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  31620 | loss 3.1849 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  31640 | loss 3.2182 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31660 | loss 3.1216 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31680 | loss 3.1013 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  31700 | loss 3.1436 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  31720 | loss 3.2003 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  31740 | loss 3.1764 | grad_norm 0.090 | lr x1.000 | 204k tok/s
+           val loss 3.1921
+           ckpt step31750.pt @ step 31750 sha256 19545e46f15fdf80
+step  31760 | loss 3.1929 | grad_norm 0.084 | lr x1.000 | 178k tok/s
+step  31780 | loss 3.1967 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  31800 | loss 3.1420 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  31820 | loss 3.1774 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  31840 | loss 3.1935 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  31860 | loss 3.1043 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  31880 | loss 3.0956 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31900 | loss 3.1980 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  31920 | loss 3.1974 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  31940 | loss 3.1885 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  31960 | loss 3.1489 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  31980 | loss 3.2014 | grad_norm 0.085 | lr x1.000 | 204k tok/s
+step  32000 | loss 3.1885 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+           val loss 3.1916
+           ckpt step32000.pt @ step 32000 sha256 16807f11d1c0b981
+step  32020 | loss 3.1339 | grad_norm 0.082 | lr x1.000 | 175k tok/s
+step  32040 | loss 3.0770 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  32060 | loss 3.1316 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  32080 | loss 3.2251 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  32100 | loss 3.1533 | grad_norm 0.089 | lr x1.000 | 204k tok/s
+step  32120 | loss 3.1635 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  32140 | loss 3.1624 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  32160 | loss 3.1111 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  32180 | loss 3.1762 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  32200 | loss 3.1530 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  32220 | loss 3.1711 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  32240 | loss 3.1298 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+           val loss 3.1907
+           ckpt step32250.pt @ step 32250 sha256 3de87f1ff2b11549
+step  32260 | loss 3.1517 | grad_norm 0.078 | lr x1.000 | 175k tok/s
+step  32280 | loss 3.1323 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  32300 | loss 3.1144 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  32320 | loss 3.0762 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  32340 | loss 3.1753 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  32360 | loss 3.1189 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  32380 | loss 3.0899 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  32400 | loss 3.2063 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  32420 | loss 3.1678 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  32440 | loss 3.1659 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  32460 | loss 3.1566 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  32480 | loss 3.1464 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  32500 | loss 3.1580 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+           val loss 3.1902
+           ckpt step32500.pt @ step 32500 sha256 2b1ce5eb1b31bf96
+step  32520 | loss 3.1352 | grad_norm 0.080 | lr x1.000 | 175k tok/s
+step  32540 | loss 3.1817 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  32560 | loss 3.1667 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  32580 | loss 3.1635 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  32600 | loss 3.1961 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  32620 | loss 3.1654 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  32640 | loss 3.1272 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  32660 | loss 3.1438 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  32680 | loss 3.1018 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  32700 | loss 3.1987 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  32720 | loss 3.2149 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  32740 | loss 3.1190 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+           val loss 3.1898
+           ckpt step32750.pt @ step 32750 sha256 cd8011cf035807de
+step  32760 | loss 3.1526 | grad_norm 0.079 | lr x1.000 | 175k tok/s
+step  32780 | loss 3.1604 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  32800 | loss 3.1724 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  32820 | loss 3.1147 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  32840 | loss 3.1842 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  32860 | loss 3.0919 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  32880 | loss 3.1650 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  32900 | loss 3.2075 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  32920 | loss 3.2219 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  32940 | loss 3.1674 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  32960 | loss 3.1680 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  32980 | loss 3.1910 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  33000 | loss 3.1065 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+           val loss 3.1887
+           ckpt step33000.pt @ step 33000 sha256 aae0076532a48e8d
+step  33020 | loss 3.0763 | grad_norm 0.084 | lr x1.000 | 177k tok/s
+step  33040 | loss 3.1952 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  33060 | loss 3.2003 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  33080 | loss 3.1676 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  33100 | loss 3.0831 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33120 | loss 3.1249 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  33140 | loss 3.2004 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33160 | loss 3.1960 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  33180 | loss 3.1630 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33200 | loss 3.1727 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  33220 | loss 3.1356 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  33240 | loss 3.1218 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+           val loss 3.1875
+           ckpt step33250.pt @ step 33250 sha256 600789642a0631a9
+step  33260 | loss 3.1300 | grad_norm 0.076 | lr x1.000 | 175k tok/s
+step  33280 | loss 3.1400 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  33300 | loss 3.1983 | grad_norm 0.086 | lr x1.000 | 205k tok/s
+step  33320 | loss 3.1217 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33340 | loss 3.1779 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33360 | loss 3.1140 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33380 | loss 3.2113 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33400 | loss 3.1081 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33420 | loss 3.2049 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  33440 | loss 3.1417 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33460 | loss 3.1388 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33480 | loss 3.1417 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33500 | loss 3.1883 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+           val loss 3.1876
+           ckpt step33500.pt @ step 33500 sha256 ec6a8a246bc16389
+step  33520 | loss 3.1816 | grad_norm 0.077 | lr x1.000 | 176k tok/s
+step  33540 | loss 3.1462 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  33560 | loss 3.1990 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  33580 | loss 3.2019 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  33600 | loss 3.2194 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  33620 | loss 3.1419 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33640 | loss 3.1697 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  33660 | loss 3.1765 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33680 | loss 3.1558 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33700 | loss 3.1333 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  33720 | loss 3.2003 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33740 | loss 3.1546 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+           val loss 3.1859
+           ckpt step33750.pt @ step 33750 sha256 a0f22ffa092e48be
+step  33760 | loss 3.1971 | grad_norm 0.080 | lr x1.000 | 176k tok/s
+step  33780 | loss 3.0968 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33800 | loss 3.1680 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  33820 | loss 3.1180 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33840 | loss 3.1353 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  33860 | loss 3.1121 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  33880 | loss 3.2116 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33900 | loss 3.1640 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  33920 | loss 3.1635 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  33940 | loss 3.1756 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  33960 | loss 3.2128 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  33980 | loss 3.1124 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  34000 | loss 3.1628 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+           val loss 3.1856
+           ckpt step34000.pt @ step 34000 sha256 184f4eecd6334a37
+step  34020 | loss 3.1699 | grad_norm 0.078 | lr x1.000 | 178k tok/s
+step  34040 | loss 3.1614 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  34060 | loss 3.1472 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  34080 | loss 3.1314 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  34100 | loss 3.1305 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  34120 | loss 3.1918 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  34140 | loss 3.2102 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  34160 | loss 3.0635 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34180 | loss 3.1859 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  34200 | loss 3.1232 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  34220 | loss 3.1425 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  34240 | loss 3.0697 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+           val loss 3.1856
+           ckpt step34250.pt @ step 34250 sha256 e0f022ab7298a5c7
+step  34260 | loss 3.1437 | grad_norm 0.076 | lr x1.000 | 177k tok/s
+step  34280 | loss 3.2503 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  34300 | loss 3.1643 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34320 | loss 3.1333 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  34340 | loss 3.1998 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  34360 | loss 3.1646 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34380 | loss 3.1773 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  34400 | loss 3.1536 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  34420 | loss 3.1654 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  34440 | loss 3.1307 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  34460 | loss 3.1539 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  34480 | loss 3.1975 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34500 | loss 3.1901 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+           val loss 3.1848
+           ckpt step34500.pt @ step 34500 sha256 facacd5274719d0b
+step  34520 | loss 3.1765 | grad_norm 0.076 | lr x1.000 | 176k tok/s
+step  34540 | loss 3.1906 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34560 | loss 3.1841 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  34580 | loss 3.2189 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  34600 | loss 3.1293 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  34620 | loss 3.1227 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  34640 | loss 3.1828 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  34660 | loss 3.1988 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34680 | loss 3.1491 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  34700 | loss 3.1215 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  34720 | loss 3.1560 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  34740 | loss 3.1620 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+           val loss 3.1845
+           ckpt step34750.pt @ step 34750 sha256 b480ff2f0bed26b1
+step  34760 | loss 3.1302 | grad_norm 0.080 | lr x1.000 | 176k tok/s
+step  34780 | loss 3.1501 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  34800 | loss 3.1534 | grad_norm 0.082 | lr x1.000 | 204k tok/s
+step  34820 | loss 3.1451 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  34840 | loss 3.1177 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  34860 | loss 3.1643 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  34880 | loss 3.1615 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  34900 | loss 3.1649 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  34920 | loss 3.1214 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  34940 | loss 3.1531 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34960 | loss 3.1261 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  34980 | loss 3.0880 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  35000 | loss 3.1108 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+           val loss 3.1839
+           ckpt step35000.pt @ step 35000 sha256 1f287a285ad901d0
+step  35020 | loss 3.1182 | grad_norm 0.085 | lr x1.000 | 178k tok/s
+step  35040 | loss 3.1673 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  35060 | loss 3.1568 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  35080 | loss 3.2033 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  35100 | loss 3.1652 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  35120 | loss 3.1289 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  35140 | loss 3.0716 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  35160 | loss 3.1696 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  35180 | loss 3.1853 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  35200 | loss 3.1382 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  35220 | loss 3.1436 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  35240 | loss 3.1648 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+           val loss 3.1828
+           ckpt step35250.pt @ step 35250 sha256 9d1dc6e62759a0db
+step  35260 | loss 3.1263 | grad_norm 0.079 | lr x1.000 | 177k tok/s
+step  35280 | loss 3.1551 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  35300 | loss 3.1187 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  35320 | loss 3.1529 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  35340 | loss 3.1363 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  35360 | loss 3.1750 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  35380 | loss 3.1757 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  35400 | loss 3.1149 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  35420 | loss 3.1336 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  35440 | loss 3.1684 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  35460 | loss 3.1172 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  35480 | loss 3.1329 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  35500 | loss 3.1383 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+           val loss 3.1836
+           ckpt step35500.pt @ step 35500 sha256 33e22da9b63c78b6
+step  35520 | loss 3.1974 | grad_norm 0.077 | lr x1.000 | 177k tok/s
+step  35540 | loss 3.1365 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  35560 | loss 3.1226 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  35580 | loss 3.1910 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  35600 | loss 3.1117 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+step  35620 | loss 3.1617 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  35640 | loss 3.0971 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  35660 | loss 3.1026 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  35680 | loss 3.2112 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  35700 | loss 3.1801 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  35720 | loss 3.1975 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  35740 | loss 3.2070 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+           val loss 3.1828
+           ckpt step35750.pt @ step 35750 sha256 bd97ea735031aab0
+step  35760 | loss 3.1017 | grad_norm 0.081 | lr x1.000 | 176k tok/s
+step  35780 | loss 3.2518 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  35800 | loss 3.2008 | grad_norm 0.084 | lr x1.000 | 205k tok/s
+step  35820 | loss 3.1504 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  35840 | loss 3.1717 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  35860 | loss 3.1434 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  35880 | loss 3.1487 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+step  35900 | loss 3.1073 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  35920 | loss 3.1529 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  35940 | loss 3.1979 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  35960 | loss 3.1567 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  35980 | loss 3.2073 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  36000 | loss 3.1259 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+           val loss 3.1819
+           ckpt step36000.pt @ step 36000 sha256 d0be04bbc911e321
+step  36020 | loss 3.1092 | grad_norm 0.078 | lr x1.000 | 176k tok/s
+step  36040 | loss 3.1378 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36060 | loss 3.1757 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  36080 | loss 3.1263 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  36100 | loss 3.1280 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  36120 | loss 3.1088 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  36140 | loss 3.1674 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  36160 | loss 3.1245 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  36180 | loss 3.1626 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  36200 | loss 3.1884 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  36220 | loss 3.1922 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36240 | loss 3.1513 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+           val loss 3.1817
+           ckpt step36250.pt @ step 36250 sha256 a28e149d3216bf9c
+step  36260 | loss 3.1342 | grad_norm 0.082 | lr x1.000 | 175k tok/s
+step  36280 | loss 3.1200 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  36300 | loss 3.0875 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  36320 | loss 3.1467 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36340 | loss 3.1297 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  36360 | loss 3.1626 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36380 | loss 3.1842 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  36400 | loss 3.1101 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  36420 | loss 3.1590 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  36440 | loss 3.1319 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36460 | loss 3.1950 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36480 | loss 3.0703 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  36500 | loss 3.1770 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+           val loss 3.1807
+           ckpt step36500.pt @ step 36500 sha256 ba1e25dab5721ef8
+step  36520 | loss 3.1651 | grad_norm 0.080 | lr x1.000 | 177k tok/s
+step  36540 | loss 3.0820 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  36560 | loss 3.1530 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36580 | loss 3.2002 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  36600 | loss 3.1174 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  36620 | loss 3.1131 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  36640 | loss 3.1572 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  36660 | loss 3.1345 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  36680 | loss 3.1360 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36700 | loss 3.1892 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36720 | loss 3.1689 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36740 | loss 3.0761 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+           val loss 3.1804
+           ckpt step36750.pt @ step 36750 sha256 3667119ecfd680c0
+step  36760 | loss 3.1781 | grad_norm 0.076 | lr x1.000 | 176k tok/s
+step  36780 | loss 3.1864 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36800 | loss 3.1655 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  36820 | loss 3.1335 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  36840 | loss 3.1634 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  36860 | loss 3.1357 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  36880 | loss 3.1912 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  36900 | loss 3.1463 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36920 | loss 3.1420 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36940 | loss 3.1037 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  36960 | loss 3.0852 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  36980 | loss 3.1783 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  37000 | loss 3.1544 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+           val loss 3.1798
+           ckpt step37000.pt @ step 37000 sha256 fd20a1bc6a6f6b86
+step  37020 | loss 3.1637 | grad_norm 0.081 | lr x1.000 | 178k tok/s
+step  37040 | loss 3.1556 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  37060 | loss 3.1729 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37080 | loss 3.1158 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  37100 | loss 3.1207 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  37120 | loss 3.1344 | grad_norm 0.085 | lr x1.000 | 205k tok/s
+step  37140 | loss 3.1499 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37160 | loss 3.1262 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37180 | loss 3.2198 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37200 | loss 3.2008 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  37220 | loss 3.1489 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  37240 | loss 3.1218 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+           val loss 3.1803
+           ckpt step37250.pt @ step 37250 sha256 554cb462389704be
+step  37260 | loss 3.1182 | grad_norm 0.078 | lr x1.000 | 178k tok/s
+step  37280 | loss 3.0619 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  37300 | loss 3.1760 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  37320 | loss 3.1424 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37340 | loss 3.1472 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  37360 | loss 3.0786 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  37380 | loss 3.1463 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  37400 | loss 3.2241 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  37420 | loss 3.1903 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  37440 | loss 3.1648 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  37460 | loss 3.1773 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  37480 | loss 3.0986 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  37500 | loss 3.1401 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+           val loss 3.1789
+           ckpt step37500.pt @ step 37500 sha256 c7f0166e75300a5c
+step  37520 | loss 3.1291 | grad_norm 0.078 | lr x1.000 | 178k tok/s
+step  37540 | loss 3.1250 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37560 | loss 3.1250 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  37580 | loss 3.1972 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  37600 | loss 3.1463 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  37620 | loss 3.1644 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  37640 | loss 3.2057 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  37660 | loss 3.1249 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37680 | loss 3.1634 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  37700 | loss 3.1456 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  37720 | loss 3.1323 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  37740 | loss 3.2150 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+           val loss 3.1788
+           ckpt step37750.pt @ step 37750 sha256 4b60649918f80cae
+step  37760 | loss 3.1288 | grad_norm 0.079 | lr x1.000 | 179k tok/s
+step  37780 | loss 3.1942 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  37800 | loss 3.1780 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  37820 | loss 3.1304 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  37840 | loss 3.1181 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  37860 | loss 3.2086 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37880 | loss 3.1648 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37900 | loss 3.1609 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  37920 | loss 3.1948 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  37940 | loss 3.1238 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  37960 | loss 3.1805 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  37980 | loss 3.2029 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  38000 | loss 3.1236 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+           val loss 3.1779
+           ckpt step38000.pt @ step 38000 sha256 8cb6c66ec9274c82
+step  38020 | loss 3.1717 | grad_norm 0.080 | lr x1.000 | 176k tok/s
+step  38040 | loss 3.1664 | grad_norm 0.087 | lr x1.000 | 205k tok/s
+step  38060 | loss 3.1636 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  38080 | loss 3.1466 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  38100 | loss 3.1157 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  38120 | loss 3.1132 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  38140 | loss 3.1059 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  38160 | loss 3.1524 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  38180 | loss 3.1645 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  38200 | loss 3.1478 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  38220 | loss 3.1837 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  38240 | loss 3.1921 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+           val loss 3.1770
+           ckpt step38250.pt @ step 38250 sha256 dc6abb8ca69dd8fa
+step  38260 | loss 3.1954 | grad_norm 0.077 | lr x1.000 | 178k tok/s
+step  38280 | loss 3.1049 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  38300 | loss 3.1358 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  38320 | loss 3.1822 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  38340 | loss 3.1511 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  38360 | loss 3.1235 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  38380 | loss 3.2189 | grad_norm 0.083 | lr x1.000 | 203k tok/s
+step  38400 | loss 3.1796 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  38420 | loss 3.1234 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  38440 | loss 3.1464 | grad_norm 0.079 | lr x1.000 | 203k tok/s
+step  38460 | loss 3.1323 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  38480 | loss 3.1010 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  38500 | loss 3.1387 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+           val loss 3.1771
+           ckpt step38500.pt @ step 38500 sha256 be8e0ca8af84d8c8
+step  38520 | loss 3.1708 | grad_norm 0.081 | lr x1.000 | 178k tok/s
+step  38540 | loss 3.1313 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  38560 | loss 3.2340 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  38580 | loss 3.1567 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  38600 | loss 3.1872 | grad_norm 0.076 | lr x1.000 | 203k tok/s
+step  38620 | loss 3.1777 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  38640 | loss 3.1821 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  38660 | loss 3.1351 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  38680 | loss 3.1423 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  38700 | loss 3.1215 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  38720 | loss 3.1906 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  38740 | loss 3.1274 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+           val loss 3.1762
+           ckpt step38750.pt @ step 38750 sha256 0bf7d02928cde1fb
+step  38760 | loss 3.1388 | grad_norm 0.077 | lr x1.000 | 176k tok/s
+step  38780 | loss 3.2068 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  38800 | loss 3.2132 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  38820 | loss 3.1711 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  38840 | loss 3.1400 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  38860 | loss 3.1966 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  38880 | loss 3.1313 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  38900 | loss 3.1865 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  38920 | loss 3.1525 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  38940 | loss 3.1837 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  38960 | loss 3.0804 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  38980 | loss 3.1520 | grad_norm 0.082 | lr x1.000 | 205k tok/s
+step  39000 | loss 3.1279 | grad_norm 0.083 | lr x1.000 | 205k tok/s
+           val loss 3.1762
+           ckpt step39000.pt @ step 39000 sha256 ed26544e687d16df
+step  39020 | loss 3.1365 | grad_norm 0.077 | lr x1.000 | 179k tok/s
+step  39040 | loss 3.1371 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  39060 | loss 3.1165 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  39080 | loss 3.1490 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  39100 | loss 3.1091 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  39120 | loss 3.1178 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  39140 | loss 3.1163 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  39160 | loss 3.1519 | grad_norm 0.077 | lr x1.000 | 206k tok/s
+step  39180 | loss 3.1383 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  39200 | loss 3.0727 | grad_norm 0.078 | lr x1.000 | 206k tok/s
+step  39220 | loss 3.1177 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  39240 | loss 3.1471 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+           val loss 3.1752
+           ckpt step39250.pt @ step 39250 sha256 021d5e7e8b7165ad
+step  39260 | loss 3.1978 | grad_norm 0.082 | lr x1.000 | 176k tok/s
+step  39280 | loss 3.1114 | grad_norm 0.073 | lr x1.000 | 206k tok/s
+step  39300 | loss 3.1895 | grad_norm 0.076 | lr x1.000 | 206k tok/s
+step  39320 | loss 3.1212 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  39340 | loss 3.1736 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  39360 | loss 3.1482 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  39380 | loss 3.1491 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  39400 | loss 3.1282 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  39420 | loss 3.1778 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  39440 | loss 3.1435 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  39460 | loss 3.1274 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  39480 | loss 3.1384 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  39500 | loss 3.0560 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+           val loss 3.1749
+           ckpt step39500.pt @ step 39500 sha256 7a9bd5cc55aacd2a
+step  39520 | loss 3.1654 | grad_norm 0.078 | lr x1.000 | 176k tok/s
+step  39540 | loss 3.1636 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  39560 | loss 3.1797 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  39580 | loss 3.1641 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  39600 | loss 3.1296 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  39620 | loss 3.1512 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  39640 | loss 3.1483 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  39660 | loss 3.1564 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  39680 | loss 3.1666 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  39700 | loss 3.1428 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  39720 | loss 3.1918 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  39740 | loss 3.1240 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+           val loss 3.1743
+           ckpt step39750.pt @ step 39750 sha256 875eece4a8553439
+step  39760 | loss 3.1354 | grad_norm 0.076 | lr x1.000 | 179k tok/s
+step  39780 | loss 3.1974 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  39800 | loss 3.1933 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  39820 | loss 3.1362 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  39840 | loss 3.1325 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  39860 | loss 3.1603 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  39880 | loss 3.2305 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  39900 | loss 3.1674 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  39920 | loss 3.1609 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  39940 | loss 3.2475 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  39960 | loss 3.1651 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  39980 | loss 3.1126 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40000 | loss 3.1373 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+           val loss 3.1742
+           ckpt step40000.pt @ step 40000 sha256 d66af433e6bbbd88
+step  40020 | loss 3.1077 | grad_norm 0.074 | lr x1.000 | 180k tok/s
+step  40040 | loss 3.1608 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  40060 | loss 3.1180 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  40080 | loss 3.0721 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  40100 | loss 3.1571 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  40120 | loss 3.1184 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  40140 | loss 3.1817 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  40160 | loss 3.1920 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40180 | loss 3.1693 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40200 | loss 3.1267 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  40220 | loss 3.1958 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  40240 | loss 3.1387 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+           val loss 3.1738
+           ckpt step40250.pt @ step 40250 sha256 9718f2083870330d
+step  40260 | loss 3.1216 | grad_norm 0.078 | lr x1.000 | 174k tok/s
+step  40280 | loss 3.1631 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40300 | loss 3.1448 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  40320 | loss 3.1371 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40340 | loss 3.1856 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  40360 | loss 3.1177 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  40380 | loss 3.1680 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40400 | loss 3.1352 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  40420 | loss 3.0804 | grad_norm 0.071 | lr x1.000 | 203k tok/s
+step  40440 | loss 3.1735 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40460 | loss 3.1194 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  40480 | loss 3.1539 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40500 | loss 3.1490 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+           val loss 3.1735
+           ckpt step40500.pt @ step 40500 sha256 b964c171bf02803e
+step  40520 | loss 3.1537 | grad_norm 0.075 | lr x1.000 | 177k tok/s
+step  40540 | loss 3.1797 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  40560 | loss 3.1245 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40580 | loss 3.1451 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40600 | loss 3.2032 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40620 | loss 3.1502 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  40640 | loss 3.1653 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  40660 | loss 3.1230 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  40680 | loss 3.1568 | grad_norm 0.077 | lr x1.000 | 203k tok/s
+step  40700 | loss 3.1095 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40720 | loss 3.1814 | grad_norm 0.078 | lr x1.000 | 203k tok/s
+step  40740 | loss 3.1360 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+           val loss 3.1730
+           ckpt step40750.pt @ step 40750 sha256 0501d31aaee8e471
+step  40760 | loss 3.1209 | grad_norm 0.083 | lr x1.000 | 177k tok/s
+step  40780 | loss 3.0682 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  40800 | loss 3.1906 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  40820 | loss 3.1730 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  40840 | loss 3.0957 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40860 | loss 3.2302 | grad_norm 0.071 | lr x1.000 | 203k tok/s
+step  40880 | loss 3.2037 | grad_norm 0.084 | lr x1.000 | 204k tok/s
+step  40900 | loss 3.1143 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40920 | loss 3.1543 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40940 | loss 3.1519 | grad_norm 0.076 | lr x1.000 | 203k tok/s
+step  40960 | loss 3.1191 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  40980 | loss 3.2143 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41000 | loss 3.1380 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+           val loss 3.1720
+           ckpt step41000.pt @ step 41000 sha256 10131cdaf94ec415
+step  41020 | loss 3.2271 | grad_norm 0.075 | lr x1.000 | 177k tok/s
+step  41040 | loss 3.2112 | grad_norm 0.078 | lr x1.000 | 203k tok/s
+step  41060 | loss 3.1352 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  41080 | loss 3.0894 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41100 | loss 3.1009 | grad_norm 0.078 | lr x1.000 | 203k tok/s
+step  41120 | loss 3.1861 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  41140 | loss 3.1555 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  41160 | loss 3.0775 | grad_norm 0.076 | lr x1.000 | 203k tok/s
+step  41180 | loss 3.1037 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  41200 | loss 3.1859 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  41220 | loss 3.1629 | grad_norm 0.075 | lr x1.000 | 203k tok/s
+step  41240 | loss 3.1718 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+           val loss 3.1714
+           ckpt step41250.pt @ step 41250 sha256 9fce6cf7a10b01a6
+step  41260 | loss 3.1757 | grad_norm 0.073 | lr x1.000 | 176k tok/s
+step  41280 | loss 3.1286 | grad_norm 0.070 | lr x1.000 | 204k tok/s
+step  41300 | loss 3.1361 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  41320 | loss 3.1703 | grad_norm 0.077 | lr x1.000 | 203k tok/s
+step  41340 | loss 3.0819 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41360 | loss 3.0435 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  41380 | loss 3.1453 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  41400 | loss 3.1001 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  41420 | loss 3.1535 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41440 | loss 3.1798 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41460 | loss 3.1545 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  41480 | loss 3.1562 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  41500 | loss 3.1196 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+           val loss 3.1713
+           ckpt step41500.pt @ step 41500 sha256 18129223602f9e25
+step  41520 | loss 3.0869 | grad_norm 0.074 | lr x1.000 | 179k tok/s
+step  41540 | loss 3.1143 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  41560 | loss 3.1583 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  41580 | loss 3.2045 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41600 | loss 3.1274 | grad_norm 0.075 | lr x1.000 | 203k tok/s
+step  41620 | loss 3.1783 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  41640 | loss 3.1379 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  41660 | loss 3.1177 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  41680 | loss 3.1529 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  41700 | loss 3.1833 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  41720 | loss 3.1308 | grad_norm 0.072 | lr x1.000 | 203k tok/s
+step  41740 | loss 3.1517 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+           val loss 3.1706
+           ckpt step41750.pt @ step 41750 sha256 c42b9a03a8ddf1d5
+step  41760 | loss 3.1382 | grad_norm 0.075 | lr x1.000 | 177k tok/s
+step  41780 | loss 3.1422 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41800 | loss 3.1481 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  41820 | loss 3.1255 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  41840 | loss 3.0745 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  41860 | loss 3.1644 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  41880 | loss 3.1452 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41900 | loss 3.1850 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41920 | loss 3.1062 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  41940 | loss 3.1382 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  41960 | loss 3.1240 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  41980 | loss 3.1400 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  42000 | loss 3.1651 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+           val loss 3.1702
+           ckpt step42000.pt @ step 42000 sha256 43db1a865413c6ef
+step  42020 | loss 3.1530 | grad_norm 0.075 | lr x1.000 | 176k tok/s
+step  42040 | loss 3.1683 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  42060 | loss 3.1790 | grad_norm 0.077 | lr x1.000 | 203k tok/s
+step  42080 | loss 3.1129 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  42100 | loss 3.1840 | grad_norm 0.074 | lr x1.000 | 203k tok/s
+step  42120 | loss 3.1408 | grad_norm 0.073 | lr x1.000 | 203k tok/s
+step  42140 | loss 3.1220 | grad_norm 0.078 | lr x1.000 | 203k tok/s
+step  42160 | loss 3.0803 | grad_norm 0.073 | lr x1.000 | 203k tok/s
+step  42180 | loss 3.0808 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  42200 | loss 3.1470 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  42220 | loss 3.2032 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  42240 | loss 3.1260 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+           val loss 3.1700
+           ckpt step42250.pt @ step 42250 sha256 bab557e0a59cfdd1
+step  42260 | loss 3.1403 | grad_norm 0.074 | lr x1.000 | 178k tok/s
+step  42280 | loss 3.1689 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  42300 | loss 3.1334 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  42320 | loss 3.0938 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  42340 | loss 3.2309 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  42360 | loss 3.1379 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  42380 | loss 3.1223 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  42400 | loss 3.1224 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  42420 | loss 3.2094 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  42440 | loss 3.1474 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  42460 | loss 3.1839 | grad_norm 0.072 | lr x1.000 | 203k tok/s
+step  42480 | loss 3.0784 | grad_norm 0.079 | lr x1.000 | 203k tok/s
+step  42500 | loss 3.1246 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+           val loss 3.1697
+           ckpt step42500.pt @ step 42500 sha256 e7d0b33450c52229
+step  42520 | loss 3.1733 | grad_norm 0.074 | lr x1.000 | 176k tok/s
+step  42540 | loss 3.1780 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  42560 | loss 3.2059 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  42580 | loss 3.1524 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  42600 | loss 3.0874 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  42620 | loss 3.1671 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  42640 | loss 3.1676 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  42660 | loss 3.1928 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  42680 | loss 3.1052 | grad_norm 0.071 | lr x1.000 | 204k tok/s
+step  42700 | loss 3.1949 | grad_norm 0.071 | lr x1.000 | 205k tok/s
+step  42720 | loss 3.1430 | grad_norm 0.083 | lr x1.000 | 204k tok/s
+step  42740 | loss 3.1016 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+           val loss 3.1689
+           ckpt step42750.pt @ step 42750 sha256 dc84a30c0f7ee5fe
+step  42760 | loss 3.1150 | grad_norm 0.072 | lr x1.000 | 176k tok/s
+step  42780 | loss 3.1888 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  42800 | loss 3.0640 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  42820 | loss 3.1342 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  42840 | loss 3.1789 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  42860 | loss 3.1550 | grad_norm 0.071 | lr x1.000 | 204k tok/s
+step  42880 | loss 3.0890 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  42900 | loss 3.1206 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  42920 | loss 3.2095 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  42940 | loss 3.1688 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  42960 | loss 3.1275 | grad_norm 0.081 | lr x1.000 | 205k tok/s
+step  42980 | loss 3.1282 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43000 | loss 3.1337 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+           val loss 3.1688
+           ckpt step43000.pt @ step 43000 sha256 ccc73522bfde7fa8
+step  43020 | loss 3.2108 | grad_norm 0.076 | lr x1.000 | 178k tok/s
+step  43040 | loss 3.0957 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  43060 | loss 3.1448 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  43080 | loss 3.1619 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  43100 | loss 3.1492 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43120 | loss 3.1593 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43140 | loss 3.1033 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  43160 | loss 3.1241 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  43180 | loss 3.1673 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  43200 | loss 3.1743 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  43220 | loss 3.1198 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  43240 | loss 3.1262 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+           val loss 3.1680
+           ckpt step43250.pt @ step 43250 sha256 729f5af6832d2a36
+step  43260 | loss 3.1880 | grad_norm 0.075 | lr x1.000 | 175k tok/s
+step  43280 | loss 3.2049 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  43300 | loss 3.1344 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  43320 | loss 3.1676 | grad_norm 0.071 | lr x1.000 | 205k tok/s
+step  43340 | loss 3.1083 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  43360 | loss 3.1533 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+step  43380 | loss 3.1524 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43400 | loss 3.1426 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+step  43420 | loss 3.1665 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43440 | loss 3.0930 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  43460 | loss 3.1472 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  43480 | loss 3.1993 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  43500 | loss 3.1232 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+           val loss 3.1676
+           ckpt step43500.pt @ step 43500 sha256 1934562b5c75634e
+step  43520 | loss 3.1551 | grad_norm 0.080 | lr x1.000 | 176k tok/s
+step  43540 | loss 3.1910 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  43560 | loss 3.1565 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  43580 | loss 3.1483 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  43600 | loss 3.1125 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  43620 | loss 3.1885 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  43640 | loss 3.0856 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  43660 | loss 3.1418 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  43680 | loss 3.1530 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+step  43700 | loss 3.1617 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  43720 | loss 3.1013 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  43740 | loss 3.1453 | grad_norm 0.071 | lr x1.000 | 205k tok/s
+           val loss 3.1681
+           ckpt step43750.pt @ step 43750 sha256 3a38d9742fc4e501
+step  43760 | loss 3.2267 | grad_norm 0.074 | lr x1.000 | 176k tok/s
+step  43780 | loss 3.2079 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  43800 | loss 3.1138 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43820 | loss 3.1627 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43840 | loss 3.0686 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43860 | loss 3.1473 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  43880 | loss 3.1675 | grad_norm 0.070 | lr x1.000 | 205k tok/s
+step  43900 | loss 3.1183 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  43920 | loss 3.0804 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  43940 | loss 3.1647 | grad_norm 0.078 | lr x1.000 | 205k tok/s
+step  43960 | loss 3.1903 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  43980 | loss 3.1614 | grad_norm 0.079 | lr x1.000 | 205k tok/s
+step  44000 | loss 3.1876 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+           val loss 3.1674
+           ckpt step44000.pt @ step 44000 sha256 095168e87a36960a
+step  44020 | loss 3.1300 | grad_norm 0.074 | lr x1.000 | 175k tok/s
+step  44040 | loss 3.1607 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  44060 | loss 3.1702 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  44080 | loss 3.1305 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  44100 | loss 3.1198 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  44120 | loss 3.1644 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  44140 | loss 3.0542 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  44160 | loss 3.1628 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44180 | loss 3.1032 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  44200 | loss 3.1661 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  44220 | loss 3.0855 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44240 | loss 3.1569 | grad_norm 0.081 | lr x1.000 | 203k tok/s
+           val loss 3.1665
+           ckpt step44250.pt @ step 44250 sha256 35e0f4905f7c6ec8
+step  44260 | loss 3.1121 | grad_norm 0.073 | lr x1.000 | 177k tok/s
+step  44280 | loss 3.1734 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  44300 | loss 3.1384 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  44320 | loss 3.0993 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44340 | loss 3.0961 | grad_norm 0.077 | lr x1.000 | 203k tok/s
+step  44360 | loss 3.1007 | grad_norm 0.075 | lr x1.000 | 203k tok/s
+step  44380 | loss 3.1671 | grad_norm 0.071 | lr x1.000 | 204k tok/s
+step  44400 | loss 3.1237 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  44420 | loss 3.0871 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  44440 | loss 3.1052 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44460 | loss 3.1121 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44480 | loss 3.0990 | grad_norm 0.070 | lr x1.000 | 204k tok/s
+step  44500 | loss 3.0892 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+           val loss 3.1657
+           ckpt step44500.pt @ step 44500 sha256 c28181b67b5fb3b1
+step  44520 | loss 3.0996 | grad_norm 0.076 | lr x1.000 | 175k tok/s
+step  44540 | loss 3.1041 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44560 | loss 3.1166 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  44580 | loss 3.1420 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44600 | loss 3.2152 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44620 | loss 3.1507 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  44640 | loss 3.0587 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  44660 | loss 3.1595 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  44680 | loss 3.0886 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  44700 | loss 3.1154 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+step  44720 | loss 3.0765 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  44740 | loss 3.1574 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+           val loss 3.1658
+           ckpt step44750.pt @ step 44750 sha256 58660c1f37d700bf
+step  44760 | loss 3.1348 | grad_norm 0.073 | lr x1.000 | 176k tok/s
+step  44780 | loss 3.1886 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  44800 | loss 3.0653 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  44820 | loss 3.1167 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  44840 | loss 3.1392 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+step  44860 | loss 3.1391 | grad_norm 0.071 | lr x1.000 | 204k tok/s
+step  44880 | loss 3.1394 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  44900 | loss 3.2058 | grad_norm 0.077 | lr x1.000 | 204k tok/s
+step  44920 | loss 3.1650 | grad_norm 0.081 | lr x1.000 | 204k tok/s
+step  44940 | loss 3.1396 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  44960 | loss 3.1183 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  44980 | loss 3.1023 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  45000 | loss 3.1282 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+           val loss 3.1651
+           ckpt step45000.pt @ step 45000 sha256 3fb6564f6254868f
+step  45020 | loss 3.1563 | grad_norm 0.073 | lr x1.000 | 175k tok/s
+step  45040 | loss 3.1121 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  45060 | loss 3.1554 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  45080 | loss 3.0832 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  45100 | loss 3.1722 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+step  45120 | loss 3.1248 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  45140 | loss 3.1054 | grad_norm 0.071 | lr x1.000 | 204k tok/s
+step  45160 | loss 3.0973 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  45180 | loss 3.0955 | grad_norm 0.071 | lr x1.000 | 204k tok/s
+step  45200 | loss 3.1858 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  45220 | loss 3.1674 | grad_norm 0.073 | lr x1.000 | 204k tok/s
+step  45240 | loss 3.1192 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+           val loss 3.1644
+           ckpt step45250.pt @ step 45250 sha256 a85a3c7b67d66779
+step  45260 | loss 3.1163 | grad_norm 0.073 | lr x1.000 | 176k tok/s
+step  45280 | loss 3.1574 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  45300 | loss 3.1180 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  45320 | loss 3.0774 | grad_norm 0.080 | lr x1.000 | 204k tok/s
+step  45340 | loss 3.1766 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  45360 | loss 3.1678 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  45380 | loss 3.1347 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  45400 | loss 3.1689 | grad_norm 0.071 | lr x1.000 | 205k tok/s
+step  45420 | loss 3.1923 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  45440 | loss 3.0792 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  45460 | loss 3.0969 | grad_norm 0.070 | lr x1.000 | 204k tok/s
+step  45480 | loss 3.1955 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  45500 | loss 3.2199 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+           val loss 3.1649
+           ckpt step45500.pt @ step 45500 sha256 1cc253995face196
+step  45520 | loss 3.0508 | grad_norm 0.070 | lr x1.000 | 175k tok/s
+step  45540 | loss 3.1399 | grad_norm 0.077 | lr x1.000 | 205k tok/s
+step  45560 | loss 3.2584 | grad_norm 0.076 | lr x1.000 | 205k tok/s
+step  45580 | loss 3.1676 | grad_norm 0.080 | lr x1.000 | 205k tok/s
+step  45600 | loss 3.0798 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  45620 | loss 3.0932 | grad_norm 0.072 | lr x1.000 | 204k tok/s
+step  45640 | loss 3.1440 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  45660 | loss 3.1816 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  45680 | loss 3.1309 | grad_norm 0.079 | lr x1.000 | 204k tok/s
+step  45700 | loss 3.0932 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+step  45720 | loss 3.1045 | grad_norm 0.069 | lr x1.000 | 204k tok/s
+step  45740 | loss 3.1739 | grad_norm 0.074 | lr x1.000 | 205k tok/s
+           val loss 3.1640
+           ckpt step45750.pt @ step 45750 sha256 a7f71f7b9edad3c1
+step  45760 | loss 3.1787 | grad_norm 0.073 | lr x1.000 | 177k tok/s
+step  45780 | loss 3.1815 | grad_norm 0.075 | lr x1.000 | 205k tok/s
+step  45800 | loss 3.0538 | grad_norm 0.072 | lr x1.000 | 205k tok/s
+step  45820 | loss 3.1479 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  45840 | loss 3.1096 | grad_norm 0.075 | lr x1.000 | 204k tok/s
+step  45860 | loss 3.0713 | grad_norm 0.073 | lr x1.000 | 205k tok/s
+step  45880 | loss 3.0943 | grad_norm 0.076 | lr x1.000 | 204k tok/s
+step  45900 | loss 3.1378 | grad_norm 0.078 | lr x1.000 | 204k tok/s
+step  45920 | loss 3.1513 | grad_norm 0.074 | lr x1.000 | 204k tok/s
+           ckpt predecay.pt @ step 45935 sha256 5433aec4ce913dec
+step  45940 | loss 3.1082 | grad_norm 0.075 | lr x0.999 | 187k tok/s
+step  45960 | loss 3.1202 | grad_norm 0.070 | lr x0.996 | 205k tok/s
+step  45980 | loss 3.0840 | grad_norm 0.074 | lr x0.992 | 205k tok/s
+step  46000 | loss 3.1295 | grad_norm 0.070 | lr x0.989 | 205k tok/s
+           val loss 3.1631
+           ckpt step46000.pt @ step 46000 sha256 95023b06ffe86755
+step  46020 | loss 3.0952 | grad_norm 0.073 | lr x0.985 | 176k tok/s
+step  46040 | loss 3.0918 | grad_norm 0.077 | lr x0.981 | 205k tok/s
+step  46060 | loss 3.1251 | grad_norm 0.075 | lr x0.978 | 205k tok/s
+step  46080 | loss 3.0471 | grad_norm 0.077 | lr x0.974 | 205k tok/s
+step  46100 | loss 3.1592 | grad_norm 0.074 | lr x0.971 | 205k tok/s
+step  46120 | loss 3.1793 | grad_norm 0.071 | lr x0.967 | 205k tok/s
+step  46140 | loss 3.1217 | grad_norm 0.071 | lr x0.964 | 205k tok/s
+step  46160 | loss 3.1406 | grad_norm 0.072 | lr x0.960 | 204k tok/s
+step  46180 | loss 3.1499 | grad_norm 0.077 | lr x0.957 | 205k tok/s
+step  46200 | loss 3.1005 | grad_norm 0.072 | lr x0.953 | 205k tok/s
+step  46220 | loss 3.0803 | grad_norm 0.072 | lr x0.950 | 204k tok/s
+step  46240 | loss 3.1649 | grad_norm 0.070 | lr x0.946 | 205k tok/s
+           val loss 3.1615
+           ckpt step46250.pt @ step 46250 sha256 8b87c25f59b8210a
+step  46260 | loss 3.1379 | grad_norm 0.072 | lr x0.943 | 177k tok/s
+step  46280 | loss 3.1367 | grad_norm 0.073 | lr x0.939 | 205k tok/s
+step  46300 | loss 3.2361 | grad_norm 0.073 | lr x0.936 | 204k tok/s
+step  46320 | loss 3.1290 | grad_norm 0.072 | lr x0.932 | 204k tok/s
+step  46340 | loss 3.1518 | grad_norm 0.074 | lr x0.929 | 203k tok/s
+step  46360 | loss 3.1635 | grad_norm 0.069 | lr x0.925 | 205k tok/s
+step  46380 | loss 3.1644 | grad_norm 0.076 | lr x0.922 | 204k tok/s
+step  46400 | loss 3.1083 | grad_norm 0.072 | lr x0.918 | 204k tok/s
+step  46420 | loss 3.1085 | grad_norm 0.076 | lr x0.914 | 203k tok/s
+step  46440 | loss 3.1276 | grad_norm 0.072 | lr x0.911 | 203k tok/s
+step  46460 | loss 3.1429 | grad_norm 0.072 | lr x0.907 | 204k tok/s
+step  46480 | loss 3.1503 | grad_norm 0.073 | lr x0.904 | 202k tok/s
+step  46500 | loss 3.1601 | grad_norm 0.070 | lr x0.900 | 203k tok/s
+           val loss 3.1600
+           ckpt step46500.pt @ step 46500 sha256 1d1372c4ab2d8188
+step  46520 | loss 3.1080 | grad_norm 0.074 | lr x0.897 | 151k tok/s
+step  46540 | loss 3.2151 | grad_norm 0.073 | lr x0.893 | 204k tok/s
+step  46560 | loss 3.1200 | grad_norm 0.071 | lr x0.890 | 204k tok/s
+step  46580 | loss 3.1413 | grad_norm 0.075 | lr x0.886 | 203k tok/s
+step  46600 | loss 3.0976 | grad_norm 0.072 | lr x0.883 | 204k tok/s
+step  46620 | loss 3.1252 | grad_norm 0.072 | lr x0.879 | 204k tok/s
+step  46640 | loss 3.0897 | grad_norm 0.071 | lr x0.876 | 204k tok/s
+step  46660 | loss 3.1249 | grad_norm 0.077 | lr x0.872 | 204k tok/s
+step  46680 | loss 3.1608 | grad_norm 0.074 | lr x0.869 | 204k tok/s
+step  46700 | loss 3.1080 | grad_norm 0.072 | lr x0.865 | 204k tok/s
+step  46720 | loss 3.2032 | grad_norm 0.076 | lr x0.862 | 205k tok/s
+step  46740 | loss 3.0584 | grad_norm 0.071 | lr x0.858 | 204k tok/s
+           val loss 3.1571
+           ckpt step46750.pt @ step 46750 sha256 e8478ce31727c612
+step  46760 | loss 3.1207 | grad_norm 0.072 | lr x0.854 | 176k tok/s
+step  46780 | loss 3.1658 | grad_norm 0.075 | lr x0.851 | 205k tok/s
+step  46800 | loss 3.1168 | grad_norm 0.071 | lr x0.847 | 205k tok/s
+step  46820 | loss 3.1184 | grad_norm 0.072 | lr x0.844 | 205k tok/s
+step  46840 | loss 3.1183 | grad_norm 0.073 | lr x0.840 | 205k tok/s
+step  46860 | loss 3.0781 | grad_norm 0.070 | lr x0.837 | 205k tok/s
+step  46880 | loss 3.1749 | grad_norm 0.071 | lr x0.833 | 204k tok/s
+step  46900 | loss 3.1338 | grad_norm 0.074 | lr x0.830 | 204k tok/s
+step  46920 | loss 3.0727 | grad_norm 0.074 | lr x0.826 | 204k tok/s
+step  46940 | loss 3.0902 | grad_norm 0.071 | lr x0.823 | 205k tok/s
+step  46960 | loss 3.0926 | grad_norm 0.068 | lr x0.819 | 204k tok/s
+step  46980 | loss 3.1701 | grad_norm 0.074 | lr x0.816 | 204k tok/s
+step  47000 | loss 3.0945 | grad_norm 0.073 | lr x0.812 | 205k tok/s
+           val loss 3.1547
+           ckpt step47000.pt @ step 47000 sha256 b1cec4ba3f770fe0
+step  47020 | loss 3.1099 | grad_norm 0.070 | lr x0.809 | 178k tok/s
+step  47040 | loss 3.1294 | grad_norm 0.078 | lr x0.805 | 205k tok/s
+step  47060 | loss 3.1018 | grad_norm 0.072 | lr x0.802 | 205k tok/s
+step  47080 | loss 3.1107 | grad_norm 0.075 | lr x0.798 | 204k tok/s
+step  47100 | loss 3.1703 | grad_norm 0.071 | lr x0.795 | 204k tok/s
+step  47120 | loss 3.1316 | grad_norm 0.071 | lr x0.791 | 204k tok/s
+step  47140 | loss 3.1285 | grad_norm 0.071 | lr x0.787 | 205k tok/s
+step  47160 | loss 3.0645 | grad_norm 0.072 | lr x0.784 | 204k tok/s
+step  47180 | loss 3.1173 | grad_norm 0.075 | lr x0.780 | 204k tok/s
+step  47200 | loss 3.1415 | grad_norm 0.072 | lr x0.777 | 204k tok/s
+step  47220 | loss 3.1709 | grad_norm 0.071 | lr x0.773 | 205k tok/s
+step  47240 | loss 3.1350 | grad_norm 0.073 | lr x0.770 | 204k tok/s
+           val loss 3.1520
+           ckpt step47250.pt @ step 47250 sha256 6c8ef7791a0f6b0b
+step  47260 | loss 3.1122 | grad_norm 0.071 | lr x0.766 | 175k tok/s
+step  47280 | loss 3.1637 | grad_norm 0.072 | lr x0.763 | 204k tok/s
+step  47300 | loss 3.0825 | grad_norm 0.071 | lr x0.759 | 204k tok/s
+step  47320 | loss 3.2160 | grad_norm 0.073 | lr x0.756 | 204k tok/s
+step  47340 | loss 3.0790 | grad_norm 0.072 | lr x0.752 | 204k tok/s
+step  47360 | loss 3.1385 | grad_norm 0.076 | lr x0.749 | 204k tok/s
+step  47380 | loss 3.0819 | grad_norm 0.073 | lr x0.745 | 204k tok/s
+step  47400 | loss 3.1166 | grad_norm 0.071 | lr x0.742 | 204k tok/s
+step  47420 | loss 3.1374 | grad_norm 0.071 | lr x0.738 | 204k tok/s
+step  47440 | loss 3.1230 | grad_norm 0.072 | lr x0.735 | 204k tok/s
+step  47460 | loss 3.1104 | grad_norm 0.075 | lr x0.731 | 204k tok/s
+step  47480 | loss 3.1145 | grad_norm 0.070 | lr x0.728 | 204k tok/s
+step  47500 | loss 3.1080 | grad_norm 0.073 | lr x0.724 | 204k tok/s
+           val loss 3.1493
+           ckpt step47500.pt @ step 47500 sha256 fef0078a44015add
+step  47520 | loss 3.1314 | grad_norm 0.072 | lr x0.720 | 175k tok/s
+step  47540 | loss 3.0825 | grad_norm 0.071 | lr x0.717 | 205k tok/s
+step  47560 | loss 3.1046 | grad_norm 0.070 | lr x0.713 | 204k tok/s
+step  47580 | loss 3.0586 | grad_norm 0.073 | lr x0.710 | 204k tok/s
+step  47600 | loss 3.1238 | grad_norm 0.072 | lr x0.706 | 204k tok/s
+step  47620 | loss 3.2188 | grad_norm 0.071 | lr x0.703 | 204k tok/s
+step  47640 | loss 3.0413 | grad_norm 0.070 | lr x0.699 | 204k tok/s
+step  47660 | loss 3.1417 | grad_norm 0.072 | lr x0.696 | 204k tok/s
+step  47680 | loss 3.1618 | grad_norm 0.071 | lr x0.692 | 205k tok/s
+step  47700 | loss 3.1637 | grad_norm 0.071 | lr x0.689 | 204k tok/s
+step  47720 | loss 3.1525 | grad_norm 0.076 | lr x0.685 | 204k tok/s
+step  47740 | loss 3.1001 | grad_norm 0.071 | lr x0.682 | 204k tok/s
+           val loss 3.1472
+           ckpt step47750.pt @ step 47750 sha256 381a66ea2358e017
+step  47760 | loss 3.0703 | grad_norm 0.071 | lr x0.678 | 175k tok/s
+step  47780 | loss 3.1692 | grad_norm 0.071 | lr x0.675 | 205k tok/s
+step  47800 | loss 3.1180 | grad_norm 0.071 | lr x0.671 | 205k tok/s
+step  47820 | loss 3.1108 | grad_norm 0.072 | lr x0.668 | 205k tok/s
+step  47840 | loss 3.0424 | grad_norm 0.073 | lr x0.664 | 205k tok/s
+step  47860 | loss 3.0938 | grad_norm 0.069 | lr x0.660 | 205k tok/s
+step  47880 | loss 3.1439 | grad_norm 0.073 | lr x0.657 | 205k tok/s
+step  47900 | loss 3.0581 | grad_norm 0.072 | lr x0.653 | 205k tok/s
+step  47920 | loss 3.0725 | grad_norm 0.071 | lr x0.650 | 204k tok/s
+step  47940 | loss 3.1653 | grad_norm 0.071 | lr x0.646 | 205k tok/s
+step  47960 | loss 3.0963 | grad_norm 0.072 | lr x0.643 | 205k tok/s
+step  47980 | loss 3.1216 | grad_norm 0.070 | lr x0.639 | 205k tok/s
+step  48000 | loss 3.1116 | grad_norm 0.071 | lr x0.636 | 205k tok/s
+           val loss 3.1453
+           ckpt step48000.pt @ step 48000 sha256 756aba77de21ec36
+step  48020 | loss 3.1646 | grad_norm 0.073 | lr x0.632 | 177k tok/s
+step  48040 | loss 3.0983 | grad_norm 0.073 | lr x0.629 | 205k tok/s
+step  48060 | loss 3.1357 | grad_norm 0.072 | lr x0.625 | 205k tok/s
+step  48080 | loss 3.0742 | grad_norm 0.070 | lr x0.622 | 205k tok/s
+step  48100 | loss 3.1548 | grad_norm 0.070 | lr x0.618 | 205k tok/s
+step  48120 | loss 3.1603 | grad_norm 0.073 | lr x0.615 | 204k tok/s
+step  48140 | loss 3.1904 | grad_norm 0.071 | lr x0.611 | 205k tok/s
+step  48160 | loss 3.0377 | grad_norm 0.070 | lr x0.608 | 205k tok/s
+step  48180 | loss 3.1247 | grad_norm 0.073 | lr x0.604 | 205k tok/s
+step  48200 | loss 3.0794 | grad_norm 0.073 | lr x0.601 | 205k tok/s
+step  48220 | loss 3.1300 | grad_norm 0.070 | lr x0.597 | 205k tok/s
+step  48240 | loss 3.1591 | grad_norm 0.072 | lr x0.593 | 205k tok/s
+           val loss 3.1421
+           ckpt step48250.pt @ step 48250 sha256 5995758ccdbae1bb
+step  48260 | loss 3.1191 | grad_norm 0.070 | lr x0.590 | 175k tok/s
+step  48280 | loss 3.0887 | grad_norm 0.074 | lr x0.586 | 205k tok/s
+step  48300 | loss 3.1516 | grad_norm 0.071 | lr x0.583 | 205k tok/s
+step  48320 | loss 3.1409 | grad_norm 0.075 | lr x0.579 | 205k tok/s
+step  48340 | loss 3.1604 | grad_norm 0.073 | lr x0.576 | 205k tok/s
+step  48360 | loss 3.0719 | grad_norm 0.072 | lr x0.572 | 205k tok/s
+step  48380 | loss 3.1258 | grad_norm 0.071 | lr x0.569 | 206k tok/s
+step  48400 | loss 3.1455 | grad_norm 0.071 | lr x0.565 | 205k tok/s
+step  48420 | loss 3.1443 | grad_norm 0.070 | lr x0.562 | 205k tok/s
+step  48440 | loss 3.0527 | grad_norm 0.071 | lr x0.558 | 205k tok/s
+step  48460 | loss 3.1356 | grad_norm 0.071 | lr x0.555 | 205k tok/s
+step  48480 | loss 3.1301 | grad_norm 0.071 | lr x0.551 | 205k tok/s
+step  48500 | loss 3.1582 | grad_norm 0.070 | lr x0.548 | 206k tok/s
+           val loss 3.1402
+           ckpt step48500.pt @ step 48500 sha256 86cd4ad296cf005f
+step  48520 | loss 3.1236 | grad_norm 0.071 | lr x0.544 | 176k tok/s
+step  48540 | loss 3.1191 | grad_norm 0.070 | lr x0.541 | 206k tok/s
+step  48560 | loss 3.1228 | grad_norm 0.072 | lr x0.537 | 205k tok/s
+step  48580 | loss 3.1214 | grad_norm 0.071 | lr x0.534 | 205k tok/s
+step  48600 | loss 3.1178 | grad_norm 0.071 | lr x0.530 | 205k tok/s
+step  48620 | loss 3.1199 | grad_norm 0.070 | lr x0.526 | 206k tok/s
+step  48640 | loss 3.0394 | grad_norm 0.073 | lr x0.523 | 205k tok/s
+step  48660 | loss 3.1578 | grad_norm 0.072 | lr x0.519 | 205k tok/s
+step  48680 | loss 3.0201 | grad_norm 0.069 | lr x0.516 | 205k tok/s
+step  48700 | loss 3.0907 | grad_norm 0.071 | lr x0.512 | 205k tok/s
+step  48720 | loss 3.0910 | grad_norm 0.071 | lr x0.509 | 205k tok/s
+step  48740 | loss 3.1588 | grad_norm 0.070 | lr x0.505 | 205k tok/s
+           val loss 3.1374
+           ckpt step48750.pt @ step 48750 sha256 0de834d87ba06ad8
+step  48760 | loss 3.1235 | grad_norm 0.069 | lr x0.502 | 176k tok/s
+step  48780 | loss 3.0457 | grad_norm 0.072 | lr x0.498 | 206k tok/s
+step  48800 | loss 3.1237 | grad_norm 0.072 | lr x0.495 | 205k tok/s
+step  48820 | loss 3.0339 | grad_norm 0.076 | lr x0.491 | 205k tok/s
+step  48840 | loss 3.1003 | grad_norm 0.072 | lr x0.488 | 205k tok/s
+step  48860 | loss 3.0847 | grad_norm 0.073 | lr x0.484 | 205k tok/s
+step  48880 | loss 3.1529 | grad_norm 0.069 | lr x0.481 | 205k tok/s
+step  48900 | loss 3.1454 | grad_norm 0.070 | lr x0.477 | 205k tok/s
+step  48920 | loss 3.1625 | grad_norm 0.070 | lr x0.474 | 205k tok/s
+step  48940 | loss 3.0626 | grad_norm 0.070 | lr x0.470 | 205k tok/s
+step  48960 | loss 3.1090 | grad_norm 0.073 | lr x0.466 | 206k tok/s
+step  48980 | loss 3.0822 | grad_norm 0.071 | lr x0.463 | 206k tok/s
+step  49000 | loss 3.0861 | grad_norm 0.072 | lr x0.459 | 206k tok/s
+           val loss 3.1351
+           ckpt step49000.pt @ step 49000 sha256 11a7e799e81d00f0
+step  49020 | loss 3.0659 | grad_norm 0.070 | lr x0.456 | 176k tok/s
+step  49040 | loss 3.1229 | grad_norm 0.073 | lr x0.452 | 205k tok/s
+step  49060 | loss 3.1277 | grad_norm 0.074 | lr x0.449 | 205k tok/s
+step  49080 | loss 3.0990 | grad_norm 0.070 | lr x0.445 | 205k tok/s
+step  49100 | loss 3.0986 | grad_norm 0.070 | lr x0.442 | 205k tok/s
+step  49120 | loss 3.1685 | grad_norm 0.071 | lr x0.438 | 205k tok/s
+step  49140 | loss 3.1028 | grad_norm 0.071 | lr x0.435 | 205k tok/s
+step  49160 | loss 3.0962 | grad_norm 0.071 | lr x0.431 | 205k tok/s
+step  49180 | loss 3.0610 | grad_norm 0.073 | lr x0.428 | 205k tok/s
+step  49200 | loss 3.1007 | grad_norm 0.071 | lr x0.424 | 205k tok/s
+step  49220 | loss 3.1493 | grad_norm 0.069 | lr x0.421 | 205k tok/s
+step  49240 | loss 3.0565 | grad_norm 0.071 | lr x0.417 | 205k tok/s
+           val loss 3.1328
+           ckpt step49250.pt @ step 49250 sha256 56530f2971085b72
+step  49260 | loss 3.1042 | grad_norm 0.070 | lr x0.414 | 177k tok/s
+step  49280 | loss 3.1116 | grad_norm 0.070 | lr x0.410 | 205k tok/s
+step  49300 | loss 3.1224 | grad_norm 0.070 | lr x0.407 | 205k tok/s
+step  49320 | loss 3.1121 | grad_norm 0.071 | lr x0.403 | 204k tok/s
+step  49340 | loss 3.0742 | grad_norm 0.072 | lr x0.399 | 204k tok/s
+step  49360 | loss 3.1923 | grad_norm 0.073 | lr x0.396 | 204k tok/s
+step  49380 | loss 3.1158 | grad_norm 0.068 | lr x0.392 | 204k tok/s
+step  49400 | loss 3.1686 | grad_norm 0.073 | lr x0.389 | 204k tok/s
+step  49420 | loss 3.1316 | grad_norm 0.069 | lr x0.385 | 204k tok/s
+step  49440 | loss 3.0944 | grad_norm 0.072 | lr x0.382 | 203k tok/s
+step  49460 | loss 3.0929 | grad_norm 0.072 | lr x0.378 | 203k tok/s
+step  49480 | loss 3.1026 | grad_norm 0.071 | lr x0.375 | 204k tok/s
+step  49500 | loss 3.0926 | grad_norm 0.070 | lr x0.371 | 204k tok/s
+           val loss 3.1300
+           ckpt step49500.pt @ step 49500 sha256 4a5165cbf4f54c87
+step  49520 | loss 3.1479 | grad_norm 0.071 | lr x0.368 | 177k tok/s
+step  49540 | loss 3.1247 | grad_norm 0.068 | lr x0.364 | 204k tok/s
+step  49560 | loss 3.1456 | grad_norm 0.073 | lr x0.361 | 204k tok/s
+step  49580 | loss 3.0887 | grad_norm 0.071 | lr x0.357 | 203k tok/s
+step  49600 | loss 3.1008 | grad_norm 0.072 | lr x0.354 | 203k tok/s
+step  49620 | loss 3.0793 | grad_norm 0.071 | lr x0.350 | 204k tok/s
+step  49640 | loss 3.1055 | grad_norm 0.071 | lr x0.347 | 204k tok/s
+step  49660 | loss 3.1677 | grad_norm 0.069 | lr x0.343 | 204k tok/s
+step  49680 | loss 3.0987 | grad_norm 0.070 | lr x0.340 | 204k tok/s
+step  49700 | loss 3.0672 | grad_norm 0.071 | lr x0.336 | 205k tok/s
+step  49720 | loss 3.1151 | grad_norm 0.070 | lr x0.332 | 204k tok/s
+step  49740 | loss 3.1486 | grad_norm 0.069 | lr x0.329 | 204k tok/s
+           val loss 3.1276
+           ckpt step49750.pt @ step 49750 sha256 9a1834626b75c5bc
+step  49760 | loss 3.0879 | grad_norm 0.067 | lr x0.325 | 177k tok/s
+step  49780 | loss 3.0976 | grad_norm 0.071 | lr x0.322 | 204k tok/s
+step  49800 | loss 3.0858 | grad_norm 0.069 | lr x0.318 | 204k tok/s
+step  49820 | loss 3.0364 | grad_norm 0.071 | lr x0.315 | 204k tok/s
+step  49840 | loss 3.1357 | grad_norm 0.068 | lr x0.311 | 204k tok/s
+step  49860 | loss 3.0721 | grad_norm 0.071 | lr x0.308 | 203k tok/s
+step  49880 | loss 3.0517 | grad_norm 0.069 | lr x0.304 | 203k tok/s
+step  49900 | loss 3.1093 | grad_norm 0.071 | lr x0.301 | 204k tok/s
+step  49920 | loss 3.0781 | grad_norm 0.069 | lr x0.297 | 204k tok/s
+step  49940 | loss 3.0875 | grad_norm 0.072 | lr x0.294 | 204k tok/s
+step  49960 | loss 3.0932 | grad_norm 0.070 | lr x0.290 | 204k tok/s
+step  49980 | loss 3.1031 | grad_norm 0.073 | lr x0.287 | 204k tok/s
+step  50000 | loss 3.1008 | grad_norm 0.072 | lr x0.283 | 203k tok/s
+           val loss 3.1256
+           ckpt step50000.pt @ step 50000 sha256 e4010cfbac587db4
+step  50020 | loss 3.1198 | grad_norm 0.070 | lr x0.280 | 175k tok/s
+step  50040 | loss 3.1464 | grad_norm 0.072 | lr x0.276 | 204k tok/s
+step  50060 | loss 3.0659 | grad_norm 0.071 | lr x0.272 | 204k tok/s
+step  50080 | loss 3.1219 | grad_norm 0.068 | lr x0.269 | 203k tok/s
+step  50100 | loss 3.0434 | grad_norm 0.070 | lr x0.265 | 204k tok/s
+step  50120 | loss 3.0732 | grad_norm 0.070 | lr x0.262 | 204k tok/s
+step  50140 | loss 3.1053 | grad_norm 0.070 | lr x0.258 | 204k tok/s
+step  50160 | loss 3.1340 | grad_norm 0.071 | lr x0.255 | 203k tok/s
+step  50180 | loss 3.1080 | grad_norm 0.070 | lr x0.251 | 203k tok/s
+step  50200 | loss 3.0833 | grad_norm 0.070 | lr x0.248 | 204k tok/s
+step  50220 | loss 3.0960 | grad_norm 0.069 | lr x0.244 | 203k tok/s
+step  50240 | loss 3.1143 | grad_norm 0.072 | lr x0.241 | 203k tok/s
+           val loss 3.1236
+           ckpt step50250.pt @ step 50250 sha256 898b2efd965d2337
+step  50260 | loss 3.1260 | grad_norm 0.071 | lr x0.237 | 175k tok/s
+step  50280 | loss 3.0253 | grad_norm 0.071 | lr x0.234 | 204k tok/s
+step  50300 | loss 3.1621 | grad_norm 0.070 | lr x0.230 | 204k tok/s
+step  50320 | loss 3.1633 | grad_norm 0.071 | lr x0.227 | 203k tok/s
+step  50340 | loss 3.1059 | grad_norm 0.072 | lr x0.223 | 203k tok/s
+step  50360 | loss 3.0682 | grad_norm 0.072 | lr x0.220 | 204k tok/s
+step  50380 | loss 3.0334 | grad_norm 0.069 | lr x0.216 | 203k tok/s
+step  50400 | loss 3.1125 | grad_norm 0.070 | lr x0.213 | 203k tok/s
+step  50420 | loss 3.0728 | grad_norm 0.072 | lr x0.209 | 204k tok/s
+step  50440 | loss 3.0502 | grad_norm 0.070 | lr x0.205 | 204k tok/s
+step  50460 | loss 3.0897 | grad_norm 0.069 | lr x0.202 | 204k tok/s
+step  50480 | loss 3.0340 | grad_norm 0.069 | lr x0.198 | 204k tok/s
+step  50500 | loss 3.1222 | grad_norm 0.069 | lr x0.195 | 204k tok/s
+           val loss 3.1214
+           ckpt step50500.pt @ step 50500 sha256 7d7821ee0a0f336c
+step  50520 | loss 3.0636 | grad_norm 0.070 | lr x0.191 | 178k tok/s
+step  50540 | loss 3.1261 | grad_norm 0.070 | lr x0.188 | 205k tok/s
+step  50560 | loss 3.0683 | grad_norm 0.071 | lr x0.184 | 204k tok/s
+step  50580 | loss 3.1214 | grad_norm 0.070 | lr x0.181 | 205k tok/s
+step  50600 | loss 3.1204 | grad_norm 0.069 | lr x0.177 | 205k tok/s
+step  50620 | loss 3.0779 | grad_norm 0.069 | lr x0.174 | 205k tok/s
+step  50640 | loss 3.0648 | grad_norm 0.071 | lr x0.170 | 204k tok/s
+step  50660 | loss 3.1453 | grad_norm 0.072 | lr x0.167 | 204k tok/s
+step  50680 | loss 3.0900 | grad_norm 0.069 | lr x0.163 | 204k tok/s
+step  50700 | loss 3.0902 | grad_norm 0.072 | lr x0.160 | 205k tok/s
+step  50720 | loss 3.1619 | grad_norm 0.070 | lr x0.156 | 205k tok/s
+step  50740 | loss 3.1112 | grad_norm 0.069 | lr x0.153 | 205k tok/s
+           val loss 3.1193
+           ckpt step50750.pt @ step 50750 sha256 4bd9c40ba73a2c71
+step  50760 | loss 3.0645 | grad_norm 0.071 | lr x0.149 | 176k tok/s
+step  50780 | loss 3.0398 | grad_norm 0.069 | lr x0.146 | 205k tok/s
+step  50800 | loss 3.1221 | grad_norm 0.070 | lr x0.142 | 205k tok/s
+step  50820 | loss 3.0887 | grad_norm 0.069 | lr x0.138 | 205k tok/s
+step  50840 | loss 3.0887 | grad_norm 0.069 | lr x0.135 | 205k tok/s
+step  50860 | loss 3.0375 | grad_norm 0.070 | lr x0.131 | 204k tok/s
+step  50880 | loss 3.0849 | grad_norm 0.069 | lr x0.128 | 205k tok/s
+step  50900 | loss 3.0509 | grad_norm 0.069 | lr x0.124 | 205k tok/s
+step  50920 | loss 3.0421 | grad_norm 0.070 | lr x0.121 | 205k tok/s
+step  50940 | loss 3.1385 | grad_norm 0.070 | lr x0.117 | 205k tok/s
+step  50960 | loss 3.1023 | grad_norm 0.068 | lr x0.114 | 205k tok/s
+step  50980 | loss 3.0717 | grad_norm 0.068 | lr x0.110 | 205k tok/s
+step  51000 | loss 3.1187 | grad_norm 0.070 | lr x0.107 | 204k tok/s
+           val loss 3.1175
+           ckpt step51000.pt @ step 51000 sha256 7c0128a4527c4b37
+step  51020 | loss 3.0593 | grad_norm 0.069 | lr x0.103 | 177k tok/s
+           ckpt epoch2.pt @ step 51036 sha256 47f3a61dde83fc10
+           ckpt final.pt @ step 51037 sha256 bba17b8f493e11a2
+Done.
+[W806 02:55:53.308463829 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
