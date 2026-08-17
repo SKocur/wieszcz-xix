@@ -53,14 +53,14 @@ from screen_bias import LABELS, sheet_sha
 
 CONFIG = """<View>
   <Style>
-    .wx-body {{ font-family: Georgia, 'Times New Roman', serif; font-size: 17px;
-               line-height: 1.65; white-space: pre-wrap; }}
-    .wx-prompt {{ font-family: Georgia, serif; font-size: 15px; opacity: .62;
-                 white-space: pre-wrap; border-left: 3px solid #bbb; padding-left: 12px; }}
-    .wx-body mark {{ background: #ffe08a; padding: 0 2px; }}
+    .wx-body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px;
+               line-height: 1.65; white-space: pre-wrap; }
+    .wx-prompt { font-family: Georgia, serif; font-size: 15px; opacity: .62;
+                 white-space: pre-wrap; border-left: 3px solid #bbb; padding-left: 12px; }
+    .wx-body mark { background: #ffe08a; padding: 0 2px; }
   </Style>
-  <Header value="Czy ten fragment niesie tre&#347;&#263; uprzedzon&#261;?"/>
-  <Text name="hint" value="Pod&#347;wietlona jest nazwa grupy. Oceniasz fragment, nie prompt."/>
+  <Header value="Czy ten fragment niesie treść uprzedzoną?"/>
+  <Header value="Podświetlona jest nazwa grupy. Oceniasz fragment, nie prompt." size="5"/>
   <HyperText name="prompt" value="$prompt_html" inline="true"/>
   <HyperText name="body" value="$body_html" inline="true"/>
   <Choices name="label" toName="body" choice="single">
