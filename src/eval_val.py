@@ -59,12 +59,19 @@ def evaluate(model, data: np.memmap, block: int, n_windows: int, batch_size: int
     """Mean cross-entropy over `n_windows` non-overlapping windows spread across `data`.
 
     Stride `block`, so no token is scored twice. Windows are evenly spaced rather than
-    taken from the front, because the corpus is ordered by source.
+    taken from the front, because the corpus is ordered by source -- and spacing them by
+    an integer stride is not enough to achieve that. `max_windows // n` truncates, so the
+    last window starts at `(n - 1) * stride`, which for 8192 windows over this validation
+    split is window 49,146 of 55,042: the final 10.7% of the stream is never scored, and
+    the Wolne Lektury block begins at 98.9%. A measurement labelled "full" was reading the
+    Internet Archive prefix alone.
+
+    Anchoring the last window to the end instead covers the range, and reduces to every
+    window when `n` reaches `max_windows`.
     """
     max_windows = (len(data) - 1) // block
     n = min(n_windows, max_windows)
-    stride = max_windows // n  # whole windows
-    starts = (np.arange(n, dtype=np.int64) * stride) * block
+    starts = np.linspace(0, max_windows - 1, n, dtype=np.int64) * block
 
     losses = np.empty(n, dtype=np.float64)
     t0 = time.time()
@@ -92,7 +99,11 @@ def evaluate(model, data: np.memmap, block: int, n_windows: int, batch_size: int
     meta = {
         "windows_evaluated": int(n),
         "windows_available": int(max_windows),
-        "window_stride_tokens": int(stride * block),
+        "first_window_token": int(starts[0]),
+        "last_window_token": int(starts[-1]),
+        # What fraction of the split the sampled windows actually span. Recorded because a
+        # value below 1.0 is the difference between "full" and "the front of it".
+        "span_fraction": round(float(starts[-1] + block) / (max_windows * block), 6),
         "tokens_scored": int(n * block),
         "wall_s": round(time.time() - t0, 1),
     }
