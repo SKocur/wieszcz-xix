@@ -68,6 +68,20 @@ CONFIG = """<View>
     <Choice value="not" hotkey="2" alias="nie"/>
     <Choice value="unclear" hotkey="3" alias="niejasne"/>
   </Choices>
+  <View visibleWhen="choice-selected" whenTagName="label" whenChoiceValue="prejudiced">
+    <Header value="Jakiego rodzaju? (można zaznaczyć kilka)" size="5"/>
+    <Choices name="kind" toName="body" choice="multiple">
+      <Choice value="antisemitic" hotkey="q" alias="antysemickie"/>
+      <Choice value="national" hotkey="w" alias="narodowe/etniczne"/>
+      <Choice value="confessional" hotkey="e" alias="wyznaniowe"/>
+      <Choice value="colonial" hotkey="r" alias="kolonialne/rasowe"/>
+      <Choice value="misogynist" hotkey="t" alias="mizoginiczne"/>
+      <Choice value="other" hotkey="y" alias="inne"/>
+    </Choices>
+    <Header value="Grupa docelowa (opcjonalnie)" size="5"/>
+    <TextArea name="target" toName="body" rows="1" maxSubmissions="1"
+              placeholder="np. Żydzi; Anglia (protestanci); ludy kolonizowane"/>
+  </View>
 </View>
 """
 
@@ -125,25 +139,38 @@ def cmd_tasks(args: argparse.Namespace) -> None:
     print(f"wrote {out}\nwrote {cfg}")
 
 
-def _labels_from_export(export: list) -> dict[str, str]:
-    """Accept either the full JSON export or JSON-MIN; both name the choice differently."""
-    got: dict[str, str] = {}
+def _labels_from_export(export: list) -> dict[str, dict]:
+    """Accept either the full JSON export or JSON-MIN.
+
+    Results are keyed by `from_name`, not merged: the config asks a second question about
+    the kind of prejudice, and a reader that takes whatever choices it finds last would let
+    "antisemitic" land in the label field and silently destroy the count.
+
+    One annotation per task per annotator is assumed; where a task carries several, the
+    annotator id is kept so agreement can be computed downstream.
+    """
+    got: dict[str, dict] = {}
     for t in export:
         ref = (t.get("data") or {}).get("ref") or t.get("ref")
         if not ref:
             continue
-        choice = None
         for ann in t.get("annotations") or []:
+            rec: dict = {"annotator": ann.get("completed_by")}
             for res in ann.get("result") or []:
-                vals = (res.get("value") or {}).get("choices") or []
-                if vals:
-                    choice = vals[0]
-        if choice is None and isinstance(t.get("label"), list) and t["label"]:
-            choice = t["label"][0]
-        elif choice is None and isinstance(t.get("label"), str):
-            choice = t["label"]
-        if choice in LABELS:
-            got[ref] = choice
+                name, val = res.get("from_name"), res.get("value") or {}
+                if name == "label" and val.get("choices"):
+                    rec["label"] = val["choices"][0]
+                elif name == "kind" and val.get("choices"):
+                    rec["kind"] = sorted(val["choices"])
+                elif name == "target" and val.get("text"):
+                    rec["target"] = " ".join(val["text"]).strip()
+            if rec.get("label") in LABELS:
+                got[ref] = rec
+        if ref not in got:
+            flat = t.get("label")
+            flat = flat[0] if isinstance(flat, list) and flat else flat
+            if flat in LABELS:
+                got[ref] = {"label": flat, "annotator": t.get("annotator")}
     return got
 
 
@@ -159,7 +186,8 @@ def cmd_apply(args: argparse.Namespace) -> None:
 
     applied, changed, unknown = 0, 0, 0
     recheck: dict[str, str] = {}
-    for ref, label in got.items():
+    for ref, rec in got.items():
+        label = rec["label"]
         if ref.endswith("#recheck"):
             recheck[ref[:-len("#recheck")]] = label
             continue
@@ -170,6 +198,9 @@ def cmd_apply(args: argparse.Namespace) -> None:
         if row["label"] is not None and row["label"] != label:
             changed += 1
         row["label"] = label
+        for field in ("kind", "target", "annotator"):
+            if rec.get(field) is not None:
+                row[field] = rec[field]
         applied += 1
 
     agree = [(index[k]["label"], v) for k, v in recheck.items() if k in index
