@@ -1,0 +1,101 @@
+{
+ "qwen3.8-2.4t-a95b": {
+  "n": 27,
+  "raw_agreement": 0.8148,
+  "expected": 0.6475,
+  "cohen_kappa": 0.4747,
+  "confusion_human|model": {
+   "not|not": 19,
+   "not|prejudiced": 1,
+   "prejudiced|prejudiced": 3,
+   "unclear|not": 4
+  },
+  "verdict_counts": {
+   "prejudiced": 26,
+   "not": 275,
+   "unclear": 0
+  },
+  "failed": 0,
+  "file": "output/adj2_qwen3.8-2.4t-a95b.json"
+ },
+ "glm-5.2": {
+  "n": 27,
+  "raw_agreement": 0.7778,
+  "expected": 0.6722,
+  "cohen_kappa": 0.3222,
+  "confusion_human|model": {
+   "not|not": 19,
+   "not|unclear": 1,
+   "prejudiced|not": 1,
+   "prejudiced|prejudiced": 2,
+   "unclear|not": 4
+  },
+  "verdict_counts": {
+   "prejudiced": 19,
+   "not": 273,
+   "unclear": 9
+  },
+  "failed": 0,
+  "file": "output/adj2_glm-5.2.json"
+ },
+ "deepseek-v4-pro": {
+  "n": 27,
+  "raw_agreement": 0.7778,
+  "expected": 0.6722,
+  "cohen_kappa": 0.3222,
+  "confusion_human|model": {
+   "not|not": 19,
+   "not|unclear": 1,
+   "prejudiced|not": 1,
+   "prejudiced|prejudiced": 2,
+   "unclear|not": 4
+  },
+  "verdict_counts": {
+   "prejudiced": 21,
+   "not": 254,
+   "unclear": 26
+  },
+  "failed": 0,
+  "file": "output/adj2_deepseek-v4-pro.json"
+ },
+ "mistral-large-2512": {
+  "n": 27,
+  "raw_agreement": 0.8148,
+  "expected": 0.6475,
+  "cohen_kappa": 0.4747,
+  "confusion_human|model": {
+   "not|not": 19,
+   "not|prejudiced": 1,
+   "prejudiced|prejudiced": 3,
+   "unclear|not": 4
+  },
+  "verdict_counts": {
+   "prejudiced": 61,
+   "not": 239,
+   "unclear": 1
+  },
+  "failed": 0,
+  "file": "output/adj2_mistral-large-2512.json"
+ },
+ "apertus-70b": {
+  "n": 27,
+  "raw_agreement": 0.5185,
+  "expected": 0.4842,
+  "cohen_kappa": 0.0665,
+  "confusion_human|model": {
+   "not|not": 12,
+   "not|prejudiced": 8,
+   "prejudiced|not": 1,
+   "prejudiced|prejudiced": 2,
+   "unclear|not": 3,
+   "unclear|prejudiced": 1
+  },
+  "verdict_counts": {
+   "prejudiced": 120,
+   "not": 181,
+   "unclear": 0
+  },
+  "failed": 0,
+  "file": "output/adj2_apertus-70b.json"
+ }
+}
