@@ -46,3 +46,7 @@ metrics/ia_collection_sweep*.jsonl
 
 # uncompressed working copy of the freeze manifest; the gzipped one is tracked in metrics/
 data/*.sha256
+
+# working copies pulled off the crawler VPS at decommissioning; the gzipped
+# provenance is tracked in metrics/
+data/crawl_provenance/
