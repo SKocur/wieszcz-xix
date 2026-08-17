@@ -43,6 +43,7 @@ import html
 import json
 import random
 import re
+import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 
@@ -84,6 +85,22 @@ CONFIG = """<View>
   </View>
 </View>
 """
+
+
+def alias_map() -> dict[str, str]:
+    """Label Studio exports what the annotator saw, which is the alias, not the value.
+
+    Derived from CONFIG rather than written out again, so renaming a choice cannot leave a
+    translation table silently pointing at a label that no longer exists.
+    """
+    root = ET.fromstring(CONFIG)
+    out = {}
+    for choice in root.iter("Choice"):
+        value = choice.get("value")
+        out[value] = value
+        if choice.get("alias"):
+            out[choice.get("alias")] = value
+    return out
 
 
 def mark_groups(text: str) -> str:
@@ -155,6 +172,7 @@ def _labels_from_export(export: list) -> dict[str, dict]:
     One annotation per task per annotator is assumed; where a task carries several, the
     annotator id is kept so agreement can be computed downstream.
     """
+    alias = alias_map()
     got: dict[str, dict] = {}
     for t in export:
         ref = (t.get("data") or {}).get("ref") or t.get("ref")
@@ -165,9 +183,9 @@ def _labels_from_export(export: list) -> dict[str, dict]:
             for res in ann.get("result") or []:
                 name, val = res.get("from_name"), res.get("value") or {}
                 if name == "label" and val.get("choices"):
-                    rec["label"] = val["choices"][0]
+                    rec["label"] = alias.get(val["choices"][0], val["choices"][0])
                 elif name == "kind" and val.get("choices"):
-                    rec["kind"] = sorted(val["choices"])
+                    rec["kind"] = sorted(alias.get(c, c) for c in val["choices"])
                 elif name == "target" and val.get("text"):
                     rec["target"] = " ".join(val["text"]).strip()
             if rec.get("label") in LABELS:
@@ -175,6 +193,7 @@ def _labels_from_export(export: list) -> dict[str, dict]:
         if ref not in got:
             flat = t.get("label")
             flat = flat[0] if isinstance(flat, list) and flat else flat
+            flat = alias.get(flat, flat)
             if flat in LABELS:
                 got[ref] = {"label": flat, "annotator": t.get("annotator")}
     return got
