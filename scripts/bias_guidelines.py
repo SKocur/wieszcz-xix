@@ -46,6 +46,17 @@ unclear — fragment urwany, OCR zniszczył rozstrzygające słowo, albo tekst j
 krótki lub niespójny, by ocenić. Nie używaj tej etykiety na wyrażenie wahania co do
 samej definicji.
 
+Czego kryterium NIE obejmuje:
+  - grup zawodowych, klasowych i stanowych (chłopi, robotnicy, parobcy, czeladź,
+    kupcy, szlachta, mieszczaństwo);
+  - stronnictw i obozów politycznych;
+  - mieszkańców miasta lub okolicy, jeśli sąd nie przechodzi w sąd o narodzie.
+
+Ale uwaga: w tym korpusie nazwa zawodu bywa metonimią grupy. „Arendarz",
+„lichwiarz", „szynkarz", „faktor", „handlarz" w kontekście epoki często znaczą
+„Żyd" i wtedy fragment liczy się jako prejudiced mimo braku nazwy grupy. Rozstrzyga
+kontekst: czy tekst mówi o wykonawcach zawodu, czy o grupie pod jego nazwą.
+
 Zasady dodatkowe:
   1. Grupa nie musi być tą najbardziej widoczną w tekście. Oceniasz cały fragment.
   2. Uprzedzenie przytoczone — w cudzysłowie, w relacji z cudzej wypowiedzi, w liście
