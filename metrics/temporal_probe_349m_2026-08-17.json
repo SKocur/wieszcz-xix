@@ -1,0 +1,2748 @@
+{
+ "meta": {
+  "script": "scripts/temporal_probe.py",
+  "script_sha256": "99527570331f5553",
+  "timestamp_utc": "2026-08-17T07:14:45+00:00",
+  "host": "mlbox",
+  "device": "cuda",
+  "wieszcz_ckpt": "checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/final.pt",
+  "wieszcz_params": 349069440,
+  "hf_model": null,
+  "hf_dtype": null,
+  "seeds": 8,
+  "max_new_tokens": 256,
+  "temperature": 0.9,
+  "top_p": 0.9,
+  "sampling_seed_base": 1337,
+  "elapsed_seconds": 145.4
+ },
+ "battery": {
+  "modern": [
+   "internet",
+   "smartfon",
+   "komputer",
+   "telewiz",
+   "telefon komórk",
+   "digitized by",
+   "www.",
+   "http",
+   "hitler",
+   "gestapo",
+   "nkwd",
+   "kołchoz",
+   "kolchoz",
+   "faszyzm",
+   "faszyst",
+   "międzywojenn",
+   "miedzywojenn",
+   "copyright",
+   "wszelkie prawa zastrze",
+   "mikrofilm"
+  ],
+  "modern_re": [
+   "isbn_number",
+   "druga_wojna_światowa",
+   "domena_publiczna"
+  ],
+  "period_control": [
+   "telefon",
+   "automobil",
+   "aeroplan",
+   "samochod",
+   "samochód",
+   "samolot",
+   "lotnisk",
+   "czołg",
+   "bolszewi",
+   "sowiet",
+   "radjo",
+   "radiow"
+  ]
+ },
+ "term_sets": {
+  "modern": [
+   [
+    "internet",
+    "Wiadomość rozeszła się błyskawicznie przez"
+   ],
+   [
+    "komputer",
+    "Na biurku stał nowy"
+   ],
+   [
+    "telewizja",
+    "Program nadaje wieczorami"
+   ],
+   [
+    "telefon komórkowy",
+    "Z kieszeni wyjął"
+   ],
+   [
+    "Hitler",
+    "Kanclerzem Rzeszy został wówczas"
+   ],
+   [
+    "gestapo",
+    "Aresztowaniami kierowało"
+   ],
+   [
+    "NKWD",
+    "Śledztwo prowadziło"
+   ],
+   [
+    "kołchoz",
+    "Ziemię gromadzką zamieniono w"
+   ],
+   [
+    "faszyzm",
+    "Nowym prądem politycznym stał się"
+   ],
+   [
+    "druga wojna światowa",
+    "W roku tym wybuchła"
+   ],
+   [
+    "smartfon",
+    "Na stoliku leżał"
+   ],
+   [
+    "mikrofilm",
+    "Zbiory przeniesiono na"
+   ],
+   [
+    "copyright",
+    "Na odwrocie karty tytułowej widniał"
+   ],
+   [
+    "okupacja hitlerowska",
+    "Nastała wówczas"
+   ]
+  ],
+  "period": [
+   [
+    "telegraf",
+    "Wiadomość nadeszła wczoraj przez"
+   ],
+   [
+    "dorożka",
+    "Pod bramą kamienicy czekała"
+   ],
+   [
+    "gubernia",
+    "Utworzono wówczas nową"
+   ],
+   [
+    "rubel",
+    "Walutą obiegową był wówczas"
+   ],
+   [
+    "kopiejka",
+    "Najmniejszą monetą była"
+   ],
+   [
+    "jenerał",
+    "Na czele oddziału stał stary"
+   ],
+   [
+    "automobil",
+    "Przed gmachem zatrzymał się"
+   ],
+   [
+    "aeroplan",
+    "Nad miastem przeleciał"
+   ],
+   [
+    "telefon",
+    "W kantorze zainstalowano nowy"
+   ],
+   [
+    "cesarstwo",
+    "Rozciągało się nad nimi potężne"
+   ],
+   [
+    "gimnazyum",
+    "Chłopca oddano do"
+   ],
+   [
+    "folwark",
+    "Za wsią leżał rozległy"
+   ],
+   [
+    "karczma",
+    "Przy trakcie stała stara"
+   ],
+   [
+    "guwernantka",
+    "Dzieci uczyła francuska"
+   ]
+  ]
+ },
+ "futures": [
+  {
+   "prompt": "W roku 1939 wybuchła",
+   "gold": " druga wojna światowa"
+  },
+  {
+   "prompt": "Pierwszym prezydentem odrodzonej Rzeczypospolitej został",
+   "gold": " Gabriel Narutowicz"
+  },
+  {
+   "prompt": "Człowiek po raz pierwszy stanął na Księżycu w roku",
+   "gold": " 1969"
+  },
+  {
+   "prompt": "Po drugiej wojnie światowej Polska znalazła się w strefie wpływów",
+   "gold": " Związku Radzieckiego"
+  },
+  {
+   "prompt": "Wiadomości czyta się dziś najczęściej przez",
+   "gold": " internet"
+  },
+  {
+   "prompt": "Mur berliński runął w roku",
+   "gold": " 1989"
+  },
+  {
+   "prompt": "Polska wstąpiła do Unii Europejskiej w roku",
+   "gold": " 2004"
+  },
+  {
+   "prompt": "Najcięższe walki powstania warszawskiego toczyły się w roku",
+   "gold": " 1944"
+  }
+ ],
+ "generations_wieszcz": {
+  "generations": 64,
+  "preamble": "",
+  "total_bytes": 55709,
+  "docs_with_modern_marker": 0,
+  "modern_marker_doc_rate": 0.0,
+  "modern_marker_doc_rate_ci95": [
+   0.0,
+   0.05663
+  ],
+  "modern_markers_per_100k_bytes": 0.0,
+  "docs_with_control_marker": 0,
+  "control_marker_doc_rate": 0.0,
+  "orto_modern_share": {
+   "n": 33,
+   "mean": 0.27273,
+   "sem": 0.07873,
+   "ci95": [
+    0.11842,
+    0.42704
+   ]
+  },
+  "items": [
+   {
+    "id": "s1337_p0",
+    "seed": 1337,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " w Szwajcarji w miejscowości zwanej Pensier, znaleziono w ma-\n\njej części w spróchniałych drzewach mnóstwo zębów słonia, tak nadzwyczajnej wielkości, iż przypominają w niem budowę ówczesnej wieży Babel.\n\n|. „GAZETA ROLNICZA”\n\nORGAN CENTRALNEGO TOWARZYSTWA ROLNICZEGO\n\nKRAKOWSKIEGO\n\n| pod redakcją Józefa Jezierskiego i prof. dra Stanisława Gło-\n\nSprawozdanie z działalności polskiego Towarzystwa rolniczego za rok 1909.\n\nRok ubiegły pod względem rozwoju rolnictwa w Królestwie Połskiem pod względem zasobów i rozwoju spółek rolniczych — zaznaczył się nader obficie. Silny postęp rolnictwa, naturalny odpływ ludności za granicę i przeciętny wzrost produkcji rolnej, były głównemi cechami roku ubiegłego. Dzięki tym okolicznościom rozkwit rolnictwa i poszczególnych działów ekonomicznych znaczny i odpowiednio do celu w kierunku postępu rolniczego posunięty.\n\nTowarzystwo założone na zasadach",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 2,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 890,
+     "bytes": 945
+    }
+   },
+   {
+    "id": "s1337_p1",
+    "seed": 1337,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " w Szadku, w gub. kieleckiej, pękła bania do zbierania centaarów węgla kamiennego. Zołnierze rozsypali się po mieście, rozbierając się na noc w chatach. W jednej z nich, na ulicy, tkwił pakiet, związany sznurem. Katowali go tak, że potłukł się bardzo. Włościanie z okolicy zebrali się na miejsce i zaczęli przeszukiwać i ścigać łotrów.\n\n— Z Moskwy donoszą, że aresztowano tam woźnicę kolejowego Ośka, który rozbił dynamitem trzy wagony towarowe. Przyznał się on, że jest autorem znanego zamachu na Aleksandra II.\n\n— Upały. W Nowym Jorku panują tak okropne upały, że w wielu okolicach przecięciowo pada po 100 tuntów papieru na jeden dzień.\n\n— Bandyci-karykatury. W Londynie policja przytrzymała b. oficera angielskiego Burnsa, znanego w Krakowie, który nosił jako firmę swoją portret",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 783,
+     "bytes": 835
+    }
+   },
+   {
+    "id": "s1337_p2",
+    "seed": 1337,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": " w Szklance wody i w kurhauzie wykwintny lubił się popijać і gdy spędziłem popołudniowe godziny i gdy mnie czasem zawołano do domu.\n\nСо za szkoda, że nie jestem teraz studentem! Człowiek, który nie potrzebuje ani studenta, ani studentówki, który sam jeden siedzi w zamkniętym domu, któryby był teatrem amatorskim, koncertem z tańcami, со jest rzeczą bardzo przyjemną w towarzystwie salonowym, a przytem poprawia przy najlepszych chęciach wszystko i dobrze, co jest złem i niedobrem, jest studentem, który jest sam sobie winien, że\n\nOtwarcie mówi, że chce się uczyć i chce\n\nah.\n\nsię uczyć, a w domu pozostaje się na mozole, jako na zupełnem nieuctwie. Bo to taki spokój, ta taktyczna zależność od szkoły i nie tego rodzaju walka.\n\n(P. Stapiński. A więc panowie widzicie w tem widzę, że padacie na kolana przed tą szkołą, która robi",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 830,
+     "bytes": 878
+    }
+   },
+   {
+    "id": "s1337_p3",
+    "seed": 1337,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": " w Krakowie z dnia 7. października 1888. P. prezes Zyblikiewicz zagaja posiedzenie następującemi słowy :\n\n„Wsród okoliczności, które nas obecnie spotykają, przybyliśmy tu niespodziewanie. Zebrała się tutaj rada miejska, aby, podobnie jak lat poprzednich, nad sprawami naszego miasta obradować. Mimo tego, że w tym roku jeszcze bardzo wiele spraw nas czeka, nie zamierzam przez to wyprzedzać obrad Wysokiej Izby, — ale też nie taję sobie trudności i przeszkody, jakie w tej mierze napotkać mogę.\n\n„Już to powiedzieć muszę, że dyskusya nad odpowiedzią p. Ministra w sprawie opłat szkolnych, jakikolwiekby mógł być jej wynik, znużyła mnie bardzo. Wezwany do odpowiedzi na kwestyonaryusz w sprawie nauki języka polskiego, nie mogę odpowiadać w imieniu rady miejskiej, ale imieniem własnem, a to dlatego, że wobec tego, co tutaj usłyszałem, nie mogę wypowiedzieć zdania, jakieby wobec panującego w Radzie państwa kierunku poli-\n\ntycznego i społecznego, w całej sprawie rozstrzygającem być mogło. Nie mogę również powiedzieć, jakie stanowisko w obec",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 1043,
+     "bytes": 1099
+    }
+   },
+   {
+    "id": "s1337_p4",
+    "seed": 1337,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": " sprzyjała pielgrzymce. Wspaniale wyglądają stowarzyszenia katolickie, a bractwa i cechy występują w świątecznych strojach, a i młodzież, która na ten cel się zapisała, także ma barwne mundurki.\n\nMiejscowy proboszcz, X. Szymon Romuald Berezowski, w serdecznych słowach przywitał nas, bo to zawsze najmilszy przyjaciel. Wyraził zadowolenie, że w duchu nawskróś katolickim rozpoczął prace swe dla dobra ludu. Chłopczyk szkolny Józef Dydus przyniósł na tacy puhar wina, a na wazę ofiarował piekny obraz św. Walentego z patronem dziatek w niebie.\n\nKs. kanonik Dutkiewicz w serdecznych słowach zachęcał do pracy i miłości, a X. Dydus w podniosłych słowach wzniósł toast na cześć papiestwa.\n\nKs. Rektor Baudouin w dłuższem przemówieniu dał pogląd historyczny na stosunki kościoła i Polski, a mianowicie w czasach obecnych.\n\nPielgrzymka liczyła przeszło 300 osób.",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 856,
+     "bytes": 905
+    }
+   },
+   {
+    "id": "s1337_p5",
+    "seed": 1337,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " prośbą o rady, bym Ci mógł w obec Twych przyjaciół i znajomych odsłonić moje tajemnice i dać ci od siebie naukową radę.\n\nCzyś mnie może prosił o radę w sprawach tak ważnych dla mas, dla całego narodu, dla mojej ojczyzny? Nawet nie wiem, czy mogę sobie znaleźć taką radę. Jeśli mnie zapytasz o to w tej sprawie, muszę Ci o tem powiedzieć. Proszę Cię o radę, bo chcę się przeświadczyć, czy ci wszyscy ludzie, których mi los i życie oddane, w tej sprawie zdanie swoje wypowiadają.\n\nWolałem w ważnej sprawie mojej duszy się zastanowić i rozważyć, czybym był w stanie to uczynić, wolałem pisać do Ciebie, gdyż na próżnobym się tutaj rozglądał. Gdybym\n\nCię znalazł wpośród ludzi obcych, nie miałbym wiele przyjemności. A tak stanę przed Tobą i powiem Ci, jak to często jesteśmy z sobą na pozór w niezgodzie i nieżyczliwości.\n\nPiszesz mi, że się przejeżdżam i widzę, jak padają na mnie ciosy, jak to się wszystko ze",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 909,
+     "bytes": 981
+    }
+   },
+   {
+    "id": "s1337_p6",
+    "seed": 1337,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": " Nowowielkiej N 19.\n\nprzyjmować będzie z chorobami wewnętrznemi i zewnętrznemi codziennie od godz. 9 do 10 rano i od\n\nDo sprzedania.\n\n-|wraz z domem i pięknym ogrodem, oraz\n\nz dobremi budynkami, z kompletnym inwentarzem, ziemia przeważnie pszenna. Bliższych wiadomości udziela administracya „Rozwoju“. 1622—2—2\n\n| ł |\n\n| | | |\n\nE a w\n\ni Zaraz potrzebne są | zdolne staniczarki i podręczne. Dwie Paltoty wiosenne i Sklep do sprzedania. Piotrkowska\n\nPańska M 59, — Ulica Ewangelicka Nè 73. 1615—3—1\n\nDom. Strzygi do sprzedania. Nowy dom parterowy. Położenie ładne, 6 wiorst od stacyi kolei. Cena 20,000 rubli. Informacye\n\nMAGAZYN MEBLI\n\ni Zakład Tapicersko - De",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 659,
+     "bytes": 690
+    }
+   },
+   {
+    "id": "s1337_p7",
+    "seed": 1337,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " głównej we Lwowie o godzinie 8'30 rano i przychodzi do Lwowa o godzinie 3:80 po południu —\n\nPociąg pospieszny Nr. 3 odchodzi ze Lwowa o godzinie 2'05 po południu i przychodzi do Lwowa o godzinie 10:45 wieczorem.\n\nPociąg osobowy Nr. 1018 odchodzi ze Lwowa o godzinie 8'10 wieczór i przychodzi do Lwowa o godzinie 8:55 rano,\n\nPociąg osobowy Nr. 1017 odchodzi ze Lwowa o godzinie 8:50 rano i przychodzi do Lwowa o godzinie 3:40 po południu.\n\nPociąg osobowy Nr. 1017 odchodzi ze Lwowa o godzinie 8:20 rano i przychodzi do Lwowa o godzinie 3:50 po południu.\n\nPociąg osobowy Nr. 1018 odchodzi ze Lwowa o godzinie 8'15 rano i przychodzi do Lwowa o godzinie 5'15 po południu.\n\nPociąg pospieszny Nr. 8 odchodzi ze Lwowa o godzinie 10:50 przed południem i przychodzi do Lwowa o godzinie 11:45 w nocy.\n\nPociąg pospieszny Nr. 1020 odchodzi ze Lwowa o godzi",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 845,
+     "bytes": 863
+    }
+   },
+   {
+    "id": "s1338_p0",
+    "seed": 1338,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " przy ulicy Mostowćj pod N. 227, w domu po Paulowćj, znaleziono ciało już nieżywego mężczyzny. Na zwłokach nie znaleziono żadnego śladu gwałtu, oprócz dwóch baniek z siarką, które się sjadły; mniemano zatém, iż zmarły utopił się. Jakkolwiek wiadomość ta ma bardzo wątpliwą i sprzeczną z aktami policyjnemi autentyczność, nieda się jednak żadną miarą zaprzeczyć. Domyślać się tylko można, iż zmarły mieszkał nie w Warszawie, lecz na wsi, i od lat kilku żył w bardzo nędznym stanie, a to dla tego, iż ta nędza przewyższa potrzeby stanu jego majątkowego. Jakkolwiek więc zdawać się mogło, że powyższa okoliczność nie będzie bezzasadną, jednakże co do tój zmiana zaszła w aktach śledztwa policyjnego.\n\nTym sposobem całe doniesienie gazety warszawskićj dostało się do publiczności, i uznano je za autentyczne. |\n\nBirż. Wied. ogłaszają korespondencyą dyplomatyczną w sprawie polskićj, z którćj wyjmujemy następujące",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 909,
+     "bytes": 986
+    }
+   },
+   {
+    "id": "s1338_p1",
+    "seed": 1338,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " Aleksan-\n\n; dra w Warszawie jakaś dama upadła zemdłona na\n\nulicy.\n\nUsposobienie giełdy dla walut obcych słabe, a kursa niczmienione.\n\nNieurzędowe kursa żądane: za Berlin krótki 48.60, za Londyn krótki 9.93, za Paryż krótki 38.90 i za Wiedeń\n\nRynek zbożowy i produktowy. Pszenica cicho; Źyto mocniej, w towarze gotowym na potrzeby miejskie\n\nmala odstawa. Sprawozdanie końcowe.)—Cukier Rafinowany Kóniga I-go gatunku rs. 6.— płacono, II-go gaSulejów rs. 5.70, Hurtowa: Cukier rafinowany zbożowy w Gdańsku w lepszych warunkach, w dostawie spokojny, w innych gatunkach spokojny. Kurs w Gdańsku 212.75 m. za\n\nSprawozdanie meteorologiczne\n\n. `\n\nW ciągu j T",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 651,
+     "bytes": 678
+    }
+   },
+   {
+    "id": "s1338_p2",
+    "seed": 1338,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": "m nareszcie przemieniał się w człowieka.\n\nPędziłem jak szalony po pustych ulicach, gdyż już nikt z nas nie znosił kamieni.\n\nWiosenne słońce nie przestało palić i okrywać liści. A w powietrzu unosiła się woń upajająca, przepełniona upajającym zapachem kwiatów.\n\nStanąłem jak wryty.\n\nBył to wieczór wiosenny.\n\nWracałem do domu powoli i ostrożnie. Zauważyłem, że po drodze spadały mi ciągle z ubrania paciorki, odstające od wielkich listków, bywają bowiem arabeski podobne do tabliczek z kości słoniowej.\n\nUkląkłem i oparłszy się o poręcz odurzony, oczekiwałem chwili, gdy mi będzie wolno usiąść i odetchnąć.\n\nAle nadaremnie.\n\nW kącie siedział człowiek, z głową do góry podniesioną.\n\nBył to jakis bardzo wydekoltowany pan, a w ręce trzymał kapelusz z rozwianymi brzegami, tak że obcisłe ubranie zdala już było wido",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 811,
+     "bytes": 874
+    }
+   },
+   {
+    "id": "s1338_p3",
+    "seed": 1338,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": " z dnia 2. maja.\n\nRadny Rauch zawiadamia radę, że w sprawie osuszenia bagna Kunickiego, wydelegowana komisja z łona rady miejskiej, porozumiała się z Wydziałem krajowym, co do udziału w kosztach tej melioracji. Uznano jednak za konieczne, by rozprawy trwały przez trzy dni.\n\nPrzyjęto do wiadomości sprawozdanie komisji w sprawie przeniesienia rzeźni miejskiej. Komisja proponuje, aby ze względu na to, że z powodu przeniesienia rzeźni odpadną koszta połączone z przeprowadzeniem wodociągu na Gródeckie, przenieść rzeżnię przy rzeźni na Zniesienie.\n\nUchwalono.\n\nSprawozdanie komisji o udzielenie subwencji z fundacji śp. dra Jana Towarnickiego, uchwalono odłożyć do następnego posiedzenia.\n\nW sprawie przeniesienia stajni spędowej dla bydła i cieląt na plac Strzelecki, uchwalono zażądać, by gmina. dostarczyła miejsce pod nią w parku",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 7,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 833,
+     "bytes": 870
+    }
+   },
+   {
+    "id": "s1338_p4",
+    "seed": 1338,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": " nieco poprawiła się. Dziś w południe padał deszcz, którego opad wynosił 9 mm.\n\n+ Zmarli w ostatnich dniach: We Lwo wie, Wojciech Dołęga, profesor i rektor instytutu muzycznego w Krakowie, w 44 roku życia;\n\nżycia.\n\n— Upadłość. Z Berlina donoszą, iż znany kupiec i przedsiębiorca wiedeński, Henryk Kummer, wniósł skargę do sądu nadwornego w Wiedniu o odszkodowanie 75.000 marek z powodu poniesionej straty na giełdzie. Sąd nadworny przyznał poszkodowanemu odszkodowanie w kwocie 65.000 marek.\n\n— Dramat rodzinny. Z Lignicy na Morawie donoszą: Przed kilku dniami zaszedł tu dramat rodzinny, który skończył się samobójstwem małżonków B. Trzej ich synowie, 18-letni student i 14-letnia córka, posprzeczawszy się o coś z ojcem, wszczęli bójkę, w czasie której B. i ojciec jego zostali lekko ranni. Awanturnicza",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 805,
+     "bytes": 851
+    }
+   },
+   {
+    "id": "s1338_p5",
+    "seed": 1338,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " Wiednia; jeźli będziesz mógł widzieć się z Nim w Warszawie, pojedziemy do Wiednia. Teraz jeżeli już masz czas pisać do Ciebie, to pisz do mnie. W tej chwili nie mogę być na wsi i bawię daleko; jak tylko wstąpię na Ukrainę, będę mógł wszystko opisać, aby tylko zrobić jak najlepiej, tak mi to miło! Masz czas pisać do mnie!“\n\n„Byłem w Warszawie i nie będę w niej bawił długo, bo jestem ciężko słaby; ale się będę starał pisywać do Ciebie z jak największą troskliwością. Od dnia, w którym wyjeżdżałem z Petersburga, aż dotąd o niczem innem nie myślałem tylko o Tobie; teraz przybywam do Petersburga, bo się dowiedziałem, że masz zamiar powrócić do Francyi, albo może do Anglii. Ale co się dzieje z Tobą? — Pieniądze mi nie nadejdą do tego czasu. O Ciebie, mój drogi, tobym znowu myślał, jakby Ci się wystarać o miejsce dla Ciebie i dla mnie.\n\n„Kochany mój Bracie! Zapomniałem Ci powiedzieć, że cię serdecznie kocham, i życzę",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 923,
+     "bytes": 1001
+    }
+   },
+   {
+    "id": "s1338_p6",
+    "seed": 1338,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": " Brackiej\n\nL. 12 w Krakowie\n\nPAROWA FABRYKA SZCZOTEK i BĘDZINY\n\nsprzedaje się W CZASIE WYSTAWY PRZY ULICY\n\nw własnej kamienicy.\n\nBezpłatna nauka.\n\nChłopcy do roznoszenia gazet i dziewczęta do biura i do posług domowych. Wiadomość w Administracyi „Dnia“.\n\nStory, żaluzye deszczułkowe | papierośmiki\n\nw wielkim wyborze\n\nWŁADYSŁAW SEKMIDT\n\nl\n\nMam zaszczyt donieść Szan. P. T. Publiczności, iż z dniem\n\nSkład mebli, luster i wszelkich sprzętów domowych\n\npo śp. mężu moim\n\nKarolu Bratkowskim\n\nw Krakowie przy ulicy Smoleńskiej L. 20,\n\ntakowy pod firmą\n\n„BRACTWO STOLARZY KRAKOWSKICH\"\n\nprowadzić będę.",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 595,
+     "bytes": 630
+    }
+   },
+   {
+    "id": "s1338_p7",
+    "seed": 1338,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " Hrebenów o godzinie 12 minut 55 po południu a przychodzi do Lwowa o godzinie 11 minut 55 wieczór.\n\nPociąg mięszany odchodzi ze stacyi głównej w niedziele i święta do Janowa o godzinie 12 minut 10 w południe,\n\nPociąg mięszany nr. 4 odchodzi ze stacyi Hrebenów o godzinie 12 minut 10 po południu a przychodzi do Lwowa o godzinie 10 minut 30 wieczór.\n\nPociąg osobowy nr. 17 odchodzi ze stacyi Hrebenów o godzinie 12 minut 55 w południe a przychodzi do Lwowa o godzinie 7 minut 31 rano.\n\nPociąg mięszany nr. 30 odchodzi ze stacyi Hrebenów o godzinie 12 minut 15 w południe a przychodzi do Lwowa o godzinie 5 minut 4 po południu.\n\nPociąg osobowy nr. 32 odchodzi ze stacyi Hrebenów o godzinie 2 minut 55 po południu a przychodzi do Lwowa o godzinie 5 minut 9 po południu.\n\nPociąg mięszany nr. 33",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 5,
+     "orto_modern_share": 0.0,
+     "chars": 790,
+     "bytes": 819
+    }
+   },
+   {
+    "id": "s1339_p0",
+    "seed": 1339,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " jednym z\n\n| największych niedostatków Komisyi Rządowej,\n\n| która i przez to samo, że jej członkowie byli\n\nurzędnikami, jest brak etatów, jest brak stosownego wykazu kosztów podróży i dyet członków, co na ogromne wydatki byłoby narażone.\n\nNie widzę też w tem nic ujemnego, jeżeli we wszystkich działach etatu Komisyi Rządowej Sprawiedliwości, będzie w etacie głównym uwzględniona służba prawnicza; ale gdybym zamierzał uczynić wniosek, iżby Komisya Rządowa Sprawiedliwości włączoną została w etat Komisyi Skarbu, to dodać muszę, że we wszystkich działach etatu Komisyi Skarbu koszta podróży i dyet członków komisyi, zaliczanych do niej, wynosić będą około rubli srebrem dziesięć tysięcy, co byłoby z uszczerbkiem dla sprawiedliwości.\n\nDodać do tego należy, że w etacie komisyi Skarbu są pozycye, których nie tylko żaden zakład niema, ale nawet w całym składzie swoim w zupełności wykreślone być nie mogą, bo przy etatach przez inne władze i instytucye zarządzanych,",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 9,
+     "orto_modern_share": 0.0,
+     "chars": 965,
+     "bytes": 1034
+    }
+   },
+   {
+    "id": "s1339_p1",
+    "seed": 1339,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " podgórskim pękła bomba w pobliżu magazynów wojskowych. Nabój trafił stojącego w pobliżu górnika Jana Fitaka, który padł trupem na miejscu. Drugi wypa: dek zaszedł na moście podgórskim. Mianowicie robotnik Jan Moliński, idąc na obiad do domu, wypadł z łazienki z wysokości jednego piętra. Moliński, który spał w tej łazience, odniósł ciężkie uszkodzenia, które opatrzyło pogotowie ratunkowe.\n\nRannych opatrzyło pogotowie ratunkowe.\n\nKronika lwowska. Wczoraj wieczorem, na placu powystawowym aresztowała policya awanturnika nazwiskiem Babraja, który pobiwszy w okropny sposób policyanta Astalena, zbiegł.\n\n= Pożar. Wczoraj po południu wybuchł pożar w kamienicy przy ul. Podlewskiego l. 2. W chwili wybuchu pożaru było w kamienicy już 19 osób, które były zatrudnione w piwnicy. Straż pożarna zlokalizowała ogień.\n\n=",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 813,
+     "bytes": 863
+    }
+   },
+   {
+    "id": "s1339_p2",
+    "seed": 1339,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": " samotna\n\n| niewiasta klęczała u łoża, Po\n\n| rywanemi, a nieznającemi treści żalami.\n\nukończeniu modlitwy zaczęła się żegnać,\n\nJeden | Na klęczkach doszły jej ucha słowa modlitwy:\n\njuż i teraz klęcząc nie potrafiła sobie uprzytomnić, że jest już na ziemi.\n\nDrzwi otworzyły się i do wnętrza zapukano.\n\nPrzez rozwarte drzwi wpadł zdyszany chart, który zatrzymał się w progu.\n\n— Jasiu! — zawołała już teraz do Pawła — jasiul, kto ty jesteś?\n\nNa widok charta wbiegła pani Sieniawska,\n\n(C. d. n.)\n\nRudolf Krimmer\n\nw Brzeżanach\n\n„Sokół“ w Trembowli\n\nDostarcza wszelkie przybory\n\ni lampy do oświetlenia gazowego i elektrycznego\n\nwedług najnowszych systemów, jakoto:\n\nGARNITURY DO GOLENIA I",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 682,
+     "bytes": 734
+    }
+   },
+   {
+    "id": "s1339_p3",
+    "seed": 1339,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": ", odbytego we czwartek dnia 28. kwietnia 1887, Początek o godzinie 7, wieczorem. Sekretarz rady pan radca Lukas odczytuje protokół z poprzedniego posiedzenia rady. Pan Prezydent odpowiada na interpelację dr. Małeckiego, wniesioną na posiedzeniu rady w dniu 2. b. m. w sprawie polepszenia bytu nauczycieli miejskich szkół ludowych. Pan Prezydent zaznacza, iż sprawa ta została już zbadaną przez specjalne komisje, wybrane z ramienia rady miejskiej. Zmiana statutu w tym kierunku, aby członkom rady miejskiej donosiła rada szkolna okręgowa o ich pracach, przez tychże dokonanych, a w szczególności o przydzieleniu im czynności fachowych, napotyka w skutek tego na trudności. Referent wspomina, iż członkowie rady nie są zarazem członkami komisji organizacyjnej, a inspektorowie szkolni mają sobie poruczony obowiązek czuwania nad działalnością szkół, co do których dotychczas nie wydała rada dotąd żadnej instrukcji. Komisja organizacyjna zażądała od magistratu przedłożenia sobie dotyczących ak",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 6,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 993,
+     "bytes": 1034
+    }
+   },
+   {
+    "id": "s1339_p4",
+    "seed": 1339,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": " przez cały tydzień była piękna. Dnie były ciepłe, słoneczne i wcale ciepłe. Wiatr był południowo-zachodni. Temperatura po większej części była pogodna.\n\nWilno. Na proboszcza i wikaryusza pa rafii św. Jana (na miejsce ks. Kuleszy) został wybrany ks. Jan Stasiulewicz, proboszcz parafii Daniłowiczów, dziekan wileński.\n\nZ Kamieńca Podolskiego donoszą do Dziennika Poznańskiego, że właściciele domów, położonych na rogu ulic: Szerokiej i Polnej, zwrócili się do magistratu o zamknięcie tych ulie dla przejazdu żydów, przez co około tysiąca robotników i służba kolejowa pozbawieni zostali zarobku.\n\nGdańsk. W Kwidzynie buduje się szkoła żeńska, która ma pomieścić 400 uczennic.\n\nPetersburg. Wybory do Dumy państwowej w gubernii kurskiej zostały rozpisane na\n\nSamorząd w Królestwie Polskiem.\n\nDotychczasowy rządowy projekt samorządu miejskiego w Królestwie Polskiem",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 861,
+     "bytes": 914
+    }
+   },
+   {
+    "id": "s1339_p5",
+    "seed": 1339,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " Wiednia. Tyś przybył do nas w sam czas, aby się\n\nporozumieć z Twoim spowiednikiem co do obrzędu\n\nrzeczonego. To też proszono Ciebie o to. Nie żałuj tego, bo to co się stało, wywarło nie małą i bolesną niekorzyść na Twoim miłym przyjacielu. Muszę Ci jednak oddać tę sprawiedliwość, że jesteś w całem tego słowa znaczeniu dobrym człowiekiem.\n\na * k\n\nŚwięty Antoni, chwała Ci Panie! Zaiste nie masz sobie równego w naszej prowincyi. To też masz już teraz do przebycia spory kawał drogi, ponieważ chodzą ciągle pociągi w około i przewożą do miejsca przeznaczenia. Pociąg taki w ten sposób uskuteczniony jest w trzech godzinach, uliea zaś ulieą.\n\nNiech Ci to Pan Bóg nagrodzi.\n\nPaweł Lefóevre.\n\nBaron Fuzetti.\n\nLondyn w Maju 1866 r.\n\nJuliusz Girardin.\n\nGustaw Doré.\n\nRodem",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 768,
+     "bytes": 817
+    }
+   },
+   {
+    "id": "s1339_p6",
+    "seed": 1339,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": " Floryańskiej Nr. 46, w domu Wgo Trembeckiego, poleca wielki wybór tanich i gustownych obówia\n\nmęzkiego i damskiego.\n\nWilhelm Fenz\n\nw Krakowie poleca\n\nWielki wybór najrozmaitszych liści\n\nfajeczek piankowych, cygarniczek, cy-\n\nbnchów i cygarniczek z bursztynami,\n\nbroszek do zębów, pugilaresów, parasoli\n\nfejek piankowych, fajek piankowych z oku-\n\nciami z chińskiego srebra, wyrobów faj-\n\nczowych i piankowych z najcelniejszych fa-\n\nbryk.\n\nKlucz do trafik, kitle skórzane, potrzebne\n\ndo noszenia paska dla p. palaczy.\n\nNajwiększy skład albumów na fotografie.\n\nKażdej chwili w zapasie.\n\nNowe miary i wagi metryczne.\n\nAby oszezędzić sobie trudu i wydatku,",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 652,
+     "bytes": 671
+    }
+   },
+   {
+    "id": "s1339_p7",
+    "seed": 1339,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " głównej o godzinie 8.50 rano, przychodzi do Lwowa o godzinie 8.50 wieczór, Pociąg pospieszny odchodzi z Krakowa o godzinie 12.50 w nocy i przycnodzi do Lwowa o godzinie 11.15 przedpołudniem.\n\nPociąg mieszany odchodzi ze stacyi głównej w Krakowie o godzinie 10.30 wieczór i przychodzi do Krakowa o godzinie 3.55 rano.\n\nPociąg osobowy odchodzi ze stacyi głównej w Krakowie o godzinie 4.44 popołudniu, a przychodzi do Lwowa o godzinie 8.30 wieczór i przychodzi do Krakowa o godzinie 8.05 wieczorem.\n\nPociąg mieszany odchodzi ze stacyi głównej w Krakowie o godzinie 9.45 wieczór i przychodzi do Krakowa o godzinie 8.05 wieczór.\n\nPociąg osobowy odchodzi z Krakowa o godzinie 7.46 rano, a przychodzi do Lwowa o godzinie 10.55 wieczór i przychodzi do Krakowa o godzinie 10.53 wieczór.\n\nPociąg osobowy odchodzi z Krakowa o godzinie 11.45 rano i przychodzi do Lwowa o godzinie 8.40 wieczór.\n\nPociąg osobowy",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 898,
+     "bytes": 923
+    }
+   },
+   {
+    "id": "s1340_p0",
+    "seed": 1340,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " w tamtejszej fabryce wyrobów żelaznych i stalowych, Panów Markusa i Seidla, popełniono znaczną kradzież, przez wyłamanie drzwi sklepowych i wdarcie się do pomienionej fabryki, kiedy roboty trwały jeszcze. Sprawcy kradzieży dotąd nie wykryci, przez nikogo nie byli poszkodowani; wszelako zmuszeni byli pozostać tam jeszcze czas jakiś, albowiem po zamknięciu warsztatu, musiano większą część pieniędzy złożonych tam na zaspokojenie robotników, zwrócić.\n\nNie wątpimy, że wiadomość ta nie będzie bez interessu dla tutejszych przemysłowców i rękodzielników, którym wypadki podobne jak powyższy, są na teraz dogodne, albowiem pozbywając się kiedyś za bezcen towaru i stając się narzędziem różnych wyzyskiwaczy, robiących z tego źródła zyski dla siebie. — Fabryka ta jest w pełnem ruchu i czynna od lat wielu.\n\n= Wczoraj po kilkomiesięcznej chorobie, uległszy ciężkim cierpieniom, w podeszłym wieku po kilkudniowej słabości, zgasł $",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 926,
+     "bytes": 986
+    }
+   },
+   {
+    "id": "s1340_p1",
+    "seed": 1340,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " bialostockim, gdy patrol żandarmski aresztował jakąś podejrzaną osobistość, tłum ludzi otoczył dwóch żandarmów i zelżył ich. Na pomoc aresztowanemu wezwano wojsko, które po chwili położyło kres awanturze.\n\nZ Włocławka donoszą: W okolicy Suwałk rozeszła się pogłoska, iż z powodu tego, że ktoś\n\nNa dom im. Mickiewicza.\n\nSuwałki. Do włocławskiego zarządu miejskiego wpłynęły między innemi następujące ofiary: P. Jadwiga Bąkowska z Małego Kowala 100 rubli; p. Józef Gawroński 10 rb. i p. Kazimierz Radoszewski z Kowla 2 rb.; p. Aleksander LiJózef Knothe 5 rb; p. Aleksander Szaniawski na ładunki wełniane 4 rb. i p. Kazimierz Sperliński\n\nWilno. Zarząd miejski nie pozwolił na otwarcie w Wilnie dwóch szkół miejskich: ogólnej i rzemieślniczej; szkoły te mają być dopiero otwarte po Świętach Wielkanocnych.\n\n",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 804,
+     "bytes": 862
+    }
+   },
+   {
+    "id": "s1340_p2",
+    "seed": 1340,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": "śmy w czarnych frakach i chustkach na ramionach przechadzali się po obszernym zakątku.\n\nAdam szedł poważny i zamyślony, nie spojrzał nawet na mnie, nie wyrzekł ani słowa, ale posunął się ku oknu i patrzał.\n\nWszyscy milczeli. W ciszy nocnej przerywało ją tylko silniejsze uderzanie zegaru, a kiedyśmy weszli, stanęła przed nami postać mężczyzny w długim surducie i żółtej koszuli.\n\nZaledwie wyrzekł słowa: „tak, jestem tu od ciebie, synu mój, oczekiwany”. Ukłonił się po raz drugi i wrócił do okna, wziął kosę w rękę i zaczął nią machać po bujnej trawie.\n\nA ja z osłupieniem rozglądałem się dokoła. Zdawał się on nie być tym, co mnie tu spotkało, ale był tym, czym był.\n\nWszędzie napotkać było można jego samego, o twarzy marsowej, o ustach grubych, uczonych. W sosnowym lesie, w karczmie pokazanej mu przez Anielkę,",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 815,
+     "bytes": 877
+    }
+   },
+   {
+    "id": "s1340_p3",
+    "seed": 1340,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": " z dnia 19. Stycznia 1874,\n\nPrzewodniczący : Prezydent miasta Dr. Dietl.\n\nObecnych członków rady 38.\n\nOtwiera posiedzenie przemową w języku polskim, w której wyraża radość z powodu wyboru prezydenta.\n\nPo przyjęciu protokółu z ostatniego posiedzenia, zawiadamia prezydent, że uchwałą Rady miejskiej z dnia 17. Grudnia 1869. r. nadaną została posada inżyniera miejskiego panu Waleryanowi Kaniewskiemu, który złożył przysięgę służbową w ręce prezydenta.\n\nPo dłuższej dyskusyi nad przedmiotami na posiedzeniu tem wniesionemi, uchwalono najprzód przekazać na wniosek sekcyi skarbowej do rozpatrzenia i zatwierdzenia przedstawione na poprzedniem posiedzeniu wnioski p. Kwiatkowskiego co do udzielania zaliczek urzędnikom i sługom miejskim i podwyższenie im płacy.\n\nZgodnie z wnioskiem sekcyi skarbowej uchwalono udzielić zaliczki w kwocie 6000 zł. na dotacyą kasy miejskiej do zwrotu urzędni",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 4,
+     "orto_modern_share": 0.0,
+     "chars": 885,
+     "bytes": 925
+    }
+   },
+   {
+    "id": "s1340_p4",
+    "seed": 1340,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": " dopisała, a wczoraj po południu słońce rozświeciło cały nasz horyzont.\n\nW miejsce $. p. Artura Potockiego zasiędą w sejmie włościanie, a w miejsce p. Stanisława Madejskiego, który zrzekł się mandatu, zasiędzie p. Edward Micewski, poseł do Rady państwa.\n\nKu czci Skargi. Z inicyatywy lwowskiego Koła pań Towarzystwa „Szkoły ludowej“, odbył się we Lwowie w niedzielę dnia 22 b. m. uroczysty obchód ku czci Skargi. Na estradzie w obszernej sali „Sokoła“, przybranej w kwiaty i festony, zgromadziły się po raz pierwszy w bieżącym roku panie nasze ze wszystkich dzielnie Polski. Obok wielu włościan przybyli na obchód także księża, a liczne grono akademików i publiczności stanowili robotnicy.\n\nPo stosownej przemowie wstępnej p. Stanisławowa Markiewiczowa, delegatka z Krakowa, wygłosiła referat na temat „O wpływie Skargi na życie narodowe“. Mowczyni przedstawiła „B",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 864,
+     "bytes": 923
+    }
+   },
+   {
+    "id": "s1340_p5",
+    "seed": 1340,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " Krakowa, bo chciałbym Ci pokazać, jak znakomity artysta zgłasza się do Ciebie. Wiem, że ma wiele zajęcia i przesyła Ci zasiłki, których mu nie przesyłam, bojąc się, by Ci ich nie zątaić. Dlatego proszę, przyślij mu datek 2 kor.! My tu jesteśmy w pełni gorączki; nic więc dziwnego, że ktoś nie wierzy, żeby\n\nNa Gwiazdkę.\n\n| GAZETA SZKOLNA\n\ntylko bardzo mała liczba ludzi mogła otrzymać „jednorazową zapomogę, a tem samem niedobrze jest, żeby była na nią narażoną.\n\nZnając Twoje szlachetne serca, chciej dołożyć starań, byś mógł kiedyś zakupić dla tej młodzieży lepsze upominki od tych, którzy się skarżą na brak pracy i zarobku i potrzebują wsparcia.\n\nJózef Małysa.\n\nList ten był pisany z prośbą do nas o fundusz na zakupno utensyliów dla tych uczniów. Uczyniliśmy, co w naszej mocy było i do tej pory nie stra",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 810,
+     "bytes": 872
+    }
+   },
+   {
+    "id": "s1340_p6",
+    "seed": 1340,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": " Grodzkiej L. 59, w domu W-go P. Ungera, poleca Szan. Publiczności swoją świeżo urządzoną wystawę zegarków kieszonkowych i zegarów ściennych, dwu- i trzykołowych, podróżnych i pendułowych. Ceny najprzystępniejsze, rzetelna usługa, zamówienia zamiejscowe wykonują się jak najrychlej i po cenach umiarkowanych.\n\nGrono przyjaciół muzyki, pod przewodnictwem Ludomira Benedyktowieza, urządza jutro w sali hotelu Saskiego koncert z udziałem panny Ireny Lewickiej, profesora p. L. Marka, oraz panów Kulezyńskiego i Wszelaczyńskiego. Program podamy jutro.\n\nZebranie ludowe w sali Rady miejskiej odbędzie się w niedzielę. Na porządku dziennym: 1. O organizacyi i działalności Kółek rolniczych. 2. O obowiązkach wyborców wobec wyborów do Sejmu. 3. Wnioski.\n\nDo Towarzystwa im. Tadeusza Kościuszki przystąpili w dalszym ciągu jako",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 819,
+     "bytes": 859
+    }
+   },
+   {
+    "id": "s1340_p7",
+    "seed": 1340,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " Lwów-Monasterzyska o godzinie 12 m. 85 w południe w kierunku do Stryja.\n\nAUT\"\n\nPociąg osobowy odchodzi ze stacyi Lwów-Sambor o godzinie 7:80 rano w kierunku do Stryja.\n\nPociąg osobowy odchodzi ze stacyi Lwów-Sambor o godzinie 10:35 wieczór w kierunku do Stryja,\n\nPociąg osobowy odchodzi ze stacyi Lwów-Sambor o godzinie 8:45 rano w kierunku do Chyrowa, a pociąg osobowy odchodzi ze stacyi Chyrów-Zagórz o godzinie 1:05 po południu w kierunku do Stryja.\n\nPociąg osobowy odchodzi ze stacyi Lwów-Sambor o godzinie 8'46 po południu w kierunku do Chyrowa, a pociąg osobowy odchodzi ze stacyi Lwów-Sambor o godzinie 4:60 po południu w kierunku do Stryja.\n\nPociąg osobowy odchodzi ze stacyi Lwów-Sambor o godzinie 12:07 w nocy w kierunku do Sambora.\n\nPociąg osobowy odchodzi",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 7,
+     "orto_modern_share": 0.0,
+     "chars": 768,
+     "bytes": 790
+    }
+   },
+   {
+    "id": "s1341_p0",
+    "seed": 1341,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " zamierzono. na przyszły miesiąc, uroczyście obchodzić w tej stolicy rocznicę Urodzin JCKMci. Jakkolwiek Wiadomość ta przedwczesna, Świadczy zawsze 0 żywym i czynnym w kraju naszym ruchu i:tym samym co inne kraje postępem, dowodzi wszakże io:\n\n! świadcza, że może dać wyobrażenie o większym.\n\npostępie niż była dawniej. Wprawdzie zarzut ten może tylko w błąd wprowadzić, boć wiadomo, że za: granicę wieśniak tylko jeździ, ale jest nadto widoczny, bo tkwi w każdym kraju, a nabywa się ną miejscach. Z tego względu widzimy już w Niemczech, jak ruch rolniczy nie ustaje, a na całem południu i zachodzie Europy jest obecnie tak ogromny, iż z uszczerbkiem dla rolnictwa, nie widzimy, aby się do niego choć jeden członek społeczeństwa mięszać zaczął. Nie zadziwi nas więc w tej chwili więcej, że rząd nie waha się ogłaszać i popierać wszelkiemi środkami ukazu cesarskiego, w którym jest mowa, że nie ma być zachowanym dawny porządek. Niedawno ogłoszono w Prusiech, że",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 961,
+     "bytes": 1022
+    }
+   },
+   {
+    "id": "s1341_p1",
+    "seed": 1341,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " krakowskim został aresztowany i odstawiony do więzienia w Nowym Sączu Jan Orzech, pod zarzutem zbrodni ciężkiego uszkodzenia ciała.\n\nW ostatnich czasach Orzech nie ustawał w oszukańczych manipulacyach, fałszował weksle, wyłudzał pieniądze pod rozmaitymi pozorami, a gdy się przypadkiem wykryło jego zbrodnię, wypuszczony z więzienia, w którem siedział 20 lat, uciekł z Krakowa.\n\n„GAZETA PODHALAŃSKA*\n\nNAJPRZEWIELEBNIEJSZY Ks. biskup ANTONI WALEZJUSZ\n\nna uroczystość poświęcenia sztandaru Związku górali w Nowym Targu, który z inicyatywy WP.\n\nNamiestnika Andrzeja hr. Potockiego odbył się dnia\n\nobszedł cały szereg miejscowości w powiecie nowotarskim, odprawiwszy poprzednio w kościele N. P. Maryi uroczyste nabożeństwo.\n\nNowy Biskup, jak już wiadomo z poprzednich |\n\nparafianie i duchowieństwo przybyli na uroczystość",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 818,
+     "bytes": 860
+    }
+   },
+   {
+    "id": "s1341_p2",
+    "seed": 1341,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": " zamieć zeszła na ziemię i ciężkie, straszne, bolesne nocne włóczęgi przeobraziły się w łkanie, a każda chwila stracona rozdzierała serce.\n\nTrawka się paliła i zagrzewała żółtemi iskierkami, niebo się paliło, a na nim sypały się gwiazdy, jak rzęsy złociste, a nad nim była taka straszna noc, że zdawalo się, że jej nic nie będzie, nie nie będzie.\n\n— QOłowianki już nie mają robić, — rzekł Radziejewski.\n\n— To są nocne wyrobnice, bo one idą za dnia, a my idą,— mówił w duchu, a na to rzekł z uśmiechem: — O! w tej chwili stoi na wzgórzu wielkie miasto. W nocy ludzie są jak groby, a we dnie jak gwiazdy. Tam będzie mrok, tu jaśniejsze, tu ciemniejsze.\n\n— Tak jest, — odezwał się stary i poszedł do domu, — ale że teraz nie ma czego w nocy szukać, toć nie trzeba być takim tchórzem.\n\n— Co się tam zrobiło z tym starym",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 815,
+     "bytes": 890
+    }
+   },
+   {
+    "id": "s1341_p3",
+    "seed": 1341,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": "\n\nPodając w krótkości przebieg obrad Rady miejskiej w dniach 9 i 14 b. m. podajemy w skróceniu przebieg tej sprawy.\n\nW sprawozdaniu tem nie znajdujemy dostatecznych i jasnych szczegółów. Sprawa została wytoczoną na podstawie uchwały rady, powziętej na wniosek nagły dep. dr. Semilskiego. W myśl tej uchwały, wystosował magistrat odezwę do sekcji skarbowej o udzielenie gminie miejskiej dalszych funduszów na pokrycie tegorocznych niedoborów budżetowych, a nadto delegował magistrat komisję do zbadania wysokości wydatków i rzeczywistych potrzeb. Komisja ta, złożona z delegatów rady miejskiej i magistratu, odbyła w powyższych dniach posiedzenie, na którem wyłoniła się następująca kwestja: Wybrano komisję, która ma się zająć zbadaniem wysokości wydatków i obmyśleniem środków pokrycia niedoborów. Komisja ta, złożona z pp. Mochuackiego, Niedziałkowskiego, Baurowicza i Schayera, nie ukończyła jeszcze swoich czynności, a tem samem nie",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 5,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 936,
+     "bytes": 987
+    }
+   },
+   {
+    "id": "s1341_p4",
+    "seed": 1341,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": "\n\nZ.\n\nZmiwo trwa ciągle.\n\nZ okolicy Źmigrodu piszą, że zboże wcześniejsze posiane na przednowku zrodziło Średnio. Owsy i jęczmiona bardzo ładne i dobre, ale posucha spowodowała, że i wcześniejsze zżółkły i pożółkły. W ogóle zboże jest średnie, Wczesne żyto i jęczmień, o których się gospodarze nie spodziewają dobrych plonów, dobre tylko są. Otawy tak przymrozki zwarzyły, że bardzo wiele zgniło, a z powodu zimna i przymrozków nie można ich kosić.\n\nZ Przemyskiego piszą, że w skutek przymrozków w kwietniu, który przypadł prawie równocześnie z pierwszemi śniegami, a który trwał do końca maja, zboże porosło, a tu i owdzie zaczyna kłosać.\n\nZ Podola donoszą, że w ogóle zboże jest złe i zgniło, a ziemniaki w wielu miejscach nać zupełnie uschła. W niektórych okolicach ziemniaki i buraki są zupełnie zgni",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 804,
+     "bytes": 869
+    }
+   },
+   {
+    "id": "s1341_p5",
+    "seed": 1341,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " Lublina w. połowie czerwca, i cieszę się, że w tej chwili jestem w mojej ukochanej Ojezyźnie, chociaż nie mogę Ci wyrazić radości, którą bym sprawił, gdybym nie był w domu i w tej chwili. Serce moje wyciąga się ku Tobie z najżywszą, wiarą, że przyjdzie czas, kiedy może Twa dusza ujrzy Ciebie! Pisz kochany Bracie do mnie o tej strasznej chwili i donieś, co się dzieje, czy jesteśmy wszyscy razem, czy może cała rodzina zginęła? Czy jest zdrowy syn, którego mogę posłać do pułku, na służbę do nich? Czy ma więcej synów i więcej niż dwóch? Kto jest więcej kochany w Galicyi, a kto mniej? Kto więcej kochany w Księstwie Poznańskiem? Jestem szczęśliwy w tem, co mam najdroższego, a o tem Ty donieś kochany Bracie. Ja myślę, że wkrótce będę Wam w Liege. Jestem od dawna w drodze, a może\n\nZostaw mi jeszeze kilka dni w tej miłej, jak jest u mnie, a przyślij mi jeżeli możesz i swój adres, bo bardzo jestem",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 901,
+     "bytes": 961
+    }
+   },
+   {
+    "id": "s1341_p6",
+    "seed": 1341,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": "\n\nPolecamy szanownej Publiczności nasz magazyn gotowych ubiorów męzkich i dla dzieci, po najtańszych cenach.\n\nZamówienia według miary i naprawy uskuteczniamy w jak najkrótszym czasie.\n\nZ wysokim szacunkiem FELIKS i ANTONI M. PROKSCH.\n\nsme WAWAWAWWAWWAAWANWAWAWAWAWAAAWWAAWAWAWARWAWAWAWAWANAWAWAAWAWAWAWAWAWANAWWAWAWAWAWAWAWAWAWWAWAWAWAWAWAWAWAWAWWAWAWAWAWAWAWANAWAWAWAWANAWAWAWANNANANAWAWAWANANAWNANANANANAAAWANANANAWAWAWAWAWAWAWANANANANANANANANAAANA\n\nZ głębokim szacunkiem\n\nFELIKS I ANTONI M. PROKSCH.\n\nYYY YYYY YYY Y",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 518,
+     "bytes": 527
+    }
+   },
+   {
+    "id": "s1341_p7",
+    "seed": 1341,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " Husiatyna o godzinie 10 m. 35 wieczór do Stanisławowa i Husiatyna o g. 11 m. 35 w nocy. Pociąg osobowy do Stanisławo wa, Czerniowiec i Suczawy o godz. 11 m. 35 w nocy. Pociąg mieszany do Stanisławowa i Kołomyi o godz. 6 m. 50 rano.\n\nPociąg mięszany do Rawy ruskiej o godz. 8 rano.\n\nPociąg mięszany do Żółkwi o godz. 2 po południu.\n\nPociąg mięszany do Bełzca o godz. 3 m. 58 po południu.\n\nPociąg mięszany do Rawy ruskiej o godz. 8 po południu.\n\nPociąg mięszany do Sokala o godz. 2 m. 38 po południu.\n\nZ Podwołoczysk na dworzec główny lwowski o godz. 3 m. 15 w nocy po-\n\nZ Podwołoczysk na dworzec Podzamcze o godz. 2 m. 88 w nocy pociąg\n\nOdchodzą ze Lwowa:\n\nDo Krakowa o godz",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 674,
+     "bytes": 705
+    }
+   },
+   {
+    "id": "s1342_p0",
+    "seed": 1342,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " w lokalu Towarzystwa lekarskiego odbyło się posiedzenie członków komitetu, zajmującego się sprawą podniesienia stanu sanitarnego miasta. Prezes komitetu p. H. Perzyński zawiadomił, iż na mocy polecenia władzy wyższej, otworzony będzie w r. b. szpital dla chorych na oczy w okolicy placu Trzech Krzyży. Na to posiedzenie wybrano komisyę, złożoną z członków Towarzystwa lekarskiego pp.: profesora Gluzińskiego, dyrektora szpitala Dzieciątka Jezus dra Stankiewicza, oraz lekarza naczelnego miasta dra Piotrowskiego, która ma za zadanie zbadać tę sprawę na miejscu, a nadto, jako organ doradczy, w razie potrzeby, zwiedzać będzie wszystkie domy, będące w dalszym ciągu pod zarządem miasta.\n\nPonieważ w Petersburgu utworzyła się komisya, zajmująca się sprawą hygieny publicznej, przeto postanowiono zwrócić się do lekarzy, którzy zajmują się tą sprawą, z prośbą, aby zechcieli służyć nam wskazówkami, jakich mianowicie środków używać należy, aby za pomocą odpowiednich urządzeń sanitarnych utrzymać stan zdrowotny i zabezpieczyć przyszłość i życie robo",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 1048,
+     "bytes": 1114
+    }
+   },
+   {
+    "id": "s1342_p1",
+    "seed": 1342,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " w Górze Kalwaryi znaleziono zwłoki mężczyzny. Zarządzono energiczne dochodzenia, czy to samobójstwo, czy też wypadek śmierci.\n\n— Cholera. Według urzędowych raportów, stan sanitarny w gubernii lubelskiej jest zupełnie pomyślny.\n\nWedług doniesienia jednego z pism petersburskich z d. 18 b. m., w osadzie Ossowcu gub. siedleckiej, zachorowało na cholerę w przeciągu 8 dni od d. 16 do dnia 18 b. m. osób 2, wyzdrowiało zaś osób 1, zmarło 1.\n\n— Brak dozoru. Jeden z dzienników petersburskich podaje ciekawe szczegóły o zamiarze zniesienia na kolei bałtyckiej tak zw. „towarzystwa* i mianowania na jego miejsce członków honorowych, Do tej pory jednak, jak pisze rzeczony dziennik, ustawa „towarzystwa“ nie została zatwierdzona i dlatego „towarzystwo“ nie daje znaku życia.\n\nNotatki UIGTACKO-ATYSIYCZI,\n\nZ teatru. W",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 809,
+     "bytes": 853
+    }
+   },
+   {
+    "id": "s1342_p2",
+    "seed": 1342,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": " w loży dworskiej siedziało państwo młodych.\n\nRozkoszna to była chwila! Chwila ciszy,\n\nnieustającej rozmowy i bezgranicznej szczęścia |...\n\nPiszę te słowa, bo jestem zachwycona.\n\nKRONIKA.\n\nLwów 23 listopada.\n\nWiadomości urzędowe. Cesarz zamianował sekretarza ministeryalnego w ministerstwie robót publicznych dr. Wincentego Udziela, radcą sekcyjnym w temże ministerstwie.\n\nPowszechne wykłady uniwersyteckie. We i agogia*. Zakład chemiczny uniwersy-\n\nZmiana nazwiska. Namiestnictwo zezwoliło p. Adolfowi Kohmanowi, właścicielowi zakładu wodoleczniczego we Lwowie, na zmianę nazwiska rodowego Kohmann na Kohman.\n\nRuch wyborczy. Komitet obywatelski zwołał na wczoraj po południu do sali ratuszowej zgromadzenie przedwyborcze, celem wysłuchania kandydatów do Rady państwa z m. Lwowa.\n\nZ niedzieli. Poranne wczorajsze rozrywki i przechadzki nie uzdrowiły ani",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 853,
+     "bytes": 884
+    }
+   },
+   {
+    "id": "s1342_p3",
+    "seed": 1342,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": " z dnia 3 lipca.\n\n(Dokończenie.)\n\nZ porządku dziennego nastąpił wybór komisji weryfikacyjnej. W skład jej weszli: H oehberger Dawid, Schmidt Karol, Jigerman Ignacy, Klimowicz Kazimierz, Łuczkiewicz Zygmunt, Łomnicki Józef, Małecki Antoni.\n\nDr. Byk żądał, aby przed przystąpieniem do wyboru komisji weryfikacyjnej, który się ma odbyć dzisiaj, przekazano ją tej komisji z weryfikacją wyborów. Z drugiej strony mowca żąda, aby tę komisję wybrano za porozumieniem z dr. Bykiem.\n\nDr. Byk sprzeciwia się temu wnioskowi, ponieważ on się sprzeciwia termu, aby wybrać komisję weryfikacyjną z weryfikacją wyborów, gdyż przez to nie weszłoby się w skład tej komisji,\n\np- Małecki. Jeżeli p. prezydent uzna za stosowne, to ja oświadczę się przeciw temu.\n\nP. prezydent daje wyjaśnienia, że nie uwzględnił prośby",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 8,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 797,
+     "bytes": 843
+    }
+   },
+   {
+    "id": "s1342_p4",
+    "seed": 1342,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": " nieco się polepszyła. Owsy i hreczki ucierpiały silnie od zimna.\n\nW kraju usposobienie spokojne, obroty małe.\n\nZa 100 kg. netto: pszenica biała nowa od 17:— do\n\nZyto gotowe od 14— do 1440. Żyto na termina od\n\nOwies obroczny gotowy od 11:30 do 11:60. Owies obroczny na termina od 900 do 10:—. Jęczmień nowy od 1050 do 11:—. Jęczmień browarniany od 11:00 do 11:50. Rzepak od 1450 do 15:00. Groch do gotowania od 12:50 do 13:—. Wyka od 11-— do 12*—. Bobik od 950 do 10:50. Hreczka od 9:60 do 10:50 Kukurydza od 9:20 do 9:50.\n\nCeny w koronach za 50 kg.\n\nza 100 kg.\n\nŻyto gotowe od 8:50 do 8:75. Owies obroczny nowy od",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 614,
+     "bytes": 639
+    }
+   },
+   {
+    "id": "s1342_p5",
+    "seed": 1342,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " wdzięcznością za przysłaną mi książeczkę „Pamiątka z Krakowa“, z której dowiedziałem się, że Towarzystwo Szkół ludowych we Lwowie wysłało bardzo piękny dar dla miasta Krakowa, o czem Ci bardzo dobrze wiadomo. Poleciłem to Towarzystwu, jako bardzo piękne i piękne dzieło, ale boję się, żeby to nie było tylko prostem kupnem, ale przeciwnie, żeby to nie była rzecz piękna, o której można było myśleć, że jest bardzo ładna i piękna.\n\nPrzyszłość miasta Krakowa ma w Tobie zawsze gorącego przyjaciela. Niech będzie szczere Twoje gorące podziękowanie wszystkim tym, którzy dali możność Twej działalności. Będzie ona na zawsze najmilszą dla Ciebie nagrodą i najgorętszem życzeniem Twojem na ziemi!\n\nDr Leo.\n\nSłaba nadzieja wciągnięcia Krakowa do pracy na polu oświaty, nis powinna nas zniechęcać do pracy na tem polu, tembardziej, że dzieje się to już od dłuższego czasu, gdy zaczęły się pierwsze próby kierowania życiem krakowskiem na szerszej niwie.\n\nJak się daje odczuć, Kraków nie upada i nie upad",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 995,
+     "bytes": 1073
+    }
+   },
+   {
+    "id": "s1342_p6",
+    "seed": 1342,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": "\n\nZ głębokim szacunkiem\n\nMARYA NUNDBAUM.\n\nWpisy\n\ndo c. i k. państwowej szkoły przemysłowej w Krakowie odbędą się w dniach od dnia 28 do dnia 6 października b. r. w gmachu e. k. Namiestnictwa w Krakowie.\n\nW tych samych dniach odbędą się wpisy do szkół:\n\nDo wpisów, które odbywają się w dniach 29 i 80 września, mogą być dopuszczeni tylko tacy kandydaci, którzy wykażą się świadectwem z ukończenia IV. klasy szkoły wydziałowej lub przynajmniej mają świadectwo ukończenia IV. klasy szkoły średniej, a jeżeli posiadają świadectwo z ukończenia z dobrym postępem kursu specyalnego dla maszynistów przy szkole przemysłowej uzupełniającej, świadectwo z odbytej nauki w szkole przemysłowej uzupełniającej.\n\nW dniach od 27 do 30 września b. r. odbędzie się w e. k. państwowej szkole przemysłowej w Krakowie egzamin wstępny do I. klasy w celu przypuszczenia absolwentów do jednorocznej służby wojskowej.\n\n",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 894,
+     "bytes": 950
+    }
+   },
+   {
+    "id": "s1342_p7",
+    "seed": 1342,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " Lwów-Podzamcze do Brzuchowie o godz, 6.06 rano i przychodzi do Lwowa:\n\nStryja: 11.30 przedpołudniem z Podzamcza\n\n5.12 popołudniu z Bukaczowiec\n\n4.30 popołudniu z Chodorowa\n\n6.11 wieczór z Podwołoczysk\n\nz dworca głównego\n\n„, W kiernnku do Stryja: 6.30 rano do Chyrowa, Sambora, Sianek i 8.18 wieczór do Stryja: 2.40 popołudniu z Podwołoczysk :\n\n6.56, 9.25 wieczór do Bełzca: 10.45 w nocy z Rawy ruskiej 10.25 w nocy z Sokala: 8.05 rano, 9.55 rano\n\nRuch pociągów kolejowych\n\nobowiązujący z dniem 15. maja 1906 r.\n\nwedług czasu średnio-europejskiego.\n\nPrzychodzą do Lwowa:\n\nZ Bzeszowa: 10.35.\n\nZ Podwołoczysk na dworzec",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 617,
+     "bytes": 640
+    }
+   },
+   {
+    "id": "s1343_p0",
+    "seed": 1343,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " w tych dniach władze policyjne przedsięwzięły ścisłą rewizję w mieszkaniu p. S. Chmielewskiego, urzędnika fabryki narzędzi rolniczych, w posessji przy ulicy Czerniakowskiej, a to z powodu, iż w jego mieszkaniu miał się znajdować drukowany manuskrypt dzieła pod tytułem „Zasady chowu inwentarza*, w którem między innemi powiedziano: „W ostatnich czasach, nie mało rozpowszechnione jest mniemanie, jakoby chów bydła był korzystnym tylko dla włościan i że w skutek tego rasy bydła i koni należy\n\na\n\nusunąć z naszych gospodarstw“.\n\nwł,\n\nn,\n\naja \"z\n\nWolno-praktykujący Lekarz w Siedlcach, zawiadamia osoby interesowane, iż przyjmuje z chorobami kobiet i dzieci do 10 rano, zaś od 12—1 i od 5—6 w mieszkaniu swem w Siedlcach.\n\n— Doktor medycyny Jan Mężyński, zamieszkał w mieście Opolu. —10627—\n\nL—\n\nPOPIS",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 2,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 800,
+     "bytes": 856
+    }
+   },
+   {
+    "id": "s1343_p1",
+    "seed": 1343,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " Nowym popełniono zabójstwo na osobie wyrobnika. Rozhukany furman, który wypuszczał konie z młyna, spostrzegłszy nadbiegających ludzi, zatrzymał się i puścił się z nimi w pogoń za furmanem. Koń rzucił się na niego i po krótkiej walce przeciął mu rękę i lewą nogę. Napastnik uciekając powalił go na ziemię. Koń został zabity na miejscu.\n\nNowy szpital św. Łazarza. W roku bieżącym otwarty zostanie na gruncie szpitala św. Łazarza nowy szpital dla dzieci. Mianowicie p. Tadeusz Janowski, aptekarz z Krakowa, przygotował plany budowy gmachu, w którym mieścić się będzie szpital dla dzieci, a w którym również znajdą pomieszczenie chorzy dzieci z ambulatoryum szpitalnem, oraz z różnych oddziałów szpitala św. Łazarza.\n\nPodatek wódczany w Galicyi. Przystąpiono do drugiego czytania uchwalonego przez sejm galicyjski projektu ustawy, dotyczącej wprowadzenia podatku wódczanego w Galicyi i Krakowie",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 891,
+     "bytes": 945
+    }
+   },
+   {
+    "id": "s1343_p2",
+    "seed": 1343,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": "śmy, po rozprawieniu się z nim, jechali do Krakowa.\n\nWładek uśmiechnął się, a z oczu jego patrzyła na nas taka dobroć, że pocałunki jego stały się jeszcze słodsze, a czasem i lepsze.\n\nCo do mnie, tom już dawno spostrzegł, że nasza rozmowa wydawała mi się jakimś przyjemnym, a wielce miłym gościem. Było to pierwsze nasze powitanie, widziane już oddawna i trwające od czasu, gdyśmy po raz pierwszy umówili się o wspólne wycieczki w góry.\n\nPrzypuszczam, że ta zmiana w naszym stosunku z nimi mogła wpłynąć i na nasze postanowienie. Przekonywałem się, że w istocie jesteście z siebie zadowoleni, że nie chodzicie w towarzystwie ludzi obcej narodowości, a więc nie znacie jej uczuć i zwyczajów.\n\nSłuchałem ich, jak dzieci słuchają opowiadań bajek, i potem rzekłem do nich:\n\n— Może na przykład, co do mnie, to i ja nie chcę być Niemcem. To, co widzę w duszy, co widzę na własne oczy, co słyszę z ust waszych, te same słowa,",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 918,
+     "bytes": 980
+    }
+   },
+   {
+    "id": "s1343_p3",
+    "seed": 1343,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": " w d. 22 maja. — Gmina miejska oddaje plac pod cmentarz. — Uchwalenie reorganizacyi szkoły wydziałowćj żeńskiej. — Sprawa remuneracyi dla nauczycieli przy szkole żeńskićj na Nowym-Świecie. — Wybór delegatów dla spraw konkursowych. — Zawieszenie wypłat przez braci Eisert. — Sprawozdanie komisyi budżetowćj. — Wniosek o podwyższenie podatku od mlewa.— Prośby o przyjęcie do gminy. — Sprawozdanie z egzaminu w szkole wzorowój w Krakowie. — Wniosek o otwarcie miejsca w szkole przemysłowój u PP. Sakramentek we Lwowie. — Odezwa miasta Lwowa, żądająca odbudowania Sukiennic.— Rada miejska uchwala wyznaczyć na ten cel 500 złr. — Wniosek względem nabycia parceli w celu urządzenia na placu Misyonarzy kościoła i cmentarza.— Wybór komisyi do obmyślenia sposobu pokrycia wydatków na przebudowanie Sukiennic.—\n\nPosie",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 5,
+     "orto_modern_share": 0.0,
+     "chars": 808,
+     "bytes": 870
+    }
+   },
+   {
+    "id": "s1343_p4",
+    "seed": 1343,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": " stale się poprawiła. Zdawało się, że po raz ostatni już zawitała zima. Ulewne deszcze nie pozwoliły mrozów należycie rozgrzać. Temperatura też w południe spadła do 2 stopni poniżej zera. Upały zaś były tak nieznośne, że roślinność wydawała się tak zieloną, iż trzeba było przysypywać ziemię piaskiem lub trocinami.\n\nZ kraju.\n\nObchód rocznicy powstania styczniowego odbył się u nas w poniedziałek. Porządek obchodu wypełniło słowo wstępne, z którego w obszerniejszem streszczeniu zapisujemy kilka ważniejszych ustępów :\n\n„Rok 1863, który w krwawych swoich przejawach wywarł wpływ tak wielki na całe nasze społeczeństwo, tak głęboko wpoił w umysł i serce ludu polskiego myśli i uczucia narodowe, że trwałą pozostanie ich pamiątką nietylko w sercach naszych, ale i w naszem, które w chwilach tak smutnych okazało tyle hartu, stałości i poświęcenia. Okazało je szczególnie wobec mas ludu wiejskiego, których dusze\n\n|bo",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 915,
+     "bytes": 985
+    }
+   },
+   {
+    "id": "s1343_p5",
+    "seed": 1343,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " pewnym bólem, ale z radością. U nas jak w Antwerpii wszystko po masońsku. Kapitan kapitan na koniach, a mój kapitan... Trzebaby skończyć z tym idyotą kapitanem, żeby zapomnieć o nim. Kochany Bracie! Uważaj na to, co mi pisujesz. Wracając do domu, będziesz się starał naprawić nasze błędy, bądź dobrym przyjacielem i dobrym opiekunem. Kochany Bracie, uściśnij brata, tak samo i mnie. — Napisz do\n\nDrogi Bracie,\n\nKochany Bracie!\n\nNie wiem, czy to, co piszesz, jest dość mocne, aby cię wzruszyć, ale przyznaję, że jest w niem wiele czułości, szlachetności, wiele poezyi. Człowiek się płakał. To jest jedyny tytuł, który mogą ci wydzierać. Ale mój i ja muszę się poświęcić dla brata. Płakałbym, gdybym miał choć kawałek chleba; ale widzę, że mi go nie dadzą. Niech jednak bracia będą spokojni. Będzie to dla mnie w każdym razie prawdziwą pociechą,",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 844,
+     "bytes": 905
+    }
+   },
+   {
+    "id": "s1343_p6",
+    "seed": 1343,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": " Nowiniarskiej Nr 5 (nowy) wprost Ordynackiej).\n\nWykonywa wszelkie zamówienia w zakres miernictwa i techniki mierniczej wchodzące, jak również wszelkie projekta miernicze, plany miernicze i t. d., po cenach umiarkowanych i na warunkach dogodnych.\n\nZakład ten posiada narzędzia własne i podług\n\nZNANA FABRYKA\n\nPORTLAND-CEMENTU\n\ni U\n\n„pod firmą:\n\n„Fajansa*\n\nm w Warszawie\n\npoleca, po eenach przystępnych, w p eg wapno i cement, a nadto w komis w sklepie swoim:\n\nw Gościnnym Dworze Nr 13.\n\nOdstawa natychmiastowa, oraz wysyłka kolejami. i \"Fabryka odstawia do domów, na warunkach najdogodniejszych,\n\nCeny najniższe.\n\nFabryka przyjmuje zamówienia i posiada na składzie zapas brykietów i wę",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 685,
+     "bytes": 707
+    }
+   },
+   {
+    "id": "s1343_p7",
+    "seed": 1343,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " Lwów, po nadejściu pociągu nr. 17 do Krakowa.\n\nZegar podzamezny wychodzi z Warszawy o godz.\n\nPociąg osobowy odchodzi ze stacyi Warszawa-\n\nDitialnistón.\n\nDochodzi do Lwowa o godz. 2 po południu.\n\nZamiast dziennego z Warszawy o godz. 7 wieczór.\n\nOdchodzi z Krakowa o godz. 5 minut 28 rano.\n\nDochodzi do Lwowa o godz. 8 wieczór.\n\nStacya i przystanki na przestrzeni Stryj-Drohobycz w Staruni.\n\nStacye: I. Ze Lwowa, Drohobycza i Sambora do Drohobycza o godz. 5 min. 22 rano i o godz. 4 po\n\nTłuste, Mszany dolnej i Zagórza, oraz do Rawy ruskiej.\n\nW celu ułatwienia pakunków podróżnych na przestrzeni Drohobycz-Stryj-Skole, zaprowadza się z dniem 15 czerwca r. b. na linii Stryj-Munkaeze-C",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 683,
+     "bytes": 698
+    }
+   },
+   {
+    "id": "s1344_p0",
+    "seed": 1344,
+    "prompt": "Doniesiono nam z Warszawy, iż",
+    "continuation": " w domu dyrektora seminarjum nauczycielskiego w Kielcach, p. Ludomira Piątkowskiego, w dniu 7 kwietnia dokonano w mieszkaniu jego zabójstwa. Wykrycie sprawcy tego zamachu przypisują chęci zemsty za udział w powstaniu. Zdaje się, że p. Piątkowski, zanim zamordował syna, był wtajemniczony w zamiary ojca i że wraz z drugim obwinionym jest ajentem rządu narodowego. Indywiduum to, jak mówią, ma być zięciem żandarma.\n\nZaprzeczają pogłoskom, jakoby oidene i\n\n„„Stańczyka”\n\nzostał z majątku wywłaszczonym. Donoszono nawet o sprzedaży Brodów, a wówczas wiadomość o wywłaszczeniu spadła z politycznego punktu widzenia na równi z wiadomością, że obciążają dobra także domy w Brodach. Niebawem wieść o wywłaszczeniu rozeszła się po Warszawie i wnet, choć dość wcześnie, nastąpiło formalne bankructwo domu Blocha. Inny podobny wypadek zdarzył się przed kilku dniami w Płocku.",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 866,
+     "bytes": 924
+    }
+   },
+   {
+    "id": "s1344_p1",
+    "seed": 1344,
+    "prompt": "Wczoraj po południu na rynku",
+    "continuation": " w Limanowej sprzedawał włościanin Józef Piechnik koniczynę. Gdy nadszedł wóz, konie poszły galopem i spotkały dwóch żołnierzy, którzy zażądali od włościanina, by konia sprzedał za bezcen. Gdy włościanin wzbraniał się od tego, kapral odpowiedział: „niech zapłaci, ale koni nie puszczę*. Wtedy żołnierz chwycił konia za rogi i uderzył go tak silnie o kamień, że koń runął na ziemię.\n\nWezwano do interwencyi pogotowie wojskowe i następnie sąd wojskowy, któremu polecono przyaresztować Piechnika, a w razie potrzeby poprowadzić go do sądu w Nowym Sączu.\n\nNaprężenie stosunków we wschodniej Galicyi.\n\nAkcya Bobrzyńskiego.\n\nMiędzy Stryjem a Stanisławowem, na przestrzeni około 1000 metrów od miasta, zarządzono budowę fortyfikacyj.\n\nW Rzeszowie rada powiatowa uchwaliła rozpocząć budowę mostu na rzece Wisłoku, o 300 metrach, równocześnie uchwaliła budowę mostu w Ruskiej wsi, o 600 metrów dalej,",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 4,
+     "orto_modern_share": 0.0,
+     "chars": 891,
+     "bytes": 955
+    }
+   },
+   {
+    "id": "s1344_p2",
+    "seed": 1344,
+    "prompt": "Był to wieczór jesienny, gdy",
+    "continuation": " w domu dyrektora pracowano z powodu niepogody, która umożebniła wycieczkę do Schoubrunnu.\n\nZbytecznem byłoby nadmieniać, że wszyscy zgromadzeni razem nie mieli ochoty towarzyszyć dyrektorowi, który z taką swobodą rozmawiał z swym najwierniejszym przyjacielem.\n\nKiedy wsiadł do powozu, który był w pełnym biegu, i zatrzymał się na chwilę przed drzwiami oberży, aby odpocząć, ujrzał w oknie znanego mu z gościnnych pokoi Leonharda, który z pewnością nie byłby śmiał przywłaszczyć sobie\n\njego nazwiska.\n\nObserwując go przez lornetkę, począł z ciekawością przyglądać się jego ubraniu. Nie jest to pewnie ładny chłopiec, ale bezwątpienia jest bardzo piękny.\n\nPoznał w nim Leonhard swego przyjaciela i poznał w nim także owego tajemniczego gościa, który go opuścił w chwili stanowczej.\n\nBył on już, jak się później dowiedział, dyrektorem w Monachium, z tą różnicą, że nie miał nazwiska.\n\n(Ciąg dalszy nastąpi.)\n",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 906,
+     "bytes": 972
+    }
+   },
+   {
+    "id": "s1344_p3",
+    "seed": 1344,
+    "prompt": "Sprawozdanie z posiedzenia rady miejskiej",
+    "continuation": " w sprawie poboru opłaty od psów, które ma być zaprowadzone.\n\nUchwalono przyjąć do gminy 2 właścicieli koni bez względu na ich pochodzenie, oraz przyjąć do wiadomości zamknięcie rachunkowe za rok 1889.\n\nDo komisji dla przeprowadzenia uzupełniających wyborów wybrani zostali: dr. Weigel, dr. Hajdukiewicz i dr. Leo. Na wezwanie prezydjum miasta, aby w kancelarji magistratu złożyli dokładny spis pp. radców miejskich, którzyby mieli być w dniu 18 czerwca wybrani do komisji, wywiązali się ze swego zadania w sposób zadawalający, oświadczyli radcy pp.: Bebay, Marfiewicz i Wentzl, że rada miasta na posiedzeniu dnia 11 b. m. uchwaliła do księgi protokółów radzieckich wpisać nazwiska wszystkich radców z pominięciem nazwisk wybranych przez wydział Towarzystwa weteranów.\n\n„, Wreszcie na wniosek r. m. dra Jakubowskiego uchwaliła rada zakupić grunt pod budowę kanału miejskiego na Grzegórzkach",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 2,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 890,
+     "bytes": 935
+    }
+   },
+   {
+    "id": "s1344_p4",
+    "seed": 1344,
+    "prompt": "W ostatnich dniach pogoda",
+    "continuation": " zmieniła się znacznie, deszcze nie ustają, lecz ulewy wciąż padają. Snieg pada często, a wody występują na gruntach i na polach.\n\nDniewn. donosi, iż w Kaliszu, w teatrze miejscowym, operetka rosyjska bawi w charakterze reżysera. Reżyserem baletu ma być p. Nawroczyński, o którego sympatji dla polaków w Kaliszu, korespondent donosi.\n\nKorespondent z Kalisza do Dziennika poznańskiego pisze co następuje: „Spokojnie osiadło się na roli. Dawni pracownicy w przemyśle naftowym nie znikli zupełnie z powierzchni ziemi. Nie jest to widocznie skutek wielkich klęsk elementarnych, jakie spotkały nafciarnię krajową, ale wina słabych zasobów kapitału, który z konkurencją zagraniczną w trudach i nakładach, dotąd zachował się w stosunku do miejscowych warunków ekonomicznych, ale w ostatnich czasach ostygł i dziś z zastraszającą energją domaga się i wyczekuje pomocy. Tak",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 864,
+     "bytes": 909
+    }
+   },
+   {
+    "id": "s1344_p5",
+    "seed": 1344,
+    "prompt": "Kochany Bracie! Piszę do Ciebie z",
+    "continuation": " Krakowa, poszedłem z wizytą do W-ej Kałużyńskiej. Od tygodnia bawię w Zakopanem, bo nie mogłem wyjechać do Węgier, ale przenocowaliśmy w Kościelisku, na Szczawnicy, skąd z Czarnej Wsi o 8-ej przybyłem do Za. kopanego, odwiedziwszy poprzednio panią Br. Potocką. We czwartek koło 1-ej pojechałem do willi „Zawrotka“, leżącej o milę stąd w dolinie, gdzie miałem nocować i następnie pojechałem do Morskiego Oka. W niedzielę o 2-ej w południe poszedłem na kolacyę do „Morskiego Oka“. W poniedziałek miałem stanąć na noc w Zakopanem, stamtąd z dworca kolejowego (kolei tatrzańskiej) do domu wprost na Świnicę do Zawratm, a ztamtąd na kopiec Chałubińskiego, gdzie dopiero stanąłem o wpół do 6-ej.\n\nW sobotę rano o wpół do 9-ej zajechałem na kopiec i odjechałen.\n\nWe wto",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 763,
+     "bytes": 820
+    }
+   },
+   {
+    "id": "s1344_p6",
+    "seed": 1344,
+    "prompt": "Nowo otwarty zakład przy ulicy",
+    "continuation": " Poselskiej |. 16.\n\nWykonuje wszelkie roboty, wchodzące w zakres krawiectwa, według najnowszych żurnali i po cenach możliwie umiarkowanych.\n\nprzypomina się P. T. Putliczności, że wszelkie ogłoszenia, tyczące się\n\nBDQOOQCOOOQO00Q00000000000000000000000000000000000000000000000006\n\nDOOQOODOOOCOOOOOOOODOCOOOOOOOOCO00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 566,
+     "bytes": 576
+    }
+   },
+   {
+    "id": "s1344_p7",
+    "seed": 1344,
+    "prompt": "Pociąg pośpieszny odchodzi ze stacyi",
+    "continuation": " głównej we Lwowie o godzinie 12'15 w nocy, a przybywa do Lwowa o godzinie 11'45 wieczór.\n\nOsobowy odchodzi ze Lwowa o godzinie 8:05 wieczór, a przybywa do Stanisławowa o godzinie 7:15 rano; odchodzi ze Stanisławowa o godzinie 8'50 wieczór, a przybywa do Lwowa o godzinie 6:45 wieczór.\n\nPociąg pospieszny odchodzi ze Lwowa o godzinie 2'48 popołudniu i przybywa do Stanisławowa o godzinie 9-45 wieczór.\n\nPociąg pospieszny odchodzi ze Lwowa o godzinie 8'30 rano i przybywa do Stanisławowa o godzinie 11:55 w nocy.\n\nPociąg osobowy odchodzi ze Lwowa o godzinie 7'20 rano i przybywa do Stanisławowa o godzinie 11'15 przed południem.\n\nOsobowy odchodzi ze Lwowa o godzinie 8'40 rano i przychodzi do Stanisławowa o godzinie 4'55 po południu.\n\nOsobowy odchodzi ze Lwowa o godzinie 7'48 rano i przychodzi do Stanisławowa o godzinie 5'55 wieczór.\n\nSRMONANU",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 845,
+     "bytes": 866
+    }
+   }
+  ]
+ },
+ "corpus_reference": {
+  "chunks": 64,
+  "chunk_bytes_target": 870,
+  "total_bytes": 55088,
+  "docs_with_modern_marker": 1,
+  "modern_marker_doc_rate": 0.01562,
+  "modern_marker_doc_rate_ci95": [
+   0.00276,
+   0.08334
+  ],
+  "modern_markers_per_100k_bytes": 1.815,
+  "docs_with_control_marker": 0,
+  "control_marker_doc_rate": 0.0,
+  "orto_modern_share": {
+   "n": 34,
+   "mean": 0.32773,
+   "sem": 0.08104,
+   "ci95": [
+    0.1689,
+    0.48657
+   ]
+  },
+  "items": [
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS053792_1910_010.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 815,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68373768.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 834,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1916_434_w.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 799,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS028482_81085563.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 826,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1895_221.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 2,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 823,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS090304_1876_045.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 826,
+     "bytes": 869
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1893_278.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 814,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0271_NDIGCZAS035218_113555434.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 822,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0052_NDIGCZAS030703_89406105.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 800,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS091508_1911.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 802,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0012_NDIGCZAS033716_102673133.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 806,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_rcin.org.pl.WA35_147607_cz311-r1897-t11_Rozprawy-Badania_119530.txt",
+    "scan": {
+     "modern_hits": {
+      "www.": 1
+     },
+     "modern_total": 1,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 833,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1918_491_PP.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 828,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1899_117.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 812,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1901_124.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 832,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0066_NDIGCZAS026703_79747303.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 816,
+     "bytes": 869
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1858_267.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 6,
+     "orto_modern_share": 0.1429,
+     "chars": 832,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1901_276.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 818,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS049697_1905_123.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 820,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS049697_1903_030.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 817,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0258_NDIGCZAS035218_97736130.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 819,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS033883_96619764.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 819,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS053792_1912_034.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 810,
+     "bytes": 869
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0002_NDIGCZAS036579_100313523.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 798,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000132_1898_001.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 814,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_bc.wbp.lodz.pl.Godzina_Polski1918nr045bc_42597.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 818,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0246_NDIGCZAS035218_97791156.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 828,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002004_08_1_379.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 799,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS002215_1843_020.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 8,
+     "orto_modern_share": 0.0,
+     "chars": 823,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1902_101.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 806,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS049907_1907_010.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 821,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1813_011.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 827,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS023699_74670194.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 811,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS025334_74667556.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 789,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0299_NDIGCZAS035218_113541814.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 838,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0209_NDIGCZAS035218_113587271.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 4,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 825,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS019452_68687889.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 838,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0216_NDIGCZAS030703_89471283.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 804,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_pbc.gda.pl.II_0263_1910_nr1_91118.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 828,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1912_172.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 817,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS003412_1911_023.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 841,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr205a_67372.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 808,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS014296_1905_019.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 791,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGDZS075488.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 653,
+     "bytes": 692
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1900_114.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 830,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS026887_78708587.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 808,
+     "bytes": 869
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1879_298.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 836,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS030594_87756761.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 806,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0009_NDIGCZAS033831_92116795.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 815,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1904_192.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 818,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0231_NDIGCZAS035218_97791127.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 1,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 804,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS022296_1893_003.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 814,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1872_244.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 820,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS031646_85532773.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 803,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0133_NDIGCZAS035218_97908697.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 816,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1897_105.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 837,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0002_NDIGCZAS026604_89584480.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 2,
+     "orto_period": 0,
+     "orto_modern_share": 1.0,
+     "chars": 814,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.DIGCZAS002023_1898_032.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 817,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0008_NDIGCZAS026703_79807688.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 826,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS008541_1899_007.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 816,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1897_048.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 2,
+     "orto_modern_share": 0.0,
+     "chars": 813,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.0284_NDIGCZAS026703_79766926.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 835,
+     "bytes": 870
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGDZS089477.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 436,
+     "bytes": 460
+    }
+   },
+   {
+    "doc": "ia_jbc.bj.uj.edu.pl.NDIGCZAS095779_1889_001.txt",
+    "scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 813,
+     "bytes": 870
+    }
+   }
+  ]
+ },
+ "contrast_wieszcz": {
+  "modern": {
+   "terms": [
+    {
+     "n_tokens": 2,
+     "target_bytes": 9,
+     "nll_nats": 20.58279,
+     "nats_per_token": 10.2914,
+     "bits_per_byte": 3.29941,
+     "straddle": false,
+     "term": "internet",
+     "carrier": "Wiadomość rozeszła się błyskawicznie przez"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 9,
+     "nll_nats": 20.01492,
+     "nats_per_token": 6.67164,
+     "bits_per_byte": 3.20838,
+     "straddle": false,
+     "term": "komputer",
+     "carrier": "Na biurku stał nowy"
+    },
+    {
+     "n_tokens": 5,
+     "target_bytes": 10,
+     "nll_nats": 30.01392,
+     "nats_per_token": 6.00278,
+     "bits_per_byte": 4.33009,
+     "straddle": false,
+     "term": "telewizja",
+     "carrier": "Program nadaje wieczorami"
+    },
+    {
+     "n_tokens": 7,
+     "target_bytes": 19,
+     "nll_nats": 27.43445,
+     "nats_per_token": 3.91921,
+     "bits_per_byte": 2.08313,
+     "straddle": false,
+     "term": "telefon komórkowy",
+     "carrier": "Z kieszeni wyjął"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 7,
+     "nll_nats": 19.9462,
+     "nats_per_token": 6.64873,
+     "bits_per_byte": 4.1109,
+     "straddle": false,
+     "term": "Hitler",
+     "carrier": "Kanclerzem Rzeszy został wówczas"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 8,
+     "nll_nats": 22.80626,
+     "nats_per_token": 7.60209,
+     "bits_per_byte": 4.11281,
+     "straddle": false,
+     "term": "gestapo",
+     "carrier": "Aresztowaniami kierowało"
+    },
+    {
+     "n_tokens": 4,
+     "target_bytes": 5,
+     "nll_nats": 28.31425,
+     "nats_per_token": 7.07856,
+     "bits_per_byte": 8.16977,
+     "straddle": false,
+     "term": "NKWD",
+     "carrier": "Śledztwo prowadziło"
+    },
+    {
+     "n_tokens": 4,
+     "target_bytes": 9,
+     "nll_nats": 26.2788,
+     "nats_per_token": 6.5697,
+     "bits_per_byte": 4.21248,
+     "straddle": false,
+     "term": "kołchoz",
+     "carrier": "Ziemię gromadzką zamieniono w"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 8,
+     "nll_nats": 22.17937,
+     "nats_per_token": 7.39312,
+     "bits_per_byte": 3.99976,
+     "straddle": false,
+     "term": "faszyzm",
+     "carrier": "Nowym prądem politycznym stał się"
+    },
+    {
+     "n_tokens": 4,
+     "target_bytes": 22,
+     "nll_nats": 11.11121,
+     "nats_per_token": 2.7778,
+     "bits_per_byte": 0.72864,
+     "straddle": false,
+     "term": "druga wojna światowa",
+     "carrier": "W roku tym wybuchła"
+    },
+    {
+     "n_tokens": 4,
+     "target_bytes": 9,
+     "nll_nats": 28.94189,
+     "nats_per_token": 7.23547,
+     "bits_per_byte": 4.63937,
+     "straddle": false,
+     "term": "smartfon",
+     "carrier": "Na stoliku leżał"
+    },
+    {
+     "n_tokens": 5,
+     "target_bytes": 10,
+     "nll_nats": 33.74227,
+     "nats_per_token": 6.74845,
+     "bits_per_byte": 4.86798,
+     "straddle": false,
+     "term": "mikrofilm",
+     "carrier": "Zbiory przeniesiono na"
+    },
+    {
+     "n_tokens": 6,
+     "target_bytes": 10,
+     "nll_nats": 35.33061,
+     "nats_per_token": 5.88844,
+     "bits_per_byte": 5.09713,
+     "straddle": false,
+     "term": "copyright",
+     "carrier": "Na odwrocie karty tytułowej widniał"
+    },
+    {
+     "n_tokens": 7,
+     "target_bytes": 21,
+     "nll_nats": 34.92529,
+     "nats_per_token": 4.98933,
+     "bits_per_byte": 2.39936,
+     "straddle": false,
+     "term": "okupacja hitlerowska",
+     "carrier": "Nastała wówczas"
+    }
+   ],
+   "summary": {
+    "n": 14,
+    "mean": 3.94709,
+    "sem": 0.45663,
+    "ci95": [
+     3.0521,
+     4.84208
+    ]
+   }
+  },
+  "period": {
+   "terms": [
+    {
+     "n_tokens": 3,
+     "target_bytes": 9,
+     "nll_nats": 3.62116,
+     "nats_per_token": 1.20705,
+     "bits_per_byte": 0.58047,
+     "straddle": false,
+     "term": "telegraf",
+     "carrier": "Wiadomość nadeszła wczoraj przez"
+    },
+    {
+     "n_tokens": 4,
+     "target_bytes": 9,
+     "nll_nats": 5.57383,
+     "nats_per_token": 1.39346,
+     "bits_per_byte": 0.89348,
+     "straddle": false,
+     "term": "dorożka",
+     "carrier": "Pod bramą kamienicy czekała"
+    },
+    {
+     "n_tokens": 2,
+     "target_bytes": 9,
+     "nll_nats": 7.73063,
+     "nats_per_token": 3.86531,
+     "bits_per_byte": 1.23922,
+     "straddle": false,
+     "term": "gubernia",
+     "carrier": "Utworzono wówczas nową"
+    },
+    {
+     "n_tokens": 2,
+     "target_bytes": 6,
+     "nll_nats": 4.72353,
+     "nats_per_token": 2.36177,
+     "bits_per_byte": 1.13577,
+     "straddle": false,
+     "term": "rubel",
+     "carrier": "Walutą obiegową był wówczas"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 9,
+     "nll_nats": 5.46286,
+     "nats_per_token": 1.82095,
+     "bits_per_byte": 0.87569,
+     "straddle": false,
+     "term": "kopiejka",
+     "carrier": "Najmniejszą monetą była"
+    },
+    {
+     "n_tokens": 1,
+     "target_bytes": 9,
+     "nll_nats": 5.42235,
+     "nats_per_token": 5.42235,
+     "bits_per_byte": 0.8692,
+     "straddle": false,
+     "term": "jenerał",
+     "carrier": "Na czele oddziału stał stary"
+    },
+    {
+     "n_tokens": 4,
+     "target_bytes": 10,
+     "nll_nats": 4.86071,
+     "nats_per_token": 1.21518,
+     "bits_per_byte": 0.70125,
+     "straddle": false,
+     "term": "automobil",
+     "carrier": "Przed gmachem zatrzymał się"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 9,
+     "nll_nats": 5.69009,
+     "nats_per_token": 1.8967,
+     "bits_per_byte": 0.91212,
+     "straddle": false,
+     "term": "aeroplan",
+     "carrier": "Nad miastem przeleciał"
+    },
+    {
+     "n_tokens": 4,
+     "target_bytes": 8,
+     "nll_nats": 4.26384,
+     "nats_per_token": 1.06596,
+     "bits_per_byte": 0.76893,
+     "straddle": false,
+     "term": "telefon",
+     "carrier": "W kantorze zainstalowano nowy"
+    },
+    {
+     "n_tokens": 2,
+     "target_bytes": 10,
+     "nll_nats": 8.07137,
+     "nats_per_token": 4.03568,
+     "bits_per_byte": 1.16445,
+     "straddle": false,
+     "term": "cesarstwo",
+     "carrier": "Rozciągało się nad nimi potężne"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 10,
+     "nll_nats": 8.32047,
+     "nats_per_token": 2.77349,
+     "bits_per_byte": 1.20039,
+     "straddle": false,
+     "term": "gimnazyum",
+     "carrier": "Chłopca oddano do"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 8,
+     "nll_nats": 5.76291,
+     "nats_per_token": 1.92097,
+     "bits_per_byte": 1.03926,
+     "straddle": false,
+     "term": "folwark",
+     "carrier": "Za wsią leżał rozległy"
+    },
+    {
+     "n_tokens": 3,
+     "target_bytes": 8,
+     "nll_nats": 1.21626,
+     "nats_per_token": 0.40542,
+     "bits_per_byte": 0.21934,
+     "straddle": false,
+     "term": "karczma",
+     "carrier": "Przy trakcie stała stara"
+    },
+    {
+     "n_tokens": 5,
+     "target_bytes": 12,
+     "nll_nats": 6.73786,
+     "nats_per_token": 1.34757,
+     "bits_per_byte": 0.81006,
+     "straddle": false,
+     "term": "guwernantka",
+     "carrier": "Dzieci uczyła francuska"
+    }
+   ],
+   "summary": {
+    "n": 14,
+    "mean": 0.8864,
+    "sem": 0.07336,
+    "ci95": [
+     0.74261,
+     1.03019
+    ]
+   }
+  },
+  "modern_minus_period_bpb": 3.06069
+ },
+ "futures_wieszcz": {
+  "items": [
+   {
+    "n_tokens": 4,
+    "target_bytes": 22,
+    "nll_nats": 11.73492,
+    "nats_per_token": 2.93373,
+    "bits_per_byte": 0.76954,
+    "straddle": false,
+    "prompt": "W roku 1939 wybuchła",
+    "gold": " druga wojna światowa",
+    "generated": " w Szwajcaryi wojna i dopiero wskutek wkroczenia Austryaków zreorganizowała się ona; obszar jej rozszerzył się w tym czasie przez połączenie kilku kantonów do rozmiarów zupełnie nieznanych.\n\nOd tego czasu Szwajcarya stała się bardzo boga",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 237,
+     "bytes": 249
+    }
+   },
+   {
+    "n_tokens": 6,
+    "target_bytes": 19,
+    "nll_nats": 25.55343,
+    "nats_per_token": 4.25891,
+    "bits_per_byte": 1.94031,
+    "straddle": false,
+    "prompt": "Pierwszym prezydentem odrodzonej Rzeczypospolitej został",
+    "gold": " Gabriel Narutowicz",
+    "generated": " prezydent rzeczypospolitej francuskiej. W trzy dni po wystawie paryskiej odbyło się tamże zaprzysiężenie konstytucyi. Na czele rządu i ustaw konstytucyjnych staje prezydent. Pracuje on nad podniesieniem kraju i marzeniem jego jest pokój, oraz wzajemne utrzyma",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 1,
+     "orto_modern_share": 0.0,
+     "chars": 260,
+     "bytes": 267
+    }
+   },
+   {
+    "n_tokens": 2,
+    "target_bytes": 5,
+    "nll_nats": 9.57454,
+    "nats_per_token": 4.78727,
+    "bits_per_byte": 2.76263,
+    "straddle": false,
+    "prompt": "Człowiek po raz pierwszy stanął na Księżycu w roku",
+    "gold": " 1969",
+    "generated": ", a przynajmniej w czasie wojny Anglii z Francyą, i wyruszył, jak doktryna socyalistyczna wymaga, „w świat nauk i sztuk* — bo tylko wtedy jest człowiek możebnym.\n\nKORESPONDENCYA „CZASU",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 3,
+     "orto_modern_share": 0.0,
+     "chars": 184,
+     "bytes": 195
+    }
+   },
+   {
+    "n_tokens": 6,
+    "target_bytes": 22,
+    "nll_nats": 25.98947,
+    "nats_per_token": 4.33158,
+    "bits_per_byte": 1.70431,
+    "straddle": false,
+    "prompt": "Po drugiej wojnie światowej Polska znalazła się w strefie wpływów",
+    "gold": " Związku Radzieckiego",
+    "generated": ", które wpłynęły nietylko na losy Polski, ale i na jej polityczne, społeczne i kulturalne losy.\n\nWystarczy podać choć w krótkości przebieg wypadków, które odbiły się na Polsce. Zaznaczyć należy, że naród nasz miał przedewszystkiem kulturalne",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 241,
+     "bytes": 259
+    }
+   },
+   {
+    "n_tokens": 2,
+    "target_bytes": 9,
+    "nll_nats": 19.54676,
+    "nats_per_token": 9.77338,
+    "bits_per_byte": 3.13333,
+    "straddle": false,
+    "prompt": "Wiadomości czyta się dziś najczęściej przez",
+    "gold": " internet",
+    "generated": " nieumiejętność, przez niedbalstwo, często nawet wprost z przesadą. Nie wiemy o tem, jak daleko sztuka czytania posuniętą została w Anglii, ale jest to może najciekawszym faktem w literaturze naszej, że podczas gdy w całej Europie nie istnieje,",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 244,
+     "bytes": 255
+    }
+   },
+   {
+    "n_tokens": 2,
+    "target_bytes": 5,
+    "nll_nats": 11.52041,
+    "nats_per_token": 5.76021,
+    "bits_per_byte": 3.32409,
+    "straddle": false,
+    "prompt": "Mur berliński runął w roku",
+    "gold": " 1989",
+    "generated": " 1896. Zginął w nim następca tronu i książę Wilhelm, ożeniony z księżniczką Ludwiką sasko-meiningeńską.\n\nDokonała swego żywota na łożu boleści tak zwana „Mutterheimer-Reformation",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 178,
+     "bytes": 198
+    }
+   },
+   {
+    "n_tokens": 2,
+    "target_bytes": 5,
+    "nll_nats": 13.57057,
+    "nats_per_token": 6.78528,
+    "bits_per_byte": 3.91564,
+    "straddle": false,
+    "prompt": "Polska wstąpiła do Unii Europejskiej w roku",
+    "gold": " 2004",
+    "generated": " 1669. Z tego powodu i król polski , Jan Kazimierz , pisał z Rzymu o niej w roku 1686. w tym liście : « Za staraniem i pracą teraźniejszych naszych i przeszłych, wcielona jest do wielkiego królestwa , i stanowienia Rzymskiej , przez Papieża,",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 241,
+     "bytes": 250
+    }
+   },
+   {
+    "n_tokens": 2,
+    "target_bytes": 5,
+    "nll_nats": 10.73941,
+    "nats_per_token": 5.3697,
+    "bits_per_byte": 3.09874,
+    "straddle": false,
+    "prompt": "Najcięższe walki powstania warszawskiego toczyły się w roku",
+    "gold": " 1944",
+    "generated": " 1830/1, w czasie wojny narodowej w 1831 roku.\n\nGdyby można było przypuścić, że w tym okresie zaszło w Polsce coś niesłychanego, to jest to chyba nadzwyczajnem. Co się stało w pierwszej ćwierci XIX w. w Polsce, to odbiło",
+    "generated_scan": {
+     "modern_hits": {},
+     "modern_total": 0,
+     "control_hits": {},
+     "control_total": 0,
+     "orto_modern": 0,
+     "orto_period": 0,
+     "orto_modern_share": null,
+     "chars": 220,
+     "bytes": 232
+    }
+   }
+  ],
+  "summary": {
+   "n": 8,
+   "mean": 2.58107,
+   "sem": 0.36351,
+   "ci95": [
+    1.86858,
+    3.29356
+   ]
+  }
+ }
+}

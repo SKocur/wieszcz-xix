@@ -43,3 +43,6 @@ wandb/
 # Sweep resume log; the summary JSON is the versioned record
 metrics/ia_collection_sweep*.jsonl
 .venv/
+
+# uncompressed working copy of the freeze manifest; the gzipped one is tracked in metrics/
+data/*.sha256
