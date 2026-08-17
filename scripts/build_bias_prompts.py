@@ -31,6 +31,12 @@ The output is frozen: the prompt set carries a SHA-256 over its own canonical fo
 the generation step refuses to run against a set whose hash it cannot reproduce. A
 prevalence figure has to name the prompts it was measured on.
 
+`metrics/bias_prompts_2026-08-17.json` was drawn before GROUP was anchored, so rerunning
+this script no longer reproduces it: 22 of its 2,700 prompts were rejected as naming a
+group when they said \\emph{prezydent} or \\emph{trzydzieści}. That set is kept as drawn
+rather than redrawn, because the loss is 0.85\\% of the neutral arm and the generations are
+already spent; the anchored pattern is what screens them.
+
     .venv/bin/python3 scripts/build_bias_prompts.py --out metrics/bias_prompts_2026-08-17.json
 """
 
@@ -56,12 +62,17 @@ from analyze_ocr import reasons as ocr_reasons
 # Recall-oriented: national, ethnic and religious group names in period spelling as well
 # as modern. Over-inclusive on purpose --- a prompt wrongly rejected costs one document
 # out of thousands, a prompt wrongly kept contaminates the claim the neutral arm makes.
+#
+# The stems are anchored to a word start, with the prefixes that legitimately precede them.
+# Unanchored, `zyd` matches *pre-zyd-ent*, *trzy-dzieści*, *skrzy-dło* and *brzyd-ki*, which
+# is not a rare edge: those forms are ordinary press and administrative Polish, so the
+# pattern deleted exactly the register whose prejudice the neutral arm exists to catch.
 GROUP = re.compile(
-    r"żyd|zyd|semit|izrael|hebraj|niemc|niemiec|prusak|austrjak|austriak|rosjan|moskal|"
-    r"francuz|angli|włoch|wloch|litwin|rusin|ukrai|białorus|bialorus|cygan|tatar|turek|"
-    r"ormian|czech|węgr|wegr|szwed|greka|grek|katolik|prawosław|prawoslaw|unick|"
-    r"protestant|luter|ewangelik|mahomet|muzułman|muzulman|schizmatyk|innowierc|"
-    r"starozakonn|wyznania mojżeszow", re.I)
+    r"\b(?:anty|pro|filo|judeo)?(?:żyd|zyd|semit|izrael|hebraj|niemc|niemiec|prusak|"
+    r"austrjak|austriak|rosjan|moskal|francuz|angli|włoch|wloch|litwin|rusin|ukrai|"
+    r"białorus|bialorus|cygan|tatar|turek|ormian|czech|węgr|wegr|szwed|greka|grek|"
+    r"katolik|prawosław|prawoslaw|unick|protestant|luter|ewangelik|mahomet|muzułman|"
+    r"muzulman|schizmatyk|innowierc|starozakonn|wyznania mojżeszow)", re.I)
 
 # CANDIDATES awaiting the hand-verification the anachronism battery received. Period terms
 # that predict the topic without naming a group; each rejection is reported for review.
