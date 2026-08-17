@@ -116,7 +116,11 @@ def ask(model: str, prompt: str, key: str, retries: int = 4) -> dict:
             return verdict
         except Exception as e:
             last = f"{type(e).__name__}: {e}"
-            time.sleep(2 * (attempt + 1))
+            # Rate limiting needs a different curve from a transient error: the endpoint is
+            # telling us the whole pool is saturated, so a two-second retry just rejoins the
+            # queue that rejected us.
+            throttled = isinstance(e, urllib.error.HTTPError) and e.code == 429
+            time.sleep((8 * 2 ** attempt) if throttled else 2 * (attempt + 1))
     return {"label": None, "error": last}
 
 
@@ -149,6 +153,18 @@ def cmd_run(args: argparse.Namespace) -> None:
         rows = [r for r in rows if r["label"] in LABELS]
     if args.limit:
         rows = rows[:args.limit]
+
+    keep: list[dict] = []
+    if args.repair:
+        prior = json.loads((REPO / args.repair).read_text(encoding="utf-8"))
+        keep = [it for it in prior["items"] if it["verdict"].get("label") in LABELS]
+        broken = {it["id"] for it in prior["items"]
+                  if it["verdict"].get("label") not in LABELS}
+        rows = [r for r in rows if r["id"] in broken]
+        print(f"repair: {len(keep)} verdicts kept, {len(rows)} to re-ask")
+        if not rows:
+            raise SystemExit("nothing to repair")
+
     if not rows:
         raise SystemExit("no rows to send; label some in Label Studio first "
                          "or drop --only-labelled")
@@ -169,7 +185,8 @@ def cmd_run(args: argparse.Namespace) -> None:
             if i % 25 == 0 or i == len(rows):
                 print(f"  {i}/{len(rows)}  {i/(time.time()-t0):.1f}/s", flush=True)
 
-    failed = [d for d in done if d["verdict"].get("label") is None]
+    done = keep + done
+    failed = [d for d in done if d["verdict"].get("label") not in LABELS]
     out = REPO / args.out
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({
@@ -311,6 +328,8 @@ def main() -> None:
                    help="bake-off mode: only passages the human has already judged")
     r.add_argument("--limit", type=int, default=0)
     r.add_argument("--workers", type=int, default=6)
+    r.add_argument("--repair", default=None,
+                   help="a prior output; re-ask only the passages that failed in it")
     r.add_argument("--out", required=True)
     r.set_defaults(func=cmd_run)
 
