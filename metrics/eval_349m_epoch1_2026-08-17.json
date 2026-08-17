@@ -1,0 +1,32 @@
+{
+  "ckpt": "checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/epoch1.pt",
+  "step": 25518,
+  "params": 349069440,
+  "device": "cuda",
+  "dtype": "fp32",
+  "batch_size": 8,
+  "data": {
+    "path": "data/val_2026-08-03.bin",
+    "bytes": 112727414,
+    "head_tail_sha256": "a5c1894f5ab7edbf593249e6a63d6c11a39a910bd213b1406e418c4aa9e047fd"
+  },
+  "data_tokens": 56363707,
+  "block_size": 1024,
+  "cross_entropy_nats": 2.7774,
+  "sem": 0.00631,
+  "ci95": [
+    2.76504,
+    2.78976
+  ],
+  "perplexity": 16.0772,
+  "perplexity_ci95": [
+    15.8797,
+    16.2771
+  ],
+  "window_loss_std": 0.57076,
+  "windows_evaluated": 8192,
+  "windows_available": 55042,
+  "window_stride_tokens": 6144,
+  "tokens_scored": 8388608,
+  "wall_s": 509.9
+}

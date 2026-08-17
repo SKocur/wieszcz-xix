@@ -111,11 +111,21 @@ def fit_alpha(ns: list[float], ls: list[float]) -> dict:
 
 def bootstrap_alpha(ns: list[float], per_window: list[np.ndarray], draws: int,
                     seed: int) -> dict:
-    """Resample windows within each rung and refit, for an interval on the exponent."""
+    """Resample windows and refit, for an interval on the exponent.
+
+    The rungs are scored on identical windows, so the draw picks window *indices* once and
+    applies them to every rung. Resampling each rung independently would throw that pairing
+    away and inflate the interval with per-window difficulty that cancels between rungs --
+    the same difficulty that makes the rung-to-rung differences far better determined than
+    the absolute losses.
+    """
     rng = np.random.default_rng(seed)
+    n = min(len(w) for w in per_window)
+    stack = np.stack([w[:n] for w in per_window])
     alphas = []
     for _ in range(draws):
-        ls = [float(rng.choice(w, size=len(w), replace=True).mean()) for w in per_window]
+        idx = rng.integers(0, n, size=n)
+        ls = [float(stack[i][idx].mean()) for i in range(stack.shape[0])]
         f = fit_alpha(ns, ls)
         if f.get("alpha") is not None:
             alphas.append(f["alpha"])
