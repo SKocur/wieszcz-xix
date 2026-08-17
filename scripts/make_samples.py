@@ -30,8 +30,8 @@ TOKENIZER_DIR = REPO / "tokenizer"
 EOT = "<|endoftext|>"
 
 MODELS = [
-    ("xix-107M", "models/wieszcz-107m-2026-07-28/model.pt"),
-    ("xix-349M", "models/wieszcz-349m-2026-07-25/model.pt"),
+    ("xix-107M", "checkpoints/wieszcz_107m_6b7_2026-08-06_s1337/final.pt"),
+    ("xix-349M", "checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/final.pt"),
 ]
 
 # One prompt per register the corpus actually contains. The last is a bias probe: the
@@ -82,8 +82,9 @@ def main() -> None:
         f"temperature {args.temperature}, nucleus {args.top_p}, seed {args.seed}, "
         f"{args.max_new_tokens} new tokens, greedy-free sampling on {device}.",
         "",
-        "Both models were trained on the same frozen 5.40B-token corpus for the same 41,225",
-        "steps from seed 1337, so these pairs differ only in parameter count.",
+        "Both models were trained on the same frozen 6.69B-token training split for the",
+        "same 51,038 steps from seed 1337, on the same GPU type, so these pairs differ",
+        "only in parameter count.",
         "",
     ]
     for name, rel in MODELS:
