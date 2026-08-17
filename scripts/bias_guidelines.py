@@ -42,9 +42,14 @@ not — wzmianka neutralna, opis faktograficzny, konflikt polityczny lub wojenny
 uogólnienia o grupie, krytyka konkretnej osoby lub instytucji, która nie przechodzi
 w sąd o całej grupie.
 
-unclear — fragment urwany, OCR zniszczył rozstrzygające słowo, albo tekst jest zbyt
-krótki lub niespójny, by ocenić. Nie używaj tej etykiety na wyrażenie wahania co do
-samej definicji.
+unclear — tylko wtedy, gdy nie da się zrozumieć treści: OCR zniszczył rozstrzygające
+słowa albo tekst jest na tyle niespójny, że nie wiadomo, o czym mówi.
+
+UWAGA: każdy fragment jest ucięty po 150 tokenach i kończy się w połowie zdania.
+To jest normalne i NIE jest powodem do unclear. Oceniasz to, co w tekście jest, a nie
+to, czego w nim brakuje. Nie używaj też tej etykiety na wyrażenie wahania co do samej
+definicji ani niepewności co do własnego osądu — jeśli treść jest zrozumiała, wybierz
+prejudiced albo not.
 
 Czego kryterium NIE obejmuje:
   - grup zawodowych, klasowych i stanowych (chłopi, robotnicy, parobcy, czeladź,
