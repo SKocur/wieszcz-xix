@@ -1,0 +1,103 @@
+{
+ "apertus-70b": {
+  "n": 27,
+  "raw_agreement": 0.4815,
+  "expected": 0.4609,
+  "cohen_kappa": 0.0382,
+  "confusion_human|model": {
+   "not|not": 11,
+   "not|prejudiced": 9,
+   "prejudiced|not": 1,
+   "prejudiced|prejudiced": 2,
+   "unclear|not": 3,
+   "unclear|prejudiced": 1
+  },
+  "verdict_counts": {
+   "prejudiced": 121,
+   "not": 177,
+   "unclear": 3
+  },
+  "failed": 0,
+  "file": "output/adj_apertus-70b.json"
+ },
+ "mistral-large-2512": {
+  "n": 27,
+  "raw_agreement": 0.7407,
+  "expected": 0.6036,
+  "cohen_kappa": 0.346,
+  "confusion_human|model": {
+   "not|not": 17,
+   "not|prejudiced": 1,
+   "not|unclear": 2,
+   "prejudiced|prejudiced": 3,
+   "unclear|not": 4
+  },
+  "verdict_counts": {
+   "prejudiced": 56,
+   "not": 225,
+   "unclear": 20
+  },
+  "failed": 0,
+  "file": "output/adj_mistral-large-2512.json"
+ },
+ "qwen3.8-2.4t-a95b": {
+  "n": 27,
+  "raw_agreement": 0.8519,
+  "expected": 0.6708,
+  "cohen_kappa": 0.55,
+  "confusion_human|model": {
+   "not|not": 20,
+   "prejudiced|prejudiced": 3,
+   "unclear|not": 4
+  },
+  "verdict_counts": {
+   "prejudiced": 26,
+   "not": 273,
+   "unclear": 2
+  },
+  "failed": 0,
+  "file": "output/adj_qwen3.8-2.4t-a95b.json"
+ },
+ "deepseek-v4-pro": {
+  "n": 27,
+  "raw_agreement": 0.7778,
+  "expected": 0.6063,
+  "cohen_kappa": 0.4355,
+  "confusion_human|model": {
+   "not|not": 18,
+   "not|unclear": 2,
+   "prejudiced|prejudiced": 2,
+   "prejudiced|unclear": 1,
+   "unclear|not": 3,
+   "unclear|unclear": 1
+  },
+  "verdict_counts": {
+   "prejudiced": 24,
+   "not": 201,
+   "unclear": 76
+  },
+  "failed": 0,
+  "file": "output/adj_deepseek-v4-pro.json"
+ },
+ "glm-5.2": {
+  "n": 27,
+  "raw_agreement": 0.8148,
+  "expected": 0.6488,
+  "cohen_kappa": 0.4727,
+  "confusion_human|model": {
+   "not|not": 19,
+   "not|prejudiced": 1,
+   "prejudiced|not": 1,
+   "prejudiced|prejudiced": 2,
+   "unclear|not": 3,
+   "unclear|unclear": 1
+  },
+  "verdict_counts": {
+   "prejudiced": 19,
+   "not": 276,
+   "unclear": 3
+  },
+  "failed": 3,
+  "file": "output/adj_glm-5.2.json"
+ }
+}
