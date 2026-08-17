@@ -38,6 +38,7 @@ import argparse
 import hashlib
 import json
 import os
+import random
 import re
 import time
 import urllib.error
@@ -225,6 +226,79 @@ def cmd_compare(args: argparse.Namespace) -> None:
     print(f"\nwrote {out}")
 
 
+def cmd_plan(args: argparse.Namespace) -> None:
+    """Decide which passages a person still has to read.
+
+    Reading a random sample wastes most of the effort confirming easy negatives. Where
+    independent models from different families disagree, the passage is genuinely
+    ambiguous and a human verdict is the only thing that settles it; where they all agree,
+    a sample is enough to check they are not agreeing on the same mistake.
+
+    The two sets answer different questions and must not be pooled. The random verification
+    sample supports an unbiased agreement statistic; the disagreement set is chosen
+    precisely because it is hard, so a kappa computed on it would be meaningless and the
+    report says so.
+    """
+    report = json.loads((REPO / args.sheet).read_text(encoding="utf-8"))
+    rows = {r["id"]: r for r in report["rows"] if r["stratum"] == "flagged"}
+    human = {r["id"]: r["label"] for r in report["rows"] if r["label"] in LABELS}
+
+    verdicts: dict[str, dict[str, str]] = {}
+    models = []
+    for path in args.models:
+        d = json.loads((REPO / path).read_text(encoding="utf-8"))
+        models.append(d["model"])
+        for it in d["items"]:
+            lab = it["verdict"].get("label")
+            if lab in LABELS:
+                verdicts.setdefault(it["id"], {})[d["model"]] = lab
+
+    unanimous: dict[str, list[str]] = {}
+    split: list[str] = []
+    for rid in rows:
+        got = verdicts.get(rid, {})
+        vals = set(got.values())
+        if len(got) < args.min_models or len(vals) != 1:
+            # Too few verdicts counts as unsettled, not as agreement: a passage every model
+            # failed on is exactly the kind a person should see.
+            split.append(rid)
+        else:
+            unanimous.setdefault(vals.pop(), []).append(rid)
+
+    rng = random.Random(args.seed)
+    pool = [r for lab in unanimous for r in unanimous[lab] if r not in human]
+    verify = rng.sample(pool, min(args.verify, len(pool)))
+    to_read = sorted(set(split) - set(human)) + sorted(verify)
+
+    consensus_prejudiced = len(unanimous.get("prejudiced", []))
+    plan = {
+        "sheet": args.sheet, "sheet_sha256": report["sheet_sha256"],
+        "models": models, "min_models": args.min_models,
+        "flagged_total": len(rows),
+        "unanimous": {k: len(v) for k, v in unanimous.items()},
+        "split": len(split),
+        "already_human_labelled": len(human),
+        "verify_sample": len(verify), "to_read": len(to_read),
+        "consensus_prejudiced_among_unanimous": consensus_prejudiced,
+        "note": ("kappa is reportable on verify_sample only; the split set is chosen for "
+                 "difficulty and its agreement rate is not a population estimate"),
+        "ids_split": sorted(set(split) - set(human)),
+        "ids_verify": sorted(verify),
+        "ids": to_read,
+    }
+    out = REPO / args.out
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    print(f"{len(rows)} flagged passages, {len(models)} models\n")
+    for lab, ids in sorted(unanimous.items(), key=lambda x: -len(x[1])):
+        print(f"  wszystkie zgodne: {lab:<12} {len(ids):>4}")
+    print(f"  rozjazd modeli              {len(split):>4}")
+    print(f"\ndo przeczytania: {len(split)-len(set(split)&set(human))} spornych "
+          f"+ {len(verify)} losowych na weryfikację = {len(to_read)}")
+    print(f"wrote {out}")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -245,6 +319,17 @@ def main() -> None:
     c.add_argument("models", nargs="+")
     c.add_argument("--out", default="metrics/bias_adjudicator_agreement.json")
     c.set_defaults(func=cmd_compare)
+
+    pl = sub.add_parser("plan", help="decide which passages still need a person")
+    pl.add_argument("sheet")
+    pl.add_argument("models", nargs="+")
+    pl.add_argument("--verify", type=int, default=40,
+                    help="unanimous passages sampled for an unbiased agreement estimate")
+    pl.add_argument("--min-models", type=int, default=3,
+                    help="verdicts required before agreement counts as settled")
+    pl.add_argument("--seed", type=int, default=1337)
+    pl.add_argument("--out", default="metrics/bias_reading_plan.json")
+    pl.set_defaults(func=cmd_plan)
 
     args = ap.parse_args()
     args.func(args)

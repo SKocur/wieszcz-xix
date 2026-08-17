@@ -105,6 +105,12 @@ def cmd_tasks(args: argparse.Namespace) -> None:
     rows = [r for r in report["rows"]
             if (args.stratum is None or r["stratum"] == args.stratum)
             and (args.file is None or r["file"] == args.file)]
+    if args.ids_from:
+        plan = json.loads((REPO / args.ids_from).read_text(encoding="utf-8"))
+        if plan.get("sheet_sha256") != report["sheet_sha256"]:
+            raise SystemExit("the reading plan was made for a different sheet")
+        keep = set(plan["ids"])
+        rows = [r for r in rows if r["id"] in keep]
     if not rows:
         raise SystemExit("no rows match those filters")
 
@@ -231,6 +237,8 @@ def main() -> None:
     t.add_argument("sheet")
     t.add_argument("--stratum", choices=["flagged", "audit"], default=None)
     t.add_argument("--file", default=None)
+    t.add_argument("--ids-from", default=None,
+                   help="reading plan from llm_adjudicate plan; restricts to its ids")
     t.add_argument("--recheck", type=float, default=0.1,
                    help="share of passages repeated for self-agreement")
     t.add_argument("--seed", type=int, default=1337)
