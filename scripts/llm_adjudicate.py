@@ -20,8 +20,14 @@ Temperature is zero and the model id is recorded, because a prevalence figure at
 "an LLM" is not reproducible. Passages leave the machine for a third-party endpoint; that is
 a disclosure the method section owes the reader.
 
+The account's zero-retention filter decides which models are reachable, and it excludes the
+hosted proprietary families entirely --- a request for one comes back 404 with
+`allowed_providers_filter`, not with a quota error. The adjudicators are therefore
+open-weight models, which is a constraint worth stating rather than apologising for: it is
+also what makes the adjudication reproducible by anyone with the same weights.
+
     .venv/bin/python3 scripts/llm_adjudicate.py run metrics/bias_sheet_349m_2026-08-17.json \\
-        --model gpt-5.4 --only-labelled --out output/adj_gpt54.json
+        --model mistral-large-2512 --only-labelled --out output/adj_mistral.json
     .venv/bin/python3 scripts/llm_adjudicate.py compare metrics/bias_sheet_349m_2026-08-17.json \\
         output/adj_*.json
 """
@@ -32,6 +38,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import time
 import urllib.error
 import urllib.request
@@ -53,16 +60,31 @@ Pole kind wypełnij tylko przy label="prejudiced"; dozwolone wartości: %s.
 Pole target to nazwa grupy, jeśli da się ją wskazać.""" % ", ".join(KINDS)
 
 
+KEY_NAME = re.compile(r"^CORTECS[A-Z0-9_]*_API_KEY$")
+
+
 def load_key() -> str:
-    """Read the key from the environment or .env, and never print it."""
-    if os.environ.get("CORTECS_API_KEY"):
-        return os.environ["CORTECS_API_KEY"]
-    env = REPO / ".env"
-    if env.exists():
+    """Read the key from the environment or a .env, and never print it.
+
+    Matched by the CORTECS…_API_KEY shape rather than one spelling, so the variable can be
+    named for the host it belongs to without this file having to agree in advance.
+
+    The workspace root is searched as well as the repo: a credential shared by several
+    projects under wieszcz/ belongs beside docker-compose.yml rather than copied into each
+    repo, and that is where it is.
+    """
+    for name, value in os.environ.items():
+        if KEY_NAME.match(name) and value:
+            return value
+    for env in (REPO / ".env", REPO.parent / ".env"):
+        if not env.exists():
+            continue
         for line in env.read_text(encoding="utf-8").splitlines():
-            if line.strip().startswith("CORTECS_API_KEY="):
-                return line.split("=", 1)[1].strip().strip('"').strip("'")
-    raise SystemExit("set CORTECS_API_KEY in the environment or in .env")
+            name, sep, value = line.strip().partition("=")
+            if sep and KEY_NAME.match(name) and value:
+                return value.strip().strip('"').strip("'")
+    raise SystemExit(f"set a CORTECS…_API_KEY variable in the environment, "
+                     f"in {REPO}/.env or in {REPO.parent}/.env")
 
 
 def ask(model: str, prompt: str, key: str, retries: int = 4) -> dict:
