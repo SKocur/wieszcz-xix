@@ -98,9 +98,27 @@ def collect(eval_file: str) -> dict[str, str]:
         out[f"ceci{tag}"] = tex_ci(cell["ci95"], 4)
         out[f"params{tag}"] = tex_int(cell["params"])
         span = cell.get("span_fraction", span)
+    # Per source, and the penalty on the clean transcription: the table that states these
+    # is the last place a number should be retyped, since it carries three columns of them.
+    for rung, tag in LADDER:
+        for subset in ("ia", "wl"):
+            if subset in ev["by_subset"]:
+                cell = dig(ev, f"by_subset.{subset}.{rung}")
+                out[f"ce{subset}{tag}"] = tex_f(cell["cross_entropy_nats"], 3)
+                out[f"half{subset}{tag}"] = tex_f(
+                    (cell["ci95"][1] - cell["ci95"][0]) / 2, 3)
+                out[f"ppl{subset}{tag}"] = tex_f(cell["perplexity"], 1)
+        if "ia" in ev["by_subset"] and "wl" in ev["by_subset"]:
+            gap = (dig(ev, f"by_subset.wl.{rung}.cross_entropy_nats")
+                   - dig(ev, f"by_subset.ia.{rung}.cross_entropy_nats"))
+            out[f"cegap{tag}"] = tex_f(gap, 3)
+    out["wlwindows"] = tex_int(dig(ev, "by_subset.wl.47M.windows_evaluated"))
+
     losses = [float(dig(ev, f"by_subset.full.{r}.cross_entropy_nats")) for r, _ in LADDER]
-    out["gainsmalltomid"] = tex_f(losses[0] - losses[1], 4)
-    out["gainmidtolarge"] = tex_f(losses[1] - losses[2], 4)
+    # Quoted to three places in the prose, which is the precision the +-0.001
+    # half-widths support.
+    out["gainsmalltomid"] = tex_f(losses[0] - losses[1], 3)
+    out["gainmidtolarge"] = tex_f(losses[1] - losses[2], 3)
     if span is not None:
         out["evalspan"] = tex_f(span, 4)
     out["evalwindows"] = tex_int(ev["meta"]["windows_cap"])

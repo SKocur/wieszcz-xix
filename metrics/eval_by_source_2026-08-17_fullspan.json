@@ -1,0 +1,257 @@
+{
+ "meta": {
+  "script": "scripts/eval_by_source.py",
+  "script_sha256": "12a692f536d9aa8a",
+  "timestamp_utc": "2026-08-17T21:06:03+00:00",
+  "host": "mlbox",
+  "device": "cuda",
+  "dtype": "fp32",
+  "val": "data/val_2026-08-03.bin",
+  "split": "metrics/doc_split_2026-08-03.json",
+  "val_tokens": 56363707,
+  "val_documents": 2764,
+  "val_documents_ia": 2744,
+  "val_documents_wl": 20,
+  "eot_id": 0,
+  "terminators_found": 2764,
+  "source_boundary_token": 55758336,
+  "windows_cap": 8192,
+  "bootstrap_draws": 2000,
+  "seed": 1337,
+  "elapsed_seconds": 1627.6
+ },
+ "ladder": [
+  {
+   "label": "47M",
+   "ckpt": "checkpoints/wieszcz_47m_6b7_2026-08-05_s1337/final.pt"
+  },
+  {
+   "label": "107M",
+   "ckpt": "checkpoints/wieszcz_107m_6b7_2026-08-06_s1337/final.pt"
+  },
+  {
+   "label": "349M",
+   "ckpt": "checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/final.pt"
+  }
+ ],
+ "by_subset": {
+  "full": {
+   "47M": {
+    "cross_entropy_nats": 3.10094,
+    "sem": 0.00632,
+    "ci95": [
+     3.08856,
+     3.11331
+    ],
+    "perplexity": 22.2188,
+    "params": 47105088,
+    "step": 51037,
+    "windows_available": 55042,
+    "windows_evaluated": 8192,
+    "first_window_token": 0,
+    "last_window_token": 56361984,
+    "span_fraction": 1.0,
+    "tokens_scored": 8388608,
+    "wall_s": 92.1
+   },
+   "107M": {
+    "cross_entropy_nats": 2.90464,
+    "sem": 0.00633,
+    "ci95": [
+     2.89223,
+     2.91706
+    ],
+    "perplexity": 18.2587,
+    "params": 106859264,
+    "step": 51037,
+    "windows_available": 55042,
+    "windows_evaluated": 8192,
+    "first_window_token": 0,
+    "last_window_token": 56361984,
+    "span_fraction": 1.0,
+    "tokens_scored": 8388608,
+    "wall_s": 182.5
+   },
+   "349M": {
+    "cross_entropy_nats": 2.67264,
+    "sem": 0.00633,
+    "ci95": [
+     2.66023,
+     2.68506
+    ],
+    "perplexity": 14.4782,
+    "params": 349069440,
+    "step": 51037,
+    "windows_available": 55042,
+    "windows_evaluated": 8192,
+    "first_window_token": 0,
+    "last_window_token": 56361984,
+    "span_fraction": 1.0,
+    "tokens_scored": 8388608,
+    "wall_s": 507.4
+   }
+  },
+  "ia": {
+   "47M": {
+    "cross_entropy_nats": 3.1027,
+    "sem": 0.00626,
+    "ci95": [
+     3.09042,
+     3.11498
+    ],
+    "perplexity": 22.2579,
+    "params": 47105088,
+    "step": 51037,
+    "windows_available": 54451,
+    "windows_evaluated": 8192,
+    "first_window_token": 0,
+    "last_window_token": 55756800,
+    "span_fraction": 1.0,
+    "tokens_scored": 8388608,
+    "wall_s": 92.7
+   },
+   "107M": {
+    "cross_entropy_nats": 2.90645,
+    "sem": 0.00628,
+    "ci95": [
+     2.89415,
+     2.91876
+    ],
+    "perplexity": 18.2918,
+    "params": 106859264,
+    "step": 51037,
+    "windows_available": 54451,
+    "windows_evaluated": 8192,
+    "first_window_token": 0,
+    "last_window_token": 55756800,
+    "span_fraction": 1.0,
+    "tokens_scored": 8388608,
+    "wall_s": 182.8
+   },
+   "349M": {
+    "cross_entropy_nats": 2.67408,
+    "sem": 0.00628,
+    "ci95": [
+     2.66178,
+     2.68639
+    ],
+    "perplexity": 14.4991,
+    "params": 349069440,
+    "step": 51037,
+    "windows_available": 54451,
+    "windows_evaluated": 8192,
+    "first_window_token": 0,
+    "last_window_token": 55756800,
+    "span_fraction": 1.0,
+    "tokens_scored": 8388608,
+    "wall_s": 508.1
+   }
+  },
+  "wl": {
+   "47M": {
+    "cross_entropy_nats": 3.246,
+    "sem": 0.0117,
+    "ci95": [
+     3.22306,
+     3.26893
+    ],
+    "perplexity": 25.6873,
+    "params": 47105088,
+    "step": 51037,
+    "windows_available": 591,
+    "windows_evaluated": 591,
+    "first_window_token": 0,
+    "last_window_token": 604160,
+    "span_fraction": 1.0,
+    "tokens_scored": 605184,
+    "wall_s": 6.7
+   },
+   "107M": {
+    "cross_entropy_nats": 3.05769,
+    "sem": 0.01163,
+    "ci95": [
+     3.03489,
+     3.08048
+    ],
+    "perplexity": 21.2783,
+    "params": 106859264,
+    "step": 51037,
+    "windows_available": 591,
+    "windows_evaluated": 591,
+    "first_window_token": 0,
+    "last_window_token": 604160,
+    "span_fraction": 1.0,
+    "tokens_scored": 605184,
+    "wall_s": 13.2
+   },
+   "349M": {
+    "cross_entropy_nats": 2.83255,
+    "sem": 0.0114,
+    "ci95": [
+     2.8102,
+     2.85489
+    ],
+    "perplexity": 16.9887,
+    "params": 349069440,
+    "step": 51037,
+    "windows_available": 591,
+    "windows_evaluated": 591,
+    "first_window_token": 0,
+    "last_window_token": 604160,
+    "span_fraction": 1.0,
+    "tokens_scored": 605184,
+    "wall_s": 36.7
+   }
+  }
+ },
+ "alpha_fits": {
+  "full": {
+   "alpha": 0.20206,
+   "A": 45.70434,
+   "E_nats": 1.81409,
+   "draws_valid": 2000,
+   "alpha_median": 0.20206,
+   "alpha_ci95": [
+    0.19595,
+    0.20847
+   ],
+   "losses": [
+    3.10094,
+    2.90464,
+    2.67264
+   ]
+  },
+  "ia": {
+   "alpha": 0.20019,
+   "A": 44.58835,
+   "E_nats": 1.80513,
+   "draws_valid": 2000,
+   "alpha_median": 0.20016,
+   "alpha_ci95": [
+    0.19421,
+    0.20628
+   ],
+   "losses": [
+    3.1027,
+    2.90645,
+    2.67408
+   ]
+  },
+  "wl": {
+   "alpha": 0.1904,
+   "A": 37.69008,
+   "E_nats": 1.94199,
+   "draws_valid": 2000,
+   "alpha_median": 0.19077,
+   "alpha_ci95": [
+    0.17276,
+    0.2101
+   ],
+   "losses": [
+    3.246,
+    3.05769,
+    2.83255
+   ]
+  }
+ }
+}
