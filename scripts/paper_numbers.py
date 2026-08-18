@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from pathlib import Path
 
@@ -33,6 +34,21 @@ PAPER = REPO.parent / "wieszcz-xix-paper"
 # Control sequence names may contain letters only, so the rungs are named by
 # their place in the ladder rather than by parameter count.
 LADDER = (("47M", "small"), ("107M", "mid"), ("349M", "large"))
+
+# The orthography arm. The paper calls it the measurement it would keep if it could keep
+# only one, which makes it the last place a number should be retyped. Each rung's own
+# report carries the wieszcz arms; the comparator arms are named by the model they scored,
+# since the same rung is compared against both.
+PROBE_RUNGS = {
+    "mid": "metrics/temporal_probe_107m_papugapt2_2026-08-18.json",
+    "large": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
+}
+FERTILITY = "metrics/tokenizer_fertility_2026-08-18.json"
+LEDGER_VAL = "metrics/provenance_ledger_2026-08-03_val.csv.gz"
+PROBE_COMPARATORS = {
+    "bielik": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
+    "papuga": "metrics/temporal_probe_349m_papugapt2_2026-08-18.json",
+}
 
 
 def dig(obj, path: str):
@@ -54,6 +70,97 @@ def tex_f(v, places: int) -> str:
 def tex_ci(v, places: int = 3) -> str:
     lo, hi = v
     return f"[{float(lo):.{places}f}, {float(hi):.{places}f}]"
+
+
+def tokenizer_macros(out: dict[str, str], ev: dict, tok: dict) -> None:
+    """The vocabulary trade, and the conversion that makes the ladder vocabulary-free.
+
+    Bits per byte is derived from the exact held-out totals rather than from the sampled
+    fertility figure: the evaluation now spans the whole split, so the right divisor is
+    every byte of it over every token of it, and the sample would introduce an error into
+    a conversion that has no need of one.
+    """
+    import csv
+    import gzip
+
+    fert = json.loads((REPO / FERTILITY).read_text())
+    bpt = lambda block: block["fertility"]["all"]["bytes_per_token"]
+
+    out["fertilityours"] = tex_f(bpt(fert["tokenizers"]["wieszcz-8k"]), 3)
+    out["fertilitybielik"] = tex_f(bpt(fert["tokenizers"]["bielik-1.5b-v3"]), 3)
+    out["fertilitypapuga"] = tex_f(bpt(fert["tokenizers"]["papugapt2"]), 3)
+    named = {"4000": "four", "16000": "sixteen", "32000": "thirtytwo"}
+    for size, word in named.items():
+        cf = fert["counterfactual_vocabularies"][size]
+        out[f"fertility{word}"] = tex_f(bpt(cf), 3)
+
+    shares = fert["embedding_shares"]
+    for rung, tag in (("47M", "small"), ("349M", "large")):
+        for size, word in (("8000", "eight"), ("32000", "thirtytwo")):
+            share = shares[rung]["by_vocab"][size]["embedding_share"]
+            out[f"embed{tag}{word}"] = tex_f(100 * share, 1)
+
+    with gzip.open(REPO / LEDGER_VAL, "rt", encoding="utf-8") as f:
+        val_bytes = sum(int(row["bytes"]) for row in csv.DictReader(f))
+    exact = val_bytes / dig(tok, "val.tokens")
+    out["valbytes"] = tex_int(val_bytes)
+    out["fertilityexact"] = tex_f(exact, 3)
+    factor = 1.0 / (exact * math.log(2))
+    out["natstobpb"] = tex_f(factor, 4)
+    for rung, tag in LADDER:
+        out[f"bpb{tag}"] = tex_f(
+            dig(ev, f"by_subset.full.{rung}.cross_entropy_nats") * factor, 3)
+
+    # What the corpus would have been under the vocabulary we did not pick, which is the
+    # other half of the trade and the only form in which a token count is comparable.
+    corpus_bytes = bpt(fert["tokenizers"]["wieszcz-8k"]) * dig(tok, "tokens_total")
+    out["corpustokensthirtytwo"] = tex_f(
+        corpus_bytes / bpt(fert["counterfactual_vocabularies"]["32000"]) / 1e9, 2)
+    out["corpustokensbillions"] = tex_f(dig(tok, "tokens_total") / 1e9, 2)
+
+
+def probe_macros(out: dict[str, str]) -> None:
+    """Orthography shares from the temporal probes, plus what the exemplars themselves were.
+
+    The comparison across reports is only meaningful if every model saw the same exemplars,
+    so that is checked here rather than assumed: the passages are drawn under a fixed seed
+    and identical selection thresholds, and a report whose preamble differs would be
+    comparing two different demonstrations.
+    """
+    share = lambda block: tex_f(block["orto_modern_share"]["mean"], 3)
+    preambles = {}
+
+    for tag, path in PROBE_RUNGS.items():
+        ev = _load_probe(path)
+        out[f"orto{tag}"] = share(ev["generations_wieszcz"])
+        out[f"orto{tag}fewshot"] = share(ev["generations_wieszcz_fewshot"])
+        preambles[path] = ev["generations_wieszcz_fewshot"]["preamble"]
+
+    for tag, path in PROBE_COMPARATORS.items():
+        ev = _load_probe(path)
+        out[f"orto{tag}plain"] = share(ev["generations_modern_lm_plain"])
+        out[f"orto{tag}frame"] = share(ev["generations_modern_lm_imitate"])
+        out[f"orto{tag}fewshot"] = share(ev["generations_modern_lm_fewshot"])
+        preambles[path] = ev["generations_modern_lm_fewshot"]["preamble"]
+
+    if len(set(preambles.values())) != 1:
+        raise SystemExit("probe reports disagree on the exemplars, so their orthography "
+                         f"shares are not comparable: {sorted(preambles)}")
+
+    ev = _load_probe(PROBE_COMPARATORS["bielik"])
+    out["ortocorpus"] = share(ev["corpus_reference"])
+    fs = ev["fewshot"]
+    out["fewshotpassages"] = tex_int(len(fs["passages"]))
+    out["fewshotchars"] = tex_int(fs["fit_wieszcz"]["chars"])
+    out["fewshotshare"] = tex_f(fs["fit_wieszcz"]["scan"]["orto_modern_share"], 3)
+
+
+def _load_probe(rel: str) -> dict:
+    path = REPO / rel
+    if not path.exists():
+        raise SystemExit(f"{rel} not found. Re-run scripts/temporal_probe.py, or point "
+                         f"PROBE_RUNGS/PROBE_COMPARATORS at the reports you mean.")
+    return json.loads(path.read_text())
 
 
 def collect(eval_file: str) -> dict[str, str]:
@@ -123,6 +230,9 @@ def collect(eval_file: str) -> dict[str, str]:
         out["evalspan"] = tex_f(span, 4)
     out["evalwindows"] = tex_int(ev["meta"]["windows_cap"])
 
+    probe_macros(out)
+    tokenizer_macros(out, ev, tok)
+
     bad = [n for n in out if not n.isalpha()]
     if bad:
         raise SystemExit(f"macro names must be letters only, LaTeX cannot define {bad}")
@@ -156,7 +266,14 @@ def cmd_check(args) -> None:
         bare = value.replace("{,}", ",")
         used = f"\\{name}" in body
         # A value typed out where a macro exists will not follow the next measurement.
-        literal = bare in body or (value != bare and value in body)
+        # Short values are exempt: a bare "4" matches a section number or a table cell in
+        # any paper, and a check that fires on those is one a reader learns to ignore.
+        # The match is bounded by digits and separators on both sides, so a quoted figure
+        # such as 700.000 does not read as the value 0.000.
+        def typed(v: str) -> bool:
+            return re.search(rf"(?<![\d.,]){re.escape(v)}(?![\d.,])", body) is not None
+
+        literal = len(bare) >= 4 and (typed(bare) or (value != bare and typed(value)))
         if literal:
             hardcoded.append((name, bare))
         elif not used:

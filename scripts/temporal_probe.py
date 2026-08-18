@@ -17,8 +17,10 @@ Four measurements, all inference-only, wieszcz against a modern Polish LM:
 
 2. *Post-reform orthography share.* Already calibrated on the corpus: confirmed modern
    editions score 0.88-1.00 on -cja against period -cya, period print 0.00-0.02. Applied
-   to generations it is a continuous period-fidelity metric that no amount of prompting
-   makes a modern model fake, because it is a property of its tokenizer's priors.
+   to generations it is a continuous period-fidelity metric. The comparator is given two
+   chances at it, since a base model has no single "prompt" to speak of: a declarative
+   frame that describes the register, and held-out period passages to continue, which is
+   the strongest conditioning available short of training on them.
 
 3. *Era contrast in bits per byte.* The measurement that survives the size difference.
    Both models score a set of post-1918 terms and a set of period terms in identical
@@ -52,6 +54,7 @@ import argparse
 import hashlib
 import json
 import math
+import re
 import socket
 import statistics
 import sys
@@ -108,13 +111,26 @@ PROMPTS = [
     "Pociąg pośpieszny odchodzi ze stacyi",
 ]
 
-# A base model has no system prompt, so the fair way to ask a modern LM for period Polish
-# is a period-framing preamble. Without this arm the comparison would be against a
-# strawman: the introduction's claim is about a modern model *prompted to imitate*.
+# A base model has no system prompt and no instruction-following to invoke, so the two
+# conditionings below are what it can actually be given. This one is declarative rather
+# than imperative -- a document header the model continues as text, not an order it obeys
+# -- and it is the weaker of the two: it describes the register instead of exhibiting it.
 IMITATION_PREAMBLE = (
     "Poniżej znajduje się fragment polskiej gazety z roku 1905, napisany ówczesną "
     "polszczyzną, w ortografii sprzed reformy 1918 roku.\n\n"
 )
+
+# The strong form: show the register instead of naming it. Exemplars are held-out period
+# passages placed before the prompt, which is how a base model is natively asked for a
+# style, and the most the comparator can be given without training it. Reporting only the
+# declarative arm would leave the obvious objection open -- that the comparator was told
+# about pre-reform spelling rather than shown any.
+FEWSHOT_CHARS = 1400
+# Exemplars must themselves carry the spelling: a passage at the corpus average would ask
+# the comparator to imitate the very thing being measured, and one with no -cja/-cya
+# evidence at all demonstrates nothing about orthography either way.
+FEWSHOT_MAX_ORTO_MODERN = 0.10
+FEWSHOT_MIN_ORTO_PERIOD = 3
 
 # Carriers end without a space and targets begin with one, so the boundary falls where
 # byte-level BPE puts it anyway and the scored span is exactly the target. Case agreement
@@ -353,6 +369,125 @@ def mean_ci(xs: list[float]) -> dict:
             "ci95": [round(m - 1.96 * sem, 5), round(m + 1.96 * sem, 5)]}
 
 
+VOWELS = set("aąeęioóuyAĄEĘIOÓUY")
+# Long s read as f. The substitution marks eighteenth- and early-nineteenth-century
+# typography, which is a century away from the frame the declarative arm describes, and
+# native Polish almost never puts f before these consonants.
+LONG_S = re.compile(r"(?i)f[tpckwzn]")
+
+
+def reads_as_prose(piece: str) -> bool:
+    """Reject scanner debris, so the demonstration arm shows prose rather than noise.
+
+    Pre-reform orthography in this corpus lives almost entirely in the scanned press --- of
+    the twenty clean transcriptions on the held-out side, none carries it, because literary
+    transcription modernises spelling --- so exemplars must come from OCR'd text and
+    therefore have to be screened rather than assumed clean. Column rules, running heads and
+    stray marks survive cleaning as short vowel-less tokens; a passage carrying many of them
+    would ask the comparator to imitate the scanner instead of the century.
+    """
+    words = [w for w in piece.split() if any(c.isalpha() for c in w)]
+    if len(words) < 30:
+        return False
+    novowel = sum(1 for w in words if not (set(w) & VOWELS))
+    long_s = sum(1 for w in words if LONG_S.search(w))
+    letters = sum(1 for c in piece if c.isalpha() or c.isspace())
+    return (letters / len(piece) >= 0.90
+            and sum(len(w) for w in words) / len(words) >= 4.0
+            and novowel / len(words) <= 0.08
+            and long_s / len(words) <= 0.03)
+
+
+def build_fewshot_passages(clean_dir: Path, split_path: Path, budget_chars: int,
+                           seed: int, max_orto_modern: float,
+                           min_orto_period: int) -> list[dict]:
+    """Held-out passages that demonstrably carry pre-reform spelling.
+
+    Selection is on the exemplars' own orthography rather than on chance. The corpus
+    averages 0.33 post-reform, so a passage drawn at random would be asking the comparator
+    to imitate the very thing the metric measures; a passage carrying no -cja/-cya evidence
+    at all would demonstrate nothing about spelling in either direction. Documents come
+    from the validation side, so no model has trained on them, and passages are cut at
+    paragraph and sentence boundaries so the exemplar reads as prose rather than as a
+    fragment starting mid-word.
+    """
+    import random
+
+    split = json.loads(split_path.read_text(encoding="utf-8"))
+    ids = list(split["val_ids"])
+    rng = random.Random(seed)
+    piece_chars = max(200, budget_chars // 3)
+    passages: list[dict] = []
+    total = 0
+    tries = 0
+    while total < budget_chars and tries < 4000:
+        tries += 1
+        doc = clean_dir / f"{rng.choice(ids)}.txt"
+        if not doc.exists():
+            continue
+        text = doc.read_text(encoding="utf-8", errors="replace")
+        if len(text) < piece_chars + 200:
+            continue
+        start = rng.randrange(0, len(text) - piece_chars - 100)
+        nl = text.find("\n", start)
+        start = nl + 1 if 0 <= nl - start < 200 else start
+        piece = text[start:start + piece_chars]
+        stop = max(piece.rfind(". "), piece.rfind("? "), piece.rfind("! "))
+        if stop > piece_chars // 2:
+            piece = piece[:stop + 1]
+        piece = piece.strip()
+        if not piece:
+            continue
+        if not reads_as_prose(piece):
+            continue
+        scan = battery_scan(piece)
+        if scan["orto_period"] < min_orto_period:
+            continue
+        if scan["orto_modern_share"] is None or scan["orto_modern_share"] > max_orto_modern:
+            continue
+        passages.append({"doc": doc.name, "text": piece, "scan": scan})
+        total += len(piece)
+    return passages
+
+
+def fit_preamble(backend, passages: list[dict], prompts: list[str],
+                 max_new: int) -> tuple[str, dict]:
+    """Size the exemplars to the context this backend actually has.
+
+    The comparators differ by an order of magnitude here -- 1,024 positions for a GPT-2
+    against 8,192 for a Llama -- so one preamble length cannot serve both, and a preamble
+    that overruns is silently truncated by the tokenizer at whichever end it prefers.
+    Exemplars are dropped from the front, keeping the one adjacent to the prompt because
+    that is the one conditioning most strongly, and what each model received is recorded
+    rather than assumed.
+    """
+    longest_prompt = max(len(backend.encode_with_offsets(p)[0]) for p in prompts)
+    budget = backend.block - max_new - longest_prompt - 8
+    join = lambda ps: "\n\n".join(x["text"] for x in ps) + "\n\n"
+
+    kept = list(passages)
+    while len(kept) > 1 and len(backend.encode_with_offsets(join(kept))[0]) > budget:
+        kept.pop(0)
+    text = join(kept) if kept else ""
+    ids = backend.encode_with_offsets(text)[0] if text else []
+    while len(ids) > budget and len(text) > 32:
+        cut = max(16, int(len(text) * (1 - budget / len(ids))))
+        text = text[cut:]
+        space = text.find(" ")
+        if 0 <= space < 40:
+            text = text[space + 1:]
+        ids = backend.encode_with_offsets(text)[0]
+
+    return text, {
+        "passages_kept": len(kept),
+        "passages_dropped": len(passages) - len(kept),
+        "tokens": len(ids),
+        "budget_tokens": budget,
+        "chars": len(text),
+        "scan": battery_scan(text) if text else None,
+    }
+
+
 def run_generations(backend, prompts: list[str], preamble: str, seeds: int,
                     max_new: int, temperature: float, top_p: float, label: str) -> dict:
     items = []
@@ -526,6 +661,12 @@ def main() -> None:
     ap.add_argument("--clean", default="data/clean",
                     help="cleaned .txt corpus, for the held-out reference arm")
     ap.add_argument("--split", default="metrics/doc_split_2026-08-03.json")
+    ap.add_argument("--no-fewshot", dest="fewshot", action="store_false",
+                    help="skip the demonstration arm and report only the declarative one")
+    ap.add_argument("--fewshot-chars", type=int, default=FEWSHOT_CHARS,
+                    help="exemplar budget before per-backend context fitting")
+    ap.add_argument("--fewshot-max-orto", type=float, default=FEWSHOT_MAX_ORTO_MODERN,
+                    help="reject exemplars whose own post-reform share exceeds this")
     ap.add_argument("--out", default="metrics/temporal_probe.json")
     args = ap.parse_args()
 
@@ -567,6 +708,29 @@ def main() -> None:
         wieszcz, PROMPTS, "", args.seeds, args.max_new_tokens, args.temperature,
         args.top_p, "wieszcz")
 
+    if args.fewshot:
+        print("\n[1b/4] few-shot arm: exemplars of period prose", flush=True)
+        passages = build_fewshot_passages(
+            REPO / args.clean, REPO / args.split, args.fewshot_chars, args.seed,
+            args.fewshot_max_orto, FEWSHOT_MIN_ORTO_PERIOD)
+        report["fewshot"] = {
+            "requested_chars": args.fewshot_chars,
+            "max_orto_modern_share": args.fewshot_max_orto,
+            "min_orto_period": FEWSHOT_MIN_ORTO_PERIOD,
+            "passages": passages,
+        }
+        shares = [x["scan"]["orto_modern_share"] for x in passages]
+        print(f"  {len(passages)} passages, "
+              f"{sum(len(x['text']) for x in passages)} chars, "
+              f"exemplar post-reform shares {shares}", flush=True)
+        pre, fit = fit_preamble(wieszcz, passages, PROMPTS, args.max_new_tokens)
+        report["fewshot"]["fit_wieszcz"] = fit
+        print(f"  wieszcz: {fit['tokens']}/{fit['budget_tokens']} tokens, "
+              f"{fit['passages_kept']} kept", flush=True)
+        report["generations_wieszcz_fewshot"] = run_generations(
+            wieszcz, PROMPTS, pre, args.seeds, args.max_new_tokens, args.temperature,
+            args.top_p, "wieszcz-fewshot")
+
     print("\n[2/4] held-out corpus reference at matched volume", flush=True)
     gen = report["generations_wieszcz"]
     report["corpus_reference"] = run_corpus_reference(
@@ -594,6 +758,17 @@ def main() -> None:
                 hf, PROMPTS, preamble, args.seeds, args.max_new_tokens,
                 args.temperature, args.top_p, f"modern-{mode}")
 
+        if args.fewshot:
+            pre, fit = fit_preamble(hf, report["fewshot"]["passages"], PROMPTS,
+                                    args.max_new_tokens)
+            report["fewshot"]["fit_modern_lm"] = fit
+            print(f"\n[1b/4] modern LM generations (few-shot: {fit['tokens']}"
+                  f"/{fit['budget_tokens']} tokens, {fit['passages_kept']} kept)",
+                  flush=True)
+            report["generations_modern_lm_fewshot"] = run_generations(
+                hf, PROMPTS, pre, args.seeds, args.max_new_tokens, args.temperature,
+                args.top_p, "modern-fewshot")
+
         print("\n[3/4] modern LM era contrast", flush=True)
         report["contrast_modern_lm"] = run_contrast(hf)
 
@@ -618,6 +793,10 @@ def main() -> None:
     print(f"wieszcz control-marker docs: {g['docs_with_control_marker']}"
           f"/{g['generations']}  (period words: a floor, not a leak)")
     print(f"wieszcz orto modern share  : {g['orto_modern_share']}")
+    if "generations_wieszcz_fewshot" in report:
+        fs = report["generations_wieszcz_fewshot"]
+        print(f"wieszcz few-shot markers   : {fs['docs_with_modern_marker']}"
+              f"/{fs['generations']}  orto {fs['orto_modern_share'].get('mean')}")
     cr = report["corpus_reference"]
     print(f"corpus ref modern-marker   : {cr['docs_with_modern_marker']}/{cr['chunks']}"
           f"  control {cr['docs_with_control_marker']}/{cr['chunks']}"
@@ -625,8 +804,10 @@ def main() -> None:
     print(f"wieszcz modern-period bpb  : "
           f"{report['contrast_wieszcz']['modern_minus_period_bpb']}")
     if args.hf_model:
-        for mode in ("plain", "imitate"):
-            m = report[f"generations_modern_lm_{mode}"]
+        for mode in ("plain", "imitate", "fewshot"):
+            m = report.get(f"generations_modern_lm_{mode}")
+            if not m:
+                continue
             print(f"modern LM ({mode:8s}) markers: {m['docs_with_modern_marker']}"
                   f"/{m['generations']}  orto {m['orto_modern_share'].get('mean')}")
         print(f"modern LM modern-period bpb: "

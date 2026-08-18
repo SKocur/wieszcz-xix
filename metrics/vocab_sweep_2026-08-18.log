@@ -1,0 +1,27 @@
+400 held-out documents (3 transcriptions, 397 scans), 26.0 MB
+  wieszcz-8k: {'bytes': 26036285, 'tokens': 7789474, 'bytes_per_token': 3.3425, 'tokens_per_1k_bytes': 299.18}
+  bielik-1.5b-v3: {'bytes': 26036285, 'tokens': 7058477, 'bytes_per_token': 3.6887, 'tokens_per_1k_bytes': 271.1}
+  papugapt2: {'bytes': 26036285, 'tokens': 6462552, 'bytes_per_token': 4.0288, 'tokens_per_1k_bytes': 248.21}
+counterfactual vocabularies
+  ia: 295110 files (23.18 GB) -> sampled 5042 files (397 MB)
+  wl: 2992 files (0.18 GB) -> sampled 54 files (3 MB)
+  training 4000 on 5096 files ...
+
+
+
+    4000: 3.0795 B/tok
+  training 16000 on 5096 files ...
+
+
+
+    16000: 3.8472 B/tok
+  training 32000 on 5096 files ...
+
+
+
+    32000: 4.2081 B/tok
+
+bytes/token relative to ours: {'wieszcz-8k': 1.0, 'bielik-1.5b-v3': 1.1036, 'papugapt2': 1.2053}
+1 nat/token = 0.4316 bits/byte
+wrote /home/szymon/research/wieszcz/wieszcz-xix/metrics/tokenizer_fertility_2026-08-18.json
+=== DONE 2026-08-18T12:41:21+00:00 ===
