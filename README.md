@@ -19,8 +19,10 @@ project. Any leak of modern data defeats the purpose.
 
 - **Period:** 19th century (Romanticism, Positivism, early Young Poland), pre-1936 orthography.
 - **Language:** Polish, original spelling preserved (no normalization).
-- **Model:** decoder-only Transformer, small (~20–60M params) — enough to hear the period
-  voice. This is a base model (text continuation), not an instruction-tuned chatbot.
+- **Model:** decoder-only Transformer. A matched ladder at 47M, 107M and 349M parameters,
+  trained on the same frozen corpus for the same steps from the same seed, so the rungs
+  differ only in size. These are base models (text continuation), not instruction-tuned
+  chatbots.
 - **Architecture:** RoPE · RMSNorm (pre+post, Gemma-2 sandwich) · QK-Norm · SwiGLU ·
   Grouped-Query Attention · FlashAttention (via SDPA) · weight tying, scaled residual init.
 - **Optimizer:** Muon (Newton-Schulz orthogonalized momentum) on hidden weights + AdamW on
@@ -61,8 +63,9 @@ python src/train.py --config configs/wieszcz_20m.json
 
 ## Hardware
 
-A single 24 GB consumer GPU (3090/4090) is plenty for a 20–60M model; the corpus, not
-compute, is the bottleneck. Expect to be data-limited and to train for more epochs.
+A single 24 GB consumer GPU (3090/4090) is plenty at the bottom of the ladder; the 349M
+rung was trained on rented A100/H100 time. The corpus, not compute, is the bottleneck —
+expect to be data-limited and to make more than one pass over the text.
 
 ## Data licensing
 

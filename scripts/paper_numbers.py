@@ -268,7 +268,12 @@ def cmd_check(args) -> None:
         # A value typed out where a macro exists will not follow the next measurement.
         # Short values are exempt: a bare "4" matches a section number or a table cell in
         # any paper, and a check that fires on those is one a reader learns to ignore.
-        literal = len(bare) >= 4 and (bare in body or (value != bare and value in body))
+        # The match is bounded by digits and separators on both sides, so a quoted figure
+        # such as 700.000 does not read as the value 0.000.
+        def typed(v: str) -> bool:
+            return re.search(rf"(?<![\d.,]){re.escape(v)}(?![\d.,])", body) is not None
+
+        literal = len(bare) >= 4 and (typed(bare) or (value != bare and typed(value)))
         if literal:
             hardcoded.append((name, bare))
         elif not used:
