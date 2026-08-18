@@ -1,0 +1,257 @@
+{
+ "meta": {
+  "script": "scripts/tokenizer_fertility.py",
+  "script_sha256": "a16f254133cbe22a",
+  "timestamp_utc": "2026-08-18T12:39:41+00:00",
+  "host": "mlbox",
+  "documents": 400,
+  "doc_bytes_cap": 200000,
+  "seed": 1337
+ },
+ "tokenizers": {
+  "wieszcz-8k": {
+   "vocab_size": 8000,
+   "fertility": {
+    "all": {
+     "bytes": 26036285,
+     "tokens": 7789474,
+     "bytes_per_token": 3.3425,
+     "tokens_per_1k_bytes": 299.18
+    },
+    "ia": {
+     "bytes": 26010987,
+     "tokens": 7782289,
+     "bytes_per_token": 3.3423,
+     "tokens_per_1k_bytes": 299.19
+    },
+    "wl": {
+     "bytes": 25298,
+     "tokens": 7185,
+     "bytes_per_token": 3.5209,
+     "tokens_per_1k_bytes": 284.01
+    }
+   }
+  },
+  "bielik-1.5b-v3": {
+   "vocab_size": 32000,
+   "fertility": {
+    "all": {
+     "bytes": 26036285,
+     "tokens": 7058477,
+     "bytes_per_token": 3.6887,
+     "tokens_per_1k_bytes": 271.1
+    },
+    "ia": {
+     "bytes": 26010987,
+     "tokens": 7051810,
+     "bytes_per_token": 3.6886,
+     "tokens_per_1k_bytes": 271.11
+    },
+    "wl": {
+     "bytes": 25298,
+     "tokens": 6667,
+     "bytes_per_token": 3.7945,
+     "tokens_per_1k_bytes": 263.54
+    }
+   }
+  },
+  "papugapt2": {
+   "vocab_size": 50256,
+   "fertility": {
+    "all": {
+     "bytes": 26036285,
+     "tokens": 6462552,
+     "bytes_per_token": 4.0288,
+     "tokens_per_1k_bytes": 248.21
+    },
+    "ia": {
+     "bytes": 26010987,
+     "tokens": 6456358,
+     "bytes_per_token": 4.0287,
+     "tokens_per_1k_bytes": 248.22
+    },
+    "wl": {
+     "bytes": 25298,
+     "tokens": 6194,
+     "bytes_per_token": 4.0843,
+     "tokens_per_1k_bytes": 244.84
+    }
+   }
+  }
+ },
+ "embedding_shares": {
+  "47M": {
+   "d_model": 512,
+   "params_at_8k": 47105088,
+   "non_embedding_params": 43009088,
+   "by_vocab": {
+    "8000": {
+     "embedding_params": 4096000,
+     "total_params": 47105088,
+     "embedding_share": 0.087
+    },
+    "16000": {
+     "embedding_params": 8192000,
+     "total_params": 51201088,
+     "embedding_share": 0.16
+    },
+    "32000": {
+     "embedding_params": 16384000,
+     "total_params": 59393088,
+     "embedding_share": 0.2759
+    },
+    "50000": {
+     "embedding_params": 25600000,
+     "total_params": 68609088,
+     "embedding_share": 0.3731
+    },
+    "128000": {
+     "embedding_params": 65536000,
+     "total_params": 108545088,
+     "embedding_share": 0.6038
+    }
+   }
+  },
+  "107M": {
+   "d_model": 768,
+   "params_at_8k": 106859264,
+   "non_embedding_params": 100715264,
+   "by_vocab": {
+    "8000": {
+     "embedding_params": 6144000,
+     "total_params": 106859264,
+     "embedding_share": 0.0575
+    },
+    "16000": {
+     "embedding_params": 12288000,
+     "total_params": 113003264,
+     "embedding_share": 0.1087
+    },
+    "32000": {
+     "embedding_params": 24576000,
+     "total_params": 125291264,
+     "embedding_share": 0.1962
+    },
+    "50000": {
+     "embedding_params": 38400000,
+     "total_params": 139115264,
+     "embedding_share": 0.276
+    },
+    "128000": {
+     "embedding_params": 98304000,
+     "total_params": 199019264,
+     "embedding_share": 0.4939
+    }
+   }
+  },
+  "349M": {
+   "d_model": 1152,
+   "params_at_8k": 349069440,
+   "non_embedding_params": 339853440,
+   "by_vocab": {
+    "8000": {
+     "embedding_params": 9216000,
+     "total_params": 349069440,
+     "embedding_share": 0.0264
+    },
+    "16000": {
+     "embedding_params": 18432000,
+     "total_params": 358285440,
+     "embedding_share": 0.0514
+    },
+    "32000": {
+     "embedding_params": 36864000,
+     "total_params": 376717440,
+     "embedding_share": 0.0979
+    },
+    "50000": {
+     "embedding_params": 57600000,
+     "total_params": 397453440,
+     "embedding_share": 0.1449
+    },
+    "128000": {
+     "embedding_params": 147456000,
+     "total_params": 487309440,
+     "embedding_share": 0.3026
+    }
+   }
+  }
+ },
+ "counterfactual_vocabularies": {
+  "4000": {
+   "vocab_size": 4000,
+   "fertility": {
+    "all": {
+     "bytes": 26036285,
+     "tokens": 8454616,
+     "bytes_per_token": 3.0795,
+     "tokens_per_1k_bytes": 324.72
+    },
+    "ia": {
+     "bytes": 26010987,
+     "tokens": 8446393,
+     "bytes_per_token": 3.0795,
+     "tokens_per_1k_bytes": 324.72
+    },
+    "wl": {
+     "bytes": 25298,
+     "tokens": 8223,
+     "bytes_per_token": 3.0765,
+     "tokens_per_1k_bytes": 325.05
+    }
+   }
+  },
+  "16000": {
+   "vocab_size": 16000,
+   "fertility": {
+    "all": {
+     "bytes": 26036285,
+     "tokens": 6767549,
+     "bytes_per_token": 3.8472,
+     "tokens_per_1k_bytes": 259.93
+    },
+    "ia": {
+     "bytes": 26010987,
+     "tokens": 6760767,
+     "bytes_per_token": 3.8473,
+     "tokens_per_1k_bytes": 259.92
+    },
+    "wl": {
+     "bytes": 25298,
+     "tokens": 6782,
+     "bytes_per_token": 3.7302,
+     "tokens_per_1k_bytes": 268.08
+    }
+   }
+  },
+  "32000": {
+   "vocab_size": 32000,
+   "fertility": {
+    "all": {
+     "bytes": 26036285,
+     "tokens": 6187139,
+     "bytes_per_token": 4.2081,
+     "tokens_per_1k_bytes": 237.64
+    },
+    "ia": {
+     "bytes": 26010987,
+     "tokens": 6180918,
+     "bytes_per_token": 4.2083,
+     "tokens_per_1k_bytes": 237.63
+    },
+    "wl": {
+     "bytes": 25298,
+     "tokens": 6221,
+     "bytes_per_token": 4.0665,
+     "tokens_per_1k_bytes": 245.91
+    }
+   }
+  }
+ },
+ "relative_to_ours": {
+  "wieszcz-8k": 1.0,
+  "bielik-1.5b-v3": 1.1036,
+  "papugapt2": 1.2053
+ },
+ "nats_per_token_to_bits_per_byte": 0.431622
+}

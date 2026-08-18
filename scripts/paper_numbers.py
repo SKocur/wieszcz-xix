@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from pathlib import Path
 
@@ -42,6 +43,8 @@ PROBE_RUNGS = {
     "mid": "metrics/temporal_probe_107m_papugapt2_2026-08-18.json",
     "large": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
 }
+FERTILITY = "metrics/tokenizer_fertility_2026-08-18.json"
+LEDGER_VAL = "metrics/provenance_ledger_2026-08-03_val.csv.gz"
 PROBE_COMPARATORS = {
     "bielik": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
     "papuga": "metrics/temporal_probe_349m_papugapt2_2026-08-18.json",
@@ -67,6 +70,53 @@ def tex_f(v, places: int) -> str:
 def tex_ci(v, places: int = 3) -> str:
     lo, hi = v
     return f"[{float(lo):.{places}f}, {float(hi):.{places}f}]"
+
+
+def tokenizer_macros(out: dict[str, str], ev: dict, tok: dict) -> None:
+    """The vocabulary trade, and the conversion that makes the ladder vocabulary-free.
+
+    Bits per byte is derived from the exact held-out totals rather than from the sampled
+    fertility figure: the evaluation now spans the whole split, so the right divisor is
+    every byte of it over every token of it, and the sample would introduce an error into
+    a conversion that has no need of one.
+    """
+    import csv
+    import gzip
+
+    fert = json.loads((REPO / FERTILITY).read_text())
+    bpt = lambda block: block["fertility"]["all"]["bytes_per_token"]
+
+    out["fertilityours"] = tex_f(bpt(fert["tokenizers"]["wieszcz-8k"]), 3)
+    out["fertilitybielik"] = tex_f(bpt(fert["tokenizers"]["bielik-1.5b-v3"]), 3)
+    out["fertilitypapuga"] = tex_f(bpt(fert["tokenizers"]["papugapt2"]), 3)
+    named = {"4000": "four", "16000": "sixteen", "32000": "thirtytwo"}
+    for size, word in named.items():
+        cf = fert["counterfactual_vocabularies"][size]
+        out[f"fertility{word}"] = tex_f(bpt(cf), 3)
+
+    shares = fert["embedding_shares"]
+    for rung, tag in (("47M", "small"), ("349M", "large")):
+        for size, word in (("8000", "eight"), ("32000", "thirtytwo")):
+            share = shares[rung]["by_vocab"][size]["embedding_share"]
+            out[f"embed{tag}{word}"] = tex_f(100 * share, 1)
+
+    with gzip.open(REPO / LEDGER_VAL, "rt", encoding="utf-8") as f:
+        val_bytes = sum(int(row["bytes"]) for row in csv.DictReader(f))
+    exact = val_bytes / dig(tok, "val.tokens")
+    out["valbytes"] = tex_int(val_bytes)
+    out["fertilityexact"] = tex_f(exact, 3)
+    factor = 1.0 / (exact * math.log(2))
+    out["natstobpb"] = tex_f(factor, 4)
+    for rung, tag in LADDER:
+        out[f"bpb{tag}"] = tex_f(
+            dig(ev, f"by_subset.full.{rung}.cross_entropy_nats") * factor, 3)
+
+    # What the corpus would have been under the vocabulary we did not pick, which is the
+    # other half of the trade and the only form in which a token count is comparable.
+    corpus_bytes = bpt(fert["tokenizers"]["wieszcz-8k"]) * dig(tok, "tokens_total")
+    out["corpustokensthirtytwo"] = tex_f(
+        corpus_bytes / bpt(fert["counterfactual_vocabularies"]["32000"]) / 1e9, 2)
+    out["corpustokensbillions"] = tex_f(dig(tok, "tokens_total") / 1e9, 2)
 
 
 def probe_macros(out: dict[str, str]) -> None:
@@ -181,6 +231,7 @@ def collect(eval_file: str) -> dict[str, str]:
     out["evalwindows"] = tex_int(ev["meta"]["windows_cap"])
 
     probe_macros(out)
+    tokenizer_macros(out, ev, tok)
 
     bad = [n for n in out if not n.isalpha()]
     if bad:
