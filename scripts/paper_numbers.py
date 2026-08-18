@@ -34,6 +34,19 @@ PAPER = REPO.parent / "wieszcz-xix-paper"
 # their place in the ladder rather than by parameter count.
 LADDER = (("47M", "small"), ("107M", "mid"), ("349M", "large"))
 
+# The orthography arm. The paper calls it the measurement it would keep if it could keep
+# only one, which makes it the last place a number should be retyped. Each rung's own
+# report carries the wieszcz arms; the comparator arms are named by the model they scored,
+# since the same rung is compared against both.
+PROBE_RUNGS = {
+    "mid": "metrics/temporal_probe_107m_papugapt2_2026-08-18.json",
+    "large": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
+}
+PROBE_COMPARATORS = {
+    "bielik": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
+    "papuga": "metrics/temporal_probe_349m_papugapt2_2026-08-18.json",
+}
+
 
 def dig(obj, path: str):
     """Walk a dotted path, tolerating list indices."""
@@ -54,6 +67,50 @@ def tex_f(v, places: int) -> str:
 def tex_ci(v, places: int = 3) -> str:
     lo, hi = v
     return f"[{float(lo):.{places}f}, {float(hi):.{places}f}]"
+
+
+def probe_macros(out: dict[str, str]) -> None:
+    """Orthography shares from the temporal probes, plus what the exemplars themselves were.
+
+    The comparison across reports is only meaningful if every model saw the same exemplars,
+    so that is checked here rather than assumed: the passages are drawn under a fixed seed
+    and identical selection thresholds, and a report whose preamble differs would be
+    comparing two different demonstrations.
+    """
+    share = lambda block: tex_f(block["orto_modern_share"]["mean"], 3)
+    preambles = {}
+
+    for tag, path in PROBE_RUNGS.items():
+        ev = _load_probe(path)
+        out[f"orto{tag}"] = share(ev["generations_wieszcz"])
+        out[f"orto{tag}fewshot"] = share(ev["generations_wieszcz_fewshot"])
+        preambles[path] = ev["generations_wieszcz_fewshot"]["preamble"]
+
+    for tag, path in PROBE_COMPARATORS.items():
+        ev = _load_probe(path)
+        out[f"orto{tag}plain"] = share(ev["generations_modern_lm_plain"])
+        out[f"orto{tag}frame"] = share(ev["generations_modern_lm_imitate"])
+        out[f"orto{tag}fewshot"] = share(ev["generations_modern_lm_fewshot"])
+        preambles[path] = ev["generations_modern_lm_fewshot"]["preamble"]
+
+    if len(set(preambles.values())) != 1:
+        raise SystemExit("probe reports disagree on the exemplars, so their orthography "
+                         f"shares are not comparable: {sorted(preambles)}")
+
+    ev = _load_probe(PROBE_COMPARATORS["bielik"])
+    out["ortocorpus"] = share(ev["corpus_reference"])
+    fs = ev["fewshot"]
+    out["fewshotpassages"] = tex_int(len(fs["passages"]))
+    out["fewshotchars"] = tex_int(fs["fit_wieszcz"]["chars"])
+    out["fewshotshare"] = tex_f(fs["fit_wieszcz"]["scan"]["orto_modern_share"], 3)
+
+
+def _load_probe(rel: str) -> dict:
+    path = REPO / rel
+    if not path.exists():
+        raise SystemExit(f"{rel} not found. Re-run scripts/temporal_probe.py, or point "
+                         f"PROBE_RUNGS/PROBE_COMPARATORS at the reports you mean.")
+    return json.loads(path.read_text())
 
 
 def collect(eval_file: str) -> dict[str, str]:
@@ -123,6 +180,8 @@ def collect(eval_file: str) -> dict[str, str]:
         out["evalspan"] = tex_f(span, 4)
     out["evalwindows"] = tex_int(ev["meta"]["windows_cap"])
 
+    probe_macros(out)
+
     bad = [n for n in out if not n.isalpha()]
     if bad:
         raise SystemExit(f"macro names must be letters only, LaTeX cannot define {bad}")
@@ -156,7 +215,9 @@ def cmd_check(args) -> None:
         bare = value.replace("{,}", ",")
         used = f"\\{name}" in body
         # A value typed out where a macro exists will not follow the next measurement.
-        literal = bare in body or (value != bare and value in body)
+        # Short values are exempt: a bare "4" matches a section number or a table cell in
+        # any paper, and a check that fires on those is one a reader learns to ignore.
+        literal = len(bare) >= 4 and (bare in body or (value != bare and value in body))
         if literal:
             hardcoded.append((name, bare))
         elif not used:

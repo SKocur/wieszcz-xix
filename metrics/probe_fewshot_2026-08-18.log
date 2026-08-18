@@ -1,0 +1,178 @@
+=== bielik 2026-08-18T11:39:34+00:00 ===
+device cuda
+loading wieszcz: checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/final.pt
+  349.1M params, block 1024
+
+[1/4] generations under neutral period prompts
+  [wieszcz] seed 1337 done (8 generations)
+  [wieszcz] seed 1338 done (16 generations)
+  [wieszcz] seed 1339 done (24 generations)
+  [wieszcz] seed 1340 done (32 generations)
+  [wieszcz] seed 1341 done (40 generations)
+  [wieszcz] seed 1342 done (48 generations)
+  [wieszcz] seed 1343 done (56 generations)
+  [wieszcz] seed 1344 done (64 generations)
+
+[1b/4] few-shot arm: exemplars of period prose
+  4 passages, 1664 chars, exemplar post-reform shares [0.0, 0.0, 0.0, 0.0]
+  wieszcz: 533/748 tokens, 4 kept
+  [wieszcz-fewshot] seed 1337 done (8 generations)
+  [wieszcz-fewshot] seed 1338 done (16 generations)
+  [wieszcz-fewshot] seed 1339 done (24 generations)
+  [wieszcz-fewshot] seed 1340 done (32 generations)
+  [wieszcz-fewshot] seed 1341 done (40 generations)
+  [wieszcz-fewshot] seed 1342 done (48 generations)
+  [wieszcz-fewshot] seed 1343 done (56 generations)
+  [wieszcz-fewshot] seed 1344 done (64 generations)
+
+[2/4] held-out corpus reference at matched volume
+
+[3/4] era contrast in bits per byte
+
+[4/4] counterfactual futures
+
+loading modern LM: /home/szymon/research/models/bielik-1.5b-v3 (fp32)
+Loading weights:   0%|          | 0/515 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 69/515 [00:00<00:00, 688.75it/s]Loading weights:  35%|███▌      | 181/515 [00:00<00:00, 893.37it/s]Loading weights:  54%|█████▍    | 277/515 [00:00<00:00, 913.71it/s]Loading weights:  76%|███████▌  | 389/515 [00:00<00:00, 985.87it/s]Loading weights:  97%|█████████▋| 501/515 [00:00<00:00, 1027.39it/s]Loading weights: 100%|██████████| 515/515 [00:00<00:00, 997.07it/s] 
+  1596.5M params
+
+[1/4] modern LM generations (plain)
+  [modern-plain] seed 1337 done (8 generations)
+  [modern-plain] seed 1338 done (16 generations)
+  [modern-plain] seed 1339 done (24 generations)
+  [modern-plain] seed 1340 done (32 generations)
+  [modern-plain] seed 1341 done (40 generations)
+  [modern-plain] seed 1342 done (48 generations)
+  [modern-plain] seed 1343 done (56 generations)
+  [modern-plain] seed 1344 done (64 generations)
+
+[1/4] modern LM generations (imitate)
+  [modern-imitate] seed 1337 done (8 generations)
+  [modern-imitate] seed 1338 done (16 generations)
+  [modern-imitate] seed 1339 done (24 generations)
+  [modern-imitate] seed 1340 done (32 generations)
+  [modern-imitate] seed 1341 done (40 generations)
+  [modern-imitate] seed 1342 done (48 generations)
+  [modern-imitate] seed 1343 done (56 generations)
+  [modern-imitate] seed 1344 done (64 generations)
+
+[1b/4] modern LM generations (few-shot: 468/7918 tokens, 4 kept)
+  [modern-fewshot] seed 1337 done (8 generations)
+  [modern-fewshot] seed 1338 done (16 generations)
+  [modern-fewshot] seed 1339 done (24 generations)
+  [modern-fewshot] seed 1340 done (32 generations)
+  [modern-fewshot] seed 1341 done (40 generations)
+  [modern-fewshot] seed 1342 done (48 generations)
+  [modern-fewshot] seed 1343 done (56 generations)
+  [modern-fewshot] seed 1344 done (64 generations)
+
+[3/4] modern LM era contrast
+
+[4/4] modern LM futures
+
+wieszcz modern-marker docs : 0/64  ci95 [0.0, 0.05663]
+wieszcz control-marker docs: 0/64  (period words: a floor, not a leak)
+wieszcz orto modern share  : {'n': 33, 'mean': 0.27273, 'sem': 0.07873, 'ci95': [0.11842, 0.42704]}
+wieszcz few-shot markers   : 0/64  orto 0.02955
+corpus ref modern-marker   : 1/64  control 0/64  orto 0.32773
+wieszcz modern-period bpb  : 3.06069
+modern LM (plain   ) markers: 3/64  orto 0.95745
+modern LM (imitate ) markers: 0/64  orto 0.96581
+modern LM (fewshot ) markers: 1/64  orto 0.445
+modern LM modern-period bpb: -0.12699
+
+ERA INTERACTION            : 3.18768 bits/byte ci95 [2.56447, 3.81089]
+
+wrote /home/szymon/research/wieszcz/wieszcz-xix/metrics/temporal_probe_349m_bielik_2026-08-18.json
+=== papugapt2 2026-08-18T11:54:57+00:00 ===
+device cuda
+loading wieszcz: checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/final.pt
+  349.1M params, block 1024
+
+[1/4] generations under neutral period prompts
+  [wieszcz] seed 1337 done (8 generations)
+  [wieszcz] seed 1338 done (16 generations)
+  [wieszcz] seed 1339 done (24 generations)
+  [wieszcz] seed 1340 done (32 generations)
+  [wieszcz] seed 1341 done (40 generations)
+  [wieszcz] seed 1342 done (48 generations)
+  [wieszcz] seed 1343 done (56 generations)
+  [wieszcz] seed 1344 done (64 generations)
+
+[1b/4] few-shot arm: exemplars of period prose
+  4 passages, 1664 chars, exemplar post-reform shares [0.0, 0.0, 0.0, 0.0]
+  wieszcz: 533/748 tokens, 4 kept
+  [wieszcz-fewshot] seed 1337 done (8 generations)
+  [wieszcz-fewshot] seed 1338 done (16 generations)
+  [wieszcz-fewshot] seed 1339 done (24 generations)
+  [wieszcz-fewshot] seed 1340 done (32 generations)
+  [wieszcz-fewshot] seed 1341 done (40 generations)
+  [wieszcz-fewshot] seed 1342 done (48 generations)
+  [wieszcz-fewshot] seed 1343 done (56 generations)
+  [wieszcz-fewshot] seed 1344 done (64 generations)
+
+[2/4] held-out corpus reference at matched volume
+
+[3/4] era contrast in bits per byte
+
+[4/4] counterfactual futures
+
+loading modern LM: /home/szymon/research/models/papugapt2 (fp32)
+Loading weights:   0%|          | 0/149 [00:00<?, ?it/s]Loading weights: 100%|██████████| 149/149 [00:00<00:00, 86081.45it/s]
+[transformers] [1mGPT2LMHeadModel LOAD REPORT[0m from: /home/szymon/research/models/papugapt2
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+transformer.h.{0...11}.attn.masked_bias | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  124.4M params
+
+[1/4] modern LM generations (plain)
+  [modern-plain] seed 1337 done (8 generations)
+  [modern-plain] seed 1338 done (16 generations)
+  [modern-plain] seed 1339 done (24 generations)
+  [modern-plain] seed 1340 done (32 generations)
+  [modern-plain] seed 1341 done (40 generations)
+  [modern-plain] seed 1342 done (48 generations)
+  [modern-plain] seed 1343 done (56 generations)
+  [modern-plain] seed 1344 done (64 generations)
+
+[1/4] modern LM generations (imitate)
+  [modern-imitate] seed 1337 done (8 generations)
+  [modern-imitate] seed 1338 done (16 generations)
+  [modern-imitate] seed 1339 done (24 generations)
+  [modern-imitate] seed 1340 done (32 generations)
+  [modern-imitate] seed 1341 done (40 generations)
+  [modern-imitate] seed 1342 done (48 generations)
+  [modern-imitate] seed 1343 done (56 generations)
+  [modern-imitate] seed 1344 done (64 generations)
+
+[1b/4] modern LM generations (few-shot: 417/751 tokens, 4 kept)
+  [modern-fewshot] seed 1337 done (8 generations)
+  [modern-fewshot] seed 1338 done (16 generations)
+  [modern-fewshot] seed 1339 done (24 generations)
+  [modern-fewshot] seed 1340 done (32 generations)
+  [modern-fewshot] seed 1341 done (40 generations)
+  [modern-fewshot] seed 1342 done (48 generations)
+  [modern-fewshot] seed 1343 done (56 generations)
+  [modern-fewshot] seed 1344 done (64 generations)
+
+[3/4] modern LM era contrast
+
+[4/4] modern LM futures
+
+wieszcz modern-marker docs : 0/64  ci95 [0.0, 0.05663]
+wieszcz control-marker docs: 0/64  (period words: a floor, not a leak)
+wieszcz orto modern share  : {'n': 33, 'mean': 0.27273, 'sem': 0.07873, 'ci95': [0.11842, 0.42704]}
+wieszcz few-shot markers   : 0/64  orto 0.02955
+corpus ref modern-marker   : 1/64  control 0/64  orto 0.32773
+wieszcz modern-period bpb  : 3.06069
+modern LM (plain   ) markers: 2/64  orto 0.99057
+modern LM (imitate ) markers: 13/64  orto 0.98256
+modern LM (fewshot ) markers: 1/64  orto 0.77332
+modern LM modern-period bpb: -0.28045
+
+ERA INTERACTION            : 3.34113 bits/byte ci95 [2.68757, 3.99469]
+
+wrote /home/szymon/research/wieszcz/wieszcz-xix/metrics/temporal_probe_349m_papugapt2_2026-08-18.json
+=== ALL DONE 2026-08-18T12:02:29+00:00 ===
