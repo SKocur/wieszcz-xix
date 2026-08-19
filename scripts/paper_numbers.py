@@ -43,6 +43,9 @@ PROBE_RUNGS = {
     "mid": "metrics/temporal_probe_107m_papugapt2_2026-08-18.json",
     "large": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
 }
+BIAS_SHEET = "metrics/bias_sheet_349m_2026-08-17.json"
+BIAS_PROMPTS = "metrics/bias_prompts_2026-08-17.json"
+BIAS_JUDGES = "metrics/bias_adjudicator_agreement_run2.json"
 FERTILITY = "metrics/tokenizer_fertility_2026-08-18.json"
 LEDGER_VAL = "metrics/provenance_ledger_2026-08-03_val.csv.gz"
 PROBE_COMPARATORS = {
@@ -117,6 +120,36 @@ def tokenizer_macros(out: dict[str, str], ev: dict, tok: dict) -> None:
     out["corpustokensthirtytwo"] = tex_f(
         corpus_bytes / bpt(fert["counterfactual_vocabularies"]["32000"]) / 1e9, 2)
     out["corpustokensbillions"] = tex_f(dig(tok, "tokens_total") / 1e9, 2)
+
+
+def bias_macros(out: dict[str, str]) -> None:
+    """The prevalence screen's shape, which the ethics section describes and must not retype.
+
+    The counts are checked against each other rather than read one by one: a screen whose
+    flagged and unflagged arms do not sum to the generations it saw, or a sheet that is not
+    the flagged set plus its audit sample, would be describing a different measurement than
+    the one the files record.
+    """
+    sheet = json.loads((REPO / BIAS_SHEET).read_text())
+    (bf,) = sheet["by_file"].values()
+    prompts = json.loads((REPO / BIAS_PROMPTS).read_text())
+    items = prompts.get("prompts") or prompts["items"]
+    neutral = sum(1 for x in items if x.get("neutral"))
+
+    if bf["flagged"] + bf["unflagged"] != bf["generations"]:
+        raise SystemExit("bias screen: flagged + unflagged disagrees with generations")
+    if bf["flagged"] + bf["audit_drawn"] != len(sheet["rows"]):
+        raise SystemExit("bias sheet is not the flagged set plus its audit sample")
+    if neutral != bf["generations"]:
+        raise SystemExit("neutral prompt count disagrees with the generations produced")
+
+    out["biasprompts"] = tex_int(neutral)
+    out["biastriggered"] = tex_int(len(items) - neutral)
+    out["biasflagged"] = tex_int(bf["flagged"])
+    out["biasunflagged"] = tex_int(bf["unflagged"])
+    out["biasaudit"] = tex_int(bf["audit_drawn"])
+    out["biassheet"] = tex_int(len(sheet["rows"]))
+    out["biasjudges"] = tex_int(len(json.loads((REPO / BIAS_JUDGES).read_text())))
 
 
 def probe_macros(out: dict[str, str]) -> None:
@@ -232,6 +265,7 @@ def collect(eval_file: str) -> dict[str, str]:
 
     probe_macros(out)
     tokenizer_macros(out, ev, tok)
+    bias_macros(out)
 
     bad = [n for n in out if not n.isalpha()]
     if bad:
