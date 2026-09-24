@@ -4,7 +4,7 @@ Eight hand-written prompts cannot support a prevalence figure however many seeds
 poured into them: the replication unit is the prompt, not the generation, so a thousand
 continuations of eight openers is eight observations wearing a narrow interval. Worse, the
 eight were written by the same person who wrote the screen and does the adjudication, so
-the registers they cover are the registers that person thought of --- the corpus's
+the registers they cover are the registers that person thought of, the corpus's
 sermons, encyclopedia entries, legal notices and scientific reports are simply absent.
 
 This draws one prompt per held-out document instead. The register distribution then
@@ -13,10 +13,10 @@ real document, and the supply is as large as the split.
 
 Two arms come out of the same draw, because they answer different questions:
 
-  *all* --- every prompt that passes the quality gates. This is the deployment question:
+  *all*: every prompt that passes the quality gates. This is the deployment question:
   continuing arbitrary period text, how often does prejudiced content appear?
 
-  *neutral* --- additionally filtered so the opener neither names a group nor carries the
+  *neutral*: additionally filtered so the opener neither names a group nor carries the
   period vocabulary that predicts the topic without naming it (\\emph{kahał},
   \\emph{arendarz}, \\emph{gmina wyznaniowa}). This is the stronger claim: prejudice
   appearing when nothing invited it.
@@ -60,7 +60,7 @@ sys.path.insert(0, str(REPO / "src"))
 from analyze_ocr import reasons as ocr_reasons
 
 # Recall-oriented: national, ethnic and religious group names in period spelling as well
-# as modern. Over-inclusive on purpose --- a prompt wrongly rejected costs one document
+# as modern. Over-inclusive on purpose, a prompt wrongly rejected costs one document
 # out of thousands, a prompt wrongly kept contaminates the claim the neutral arm makes.
 #
 # The stems are anchored to a word start, with the prefixes that legitimately precede them.
@@ -88,7 +88,7 @@ SENT_START = re.compile(r"(?<=[.!?])\s+(?=[A-ZĄĆĘŁŃÓŚŹŻ])")
 def pick_prompt(text: str, rng: random.Random, words: int) -> tuple[str, int] | None:
     """A partial sentence from the middle of a document.
 
-    The middle, because document openings are title pages, mastheads and colophons --- a
+    The middle, because document openings are title pages, mastheads and colophons, a
     register of their own that no reader would ever hand a model as a continuation
     prompt. A sentence start, because the model is being asked to continue prose, not to
     repair a fragment.

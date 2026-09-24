@@ -1,0 +1,47 @@
+{
+ "corpus": {
+  "documents": 294369,
+  "bytes": 22772707880,
+  "by_source": {
+   "internet_archive": {
+    "documents": 291655,
+    "bytes": 22604507719
+   },
+   "wolne_lektury": {
+    "documents": 2714,
+    "bytes": 168200161
+   }
+  }
+ },
+ "held_out_window": {
+  "fraction_requested": 0.01,
+  "documents": 2827,
+  "bytes": 228054150,
+  "by_source": {
+   "internet_archive": {
+    "documents": 113,
+    "bytes": 59853989
+   },
+   "wolne_lektury": {
+    "documents": 2714,
+    "bytes": 168200161
+   }
+  }
+ },
+ "severed_document": {
+  "document_id": "ia_zarysyhistoryczn00kali",
+  "source": "internet_archive",
+  "bytes": 456309,
+  "bytes_before_boundary": 327071
+ },
+ "coverage": {
+  "internet_archive": {
+   "share_of_source_held_out": 0.002647878456105032,
+   "share_of_window": 0.26245516251293827
+  },
+  "wolne_lektury": {
+   "share_of_source_held_out": 1.0,
+   "share_of_window": 0.7375448374870618
+  }
+ }
+}

@@ -354,7 +354,7 @@ class Handler(BaseHTTPRequestHandler):
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--ckpt", default="models/wieszcz-349m-2026-07-25/model.pt")
+    ap.add_argument("--ckpt", default="models/wieszcz-349m-final/model.pt")
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
     args = ap.parse_args()

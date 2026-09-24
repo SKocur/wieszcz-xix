@@ -150,11 +150,12 @@ def card(name: str, cfg: dict, step: int, n_params: int, tok_sha: dict,
         "",
         "## Intended use and limitations",
         "",
-        "Research and digital humanities. This is a base model: it continues text rather "
-        "than answering questions, and it reproduces the worldview of its sources, "
+        "Research and digital humanities. This is a base model: it continues text and "
+        "does not answer questions, and it reproduces the worldview of its sources, "
         "including antisemitic, nationalist, colonial and misogynist discourse that was "
-        "ordinary in nineteenth-century Polish print. That is a property of the artifact, "
-        "not a defect of data cleaning. See `docs/release-and-ethics.md`.",
+        "ordinary in nineteenth-century Polish print. The prejudice comes from the "
+        "material, and cleaning was not designed to remove it. "
+        "See `docs/release-and-ethics.md`.",
         "",
         "Not suitable for human-facing deployment without a filtering layer and explicit "
         "framing, and not an authority on any subject.",
@@ -168,7 +169,8 @@ def main() -> None:
     p.add_argument("--ckpt", required=True)
     p.add_argument("--name", required=True, help="directory name, e.g. wieszcz-349m-2026-07-25")
     p.add_argument("--out", default="models")
-    p.add_argument("--eval", help="eval report from src/eval_val.py")
+    p.add_argument("--eval", help="eval report from src/eval_val.py, or a ladder report")
+    p.add_argument("--eval-rung", help="which rung to take from a ladder report, e.g. 349M")
     p.add_argument("--log", help="training log, for the corpus size")
     p.add_argument("--manifest", help="run manifest, to check the tokenizer against")
     p.add_argument("--force", action="store_true")
@@ -211,12 +213,35 @@ def main() -> None:
     (dest / "config.json").write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
 
     ev = json.loads(Path(args.eval).read_text()) if args.eval else None
+    if ev and "by_subset" in ev:
+        # A ladder report scores every rung in one file, so the rung has to be named. The
+        # alternative was writing three flattened copies into metrics/, which would put the
+        # same numbers in two places and let them drift.
+        if not args.eval_rung:
+            raise SystemExit(f"{args.eval} scores several rungs "
+                             f"({', '.join(ev['by_subset']['full'])}); pass --eval-rung")
+        block = ev["by_subset"]["full"].get(args.eval_rung)
+        if block is None:
+            raise SystemExit(f"{args.eval_rung} is not in {args.eval}")
+        ev = {"source": Path(args.eval).name, "rung": args.eval_rung,
+              "dtype": ev["meta"].get("dtype"), **block}
     if ev:
         (dest / "eval.json").write_text(json.dumps(ev, indent=2) + "\n", encoding="utf-8")
         # Per-window losses travel with the report: they are what lets somebody else redo the
         # paired comparison against another model, which two confidence intervals cannot.
         windows = Path(args.eval).with_suffix(".windows.npy")
-        if windows.exists():
+        if args.eval_rung:
+            # A ladder report stores one row per rung in the order the report lists them.
+            # Copying the whole array would hand the reader three models' losses and no way
+            # to tell which row is the one in this directory.
+            import numpy as np
+
+            stacked = Path(args.eval).with_suffix(".full.windows.npy")
+            if stacked.exists():
+                rungs = list(json.loads(Path(args.eval).read_text())["by_subset"]["full"])
+                np.save(dest / "eval.windows.npy",
+                        np.load(stacked)[rungs.index(args.eval_rung)])
+        elif windows.exists():
             shutil.copy2(windows, dest / "eval.windows.npy")
 
     if args.manifest:

@@ -28,7 +28,10 @@ sys.path.insert(0, str(REPO / "src"))
 
 from analyze_ocr import reasons, strip_edges  # noqa: E402
 
-TOKENS = REPO / "data/clean/tokens_frozen_5.40B.bin"
+# The current frozen stream. The committed `metrics/ocr_audit_frozen.json` and the
+# 1.63% the paper quotes "for history" were produced against the previous build's
+# `data/clean/tokens_frozen_5.40B.bin`; re-running now measures what exists.
+TOKENS = REPO / "data/tokens_frozen_6.69B.bin"
 IA_DOCS = 216_965
 EOT = 0
 

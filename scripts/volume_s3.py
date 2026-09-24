@@ -1,7 +1,8 @@
 """Read the RunPod network volume over its S3-compatible endpoint, without a pod.
 
 `GetObject` accepts a byte range, so a 108 MB slice of a 10.8 GB token file costs one
-ranged request instead of the pod lifecycle `pull_val.sh` needs.
+ranged request, where reading it through the volume means creating a pod, waiting for
+it to boot, copying, and tearing it down.
 
 Credentials are NOT the RunPod API key. They are a separate S3 access key/secret pair
 created under Settings -> S3 API Keys, read from .env as RUNPOD_S3_ACCESS_KEY /
@@ -166,7 +167,7 @@ def cmd_put(args) -> None:
         try:
             remote = s3.head_object(Bucket=VOLUME_ID, Key=args.key)["ContentLength"]
             break
-        except Exception:  # noqa: BLE001 — the endpoint's spurious 403
+        except Exception:  # noqa: BLE001, the endpoint's spurious 403
             if attempt == 3:
                 raise
             import time

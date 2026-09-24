@@ -8,8 +8,8 @@ losses kept so the report carries a 95% CI, and fp32 without autocast.
 Cross-entropy is in nats/token with its exponential. Every window contributes exactly
 `block_size` predicted tokens, so the mean over windows is the token-level mean.
 
-    python src/eval_val.py --ckpt checkpoints/wieszcz_350m_final.pt \
-        --data data/clean/val_tail.bin --windows 4096
+    python src/eval_val.py --ckpt checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/final.pt \
+        --data data/val_2026-08-03.bin --windows 8192
 """
 
 from __future__ import annotations
@@ -59,7 +59,7 @@ def evaluate(model, data: np.memmap, block: int, n_windows: int, batch_size: int
     """Mean cross-entropy over `n_windows` non-overlapping windows spread across `data`.
 
     Stride `block`, so no token is scored twice. Windows are evenly spaced rather than
-    taken from the front, because the corpus is ordered by source -- and spacing them by
+    taken from the front, because the corpus is ordered by source, and spacing them by
     an integer stride is not enough to achieve that. `max_windows // n` truncates, so the
     last window starts at `(n - 1) * stride`, which for 8192 windows over this validation
     split is window 49,146 of 55,042: the final 10.7% of the stream is never scored, and
@@ -113,8 +113,13 @@ def evaluate(model, data: np.memmap, block: int, n_windows: int, batch_size: int
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--ckpt", required=True)
-    p.add_argument("--data", default="data/clean/val_tail.bin",
-                   help="uint16 token file holding the held-out split")
+    # Required, with no default. The previous default was the 5.40B build's validation
+    # tail, which is a slice of a token stream this corpus supersedes: its documents are
+    # in the current *training* split, so an omitted flag would have scored a model partly
+    # on what it was trained on and returned a loss that looks like a good result.
+    p.add_argument("--data", required=True,
+                   help="uint16 token file holding the held-out split, "
+                        "e.g. data/val_2026-08-03.bin")
     p.add_argument("--windows", type=int, default=4096,
                    help="number of non-overlapping windows to score (0 = all)")
     p.add_argument("--batch-size", type=int, default=8)

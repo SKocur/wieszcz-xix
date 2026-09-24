@@ -30,7 +30,7 @@ models
 output/*
 # ...except the ladder sample set the paper's appendix points at: it records which weights
 # (by hash) produced which text, including the bias examples the ethics section quotes.
-!output/samples_ladder_2026-07-29.md
+!output/samples_ladder_2026-08-18.md
 *.pt
 *.bin
 *.safetensors
@@ -50,3 +50,9 @@ data/*.sha256
 # working copies pulled off the crawler VPS at decommissioning; the gzipped
 # provenance is tracked in metrics/
 data/crawl_provenance/
+
+# Per-window losses from the dense evaluations. The paper reads the summary JSON beside
+# each of these, never the array, and every array already ships inside its own bundle on
+# the weights record (doi:10.5281/zenodo.22099358), which is where a paired test would
+# fetch it from.
+metrics/*.windows.npy

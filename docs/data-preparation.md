@@ -1,9 +1,9 @@
-# Data preparation — design rationale
+# Data preparation: design rationale
 
 Why the corpus pipeline (`src/prepare_data.py`) makes the choices it does. Every
 decision here is **in code**, not applied by hand, so the corpus is reproducible from a
 clean checkout: `prepare_data.py` → `prepare_data.py --reclean` → `train_tokenizer.py`.
-No manual "delete the bad file" steps — if a rule is worth applying, it is a function.
+No manual "delete the bad file" steps, if a rule is worth applying, it is a function.
 
 ## Goal
 
@@ -11,7 +11,7 @@ Train a small model **from scratch on 19th-century Polish only**, so it speaks i
 language and worldview of the period. Two things follow:
 
 1. **No modern-language leakage.** Editorial footers, library boilerplate, and OCR of
-   non-period front matter are modern Polish and must be stripped — they would teach the
+   non-period front matter are modern Polish and must be stripped: they would teach the
    model 21st-century phrasing.
 2. **Register breadth over pure size.** A corpus of only literary classics biases the
    model toward poetic style and gives it little factual "knowledge of the world." We
@@ -24,11 +24,11 @@ language and worldview of the period. Two things follow:
 | **Wolne Lektury** | clean literary core | Transcribed (no OCR), public domain, one plain-text file per work. Spelling is *modernized*, but the language and worldview are period. |
 | **Wikiźródła** | curated non-fiction | Clean transcriptions; pulled from a hand-listed title file for provenance control. |
 | **Internet Archive** | breadth (history, science, memoirs) | Open, scriptable, full OCR text via `_djvu.txt`. Original pre-1936 spelling. This is the TimeCapsuleLLM approach. |
-| Polona (National Library) | *rejected* | Richest source of period **press**, but the OCR endpoint is auth-gated (HTTP 401) — not scriptable into a reproducible pipeline. |
+| Polona (National Library) | *rejected* | Richest source of period **press**, but the OCR endpoint is auth-gated (HTTP 401), not scriptable into a reproducible pipeline. |
 | HathiTrust | *rejected* | Has 19th-c Polish, but bulk full-text access is gated behind an agreement. |
-| Clean novel corpora (ELTeC-pol, MetaPNC, 100_polish_novels) | *candidate* | Clean and easy, but literary-only and usually *modernized* spelling — they add fluency, not register breadth. Deferred; dedup against Wolne Lektury needed first. |
+| Clean novel corpora (ELTeC-pol, MetaPNC, 100_polish_novels) | *candidate* | Clean and easy, but literary-only and usually *modernized* spelling, they add fluency, not register breadth. Deferred; dedup against Wolne Lektury needed first. |
 
-### The Internet Archive language tag — a 210× difference
+### The Internet Archive language tag: a 210× difference
 
 IA tags Polish with the **ISO 639-2 code `pol`**, not the English word `Polish`. For
 1800–1918 the two differ enormously:
@@ -41,7 +41,7 @@ IA tags Polish with the **ISO 639-2 code `pol`**, not the English word `Polish`.
 
 The first corpus build used `language:(Polish)` and therefore saw roughly **0.5%** of what
 is available. The query now ORs both tags. Sampling the `pol` results confirms they are
-genuine period material across registers — a 1808 satirical comedy, 1890 funeral sermons,
+genuine period material across registers, a 1808 satirical comedy, 1890 funeral sermons,
 an 1884 textbook on infectious diseases, gazetteers, ethnographic maps.
 
 The practical consequence: **the corpus is no longer capacity-limited by availability**,
@@ -57,7 +57,7 @@ flavour on top. We do not over-optimize for spelling.
 ## The filtering pipeline
 
 Filters apply **per source**. Wolne Lektury and Wikiźródła are trusted (curated Polish,
-no OCR), so only Internet Archive — an open firehose with unreliable metadata — passes
+no OCR), so only Internet Archive, an open firehose with unreliable metadata, passes
 through the quality and language gates. Order: fetch → clean → gate.
 
 ### 1. Footer / boilerplate stripping
@@ -65,13 +65,13 @@ through the quality and language gates. Order: fetch → clean → gate.
 - **Wolne Lektury** appends a license/source block after a dashed line. It is modern
   Polish (URLs, editors' names, "reprodukcja cyfrowa"). We split on `\n-{3,}\n`.
   *Lesson learned:* the files are CRLF, so newline normalization must run **before** the
-  split — doing it after left the footer in place. For a short poem the footer was >50%
+  split, doing it after left the footer in place. For a short poem the footer was >50%
   of the file, so this bug mattered.
 - **Internet Archive** Google-digitized scans open with a bilingual Google Books notice.
-  We cut through the last "Google" mention in the header region — a 19th-century book
+  We cut through the last "Google" mention in the header region, a 19th-century book
   never says "Google", so this is safe.
 
-### 2. Quality gate — `alpha_ratio ≥ 0.60`
+### 2. Quality gate: `alpha_ratio ≥ 0.60`
 
 **Metric:** share of whitespace tokens that are clean alphabetic words
 (`[A-Za-ząćęłńóśźż-]+`).
@@ -98,10 +98,10 @@ journals that are mostly tables, one 0%-alphabetic scan).
 corpus, adds a dependency and non-determinism, and a single ratio already separates the
 classes cleanly.
 
-### 3. Language gate — `is_polish`
+### 3. Language gate: `is_polish`
 
 **Problem the quality gate misses:** clean prose *in the wrong language*. IA's
-`language:Polish` tag is unreliable — English, French, Latin, Slovenian, and Italian
+`language:Polish` tag is unreliable, English, French, Latin, Slovenian, and Italian
 books slipped through, and they score *high* on `alpha_ratio` (they are clean prose),
 so the quality gate passes them.
 
@@ -115,7 +115,7 @@ so the quality gate passes them.
 | IA Polish files | 3.8–5.7% | 4.6–7.5% |
 | Wolne Lektury | 5.7% | 7.5% |
 
-Diacritics (ą ć ę ł ń ó ś ź ż) are the strongest signal — Italian, English, Latin, and
+Diacritics (ą ć ę ł ń ó ś ź ż) are the strongest signal, Italian, English, Latin, and
 French essentially lack them. But heavy OCR can strip diacritics from genuinely Polish
 text, so we back it with Polish **stopwords** ("się", "że", "nie", …). Either signal
 clearing its threshold (diacritics ≥ 2% *or* stopwords ≥ 1.5%) accepts the file; a
@@ -137,7 +137,7 @@ The IA search sorts by `identifier asc`, so a fresh run fetches the *same* top-N
 every time. Without an explicit sort, relevance order can drift and break
 reproducibility.
 
-## Second pass — what the bigger crawl exposed
+## Second pass: what the bigger crawl exposed
 
 Widening the query surfaced material the first-pass gates were too loose for.
 
@@ -145,8 +145,8 @@ Widening the query surfaced material the first-pass gates were too loose for.
 
 19th-century *editions* of 17th-century court records (`Akta grodzkie i ziemskie`,
 `Akty…`) sailed through: they are Polish, they are prose, and they were published in our
-window. But the language inside is **Old Polish plus Latin** — `msca`, `xięztwie`, `y` for
-`i`, `Sąd reddendarum rationum` — two centuries earlier than the target era. Some volumes,
+window. But the language inside is **Old Polish plus Latin**: `msca`, `xięztwie`, `y` for
+`i`, `Sąd reddendarum rationum`: two centuries earlier than the target era. Some volumes,
 published under Russian administration, carry substantial **Cyrillic**.
 
 They passed because the language gate accepted *either* signal. Measured:
@@ -164,18 +164,18 @@ files dropped.
 ### Alphabetical sorting is not a sample
 
 `sort=identifier asc` was chosen for reproducibility, but identifiers correlate with
-titles, so the first N items arrived as a run of `akta…` / `akty…` record collections —
+titles, so the first N items arrived as a run of `akta…` / `akty…` record collections,
 a systematically skewed slice of the catalogue. Switching to **`downloads desc`** is
 equally deterministic while spreading across the collection and favouring well-digitized
 mainstream works. The material changed immediately: *Chimera*, *Biblioteka Warszawska*,
 Academy of Sciences proceedings, Orgelbrand's encyclopedia, the natural-science weekly
-*Kosmos* — stopword rates of 5.8–7.5%, the top of the range.
+*Kosmos*: stopword rates of 5.8–7.5%, the top of the range.
 
-### Reference works stay — a deliberate non-tightening
+### Reference works stay: a deliberate non-tightening
 
 Measuring both gates across all 2171 accepted IA files put the stopword distribution at
 p50 = 0.065, p5 = 0.041, floor 0.030 (the gate). The bottom of that tail is **not** garbage,
-it is *catalogue-shaped* material — few function words because it is entries, not sentences:
+it is *catalogue-shaped* material, few function words because it is entries, not sentences:
 
 | stopwords | alpha | size | work |
 |-----------|-------|------|------|
@@ -184,12 +184,12 @@ it is *catalogue-shaped* material — few function words because it is entries, 
 | 0.033 | 0.624 | 2.7 MB | dictionary of foreign words |
 | 0.039 | 0.618 | 1.8 MB | *Pamiętnik fizyograficzny* (plant-locality index) |
 
-Files under 0.05 stopwords are **373 files / 391 MB — 20% of the IA corpus**. Raising the
+Files under 0.05 stopwords are **373 files / 391 MB: 20% of the IA corpus**. Raising the
 threshold to 0.05 would remove all of it, and to 0.035 would remove the armorials and the
 dictionary.
 
 **Decision: leave the gate at 0.03.** The goal is a model with *knowledge of the period's
-world*, and an encyclopedia is the densest source of exactly that — a stopword filter cannot
+world*, and an encyclopedia is the densest source of exactly that, a stopword filter cannot
 tell "list of noble families" from "list of facts about the world," and losing the latter
 costs more than keeping the former. A model that has read Orgelbrand knows what a 19th-century
 Pole knew; one trained only on novels knows how they talked. We want both. The 0.60 alpha gate
@@ -207,7 +207,7 @@ current gates over `clean/` and deletes failures. It works off `clean/` rather t
 
 `already_have()` only knows about files on disk, so a text that *failed* the gates left no
 trace and was downloaded again on every resume. After the second campaign that was roughly
-700 wasted downloads per restart — about ten minutes each time.
+700 wasted downloads per restart, about ten minutes each time.
 
 `data/rejected.jsonl` records one line per content rejection:
 
@@ -221,7 +221,7 @@ Three decisions worth keeping:
 blacklist on transient failure would permanently lose a good book because archive.org
 hiccuped once. Network failures stay retryable, gate failures do not.
 
-**Every entry carries a gate fingerprint** — a hash of the four thresholds *and* the stopword
+**Every entry carries a gate fingerprint**: a hash of the four thresholds *and* the stopword
 set. The ledger is only true while the gates are unchanged: a file rejected at
 `stopword >= 0.03` might pass at 0.02. Entries whose fingerprint no longer matches are
 ignored, so loosening a threshold silently re-opens exactly the items it had excluded. This
@@ -252,7 +252,7 @@ Three failures, each worth its fix:
 **IPv6 with no route.** `wolnelektury.pl` died with `Errno 101 Network is unreachable`
 while `archive.org` worked and `ping` looked fine. Cause: WSL2 has no IPv6 route,
 `wolnelektury.pl` publishes an AAAA record, `archive.org` does not, and `ping` defaults to
-IPv4. Python resolved AAAA first and hit a dead route — a **deterministic** failure that
+IPv4. Python resolved AAAA first and hit a dead route: a **deterministic** failure that
 retries could never fix. `urllib3.util.connection.allowed_gai_family` is pinned to
 `AF_INET`.
 
@@ -263,25 +263,25 @@ archives. All requests now go through a `Session` with exponential backoff.
 Archive fetch down with it, even though Wolne Lektury was already complete. Each source is
 now isolated: a failure logs a warning and the crawl continues.
 
-**Parallelism.** Downloads are latency-bound, not CPU-bound — six worker threads took the
+**Parallelism.** Downloads are latency-bound, not CPU-bound, six worker threads took the
 rate from 4.04 s/item to 1.69 s/item.
 
 ## Known limitations (documented, not hidden)
 
-- **Press is thin.** Daily newspapers — the best source of everyday register and world
-  events — live mostly on the auth-gated Polona, so the breadth here is books, not press.
+- **Press is thin.** Daily newspapers: the best source of everyday register and world
+  events, live mostly on the auth-gated Polona, so the breadth here is books, not press.
 - **OCR noise remains** in accepted IA files (period typefaces mangle letters). Measured at
-  **≈2.8% of words**, line-local rather than document-local — see the OCR-corruption audit
+  **≈2.8% of words**, line-local rather than document-local, see the OCR-corruption audit
   below. The gates remove the *worst files*, not the noise; that is the deliberate
   breadth-vs-cleanliness trade-off, and the fix is line/character-level, not word-deletion.
 - **No cross-source dedup yet.** A public-domain work (e.g. Mickiewicz) can appear in both
-  Wolne Lektury (clean) and Internet Archive (OCR). Left in for now — the two versions
-  differ in spelling — but a dedup-by-author/title step is the next candidate.
+  Wolne Lektury (clean) and Internet Archive (OCR). Left in for now: the two versions
+  differ in spelling, but a dedup-by-author/title step is the next candidate.
 
-## OCR corruption — measured, not guessed
+## OCR corruption: measured, not guessed
 
 `src/analyze_ocr.py` quantifies how much of the accepted corpus is OCR-mangled and, more
-importantly, *how it is distributed* — because that decides the fix. It classifies every
+importantly, *how it is distributed*: because that decides the fix. It classifies every
 whitespace token with cheap character heuristics (noise symbol inside a word; digit welded
 to a letter; interior uppercase after a lowercase, e.g. `SoKoła`; a ≥4-letter word with no
 vowel) and reports rates by source, per-document histograms, and a drop-threshold table.
@@ -301,7 +301,7 @@ no-vowel 0.05%.
 bimodal: most IA docs sit at 1–5%, a tail of ~100 sit at 10–25%, and the *dirtiest single
 document is only 27%*. There is no "60% garbage" file, because within a badly-scanned book
 the junk concentrates in mastheads, price tables, running heads and page numbers while the
-body prose dilutes it. Consequently **document-level dropping is a bad lever** — the
+body prose dilutes it. Consequently **document-level dropping is a bad lever**: the
 threshold table shows that to remove meaningful garbage you must discard mostly-good text:
 
 | drop docs above | docs dropped | text lost |
@@ -312,22 +312,22 @@ threshold table shows that to remove meaningful garbage you must discard mostly-
 | 5% | 514 | **17.6%** |
 
 **The vocabulary is already clean.** A decode-aware audit of `vocab.json` (byte-level BPE
-encodes Polish diacritics as visible Latin-1 — `ł`→`ÅĤ` — so a naïve scan reports 22.9%
+encodes Polish diacritics as visible Latin-1, `ł`→`ÅĤ`, so a naïve scan reports 22.9%
 false garbage; tokens must be byte-decoded first) finds **<1%** real garbage in the 8k
 vocab: zero digit-welded tokens, and only a handful of Google-Books watermark scraps
 (`VjOOQIC`). `min_frequency=2` already excludes hapax OCR junk, so a string like
-`bezgraniczn3rm` is **not a token** — when it appears in generation it is the model
+`bezgraniczn3rm` is **not a token**: when it appears in generation it is the model
 reassembling learned byte fragments, not a polluted vocabulary.
 
 **Fix strategy that follows from the shape of the data** (ranked by value, chosen to respect
-"never delete a word — it breaks syntax"):
+"never delete a word, it breaks syntax"):
 
-1. **Line-level filtering** — drop lines whose garbage density exceeds a threshold (mastheads,
+1. **Line-level filtering**: drop lines whose garbage density exceeds a threshold (mastheads,
    tables, running heads). Targets the real structure; keeps prose sentences whole.
-2. **Mechanical character repair, in place** — strip embedded noise symbols (2.02%) and
+2. **Mechanical character repair, in place**: strip embedded noise symbols (2.02%) and
    lowercase interior case-flips (0.73%). Fixes the word without moving it; ~2.7% of the 2.8%.
    Deeper letter substitutions (`rn→m`, `l→i`) survive and need a dictionary pass.
-3. **`min_frequency` is *not* the lever** — the vocab is already clean (measured), and raising
+3. **`min_frequency` is *not* the lever**, the vocab is already clean (measured), and raising
    the threshold cannot distinguish a rare archaic word from rare garbage, so it would evict
    real period vocabulary for negligible gain. The damage lives in the token *stream* (learned
    patterns), which only source-cleaning touches.
@@ -362,4 +362,4 @@ identifiers in `rejected.jsonl` are skipped without a download.
 
 Corpus after the second campaign (crawl still running at the time of writing):
 **5035 files** (2992 Wolne Lektury + 2171 Internet Archive, minus rejects), **2.1 GB**.
-The first build was 3222 files / 285 MB — the `pol` language tag is the whole difference.
+The first build was 3222 files / 285 MB: the `pol` language tag is the whole difference.

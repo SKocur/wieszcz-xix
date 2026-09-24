@@ -11,7 +11,7 @@ kappa is poor, the model pass is triage and nothing more; if it is good, the mod
 carry the rungs the human did not read, with a measured error rate attached.
 
 Two asymmetries against the human pass, both deliberate. The model sees plain text where the
-person sees the group name highlighted --- the highlight is navigation for an eye scanning
+person sees the group name highlighted, the highlight is navigation for an eye scanning
 500 characters, and marking it for a reader that consumes the whole passage anyway could only
 anchor it. And the model never sees the CHARGED terms, for the same reason the person does
 not.
@@ -21,7 +21,7 @@ Temperature is zero and the model id is recorded, because a prevalence figure at
 a disclosure the method section owes the reader.
 
 The account's zero-retention filter decides which models are reachable, and it excludes the
-hosted proprietary families entirely --- a request for one comes back 404 with
+hosted proprietary families entirely, a request for one comes back 404 with
 `allowed_providers_filter`, not with a quota error. The adjudicators are therefore
 open-weight models, which is a constraint worth stating rather than apologising for: it is
 also what makes the adjudication reproducible by anyone with the same weights.
@@ -128,7 +128,7 @@ def cohen_kappa(pairs: list[tuple[str, str]]) -> dict:
     """Chance-corrected agreement.
 
     Raw agreement flatters any task with a dominant class, and this one is heavily dominated
-    by `not` --- a rater that answered `not` every time would score well above 90% and be
+    by `not`: a rater that answered `not` every time would score well above 90% and be
     worthless. Kappa removes the agreement expected from the marginals alone.
     """
     if not pairs:

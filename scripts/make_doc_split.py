@@ -1,13 +1,13 @@
 """Hold out whole documents for validation, before tokenization.
 
-The first build's validation window was a contiguous tail slice of the token stream —
+The first build's validation window was a contiguous tail slice of the token stream,
 documents could straddle the boundary, and the tail was not a random sample of
 sources. This split is drawn the way the paper's limitations section prescribes:
 whole documents, chosen by a seeded shuffle, stratified by source (Internet Archive /
 Wolne Lektury) so the 0.75% WL share survives sampling, sized at ~1% of documents per
 source. Documents on the exclusion list never enter the draw.
 
-The report carries the complete train and validation id lists — the split is data,
+The report carries the complete train and validation id lists, so the split is data
 not a procedure to re-run, and the tokenizer step consumes these lists verbatim.
 
     python scripts/make_doc_split.py

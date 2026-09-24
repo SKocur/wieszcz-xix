@@ -1,12 +1,13 @@
 {
  "meta": {
   "script": "scripts/tokenizer_fertility.py",
-  "script_sha256": "a16f254133cbe22a",
+  "script_sha256": "365baff5f9fadc532ea2d6be70533acd3ed344f0aa44ed15f2b5ebd7970f707d",
   "timestamp_utc": "2026-08-18T12:39:41+00:00",
   "host": "mlbox",
   "documents": 400,
   "doc_bytes_cap": 200000,
-  "seed": 1337
+  "seed": 1337,
+  "correction": "2026-09-24: the 47M rung's d_model was 512 in RUNGS and is 576 in the run manifests, so its embedding shares were wrong. RUNGS feeds embedding_shares only; the fertility measurements are unchanged by the fix."
  },
  "tokenizers": {
   "wieszcz-8k": {
@@ -81,34 +82,34 @@
  },
  "embedding_shares": {
   "47M": {
-   "d_model": 512,
+   "d_model": 576,
    "params_at_8k": 47105088,
-   "non_embedding_params": 43009088,
+   "non_embedding_params": 42497088,
    "by_vocab": {
     "8000": {
-     "embedding_params": 4096000,
+     "embedding_params": 4608000,
      "total_params": 47105088,
-     "embedding_share": 0.087
+     "embedding_share": 0.0978
     },
     "16000": {
-     "embedding_params": 8192000,
-     "total_params": 51201088,
-     "embedding_share": 0.16
+     "embedding_params": 9216000,
+     "total_params": 51713088,
+     "embedding_share": 0.1782
     },
     "32000": {
-     "embedding_params": 16384000,
-     "total_params": 59393088,
-     "embedding_share": 0.2759
+     "embedding_params": 18432000,
+     "total_params": 60929088,
+     "embedding_share": 0.3025
     },
     "50000": {
-     "embedding_params": 25600000,
-     "total_params": 68609088,
-     "embedding_share": 0.3731
+     "embedding_params": 28800000,
+     "total_params": 71297088,
+     "embedding_share": 0.4039
     },
     "128000": {
-     "embedding_params": 65536000,
-     "total_params": 108545088,
-     "embedding_share": 0.6038
+     "embedding_params": 73728000,
+     "total_params": 116225088,
+     "embedding_share": 0.6344
     }
    }
   },

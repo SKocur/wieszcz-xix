@@ -1,28 +1,51 @@
-# Corpus provenance & licensing log
+# Corpus provenance and licensing
 
-Every text in the corpus is recorded here with its source and rights status. The rule:
-**only public-domain, pre-1936 Polish text.** When in doubt, leave it out.
+The rule the corpus is built to: **only public-domain Polish text published 1800 to 1918,
+in its original orthography.** Publication date is enforced at the crawl and then audited
+by content before tokenisation, which removed 3,733 documents from the frozen build.
 
-## Rights checklist (per source)
+## Sources actually in the frozen build
 
-- [ ] Author died more than 70 years ago (public domain in PL/EU).
-- [ ] Original orthography preserved (no modernized/critical edition text).
-- [ ] Source platform's terms of use respected (rate limits, attribution, per-item rights label).
-- [ ] Not a bulk copy of a protected database (EU sui generis right) — assembled from individual items.
+| Source | Access | Rights status | What it contributes |
+|---|---|---|---|
+| Internet Archive | `archive.org` item API, language tag `pol` | Per-item public domain | 291,655 documents of OCR in original spelling, the bulk of the corpus and all of its register breadth |
+| Wolne Lektury | `wolnelektury.pl/api` | Public domain, CC | 2,714 transcribed documents, no OCR, modernised spelling |
 
-## Sources
+Nothing else is in it. Polona holds the richest period press, and it was rejected because
+its OCR endpoint answers 401 and cannot be scripted into a reproducible pipeline. The
+Federacja Bibliotek Cyfrowych libraries were reached through the Internet Archive rather
+than individually. `docs/data-preparation.md` records the full list of sources considered
+and why each was taken or dropped.
 
-| Source | Access | Rights status | Notes |
-|--------|--------|---------------|-------|
-| Wolne Lektury | API (`wolnelektury.pl/api`) | Public domain / CC | Clean transcriptions, no OCR. Filter by epoch. |
-| Wikiźródła (pl.wikisource) | dumps / API | Public domain (source works) | Faithful transcriptions of PD works. |
-| Polona (National Library) | API | Per-item ("domena publiczna") | Respect API terms; OCR quality varies (Fraktur). |
-| Federacja Bibliotek Cyfrowych | per library | Per-item | Heterogeneous — check each record. |
+## Where the per-document record lives
 
-## Text inventory
+This file states the rule. The evidence is a ledger with one row per document, giving its
+identifier, its source, that source's own resolvable identifier, and its byte size:
 
-<!-- One row per included text. Fill in as the corpus grows. -->
+- `ledger/provenance_ledger_2026-08-03_train.csv.gz`, 291,605 rows
+- `ledger/provenance_ledger_2026-08-03_val.csv.gz`, 2,764 rows
+- `exclusions/exclusions_2026-08-03.json`, the documents the temporal audit removed, each
+  with the rule that selected it
 
-| ID | Title | Author | Death year | Source | Rights | Added |
-|----|-------|--------|-----------|--------|--------|-------|
-| | | | | | | |
+The same three files are published in the archival record at
+[doi:10.5281/zenodo.22099302](https://doi.org/10.5281/zenodo.22099302), alongside
+`RIGHTS-REVIEW.md`, which is the per-source rights review for this build, and the Wolne
+Lektury per-slug licence sweep behind it.
+
+## Rights checklist, per source
+
+- Author died more than 70 years ago, so the work is public domain in PL and the EU.
+- Original orthography preserved, with no modernised or critical-edition text.
+- The source platform's terms of use are respected: rate limits, attribution, and the
+  per-item rights label.
+- The collection is assembled from individual items rather than bulk-copied, which is what
+  the EU sui generis database right turns on.
+
+The underlying texts are public domain. The constraint that actually binds when
+redistributing is the database right over the compilation, which is why the released
+corpus carries CC0 1.0 over the compilation and database layer while leaving the texts
+themselves in the public domain where they already are.
+
+> Not legal advice. For commercial use, consult a specialist.
+
+Rights, safety or takedown concerns: legal@szymonkocur.com

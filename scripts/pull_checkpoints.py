@@ -88,7 +88,7 @@ def pull(s3, key: str, dest: Path, size: int, want: str | None) -> str:
                 raise IOError(f"sha {digest[:16]} != logged {want}")
             part.rename(dest)
             return digest
-        except Exception as exc:  # noqa: BLE001 — endpoint 403s, resets, sha mismatch
+        except Exception as exc:  # noqa: BLE001, endpoint 403s, resets, sha mismatch
             if attempt == RETRIES - 1:
                 raise
             wait = min(60, 5 * (attempt + 1))
@@ -144,7 +144,7 @@ def main() -> None:
             sys.exit(f"STOPPING: under {human(MIN_FREE)} free would remain; "
                      f"{pulled} pulled, {skipped} skipped so far")
         print(f"[pull] {run}/{name} ({human(size)}, logged sha "
-              f"{want or 'none — recording ours'})", flush=True)
+              f"{want or 'none, recording ours'})", flush=True)
         digest = pull(s3, f"{CKPT_PREFIX}{run}/{name}", dest, size, want)
         lines = [l for l in (sums.read_text().splitlines() if sums.exists() else [])
                  if not l.endswith(f"  {name}")]

@@ -10,33 +10,34 @@ digitisation boilerplate, and for standalone year strings 1920-2099.
 The battery is curated against the corpus, not against intuition. A 2026-08-03 sweep
 with hand-read contexts rejected the plausible-sounding candidates: *stalin* (the 1914
 press reviews a brochure by "K. Stalin"), *czołg* ("Rozwój i znaczenie czołgów",
-Warszawa 1918), *lotnisko* (a 1911 flight report), *samolot* (Żuławski 1911; "Siedem
-samolotów włoskich nad Wiedniem", 1918), *bolszewik/sowiet* (current affairs of
+Warszawa 1918), *lotnisko* (a 1911 flight report), *samolot* (Umiński's 1911 "Samolotem
+dookoła świata", which coined the word, is in the corpus; "Siedem samolotów
+włoskich nad Wiedniem", 1918), *bolszewik/sowiet* (current affairs of
 1917-18), *milicja obywatelska* (attested 1886 and the 1915 Warsaw militia),
 *rzeczpospolita ludowa* in any wording (the 1918 press reports daily on the
 Ukrainian People's Republic, and "polska rzeczpospolita ludowa" itself is the
 language of 1905-07 revolutionary agitation and of Daszyński's November-1918
-government — 26 years before the PRL), and *pzpr/nazis/zsrr/rwpg* (dominated by OCR
+government, 26 years before the PRL), and *pzpr/nazis/zsrr/rwpg* (dominated by OCR
 capital-soup and word-fragment noise). The period-legitimate ones now sit in the
 control battery. The same sweep confirmed low-noise markers the battery had been
-missing — interwar/PRL vocabulary (hitler, gestapo, nkwd, kołchoz, faszyzm,
+missing: interwar/PRL vocabulary (hitler, gestapo, nkwd, kołchoz, faszyzm,
 międzywojenny) and edition apparatus (copyright, wszelkie prawa zastrzeżone,
-ISBN followed by digits, domena publiczna, mikrofilm) — apparatus that
+ISBN followed by digits, domena publiczna, mikrofilm), apparatus that
 line-level cleaning removes from *lines* but which marks the whole *document* as a
 modern edition. *radjo/radiow* moved from markers to controls: wireless telegraphy is
 period ("Stacja radjotelegraficzna", 1915) and broadcast-era hits ride along with the
 other markers.
 
 Two document-level features are recorded on flagged documents for the exclusion rule
-to corroborate with — they never flag or exclude on their own. The post-reform
-orthography share — words in -cja/-sja/-zja against period -cya/-sya/-zya —
+to corroborate with; they never flag or exclude on their own. The post-reform
+orthography share, words in -cja/-sja/-zja against period -cya/-sya/-zya,
 separates modern editions from Galician print (a 1983 theatre programme and a 1972
 Wańkowicz score 0.88-1.00, Galician papers 0.00-0.02), but the full-corpus run
 showed Kryński's -ja spelling is the *norm* in 1905-18 Congress-Poland press (72k
 documents ≥0.8 modern share), so it can only corroborate, never convict. Its real
 value is directional: a high share backs up a marker or ctx-year hit, and a *period*
 share protects against OCR misreading mediaeval dates as 19xx (an Orgelbrand volume
-shows "w r. 1989" for 1289 — 87 false ctx-years on a legitimate document). Filename
+shows "w r. 1989" for 1289, giving 87 false ctx-years on a legitimate document). Filename
 years ≥1919 are recorded the same way: for IA-native identifiers they are
 publication years (tygodnikillustro1923unse), for bc.radom-style numeric ids they
 are catalogue numbers, so they feed the provenance sweep instead of excluding
@@ -46,11 +47,11 @@ Reads either the parquet shards built by `build_hf_dataset.py` (release audit) o
 directory of cleaned `.txt` files (corpus audit before tokenization).
 
 Period-legitimate near-anachronisms are counted as a control battery but never flag a
-document — their presence in quantity is what a genuine pre-1918 corpus looks like.
+document: their presence in quantity is what a genuine pre-1918 corpus looks like.
 
 Year strings are reported two ways and left unflagged, because the first measurement
 showed bare four-digit matches to be numeric noise (their decade histogram is flat out to
-the 2090s — prices and catalogue numbers, not dates). The contextual pattern requires
+the 2090s, prices and catalogue numbers rather than dates). The contextual pattern requires
 Polish date phrasing around the number ("r. 1936", "w roku 1925", "1936 r."), which bare
 noise cannot satisfy; its per-document counts are what an exclusion rule should consult.
 

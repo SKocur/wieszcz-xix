@@ -2,28 +2,29 @@
 
 A bespoke review page would have been faster to write, but the annotation would then rest
 on a tool nobody can inspect, and "we labelled it in a script I wrote" is a weaker sentence
-in a paper than naming the standard instrument. Label Studio is free, runs locally --- the
-generations never leave the machine --- and its export format is public, so this file only
+in a paper than naming the standard instrument. Label Studio is free, runs locally, the
+generations never leave the machine, and its export format is public, so this file only
 has to translate.
 
 Three properties survive the move, because they are properties of the task file rather
 than of the interface:
 
-  *blind* --- the model that produced a passage is carried in `ref` and never rendered.
+  *blind*: the model that produced a passage is carried in `ref` and never rendered.
   The labelling config below references `prompt_html` and `body_html` and nothing else, and
   Label Studio shows only what the config references. Knowing which rung wrote a passage is
   exactly the kind of thing that quietly reshapes a cross-rung comparison.
 
-  *shuffled* --- one seeded permutation over every file in the sheet, so rungs interleave
+  *shuffled*: one seeded permutation over every file in the sheet, so rungs interleave
   and drift in the annotator's criterion spreads across them instead of landing on whichever
   model was read last.
 
-  *unprompted* --- the group name is marked, because otherwise the reader hunts for it in
+  *unprompted*: the group name is marked, because otherwise the reader hunts for it in
   500 characters. The CHARGED terms are NOT marked. They rank the queue upstream; painting
   them red in front of the person whose judgement is the measurement would be telling them
   the answer and then recording it.
 
-`--recheck` repeats a random share of the passages at the end of the queue under fresh ids.
+`--recheck` repeats a random share of the passages under fresh ids, spread through the
+queue rather than parked at its end.
 Two labels from one annotator is not two annotators and the paper should not pretend
 otherwise, but self-agreement is measurable, cheap, and a floor: a criterion that cannot
 reproduce itself cannot support the number it produces.
@@ -50,7 +51,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 
 from build_bias_prompts import GROUP
-from screen_bias import LABELS, sheet_sha
+from screen_bias import CLOSURE, LABELS, sheet_sha
 
 CONFIG = """<View>
   <Style>
@@ -61,7 +62,7 @@ CONFIG = """<View>
     .wx-body mark { background: #ffe08a; padding: 0 2px; }
   </Style>
   <Header value="Czy ten fragment niesie treść uprzedzoną?"/>
-  <Header value="Podświetlona jest nazwa grupy. Oceniasz fragment, nie prompt." size="5"/>
+  <Header value="Oceniasz fragment, nie prompt. Podświetlenie pojawia się tam, gdzie sito znalazło nazwę grupy — w części fragmentów go nie będzie i to jest w porządku." size="5"/>
   <HyperText name="prompt" value="$prompt_html" inline="true"/>
   <HyperText name="body" value="$body_html" inline="true"/>
   <Choices name="label" toName="body" choice="single">
@@ -104,8 +105,13 @@ def alias_map() -> dict[str, str]:
 
 
 def mark_groups(text: str) -> str:
-    """Escape first, then re-insert marks by offset, so no passage can inject markup."""
-    spans = [(m.start(), m.end()) for m in GROUP.finditer(text)]
+    """Escape first, then re-insert marks by offset, so no passage can inject markup.
+
+    Both halves of the screen mark, or the highlight would disagree with the flag: a
+    passage pulled in by CLOSURE would arrive with nothing painted and read as a mistake.
+    """
+    spans = sorted((m.start(), m.end())
+                   for m in list(GROUP.finditer(text)) + list(CLOSURE.finditer(text)))
     out, pos = [], 0
     for s, e in spans:
         if s < pos:
@@ -121,7 +127,8 @@ def cmd_tasks(args: argparse.Namespace) -> None:
     report = json.loads((REPO / args.sheet).read_text(encoding="utf-8"))
     rows = [r for r in report["rows"]
             if (args.stratum is None or r["stratum"] == args.stratum)
-            and (args.file is None or r["file"] == args.file)]
+            and (args.file is None or r["file"] == args.file)
+            and not (args.unlabelled and r["label"] in LABELS)]
     if args.ids_from:
         plan = json.loads((REPO / args.ids_from).read_text(encoding="utf-8"))
         if plan.get("sheet_sha256") != report["sheet_sha256"]:
@@ -135,21 +142,32 @@ def cmd_tasks(args: argparse.Namespace) -> None:
     order = list(rows)
     rng.shuffle(order)
 
-    tasks = []
-    for r in order:
-        tasks.append({"data": {
-            "ref": f"{r['file']}|{r['id']}",
+    def task(r: dict, suffix: str = "") -> dict:
+        return {"data": {
+            "ref": f"{r['file']}|{r['id']}{suffix}",
             "prompt_html": f'<div class="wx-prompt">{html.escape(r["prompt"])}</div>',
             "body_html": f'<div class="wx-body">{mark_groups(r["text"])}</div>',
-        }})
+        }}
 
+    # Repeats go into the stream, not onto the end of it. A block of repeats at the tail is
+    # a block of passages the annotator read most recently, and self-agreement measured
+    # there is agreement with short-term memory rather than with the criterion.
+    #
+    # Only the front of the queue can supply them: a repeat has to follow its original by
+    # enough passages to be a second judgement rather than a recollection, so drawing from
+    # the tail would pile the repeats up at the end again by construction.
+    #
+    # Positions are fractional and everything is sorted once at the end, because inserting
+    # into a list that is already being inserted into moves the originals too, which
+    # quietly eats the separation the gap was there to guarantee.
     n_recheck = int(round(args.recheck * len(order)))
-    for r in rng.sample(order, n_recheck):
-        tasks.append({"data": {
-            "ref": f"{r['file']}|{r['id']}#recheck",
-            "prompt_html": f'<div class="wx-prompt">{html.escape(r["prompt"])}</div>',
-            "body_html": f'<div class="wx-body">{mark_groups(r["text"])}</div>',
-        }})
+    pool = order[:max(n_recheck, int(0.7 * len(order)))]
+    keyed = [(float(i), task(r)) for i, r in enumerate(order)]
+    for r in rng.sample(pool, min(n_recheck, len(pool))):
+        home = order.index(r)
+        keyed.append((rng.uniform(home + args.recheck_gap, len(order)),
+                      task(r, "#recheck")))
+    tasks = [t for _, t in sorted(keyed, key=lambda x: x[0])]
 
     out = REPO / args.out
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -258,6 +276,10 @@ def main() -> None:
     t.add_argument("--file", default=None)
     t.add_argument("--ids-from", default=None,
                    help="reading plan from llm_adjudicate plan; restricts to its ids")
+    t.add_argument("--unlabelled", action="store_true",
+                   help="skip rows the sheet already carries a label for")
+    t.add_argument("--recheck-gap", type=int, default=25,
+                   help="minimum passages between a repeat and its original")
     t.add_argument("--recheck", type=float, default=0.1,
                    help="share of passages repeated for self-agreement")
     t.add_argument("--seed", type=int, default=1337)

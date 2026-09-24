@@ -2,16 +2,16 @@
 
 The rights review covered the Polish digital-library uploads (explicit per-item
 public-domain assertions) and sampled the rest. The 2026-08-02 content audit then found
-a 1972 book among the unsampled remainder — an `internetarchivebooks` lending-library
+a 1972 book among the unsampled remainder: an `internetarchivebooks` lending-library
 scan whose metadata claims 1900. Those collections are where in-copyright modern
 editions live, and no content battery is guaranteed to catch a modern book that happens
 to avoid modern vocabulary, so membership itself is the filter: every document whose id
 does not carry a Polish-library prefix is checked against the IA metadata API and
 classified by collection.
 
-Classes: `ia_modern_scan` (inlibrary / printdisabled / internetarchivebooks — treat as
+Classes: `ia_modern_scan` (inlibrary / printdisabled / internetarchivebooks; treat as
 in-copyright candidates and exclude from redistribution), `community_upload`
-(opensource — rights unasserted), `google_books` and `institutional_old` (pre-copyright
+(opensource, rights unasserted), `google_books` and `institutional_old` (pre-copyright
 library scans), `other`. Items whose own date field parses past 1918 are additionally
 listed, whatever their collection.
 
@@ -19,7 +19,7 @@ Results append to a JSONL as they arrive and a rerun skips documents already pre
 so an interrupted sweep resumes instead of restarting; the summary JSON is compacted
 from the JSONL at the end. A previous sweep's summary seeds the cache (`--seed`), so
 auditing a frozen corpus directory (`--txt-dir`) only queries identifiers the earlier
-sweep never saw — the API is asked about each identifier once, ever.
+sweep never saw, since the API is asked about each identifier once, ever.
 
     python scripts/ia_collection_sweep.py                       # ledger of the HF build
     python scripts/ia_collection_sweep.py --txt-dir data/clean \
@@ -54,7 +54,7 @@ def fetch(identifier: str) -> dict:
         try:
             with urlopen(req, timeout=30) as r:
                 return json.load(r)
-        except Exception as e:  # noqa: BLE001 — transient API noise, retried
+        except Exception as e:  # noqa: BLE001, transient API noise, retried
             if attempt == 3:
                 return {"error": str(e)}
             time.sleep(2 * attempt)

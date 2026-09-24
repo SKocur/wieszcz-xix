@@ -1,0 +1,23 @@
+{
+ "script": "scripts/build_provenance_ledger.py",
+ "script_sha256": "368cecec7ec550a3",
+ "timestamp_utc": "2026-08-17T19:03:55+00:00",
+ "host": "MacBook-Pro-Szymon.local",
+ "split": "metrics/doc_split_2026-08-03.json",
+ "clean": "data/clean",
+ "documents_total": 294369,
+ "parts": {
+  "train": {
+   "file": "provenance_ledger_2026-08-03_train.csv.gz",
+   "documents": 291605,
+   "text_bytes": 22583569453,
+   "sha256": "7afe9f215841eb542d9435f16ff41293660fcc81305a09ad298a0ee9388e5374"
+  },
+  "val": {
+   "file": "provenance_ledger_2026-08-03_val.csv.gz",
+   "documents": 2764,
+   "text_bytes": 189138427,
+   "sha256": "2478d1b535ea9f0257019668151ea6b03e8dc682b90e925606912b0e24a388c7"
+  }
+ }
+}

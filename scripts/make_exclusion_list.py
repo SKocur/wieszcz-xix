@@ -2,24 +2,24 @@
 
 Four arms, and a corroboration matrix learned by reading the corpus (2026-08-03):
 
-1. **Strong markers** — vocabulary and boilerplate that hand-verified sweeps showed
+1. **Strong markers**: vocabulary and boilerplate that hand-verified sweeps showed
    cannot occur in period text (hitler, gestapo, nkwd, kołchoz, faszyzm, międzywojenny,
    "druga wojna światowa", mikrofilm, smartfon, "telefon komórkowy", "digitized by").
    Any hit excludes, false positives and all: over-exclusion costs a few documents out
    of 298k, under-exclusion ships post-1918 text. Edition apparatus (copyright, ISBN
    with digits, "wszelkie prawa zastrzeżone", domena publiczna) excludes the same way
    but exempts Wolne Lektury files, whose own colophon is part of an accepted source.
-2. **Noisy markers** (internet, komputer, telewiz, www., http) — real modernity *and*
+2. **Noisy markers** (internet, komputer, telewiz, www., http): real modernity *and*
    frequent OCR garble ("Internet acja" is a 1917 interpelacja, "telewizytę" a 1903
    tę wizytę, and most www./http hits are one library's watermark on period scans).
    These exclude only when the post-reform orthography share corroborates (>=0.5):
    garbled period print scores near 0, genuinely modern text near 1.
-3. **Contextual years** — Polish date phrasing naming a post-1919 year. Excludes at
+3. **Contextual years**: Polish date phrasing naming a post-1919 year. Excludes at
    >=2 phrases when orthography corroborates (>=0.8), at >=3 with any non-period
    orthography (>=0.2). At >=3 with period orthography (<0.2) the document goes to the
    review list instead: that profile is OCR misreading old dates as 19xx (an
    Orgelbrand encyclopedia carries 87 such phrases and is legitimate).
-4. **Provenance and duplicates** — every `ia_modern_scan` lending-library document
+4. **Provenance and duplicates**: every `ia_modern_scan` lending-library document
    (where in-copyright modern editions live; collection membership does not lie), and
    every document the dedup pass marked dropped (the longest member of its cluster
    stays).
@@ -27,7 +27,7 @@ Four arms, and a corroboration matrix learned by reading the corpus (2026-08-03)
 Wolne Lektury files are a separate regime: content signals fail on them in both
 directions (WL modernizes orthography, its colophon always carries an ISBN, and its
 clean transcriptions have no OCR noise to defend against), so wl_ documents skip the
-content arms entirely and are excluded by *catalogue epoch* instead — the WL epoch
+content arms entirely and are excluded by *catalogue epoch* instead, since the WL epoch
 sweep's post-1918 list (269 documents, essentially Leśmian's interwar volumes and
 Boy's essays) united with the hand-verified list from the first release audit, which
 catches what the epoch cannot: interwar *translations* of older works (Boy's Proust,
@@ -102,7 +102,7 @@ def main() -> None:
             by_ctx.add(doc)
         elif ctx >= 3:
             review[doc] = {"ctx_years": ctx, "orto_share": round(share, 3),
-                           "reason": "date phrases with period orthography — "
+                           "reason": "date phrases with period orthography, "
                                      "OCR-misread old dates?"}
 
     by_wl = set(wl_epochs["post1918_ids"]) | {d for d in carryover["ids"]

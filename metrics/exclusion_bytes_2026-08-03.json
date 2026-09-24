@@ -1,0 +1,9 @@
+{
+ "meta": {
+  "script": "scripts/exclusion_bytes.py",
+  "exclusions": "exclusions_2026-08-03.json",
+  "corpus": "data/clean"
+ },
+ "documents": 3733,
+ "bytes": 577697456
+}

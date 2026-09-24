@@ -1,11 +1,11 @@
 """Freeze a corpus build: record the consumed file list, or verify a copy against it.
 
 The 5.40B build's freeze did not write down which files it consumed, and the provenance ledger had
-to be reconstructed afterwards from mtimes against the tokenization log — the paper's
+to be reconstructed afterwards from mtimes against the tokenization log, and the paper's
 limitations section calls that out and prescribes this script: at freeze time, write the
 authoritative manifest (relative path, byte size and SHA-256 of every document); from
-then on, any copy of the corpus — on the crawler box, the training box, or restored
-years later — is checked against the manifest, not against hope.
+then on, any copy of the corpus, on the crawler box, the training box, or restored
+years later, is checked against the manifest, not against hope.
 
 Generate (run where the corpus lives, e.g. the crawler VPS):
 

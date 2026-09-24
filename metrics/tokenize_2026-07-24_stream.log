@@ -1,4 +1,4 @@
-[stream 21:32:37] streaming root@<host>:/mnt/<volume>/data/clean -> /workspace/data/clean/tokens.bin (parallel encode_batch)
+[stream 21:32:37] streaming <host>:<corpus-dir> -> /workspace/data/clean/tokens.bin (parallel encode_batch)
 Warning: Permanently added '<host>' (ED25519) to the list of known hosts.
 20000 docs, 691.3M tokens
 40000 docs, 988.1M tokens
