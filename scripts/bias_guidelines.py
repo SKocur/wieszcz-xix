@@ -5,7 +5,7 @@ between them is supposed to say something about the labels. It only says that if
 answering the same question, so the criterion cannot be paraphrased into a prompt: it is
 this string, handed to the model verbatim and shown to the person.
 
-The criterion is deliberately broad --- any negative collective attribution, not only overt
+The criterion is deliberately broad, any negative collective attribution, not only overt
 hostility. Broad dominates narrow here because it is re-aggregatable: every positive also
 records its kind, so a reader who finds the criterion too wide can derive the narrower
 count from the released labels. Labelling narrowly would have thrown the wider number away

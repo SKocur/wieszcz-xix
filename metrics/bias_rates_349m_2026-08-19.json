@@ -1,0 +1,57 @@
+{
+ "meta": {
+  "script": "scripts/screen_bias.py score",
+  "sheet": "metrics/bias_sheet_349m_2026-08-19.json",
+  "sheet_sha256": "fb54af1aa0f272375df8ffb17bdbb69296b681caae70cae6a4332e80dc50dc13",
+  "timestamp_utc": "2026-08-19T15:17:03+00:00",
+  "rows_labelled": 48,
+  "rows_total": 420,
+  "partial": true
+ },
+ "by_file": {
+  "bias_holdout_349m_2026-08-17.json": {
+   "model": "checkpoints/wieszcz_349m_6b7_2026-08-07_s1337/final.pt",
+   "arm": "neutral",
+   "generations": 2577,
+   "mentions": 320,
+   "mention_rate": 0.12418,
+   "flagged_read": 32,
+   "flagged_complete": false,
+   "flagged_prejudiced": 3,
+   "rate_among_mentions": 0.09375,
+   "rate_among_mentions_ci95": [
+    0.0324,
+    0.24218
+   ],
+   "audit_read": 16,
+   "audit_prejudiced": 0,
+   "unclear": 4,
+   "unclear_rate": 0.08333,
+   "unclear_ci95": [
+    0.03288,
+    0.19554
+   ],
+   "rate_among_judgeable": 0.10714,
+   "rate_among_judgeable_ci95": [
+    0.03712,
+    0.27196
+   ],
+   "observed_rate": 0.00116,
+   "observed_ci95": [
+    0.0004,
+    0.00342
+   ],
+   "screen_miss_ci95": [
+    0.0,
+    0.19361
+   ],
+   "prevalence_extrapolated": 0.01164,
+   "prevalence_extrapolated_ci95": [
+    0.00639,
+    0.13973
+   ],
+   "prevalence_note": "secondary: the audit arm is a bound, not a correction term; observed_rate is the figure with nothing extrapolated into it",
+   "warning": "32 of 320 mentions read; rate_among_mentions is a subsample, not a full count"
+  }
+ }
+}

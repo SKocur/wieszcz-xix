@@ -10,7 +10,7 @@ refuse.
 Four measurements, all inference-only, wieszcz against a modern Polish LM:
 
 1. *Anachronism rate in generations.* The battery from `anachronism_audit.py` is reused
-   verbatim --- the instrument that decided what leaves the corpus decides what leaves the
+   verbatim, the instrument that decided what leaves the corpus decides what leaves the
    model, so the two numbers are commensurable. Its control battery of period-legitimate
    near-anachronisms (telefon, automobil, aeroplan) carries over as the false-positive
    floor: a genuine period model *should* hit those and not the modern ones.
@@ -24,10 +24,10 @@ Four measurements, all inference-only, wieszcz against a modern Polish LM:
 
 3. *Era contrast in bits per byte.* The measurement that survives the size difference.
    Both models score a set of post-1918 terms and a set of period terms in identical
-   hand-written carriers, and what is compared is not a level but an interaction: each
-   model's (modern - period) gap, differenced across models. A crossover --- wieszcz
+   hand-written carriers, and what is compared is an interaction rather than a level: each
+   model's (modern - period) gap, differenced across models. A crossover, wieszcz
    surprised by modern vocabulary while the modern model is surprised by period
-   vocabulary --- cannot be explained by one model simply being smaller or worse, which a
+   vocabulary, cannot be explained by one model simply being smaller or worse, which a
    raw perplexity comparison could not rule out. Bits per byte rather than per token
    because the tokenizers differ (8k byte-level BPE against Qwen2.5's ~150k inherited by
    Bielik); bytes are the only unit both agree on.
@@ -80,8 +80,8 @@ EOT = "<|endoftext|>"
 def _disable_triton_bmm_override() -> bool:
     """Route aten::bmm back to its reference kernel.
 
-    PyTorch overrides the outer-product case of `bmm` --- which is how rotary embeddings
-    build their frequency table --- with a Triton kernel compiled on first use. A host
+    PyTorch overrides the outer-product case of `bmm`, which is how rotary embeddings
+    build their frequency table, with a Triton kernel compiled on first use. A host
     without a C toolchain gets an exception rather than a fallback. Removing the override
     selects the unfused reference implementation, which costs nothing at this workload size
     and makes the scores more exact rather than less; applying it unconditionally also
@@ -113,8 +113,8 @@ PROMPTS = [
 
 # A base model has no system prompt and no instruction-following to invoke, so the two
 # conditionings below are what it can actually be given. This one is declarative rather
-# than imperative -- a document header the model continues as text, not an order it obeys
-# -- and it is the weaker of the two: it describes the register instead of exhibiting it.
+# than imperative, a document header the model continues as text rather than an order it
+# obeys, and it is the weaker of the two: it describes the register instead of exhibiting it.
 IMITATION_PREAMBLE = (
     "Poniżej znajduje się fragment polskiej gazety z roku 1905, napisany ówczesną "
     "polszczyzną, w ortografii sprzed reformy 1918 roku.\n\n"
@@ -123,7 +123,7 @@ IMITATION_PREAMBLE = (
 # The strong form: show the register instead of naming it. Exemplars are held-out period
 # passages placed before the prompt, which is how a base model is natively asked for a
 # style, and the most the comparator can be given without training it. Reporting only the
-# declarative arm would leave the obvious objection open -- that the comparator was told
+# declarative arm would leave the obvious objection open, that the comparator was told
 # about pre-reform spelling rather than shown any.
 FEWSHOT_CHARS = 1400
 # Exemplars must themselves carry the spelling: a passage at the corpus average would ask
@@ -153,6 +153,29 @@ MODERN_TERMS = [
     ("okupacja hitlerowska", "Nastała wówczas"),
 ]
 
+# A second modern set, disjoint from the exclusion battery. Every term in MODERN_TERMS
+# above is a string the corpus filter deleted documents on, so a model trained on the
+# filtered corpus is guaranteed not to have seen it, and scoring it measures the filter.
+# These fourteen name post-1918 things that were never filter strings, so surprise at them
+# is a property of the corpus rather than of the rule that built it. Carriers stay in
+# period register, as above, so only the term varies.
+MODERN_TERMS_UNFILTERED = [
+    ("penicylina", "Lekarz przepisa\u0142 choremu now\u0105"),
+    ("odrzutowiec", "Nad miastem przelecia\u0142"),
+    ("radar", "Okr\u0119t wykryto przez"),
+    ("antybiotyk", "Aptekarz wyda\u0142 na recept\u0119"),
+    ("autostrada", "Pomi\u0119dzy miastami zbudowano"),
+    ("magnetofon", "G\u0142os utrwalono na"),
+    ("helikopter", "Nad polem zawis\u0142"),
+    ("kosmonauta", "W przestworza wyruszy\u0142"),
+    ("tranzystor", "W odbiorniku umieszczono"),
+    ("nylon", "Po\u0144czochy wyrabiano odt\u0105d z"),
+    ("laser", "\u015awiat\u0142o skupiono przez"),
+    ("supermarket", "Sprawunki czyniono odt\u0105d w"),
+    ("komiks", "Dzieci czytywa\u0142y barwny"),
+    ("wideo", "Obraz zapisano na"),
+]
+
 # Period terms the audit either confirmed as epoch-legitimate or left untouched. Three of
 # them (telefon, automobil, aeroplan) are the audit's own control battery, which keeps
 # this set anchored to the corpus measurement rather than to intuition.
@@ -175,7 +198,7 @@ PERIOD_TERMS = [
 
 # Openings whose natural completion is a fact from after the cutoff. None of them touches
 # the traps the corpus audit found (stalin as a 1914 surname, czołg 1918, "rzeczpospolita
-# ludowa" as 1905-07 agitation) --- every gold here is unambiguously post-1918.
+# ludowa" as 1905-07 agitation), every gold here is unambiguously post-1918.
 FUTURES = [
     ("W roku 1939 wybuchła", " druga wojna światowa"),
     ("Pierwszym prezydentem odrodzonej Rzeczypospolitej został", " Gabriel Narutowicz"),
@@ -379,9 +402,9 @@ LONG_S = re.compile(r"(?i)f[tpckwzn]")
 def reads_as_prose(piece: str) -> bool:
     """Reject scanner debris, so the demonstration arm shows prose rather than noise.
 
-    Pre-reform orthography in this corpus lives almost entirely in the scanned press --- of
+    Pre-reform orthography in this corpus lives almost entirely in the scanned press, of
     the twenty clean transcriptions on the held-out side, none carries it, because literary
-    transcription modernises spelling --- so exemplars must come from OCR'd text and
+    transcription modernises spelling, so exemplars must come from OCR'd text and
     therefore have to be screened rather than assumed clean. Column rules, running heads and
     stray marks survive cleaning as short vowel-less tokens; a passage carrying many of them
     would ask the comparator to imitate the scanner instead of the century.
@@ -454,8 +477,8 @@ def fit_preamble(backend, passages: list[dict], prompts: list[str],
                  max_new: int) -> tuple[str, dict]:
     """Size the exemplars to the context this backend actually has.
 
-    The comparators differ by an order of magnitude here -- 1,024 positions for a GPT-2
-    against 8,192 for a Llama -- so one preamble length cannot serve both, and a preamble
+    The comparators differ by an order of magnitude here, 1,024 positions for a GPT-2
+    against 8,192 for a Llama, so one preamble length cannot serve both, and a preamble
     that overruns is silently truncated by the tokenizer at whichever end it prefers.
     Exemplars are dropped from the front, keeping the one adjacent to the prompt because
     that is the one conditioning most strongly, and what each model received is recorded
@@ -527,7 +550,7 @@ def run_corpus_reference(clean_dir: Path, split_path: Path, n_chunks: int,
 
     Without this arm the generation numbers float free. "The model scores 0.27 on
     post-reform orthography" is only a statement about period fidelity once we know what
-    the corpus itself scores under the identical metric --- and the corpus is not at 0.02,
+    the corpus itself scores under the identical metric, and the corpus is not at 0.02,
     because Kryński's reformed spelling is the norm of 1905-18 Congress-Poland press. The
     control battery needs the same treatment: period-legitimate near-anachronisms are too
     rare in 16k tokens of generation to establish a false-positive floor, so the floor has
@@ -667,8 +690,15 @@ def main() -> None:
                     help="exemplar budget before per-backend context fitting")
     ap.add_argument("--fewshot-max-orto", type=float, default=FEWSHOT_MAX_ORTO_MODERN,
                     help="reject exemplars whose own post-reform share exceeds this")
+    ap.add_argument("--unfiltered-modern", action="store_true",
+                    help="score MODERN_TERMS_UNFILTERED instead of MODERN_TERMS, so the era "
+                         "contrast is not reading back the corpus exclusion rule")
     ap.add_argument("--out", default="metrics/temporal_probe.json")
     args = ap.parse_args()
+
+    if args.unfiltered_modern:
+        global MODERN_TERMS
+        MODERN_TERMS = MODERN_TERMS_UNFILTERED
 
     t0 = time.time()
     device = args.device or get_device()

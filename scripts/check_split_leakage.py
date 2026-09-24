@@ -1,21 +1,21 @@
 """Measure text leakage across the train/validation split.
 
 Deduplication ran before the split was drawn, so no cluster it found can straddle
-the boundary — one member of each cluster survives at all. What that guarantees
+the boundary, since one member of each cluster survives at all. What that guarantees
 nothing about is overlap *below* the 0.8 duplicate threshold: another edition of a
 validation document sitting in train, or a validation poem contained inside a
 training-side collected volume. Jaccard cannot see containment (a small document
 inside a large one shares almost nothing by union), so this measures both:
 
-1. **Containment** — for every validation document, the fraction of its 5-word
+1. **Containment**: for every validation document, the fraction of its 5-word
    shingles that occur anywhere in the training side. Common phrases give every
    document a nonzero floor; what matters is the tail near 1.0.
-2. **Low-threshold LSH** — bands of 4 rows over the MinHash signatures, sensitive
+2. **Low-threshold LSH**: bands of 4 rows over the MinHash signatures, sensitive
    from roughly Jaccard 0.5, listing the best training match per flagged
    validation document.
 
 Shingles are literal, so orthographic variants of the same work still evade both
-measures — the same blind spot the dedup pass records.
+measures, the same blind spot the dedup pass records.
 
     .venv/bin/python3 scripts/check_split_leakage.py
 """

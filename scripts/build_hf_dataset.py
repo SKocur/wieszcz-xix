@@ -2,7 +2,7 @@
 
 The frozen token file plus the tokenizer reconstruct every document byte-for-byte:
 byte-level BPE round-trips losslessly, and the provenance ledger records each document's
-original size. That makes this build self-verifying — every decoded document's UTF-8
+original size. That makes this build self-verifying: every decoded document's UTF-8
 length is checked against the ledger, so a truncated bin, a wrong tokenizer or a
 misaligned ledger fails loudly instead of shipping a subtly wrong corpus.
 
@@ -14,17 +14,28 @@ disagrees with its ledger stops the build.
 
 Output is the loader-script-free layout `load_dataset` reads directly: parquet shards
 under data/, one `train` split, columns id / source / source_identifier / text. The
-dataset card (README.md with YAML) is written by hand, not here — numbers to quote are
+dataset card (README.md with YAML) is written by hand, not here; numbers to quote are
 printed at the end.
 
-`--exclude` drops the documents listed in an exclusion file (the post-1918 content
-audit's output) from the *release* without touching the frozen build: excluded documents
-are still decoded and byte-verified against the ledger, so the self-check covers the
-whole stream, they just are not written out. The skipped ids, tokens and bytes are
-reported so the dataset card can state exactly what the release omits.
+`--exclude` drops the documents listed in an exclusion file from the *release* without
+touching the frozen build: excluded documents are still decoded and byte-verified against
+the ledger, so the self-check covers the whole stream, they just are not written out. The
+skipped ids, tokens and bytes are reported so the dataset card can state exactly what the
+release omits.
 
-    python scripts/build_hf_dataset.py --out ../dataset/wieszcz-xix-corpus \
-        --exclude metrics/post1918_exclusions.json
+**This build does not need it.** The temporal audit ran before tokenization, so its 3,733
+exclusions (`metrics/exclusions_2026-08-03.json`) never entered the frozen stream at all
+and the release is the training corpus document for document. The flag exists for the
+predecessor build's situation, where the audit ran after training and could be applied only
+to the released text.
+
+Do not reach for `metrics/post1918_exclusions.json` here: that is the predecessor list,
+compiled over the crawl universe against an uncalibrated battery, and 1,318 of its ids are
+documents the current rule deliberately keeps, 1918 press inside the bound, and period
+words like *komputer* (a register, from Latin *computus*) that the old markers hit.
+Applying it would make the release differ from the trained corpus for no reason.
+
+    python scripts/build_hf_dataset.py --out ../dataset/polish-pre1918-corpus
 """
 
 from __future__ import annotations
@@ -43,7 +54,7 @@ from tokenizers import ByteLevelBPETokenizer
 REPO = Path(__file__).resolve().parent.parent
 
 # Each bin is paired with the ledger written for it. The pairing is the whole correctness
-# argument of this script -- the Nth document of a stream becomes the Nth ledger row -- so
+# argument of this script, the Nth document of a stream becomes the Nth ledger row, so
 # it is stated here rather than left to two independent constants that can drift apart.
 # They did drift: this pointed at the previous build's bin and ledger, which agree with each
 # other, so it would have shipped a byte-verified release of the wrong corpus.
@@ -105,7 +116,7 @@ def main() -> None:
             b = len(text.encode("utf-8"))
             if b != int(led["bytes"]):
                 raise SystemExit(f"doc {doc_idx} ({led['document_id']}): decoded {b} B, "
-                                 f"ledger says {led['bytes']} B — bin/ledger mismatch")
+                                 f"ledger says {led['bytes']} B, bin/ledger mismatch")
             doc_idx += 1
             if led["document_id"] in excluded_ids:
                 skipped["docs"] += 1

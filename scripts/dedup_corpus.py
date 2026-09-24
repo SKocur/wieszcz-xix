@@ -3,7 +3,7 @@
 The measurement algorithm is `src/measure_duplication.py`'s, lifted from the token
 stream onto the cleaned `.txt` files so deduplication can run *before* tokenization:
 SHA-1 over the whitespace-normalized word sequence for exact duplicates (the `.txt`
-analogue of an identical token stream), then MinHash over 5-word shingles — 64
+analogue of an identical token stream), then MinHash over 5-word shingles, 64
 permutations, seed 1337, LSH banding at 8 bands x 8 rows (detection threshold near
 0.77 Jaccard, under the 0.8 that counts as a duplicate, so banding over-generates and
 the signature comparison decides). Word shingles stand where the paper's first
@@ -11,7 +11,7 @@ measurement had token shingles; the parameters are otherwise unchanged and recor
 in the report.
 
 Unlike the measurement script this one renders verdicts: in every cluster the longest
-member (by bytes) is kept and the rest are marked dropped. Nothing is deleted here —
+member (by bytes) is kept and the rest are marked dropped. Nothing is deleted here:
 the report's `dropped` list feeds the exclusion step, which is where removal is
 decided and applied.
 

@@ -3,12 +3,12 @@
 Consumes the document split verbatim (train and validation id lists, which already
 embed the exclusion list), tokenizes with the shipped tokenizer, and writes one
 uint16 stream per side with an <|endoftext|> terminator (id 0) after every document.
-Documents are written in sorted-id order — the Internet Archive block followed by the
+Documents are written in sorted-id order: the Internet Archive block followed by the
 Wolne Lektury block, as in the first build.
 
 Wolne Lektury files get one extra pass the scanned sources already had at crawl
 time: lines matching the cleaner's digitisation-boilerplate battery are dropped,
-which removes the WL colophon (ISBN, licence, foundation URL) — after the exclusion
+which removes the WL colophon (ISBN, licence, foundation URL), after the exclusion
 list, the only modern text left in the corpus.
 
 The training stream's filename carries the measured token count

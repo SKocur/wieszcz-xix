@@ -63,7 +63,7 @@ def main() -> None:
                          timeout=30) as r:
                 d = json.load(r)
             epochs[slug] = ", ".join(e["name"] for e in d.get("epochs", []))
-        except Exception:  # noqa: BLE001 — gone from the API entirely
+        except Exception:  # noqa: BLE001, gone from the API entirely
             still_missing.append(slug)
 
     post = sorted(s for s, e in epochs.items()

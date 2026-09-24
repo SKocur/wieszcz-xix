@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: "wieszcz-xix: a pre-1918 Polish corpus and a ladder of time-capsule language models"
+message: "If you use this software, the corpus or the models, please cite the paper."
+type: software
+authors:
+  - family-names: Kocur
+    given-names: Szymon
+    orcid: "https://orcid.org/0009-0005-3372-5133"
+    email: me@szymonkocur.com
+    affiliation: "Independent Researcher"
+abstract: >-
+  Code for building a 6.75-billion-token corpus of Polish text published between 1800 and
+  1918, and for training a matched ladder of decoder-only language models on it from
+  scratch. The pipeline covers crawling, OCR cleaning, deduplication, a temporal-bound
+  audit, a document-level split tested for leakage, tokenizer training, pretraining, dense
+  held-out evaluation, and the prejudice-prevalence measurement reported with the models.
+keywords:
+  - Polish
+  - historical corpus
+  - language model
+  - historical NLP
+  - digital humanities
+  - OCR
+license: Apache-2.0
+repository-code: "https://github.com/SKocur/wieszcz-xix"
+version: "1.0.0"
+date-released: "2026-09-24"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22099302
+    description: The corpus, its provenance ledger and rights review
+  - type: doi
+    value: 10.5281/zenodo.22099358
+    description: All nine checkpoints of the ladder
+preferred-citation:
+  type: article
+  title: "Wieszcz-XIX: A 6.7-Billion-Token Corpus of Nineteenth-Century Polish and Temporally Bounded Language Models Trained From Scratch"
+  authors:
+    - family-names: Kocur
+      given-names: Szymon
+      orcid: "https://orcid.org/0009-0005-3372-5133"
+      affiliation: "Independent Researcher"
+  year: 2026
+  doi: 10.5281/zenodo.21745210

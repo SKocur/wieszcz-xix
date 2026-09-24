@@ -13,7 +13,7 @@ whether ours does is measurable rather than arguable.
 
 *Embedding share.* A tied embedding is `vocab x d_model` parameters that a larger vocabulary
 grows linearly, while the rest of the model stays fixed. At the small end of a ladder this
-is the whole argument, and it reverses as the model grows -- which is worth reporting
+is the whole argument, and it reverses as the model grows, which is worth reporting
 honestly, because it means the choice is right for 47M for a reason that is weak by 349M.
 
     python scripts/tokenizer_fertility.py --hf ~/models/bielik-1.5b-v3 ~/models/papugapt2
@@ -39,7 +39,7 @@ from tokenizers import ByteLevelBPETokenizer
 from train_tokenizer import MAX_TRAIN_BYTES, SPECIAL_TOKENS, sample_corpus
 
 LN2 = math.log(2)
-RUNGS = (("47M", 512, 47_105_088), ("107M", 768, 106_859_264), ("349M", 1152, 349_069_440))
+RUNGS = (("47M", 576, 47_105_088), ("107M", 768, 106_859_264), ("349M", 1152, 349_069_440))
 ALTERNATIVES = (8_000, 16_000, 32_000, 50_000, 128_000)
 
 
@@ -52,8 +52,8 @@ def sample_documents(clean: Path, split_path: Path, n_docs: int, doc_bytes: int,
     """Held-out documents, kept whole up to a byte cap and tagged by source.
 
     Per source as well as pooled: the two halves of this corpus differ in ways a tokenizer
-    feels --- scanned press carries OCR noise that no vocabulary has merges for, while the
-    transcriptions are clean --- so a pooled figure alone would hide whichever half is
+    feels, scanned press carries OCR noise that no vocabulary has merges for, while the
+    transcriptions are clean, so a pooled figure alone would hide whichever half is
     doing the work.
     """
     split = json.loads(split_path.read_text(encoding="utf-8"))
@@ -116,8 +116,8 @@ def counterfactual_vocabularies(sizes: list[int], clean: Path, docs: list[dict],
     This is the counterfactual the choice of 8,000 needs and the only one available without
     retraining a rung: what a larger merge table would actually buy on this corpus, rather
     than what it buys on the web text the comparators were built for. Everything but
-    `vocab_size` is held to the released tokenizer's procedure --- same corpus sample, same
-    seed, same minimum frequency --- so the difference between two rows is the vocabulary
+    `vocab_size` is held to the released tokenizer's procedure, same corpus sample, same
+    seed, same minimum frequency, so the difference between two rows is the vocabulary
     and nothing else.
     """
     paths = [q for q in clean.glob("*.txt") if not q.name.startswith(".")]

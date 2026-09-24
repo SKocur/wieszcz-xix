@@ -1,0 +1,36 @@
+{
+ "meta": {
+  "script": "scripts/corpus_source_tokens.py",
+  "split": "doc_split_2026-08-03.json",
+  "tokenization": "tokenize_2026-08-03.json"
+ },
+ "streams": {
+  "train": {
+   "file": "tokens_frozen_6.69B.bin",
+   "documents": 291605,
+   "tokens": 6689593236,
+   "ia_documents": 288911,
+   "wl_documents": 2694,
+   "ia_tokens": 6642118419,
+   "wl_tokens": 47474817
+  },
+  "val": {
+   "file": "val_2026-08-03.bin",
+   "documents": 2764,
+   "tokens": 56363707,
+   "ia_documents": 2744,
+   "wl_documents": 20,
+   "ia_tokens": 55758336,
+   "wl_tokens": 605371
+  }
+ },
+ "corpus": {
+  "documents": 294369,
+  "tokens": 6745956943,
+  "ia_documents": 291655,
+  "wl_documents": 2714,
+  "ia_tokens": 6697876755,
+  "wl_tokens": 48080188,
+  "wl_share_pct": 0.71
+ }
+}

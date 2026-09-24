@@ -23,9 +23,12 @@ from pathlib import Path
 import numpy as np
 
 REPO = Path(__file__).resolve().parent.parent
-TOKENS = REPO / "data/clean/tokens_frozen_5.40B.bin"
+# The current frozen stream. The committed `metrics/ocr_audit_frozen.json` and the
+# 1.63% the paper quotes "for history" were produced against the previous build's
+# `data/clean/tokens_frozen_5.40B.bin`; re-running now measures what exists.
+TOKENS = REPO / "data/tokens_frozen_6.69B.bin"
 EOT = 0
-IA_DOCS = 216_965          # Table 2 of the paper; the rest are Wolne Lektury
+SPLIT = REPO / "metrics/doc_split_2026-08-03.json"
 CHUNK = 1 << 26            # 64M tokens per pass, ~128 MB resident
 
 
@@ -42,7 +45,19 @@ def eot_positions(path: Path) -> np.ndarray:
     return np.concatenate(out) if out else np.empty(0, dtype=np.int64)
 
 
+def ia_document_count() -> int:
+    """How many Internet-Archive documents the stream opens with, from the split file.
+
+    This was a hardcoded constant carried over from an earlier build, which is exactly the
+    way a stale number survives a rebuild. Reading it from the split that produced the
+    stream means the two cannot disagree.
+    """
+    ids = json.loads(SPLIT.read_text())["train_ids"]
+    return sum(1 for x in ids if x.startswith("ia_"))
+
+
 def main() -> None:
+    IA_DOCS = ia_document_count()
     p = argparse.ArgumentParser()
     p.add_argument("--tokens", default=str(TOKENS))
     p.add_argument("--decode-sample", type=int, default=0,

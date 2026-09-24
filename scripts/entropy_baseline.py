@@ -1,7 +1,7 @@
 """Reference entropies for the frozen corpus: where the loss axis begins and ends.
 
 A validation loss means little without reference lines. The true entropy rate of
-19th-century Polish print is not measurable, but it can be bracketed from above by
+19th-century Polish print cannot be measured directly. It can be bracketed from above by
 achievable models, cheapest first: the unigram and conditional bigram entropies of
 the training stream (what 1- and 2-gram models reach), the validation cross-entropy
 under train-fitted distributions (the held-out version of the same), and a general
@@ -9,7 +9,7 @@ compressor on the validation text. Each line is exact and reproducible; together
 they turn the ladder's losses into positions on a scale rather than bare numbers.
 
 The compressor runs per source too: the validation floor differs between OCR'd
-scans and clean transcriptions, and the gap — in nats per token — is the price of
+scans and clean transcriptions, and the gap, in nats per token, is the price of
 OCR noise, measured rather than asserted.
 
     .venv/bin/python3 scripts/entropy_baseline.py

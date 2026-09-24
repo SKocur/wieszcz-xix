@@ -9,7 +9,7 @@ This measures the mechanism with everything else held fixed. The held-out split 
 contains both sources, so the same three checkpoints are scored on the Internet Archive
 subset (the dominant training source, in-distribution) and on the Wolne Lektury subset
 (0.71% of training tokens, clean transcription against OCR, effectively near-OOD), and an
-exponent is fitted to each. Same models, same corpus, same protocol -- only the evaluation
+exponent is fitted to each. Same models, same corpus, same protocol, only the evaluation
 source differs. If the exponent flattens on the minority source, the mechanism is shown
 rather than inferred.
 
@@ -49,7 +49,7 @@ from train import get_device
 def eot_id() -> int:
     """Read the terminator's id from the tokenizer rather than assuming it.
 
-    Guessing it as the last vocabulary slot is wrong here -- it is id 0 -- and a wrong
+    Guessing it as the last vocabulary slot is wrong here, it is id 0, and a wrong
     terminator would silently put the source boundary in the middle of a document.
     """
     from tokenizers import ByteLevelBPETokenizer

@@ -1,4 +1,9 @@
-"""Recover the 350M run's loss curves from its stdout log and draw the paper figure.
+"""Recover the 350M run's loss curves from its stdout log and draw its figure.
+
+SUPERSEDED by `plot_ladder_curves.py`, which draws the ladder the paper actually
+reports. This one targets `wieszcz_350m_2026-07-25`, a run on the previous 5.40B
+build whose checkpoints are no longer kept locally; it is retained because the log
+parsing is the only record of a run that predates the per-run metrics logger.
 
 The 350M run predates the per-run metrics logger, so its only surviving record is
 `train.out` on the network volume. Parsed back into the CSV shape the logger writes.

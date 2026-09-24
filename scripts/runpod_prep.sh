@@ -28,11 +28,13 @@ CONTAINER_DISK_GB=30
 MOUNT="/workspace"             # volume mount point inside the pod
 PREP_IMAGE="python:3.11-slim"
 
-# Hetzner VPS: source of the corpus and the repo.
+# The box holding the corpus and the repo. Set these for your own host; the one this ran
+# against is decommissioned. VPS_KEY is copied to the rented pod so it can pull the corpus
+# over a direct link, so use a key issued for that purpose rather than a general one.
 VPS="${VPS:?set VPS, e.g. user@host}"
-VPS_KEY="${VPS_KEY:?set VPS_KEY}"
-VPS_CLEAN="/mnt/<volume>/data/clean"   # 202k *.txt (excludes tokens.bin)
-VPS_REPO="/root/wieszcz-xix"
+VPS_KEY="${VPS_KEY:?set VPS_KEY, path to the key used for this transfer only}"
+VPS_CLEAN="${VPS_CLEAN:-/srv/wieszcz/data/clean}"   # 202k *.txt (excludes tokens.bin)
+VPS_REPO="${VPS_REPO:-/srv/wieszcz/wieszcz-xix}"
 
 # ----------------------------- helpers ---------------------------------------------
 GO=0; [ "${1:-}" = "--go" ] && GO=1

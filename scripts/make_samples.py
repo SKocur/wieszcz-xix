@@ -5,7 +5,7 @@ the checkpoint hash, the decoding parameters and the seed alongside the text. Ea
 is generated from the same seed on every model: the draws diverge as soon as the
 distributions differ, but both runs start from one RNG state rather than two.
 
-The models are loaded once and reused across prompts --- reloading the 349M per prompt
+The models are loaded once and reused across prompts, reloading the 349M per prompt
 costs more than the generation does.
 
     python scripts/make_samples.py --out output/samples_ladder.md

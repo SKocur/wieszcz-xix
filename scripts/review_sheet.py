@@ -3,14 +3,14 @@
 Three hundred passages is an hour of reading if the tool stays out of the way, and an
 afternoon if the reader has to hunt for the group name, keep a tally, or edit JSON by hand.
 So: the matched term is highlighted, one keystroke labels, and every answer is written to
-disk before the next passage appears --- a crash or a Ctrl-C costs nothing and the session
+disk before the next passage appears, a crash or a Ctrl-C costs nothing and the session
 resumes where it stopped.
 
 The sheet's hash covers file and id, not labels, so filling it in does not invalidate the
 freeze that `screen_bias.py score` checks.
 
 Reading order is the sheet's own: flagged before audit, charged terms first. That order is
-a convenience for the reader, not a sampling decision --- every item in a stratum is read,
+a convenience for the reader, not a sampling decision, every item in a stratum is read,
 so the order it is read in cannot bias the count.
 
     .venv/bin/python3 scripts/review_sheet.py metrics/bias_sheet_2026-08-17.json

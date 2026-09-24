@@ -17,7 +17,7 @@ are already in byte order.
 
 Sizes are what the *tokeniser* saw, not what the file on disk holds, and for Wolne Lektury
 those differ: tokenisation drops the digitisation colophon, so seven held-out documents
-decode 23 bytes shorter than their cleaned files -- an `ISBN 978-83-288-...` line each. The
+decode 23 bytes shorter than their cleaned files, an `ISBN 978-83-288-...` line each. The
 colophon pass is imported from the same module tokenize_corpus uses rather than
 reimplemented, because a second copy of that rule is exactly how the two would drift apart
 again.

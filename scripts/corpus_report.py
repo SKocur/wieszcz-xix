@@ -1,8 +1,8 @@
 """Measure a frozen corpus build, before and after cleaning, with one classifier.
 
 The paper's "raw -> cleaned" table is only honest if both columns come from the same
-instruments, so this script is run twice — once on the frozen build as crawled (`--label
-raw`) and once on the final cleaned build (`--label final`) — and every number it reports
+instruments, so this script is run twice: once on the frozen build as crawled (`--label
+raw`) and once on the final cleaned build (`--label final`), and every number it reports
 is produced by detectors the pipeline already uses: the anachronism battery from
 `scripts/anachronism_audit.py`, the OCR-suspicion classifier from `src/analyze_ocr.py`,
 and the alpha-ratio definition of the cleaning gates in `src/clean_ocr.py`.
@@ -49,7 +49,11 @@ from analyze_ocr import reasons, strip_edges  # noqa: E402
 from anachronism_audit import MODERN, PERIOD_CONTROL, YEAR, YEAR_CTX  # noqa: E402
 from clean_ocr import is_anachronism  # noqa: E402
 
-BYTES_PER_TOKEN = 3.38          # measured on the 5.40B build with the shipped tokenizer
+# Measured corpus-wide on the frozen 6.75B build: 22,772,707,880 ledger bytes over
+# 6,745,956,943 tokens. Corpus-wide, not the held-out ratio (3.356): this constant
+# estimates corpus tokens from corpus bytes, so it must be calibrated on the mixture it
+# is applied to, the held-out split is 2% Wolne Lektury by documents and skews cheap.
+BYTES_PER_TOKEN = 3.376
 CONTEXT_CAP = 4                 # example snippets kept per modern marker
 
 # Character classes are counted by regex substitution because the C scan is what makes
@@ -82,7 +86,7 @@ def uploader(fname: str) -> str:
             while i + 1 < len(labels) and labels[i + 1].lower() in TLDS:
                 i += 1
             # leading accession numbers ("101727264.nlm.nih.gov", "47920560R.nlm...")
-            # are per-item, not per-library — a real domain label carries no digits
+            # are per-item, not per-library, since a real domain label carries no digits
             domain = [l for l in labels[: i + 1] if not any(c.isdigit() for c in l)]
             return ".".join(domain) if domain else "ia-other"
     if ident.endswith("goog"):
@@ -94,7 +98,7 @@ def scan_files(paths: list[str], strip_wl: bool = False) -> dict:
     """One worker's pass over its share of the corpus: char classes, length counters,
     the anachronism battery, and per-file rows for the sidecar. With `strip_wl` the
     wl_ files lose their colophon lines first, mirroring what tokenization feeds the
-    models — the final pass measures the training corpus, not the directory."""
+    models. The final pass measures the training corpus rather than the directory."""
     agg = {
         "docs": 0, "bytes": 0, "chars": 0, "words": 0,
         "alpha": 0, "digit": 0, "ws": 0, "cyrillic": 0, "diacritic": 0,
