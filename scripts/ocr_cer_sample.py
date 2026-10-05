@@ -11,8 +11,14 @@ original. Where the text is corrupt enough that context does not determine the r
 reference can honestly be written; those passages are marked `null` and counted separately,
 and that unreconstructable rate is itself a measurement.
 
+The sample was built from documents decoded out of a token stream, so its `doc` field is a
+position in that stream and not a name a reader can look up. `locate` finds each passage
+verbatim in the cleaned corpus and records the released identifier, and whether that
+document sits on the training or the held-out side of the split.
+
     python scripts/ocr_cer_sample.py build --n 20
     python scripts/ocr_cer_sample.py score
+    python scripts/ocr_cer_sample.py locate
 """
 
 from __future__ import annotations
@@ -21,12 +27,15 @@ import argparse
 import json
 import random
 import re
+import subprocess
 import unicodedata
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SAMPLE_DIR = REPO / "output/ocr_sample/ia"
 OUT = REPO / "metrics/ocr_cer_sample.json"
+CLEAN = REPO / "data/clean"
+SPLIT = REPO / "metrics/doc_split_2026-08-03.json"
 SEED = 1337
 PASSAGE_CHARS = 400
 
@@ -115,12 +124,47 @@ def cmd_score(args) -> None:
     print(f"wrote {out}")
 
 
+def cmd_locate(args) -> None:
+    """Search the corpus for a three-word phrase from each passage, then keep only the
+    candidates whose whitespace-normalised text contains the whole passage. A phrase is
+    matched across line breaks, since the raw text wraps where the page did."""
+    data = json.loads(OUT.read_text(encoding="utf-8"))
+    split = json.loads(SPLIT.read_text())
+    side = {i: "train" for i in split["train_ids"]} | {i: "val" for i in split["val_ids"]}
+    word = re.compile(r"[^\W\d_]{3,}")
+    for it in data["items"]:
+        w = it["raw"].split(" ")
+        runs = [w[i:i + 3] for i in range(len(w) - 2)
+                if all(word.fullmatch(x) for x in w[i:i + 3])]
+        phrase = max(runs, key=lambda r: sum(map(len, r)))
+        hits = subprocess.run(
+            ["rg", "-uuu", "-U", "-l", r"\s+".join(map(re.escape, phrase)), str(CLEAN)],
+            capture_output=True, text=True).stdout.split()
+        found = sorted(Path(h).stem for h in hits
+                       if it["raw"] in normalise(Path(h).read_text(encoding="utf-8",
+                                                                   errors="replace")))
+        it["released_ids"] = [f for f in found if f in side]
+        it["split"] = sorted({side[f] for f in it["released_ids"]})
+        print(f"  {it['id']} {it['doc']:<15} -> {', '.join(it['released_ids']) or 'NOT FOUND'}")
+    data["located"] = {"corpus": "data/clean", "split": SPLIT.name,
+                       "rule": "passage contained verbatim after whitespace normalisation, "
+                               "document present in the released split"}
+    OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    missing = [it["id"] for it in data["items"] if not it["released_ids"]]
+    docs = {d for it in data["items"] for d in it["released_ids"]}
+    print(f"{len(data['items']) - len(missing)} of {len(data['items'])} passages located, "
+          f"in {len(docs)} released documents")
+    if missing:
+        raise SystemExit(f"not in the released corpus: {', '.join(missing)}")
+
+
 def main() -> None:
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
     b = sub.add_parser("build"); b.add_argument("--n", type=int, default=20)
     b.set_defaults(func=cmd_build)
     s = sub.add_parser("score"); s.set_defaults(func=cmd_score)
+    loc = sub.add_parser("locate"); loc.set_defaults(func=cmd_locate)
     args = p.parse_args()
     args.func(args)
 
