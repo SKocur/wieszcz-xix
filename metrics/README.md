@@ -51,6 +51,23 @@ Two families of files supersede each other in place:
   `bias_sheet_349m_2026-08-19.json` (strata mixed, rechecks spread) after the external
   review of the screen.
 
+- `corruption_per_document_2026-10-05.csv.gz` scores every released document with the
+  four detectors of `src/analyze_ocr.py` (the Table 4 classifier), on the text as
+  tokenized, so `bytes` matches the provenance ledger row for row. `suspicious_pct` is
+  the per-document rate; the `.json` beside it carries the population rates per source,
+  the per-document quantiles and the share of documents and bytes each threshold keeps.
+  Produced by `scripts/corruption_per_document.py`.
+
+## judge_verdicts/
+
+Per-item verdicts from the five adjudicators named in the paper, one file per model and
+per round: `adj_*` is the preliminary round, `adj2_*` the one the paper reports. Each
+file carries the model, the endpoint, the decoding temperature, the sheet it scored and
+the SHA-256 of both the sheet and the criterion, so a verdict can be matched to the
+version of the criterion it answered. The agreement statistics computed from them are in
+`bias_adjudicator_agreement_prelim.json` and `_run2.json`, whose `file` fields name the
+working paths these were produced at.
+
 ## The frozen token files
 
 The current build, in `data/` at the repo root:

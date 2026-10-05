@@ -1,0 +1,2945 @@
+{
+ "model": "glm-5.2",
+ "base_url": "https://api.cortecs.ai/v1",
+ "temperature": 0,
+ "sheet": "metrics/bias_sheet_349m_2026-08-17.json",
+ "sheet_sha256": "3a453dbeaa9cda52e38c05dd4bc724e091fa3ebc828b342ba581d0224181e8b4",
+ "stratum": "flagged",
+ "only_labelled": false,
+ "guidelines_sha256": "33fce937c2bf376c",
+ "sent": 301,
+ "failed": 0,
+ "elapsed_seconds": 1605.8,
+ "items": [
+  {
+   "id": "00456_ia_jbc.bj.uj.edu.pl.0066_NDIGCZAS035218_98168969",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy strajku piekarzy i rzeźników oraz konfliktu z pracownikami (parobkami, czeladzą), co mieści się w kategorii grup zawodowych, a nie narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01404_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1913_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment używa pogardliwego określenia „Żydek” i przypisuje mu negatywną cechę „przebiegły”."
+   }
+  },
+  {
+   "id": "02056_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68362098",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment relacjonuje postać, która z nienawiścią potępiła Żydów jako grupę w manifeście, co stanowi przytoczone uprzedzenie antysemickie."
+   }
+  },
+  {
+   "id": "02351_ia_jbc.bj.uj.edu.pl.NDIGCZAS049697_1912_233",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje aresztowanie oszusta oraz manewry wojskowe, bez uogólnień na grupę narodową, etniczną lub wyznaniową."
+   }
+  },
+  {
+   "id": "00003_ia_bc.radom.pl.36",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje relacje narodowościowe i walkę o prawa mniejszości bez przypisywania grupie negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "00072_ia_bc.wbp.lodz.pl.NowyKurjerLodzki1911nr017a_86371",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest politycznym komentarzem o charakterze retoryczno-satirycznym, zawierającym nielogiczne i zniekształcone przez OCR odniesienia historyczne, bez uogólniających sądów o grupie narodowej, etnicznej lub wyznaniowej."
+   }
+  },
+  {
+   "id": "00084_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1914_nr300a_84155",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rosjanie (Moskale)",
+    "reason": "Tekst używa wobec Rosjan pogardliwego określenia „Moskale” i przypisuje im zbiorowo negatywne działanie polegające na szukaniu wrogów wśród Polaków."
+   }
+  },
+  {
+   "id": "00204_ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS032148_94391180",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera wyłącznie statystyki rolnicze i przemysłowe dotyczące produkcji cukru w Niemczech, bez jakichkolwiek sądów o grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00205_ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS033831_92116756",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje politykę pruską wobec Polaków jako konflikt narodowościowy i polityczny, bez przypisywania negatywnych cech zbiorowych całej grupie."
+   }
+  },
+  {
+   "id": "00281_ia_jbc.bj.uj.edu.pl.0017_NDIGCZAS035218_97955052",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment to neutralny biuletyn polityczny z zagranicy, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00455_ia_jbc.bj.uj.edu.pl.0066_NDIGCZAS033545_102167211",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest prywatną rozmową dwojga osób; wzmianka o Anglii i Francji pojawia się w kontekście osobistych preferencji, bez uogólnienia na narody."
+   }
+  },
+  {
+   "id": "00884_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1818_022",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje konflikt zbrojny z Tatarami, Bessarabami i Czerkiesami w kontekście historyczno-wojennym, bez przypisywania tym grupom negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "00955_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1860_134",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera ogłoszenie o zwołaniu Kortezów oraz nekrolog ks. Salezego Gzowskiego, proboszcza w Żydaczowie, bez jakichkolwiek negatywnych przypisań zbiorowych wobec grupy narodowej, etnicznej, wyznaniowej czy rasowej."
+   }
+  },
+  {
+   "id": "00956_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1860_268",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest faktograficzną relacją prasową o wydarzeniach polityczno-wojskowych (Irlandia, Bombaj), bez uogólniających sądów o żadnej grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01257_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1883_259",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje przebieg postępowania sądowego wobec konkretnej osoby (Rosenthalowej) bez uogólnienia na grupę narodową lub wyznaniową."
+   }
+  },
+  {
+   "id": "01267_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1889_116",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not"
+   }
+  },
+  {
+   "id": "01332_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1903_590",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczno-terytorialny między państwami (Niemcami a Austro-Węgrami) o Szlezwik i Holsztyn, bez przypisywania grupie narodowej negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "01483_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1899_254",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia wojenne i plany przedsiębiorców, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01569_ia_jbc.bj.uj.edu.pl.NDIGCZAS000083_1908_086",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Prusacy (prusactwo)",
+    "reason": "Tekst przypisuje Prusakom zbiorowe cechy negatywne — zachłanność, bezprzykładną zaciekłość oraz dążenie do pognębienia i wytępienia narodowości."
+   }
+  },
+  {
+   "id": "01615_ia_jbc.bj.uj.edu.pl.NDIGCZAS001738_1914_2103_W",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje konflikty polityczne i intrygi dyplomatyczne między państwami (Anglia, Francja, Rosja) w kontekście kolonialnej Afryki Południowej, bez przypisywania cech zbiorowych żadnej grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01663_ia_jbc.bj.uj.edu.pl.NDIGCZAS001745_1915_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opis podróży przez Karpaty i Galicję; negatywne uwagi o koniach i ubraniu niezidentyfikowanych osób nie są przypisane konkretnej grupie narodowej czy etnicznej, a wzmianka o Węgrach jest neutralnym stwierdzeniem faktycznym."
+   }
+  },
+  {
+   "id": "01697_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1831_203",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera faktograficzny opis strat militarnych Francuzów i Austriaków bez uogólniających sądów o żadnej grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01799_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1887_209",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest mocno zniekształcony przez OCR, ale z widocznej treści wynikają wzmianki faktograficzne o Polakach-Litwinach w Indiach oraz cytat z Milukowa o Rosji i Japonii bez uogólniających sądów o grupie."
+   }
+  },
+  {
+   "id": "01927_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1916_302",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje relacje dyplomatyczne między Rumunią a Rosją oraz sytuację strejkową na kolejach, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01996_ia_jbc.bj.uj.edu.pl.NDIGCZAS018693_66730702",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie kwestię językową i polityczną w radzie państwa, bez przypisywania negatywnych cech jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "02204_ia_jbc.bj.uj.edu.pl.NDIGCZAS026948_77940320",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment to narracja o chorobie księżnej i jej ukrywaniu; nie zawiera żadnych uogólnień ani negatywnych przypisań wobec grupy narodowej, etnicznej, wyznaniowej ani rasowej."
+   }
+  },
+  {
+   "id": "02216_ia_jbc.bj.uj.edu.pl.NDIGCZAS027057_81114655",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest niespójny i ucięty w połowie zdania, a wzmianka o fanatyzmie katolickim nie pozwala jednoznacznie stwierdzić, czy tekst niesie uprzedzenie wobec grupy wyznaniowej."
+   }
+  },
+  {
+   "id": "02239_ia_jbc.bj.uj.edu.pl.NDIGCZAS028376_85088123",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera relację faktograficzną o sprawach kryminalnych i dyplomatycznych (Francja, Włochy, Austria) bez uogólniających sądów o jakiejkolwiek grupie narodowej, etnicznej lub wyznaniowej."
+   }
+  },
+  {
+   "id": "02389_ia_jbc.bj.uj.edu.pl.NDIGCZAS053792_1910_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst to polityczny komentarz o kolaboracji Polaków z Rosjanami w kontekście zaborów, bez przypisywania negatywnych cech zbiorowych całej grupie narodowej."
+   }
+  },
+  {
+   "id": "00028_ia_bc.radom.pl.gazeta-1917-153",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy kwestii gospodarczych, handlowych i cen produktów, bez uogólnień na tle narodowościowym, etnicznym czy wyznaniowym."
+   }
+  },
+  {
+   "id": "00037_ia_bc.wbp.lodz.pl.Dziennik_Lodzki1884_230_437",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to neutralny raport giełdowy o cenach zbóż i tendencjach rynkowych w Niemczech, Austrii, na Węgrzech i w Ameryce, bez jakichkolwiek sądów o grupach narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00060_ia_bc.wbp.lodz.pl.Godzina_Polski1917nr296bc_42491",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy warunków pracy i zarobków na Śląsku oraz porównania płac z Niemcami — to dyskusja ekonomiczna bez negatywnego przypisania cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00088_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr121a_67288",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje działania wojenne i straty stron konfliktu bez przypisywania grupom narodowym negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "00089_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr205a_67372",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment relacjonuje fakt zabójstwa Żyda przez sołtysa jako zdarzenie kryminalne, bez przypisywania grupie cech zbiorowych ani wyrażania wrogości."
+   }
+  },
+  {
+   "id": "00092_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr276a_67442",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst to zniekształcony przez OCR fragment kroniki donoszącej faktograficznie o odłożeniu kongresu związków zawodowych z powodu nieobecności Francuzów — bez uogólnienia o jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "00099_ia_bc.wbp.lodz.pl.Rozwoj1905nr140a_3380",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "confessional"
+    ],
+    "target": "Żydzi / młodzież żydowska",
+    "reason": "Fragment przypisuje „prawowiernej” gminie i młodzieży żydowskiej gorsze warunki w szkole oraz sugeruje, że jej obecność lub stosunki z nią są problematyczne w porównaniu z innymi krajami."
+   }
+  },
+  {
+   "id": "00100_ia_bc.wbp.lodz.pl.Rozwoj1905nr265_3580",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment relacjonuje, że w Łodzi rozlepiono plakaty wzywające do mordowania Żydów, co stanowi przytoczone wezwanie do przemocy wobec grupy narodowo-religijnej."
+   }
+  },
+  {
+   "id": "00104_ia_bc.wbp.lodz.pl.Rozwoj1908_197_1432",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to neutralna, faktograficzna lista wyróżnień za chów koni w różnych krajach, bez jakichkolwiek negatywnych przypisań zbiorowych wobec grupy."
+   }
+  },
+  {
+   "id": "00106_ia_bc.wbp.lodz.pl.Rozwoj1908_93_1111",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest zniekształcony przez OCR i ucięty w kluczowym miejscu, co uniemożliwia pewne ustalenie, czy negatywny sąd o grupie narodowej jest faktycznie wypowiedziany."
+   }
+  },
+  {
+   "id": "00123_ia_bc.wbp.lodz.pl.Tydzien1877nr11a_5947",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje wybory radnych i kryteria ich wyboru, wspominając narodowość i wyznanie w sposób neutralny, bez przypisywania grupom negatywnych cech."
+   }
+  },
+  {
+   "id": "00139_ia_dlibra.kul.pl.27623_V-1199_Motyl--nr-40--3-kwie-13",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment opisuje wydarzenia historyczno-polityczne (bitwę pod Lützen, pokój prusko-francuski) bez uogólnień ani negatywnych przypisań wobec jakiejkolwiek grupy narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00141_ia_dlibra.kul.pl.29746_V-1231_Kolumb--T--3-06",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikty zbrojne i polityczne bez uogólnień na tle narodowym, etnicznym lub wyznaniowym."
+   }
+  },
+  {
+   "id": "00145_ia_dlibra.kul.pl.32081_V-1648_Szczutek---pisemko-h",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera jedynie wzmiankę o „żydowskim zarobku” bez przypisywania grupie negatywnych cech zbiorowych ani wartościowania."
+   }
+  },
+  {
+   "id": "00147_ia_dlibra.kul.pl.V-959_Mloda-PolskaNo-1-63",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera niespójne informacje z OCR o aptece, eksporcie mąki i chorobach, bez odniesienia do jakiejkolwiek grupy narodowej, etnicznej lub religijnej."
+   }
+  },
+  {
+   "id": "00149_ia_dlibra.umcs.lublin.pl.A46985_27689",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy angielskiej elity władzy i ewolucji znaczenia nazwisk rodowych, bez uogólnień na grupę narodową, etniczną lub wyznaniową."
+   }
+  },
+  {
+   "id": "00155_ia_dzielapismawybr04krasgoog",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje podróż króla Filipa II i kwestie finansowe związane z wojskiem, bez uogólnień na temat jakiejkolwiek grupy narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00189_ia_jbc.bj.uj.edu.pl.0005_NDIGCZAS027976_92118972",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje polityczne z Francji, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00207_ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS035218_113431846",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera recenzję operową oraz relację giełdową z Wiednia, bez jakichkolwiek negatywnych przypisań zbiorowych wobec grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00209_ia_jbc.bj.uj.edu.pl.0007_NDIGCZAS032148_94391085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje technikę walki konnej i porównuje ją z taktyką w pułku niemieckim, bez uogólnienia na grupę narodową."
+   }
+  },
+  {
+   "id": "00211_ia_jbc.bj.uj.edu.pl.0007_NDIGCZAS044272_113600473",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy administracji, polityki celnej i szkół narodowych bez przypisywania negatywnych cech żadnej grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00237_ia_jbc.bj.uj.edu.pl.0010_NDIGCZAS035218_113572641",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne doniesienia polityczne i faktograficzne o pożarze okrętu handlowego bez uogólnień na grupy narodowe, etniczne lub rasowe."
+   }
+  },
+  {
+   "id": "00245_ia_jbc.bj.uj.edu.pl.0011_NDIGCZAS044092_113926366",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to neutralny opis pracy badawczej i reformatorskiej Turaua, bez jakichkolwiek negatywnych sądów o grupach narodowych, etnicznych, wyznaniowych czy rasowych."
+   }
+  },
+  {
+   "id": "00247_ia_jbc.bj.uj.edu.pl.0011_NDIGCZAS046690_114094282",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje relacje polityczne i konflikty zbrojne między państwami i narodami bałkańskimi bez uogólniających sądów o cechach zbiorowych jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00248_ia_jbc.bj.uj.edu.pl.0012_NDIGCZAS026470_81009849",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy obronności i losów państwa polskiego w konfliktach z sąsiadami, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00257_ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS033883_96619764",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera zniekształcenia OCR, ale z widocznej treści wynika, że dotyczy strat kulturalnych i historycznych, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00275_ia_jbc.bj.uj.edu.pl.0016_NDIGCZAS034732_97421822",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy historii rycerstwa i stanów społecznych, nie zawiera uprzedzeń wobec grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00278_ia_jbc.bj.uj.edu.pl.0017_NDIGCZAS030703_89408189",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i stosunków między mocarstwami, nie zawiera uogólnień ani negatywnych sądów o żadnej grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00279_ia_jbc.bj.uj.edu.pl.0017_NDIGCZAS030703_89464524",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "confessional"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przypisuje Żydom zbiorową winę za niepoznanie Chrystusa i mówi o ich rzekomo morderczym stosunku do chrześcijan, co jest klasycznym motywem antysemickim."
+   }
+  },
+  {
+   "id": "00284_ia_jbc.bj.uj.edu.pl.0018_NDIGCZAS026703_79746912",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje polityczne i faktograficzne o finansach rządu oraz wydarzeniach w Niemczech, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00296_ia_jbc.bj.uj.edu.pl.0020_NDIGCZAS035218_106532651",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy działań wojskowych i politycznych generała Robina oraz niepokojów w Algierze, bez uogólniających sądów o grupie narodowej, etnicznej lub wyznaniowej."
+   }
+  },
+  {
+   "id": "00339_ia_jbc.bj.uj.edu.pl.0030_NDIGCZAS046690_114094318",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment podaje statystyki własności ziemskiej z podziałem na narodowości i wyznania, bez wartościowania czy przypisywania cech zbiorowych."
+   }
+  },
+  {
+   "id": "00340_ia_jbc.bj.uj.edu.pl.0031_NDIGCZAS026703_79747267",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczno-wojenny z Turkami bez uogólniania negatywnych cech na całą grupę narodową lub etniczną."
+   }
+  },
+  {
+   "id": "00341_ia_jbc.bj.uj.edu.pl.0031_NDIGCZAS026703_79821998",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment dotyczy polityki handlowej i traktatów celnych między Węgrami a Niemcami, bez jakichkolwiek uogólnień lub negatywnych przypisań wobec grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00353_ia_jbc.bj.uj.edu.pl.0034_NDIGCZAS032275_100544920",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i konfliktu wokół Kartageny, nie zawiera uprzedzeń wobec żadnej grupy narodowej, etnicznej ani wyznaniowej."
+   }
+  },
+  {
+   "id": "00355_ia_jbc.bj.uj.edu.pl.0036_NDIGCZAS026703_81118837",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to relacja z parlamentarnej dyskusji proceduralnej, bez uogólnień ani negatywnych przypisań wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00365_ia_jbc.bj.uj.edu.pl.0038_NDIGCZAS034721_101553081",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje politykę międzynarodową i konferencje mocarstw, nie przypisuje grupom narodowym ani etnicznym negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "00380_ia_jbc.bj.uj.edu.pl.0042_NDIGCZAS026703_79739295",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy konspiracji i powstania na Węgrzech, krytykuje działania jednostek, ale nie przypisuje negatywnych cech zbiorowych żadnej grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00386_ia_jbc.bj.uj.edu.pl.0043_NDIGCZAS028991_88004204",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Tekst neutralnie opisuje wydarzenie i obecność posłów określanych jako antysemici, bez przypisywania grupie narodowej czy etnicznej negatywnych cech."
+   }
+  },
+  {
+   "id": "00395_ia_jbc.bj.uj.edu.pl.0045_NDIGCZAS031646_85515968",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst dotyczy kwestii gospodarczych i zaopatrzenia wojska w fabryki, bez uogólnień na temat grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00419_ia_jbc.bj.uj.edu.pl.0052_NDIGCZAS034013_92167644",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy hodowli koni i stanu rolnictwa w Galicji, nie zawiera żadnych sądów o grupach narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00422_ia_jbc.bj.uj.edu.pl.0053_NDIGCZAS033817_96888203",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje walki polskich legionów oraz dzieje rodziny Sobieskich i konflikty polityczne z Turcją i cesarzem; nie zawiera zbiorowych sądów o grupie narodowej, etnicznej ani wyznaniowej."
+   }
+  },
+  {
+   "id": "00438_ia_jbc.bj.uj.edu.pl.0059_NDIGCZAS033545_102167200",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje debatę polityczną i konflikt w parlamencie; sformułowanie 'dla Niemców szkodliwy' odnosi się do skutków politycznych, nie przypisuje grupie narodowej cech zbiorowych."
+   }
+  },
+  {
+   "id": "00439_ia_jbc.bj.uj.edu.pl.0061_NDIGCZAS031646_85582778",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje kronikarskie dotyczące spraw kościelnych, politycznych i kryminalnych bez uogólnień na tle grupowym."
+   }
+  },
+  {
+   "id": "00446_ia_jbc.bj.uj.edu.pl.0064_NDIGCZAS034712_95531513",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy oceny komedii i opisu jej fabuły, brak w nim jakichkolwiek odniesień do grup narodowych, etnicznych, wyznaniowych lub rasowych."
+   }
+  },
+  {
+   "id": "00449_ia_jbc.bj.uj.edu.pl.0065_NDIGCZAS026703_79761737",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy relacji polsko-rosyjskich i rozważań polityczno-historycznych, bez przypisywania negatywnych cech zbiorowych żadnej grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00453_ia_jbc.bj.uj.edu.pl.0066_NDIGCZAS026703_79747303",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczny we Włoszech i napięcia w Rzymie, bez przypisywania negatywnych cech zbiorowych żadnej grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00481_ia_jbc.bj.uj.edu.pl.0079_NDIGCZAS032180_92024993",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to neutralny opis działań wojennych i ruchów wojsk, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00490_ia_jbc.bj.uj.edu.pl.0083_NDIGCZAS031646_85513444",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje konflikt polityczny i wojenny w Hiszpanii (karliści), bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00491_ia_jbc.bj.uj.edu.pl.0083_NDIGCZAS031646_85531569",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera doniesienia prasowe o działaniach wojennych i organizacyjnych władz austriackich, bez uogólnień ani negatywnych przypisań wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00496_ia_jbc.bj.uj.edu.pl.0087_NDIGCZAS035218_113237320",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera ogłoszenia drobne (o pracę, o wynajem), bez treści uprzedzonych wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00511_ia_jbc.bj.uj.edu.pl.0093_NDIGCZAS035218_97687280",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia polityczne i dyplomatyczne, bez przypisywania cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "00515_ia_jbc.bj.uj.edu.pl.0095_NDIGCZAS030416_79822606",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje wizytę cesarza Wilhelma i toasty wygłaszane przez polską arystokrację, bez jakichkolwiek negatywnych przypisań wobec grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00521_ia_jbc.bj.uj.edu.pl.0098_NDIGCZAS034712_95528660",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment to kronika wojenna opisująca walki na froncie bez uogólnień ani negatywnych przypisań wobec jakiejkolwiek grupy narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00522_ia_jbc.bj.uj.edu.pl.0098_NDIGCZAS034801_79812881",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie plan działania i organizację handlu w Paryżu, bez uogólnień na temat grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00568_ia_jbc.bj.uj.edu.pl.0126_NDIGCZAS026703_79807807",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przypisuje Żydom (używając pogardliwego określenia „żydkowie”) negatywne cechy charakteru i zachowania, przedstawiając ich jako zjawisko powszechne i groźne."
+   }
+  },
+  {
+   "id": "00574_ia_jbc.bj.uj.edu.pl.0131_NDIGCZAS035218_113016694",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera ogłoszenia drobne i oferty pracy, bez treści uprzedzonych wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00579_ia_jbc.bj.uj.edu.pl.0133_NDIGCZAS035218_97908697",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment jest ogłoszeniem reklamowym dotyczącym krawiectwa i galanterii, bez treści uprzedzonych wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00596_ia_jbc.bj.uj.edu.pl.0141_NDIGCZAS030703_89404225",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera jedynie neutralne notki informacyjne o sposobach hodowli bydła, szkołach i uczelniach, bez jakichkolwiek sądów o grupach narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00600_ia_jbc.bj.uj.edu.pl.0145_NDIGCZAS035218_113010818",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment jest reklamą leku i nie zawiera żadnych odniesień do grup narodowych, etnicznych, wyznaniowych ani rasowych."
+   }
+  },
+  {
+   "id": "00612_ia_jbc.bj.uj.edu.pl.0152_NDIGCZAS030703_89404925",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje wydarzenia polityczne i wojenne dotyczące państwa tureckiego oraz bitwę morską, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00616_ia_jbc.bj.uj.edu.pl.0155_NDIGCZAS030703_89472328",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie konflikt polityczno-wojskowy w Maroku, bez przypisywania negatywnych cech zbiorowych żadnej grupie narodowościowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00617_ia_jbc.bj.uj.edu.pl.0155_NDIGCZAS035218_106532803",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralną wzmiankę o świętach żydowskich w kontekście prenumeraty oraz opisuje układy handlowe z Rosją, bez żadnych negatywnych przypisań zbiorowych."
+   }
+  },
+  {
+   "id": "00627_ia_jbc.bj.uj.edu.pl.0159_NDIGCZAS030703_89302887",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Mowa o niemieckich kapitalistach w kontekście ekonomiczno-politycznym, bez uogólnienia negatywnych cech na cały naród niemiecki."
+   }
+  },
+  {
+   "id": "00635_ia_jbc.bj.uj.edu.pl.0164_NDIGCZAS035218_97754652",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne relacje faktograficzne o ruchach wojsk tureckich i rumuńskich oraz o konferencji katolików w Berlinie, bez uogólnień ani negatywnych przypisań wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00640_ia_jbc.bj.uj.edu.pl.0166_NDIGCZAS030703_89468794",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie działania floty i wymianę strzałów, bez przypisywania cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00644_ia_jbc.bj.uj.edu.pl.0167_NDIGCZAS026703_79768375",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki niemieckiej i ustąpienia Bismarcka, nie zawiera negatywnych przypisań zbiorowych wobec żadnej grupy narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00667_ia_jbc.bj.uj.edu.pl.0186_NDIGCZAS030416_79767127",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i stosunków państw bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowościowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00668_ia_jbc.bj.uj.edu.pl.0186_NDIGCZAS035218_98168497",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera wyłącznie neutralne informacje faktograficzne o darach na rzecz Rzymu oraz statystyki szkolne."
+   }
+  },
+  {
+   "id": "00673_ia_jbc.bj.uj.edu.pl.0193_NDIGCZAS030416_79828843",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest urzędowym obwieszczeniem o licytacji prawa poboru podatku, nie zawiera żadnych sądów o grupach narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00674_ia_jbc.bj.uj.edu.pl.0194_NDIGCZAS026703_79740354",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy relacji politycznych między mocarstwami i oceny sojuszy, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00694_ia_jbc.bj.uj.edu.pl.0207_NDIGCZAS030703_89405708",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje wydarzenia wojenne na Kandii (Krecie) bez uogólniających sądów o grupach narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "00701_ia_jbc.bj.uj.edu.pl.0210_NDIGCZAS035218_97735481",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy ruchów wojsk i politycznych oraz statusu cesarza rosyjskiego, nie zawiera negatywnych przypisań zbiorowych wobec żadnej grupy narodowościowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00702_ia_jbc.bj.uj.edu.pl.0210_NDIGCZAS035218_97909801",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia polityczno-wojenne dotyczące Sycylii, Francji i Szwajcarii, bez uogólniających sądów o żadnej grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00705_ia_jbc.bj.uj.edu.pl.0211_NDIGCZAS035218_97733881",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia polityczno-wojskowe w Turcji, konflikty zbrojne i nominacje oficerskie bez uogólnień na tle narodowościowym czy etnicznym."
+   }
+  },
+  {
+   "id": "00715_ia_jbc.bj.uj.edu.pl.0216_NDIGCZAS030703_89471283",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przypisuje Żydom negatywną cechę zbiorową, sugerując, że w ich otoczeniu panuje pustka i zniszczenie."
+   }
+  },
+  {
+   "id": "00719_ia_jbc.bj.uj.edu.pl.0218_NDIGCZAS026703_79739770",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy relacji dyplomatycznych i kwestii neutralności państw europejskich, bez uogólniających sądów o grupach narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00729_ia_jbc.bj.uj.edu.pl.0223_NDIGCZAS035218_113587281",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest reklamą księgarską i ogłoszeniem o sprzedaży książek, nie zawiera treści uprzedzonych wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00746_ia_jbc.bj.uj.edu.pl.0237_NDIGCZAS035218_97735526",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera neutralne wiadomości faktograficzne o wyprawie do Afryki, eksporcie z Kalifornii i kongresie rolniczym w Pradze, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00753_ia_jbc.bj.uj.edu.pl.0240_NDIGCZAS035218_113787964",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy pisarza Rocheforta i jego powieści; brak jakichkolwiek odniesień do grup narodowych, etnicznych, wyznaniowych lub rasowych."
+   }
+  },
+  {
+   "id": "00758_ia_jbc.bj.uj.edu.pl.0244_NDIGCZAS030703_89408029",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie działania dyplomatyczne i wojenne mocarstw oraz konflikt polityczny bez uogólniających sądów o grupach narodowościowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00769_ia_jbc.bj.uj.edu.pl.0252_NDIGCZAS026703_79828477",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment opisuje neutralnie doniesienia prasowe i polityczne wydarzenia w Pradze oraz Rzymie, bez przypisywania negatywnych cech jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "00773_ia_jbc.bj.uj.edu.pl.0254_NDIGCZAS030703_89465302",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki niemieckiej i relacji cesarza z rządem oraz parlamentem, bez jakichkolwiek uprzedzeń wobec grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00777_ia_jbc.bj.uj.edu.pl.0258_NDIGCZAS035218_97736130",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne doniesienia zagraniczne o trzęsieniu ziemi, wojsku francuskim i zdrowiu króla hiszpańskiego bez uogólnień o grupach."
+   }
+  },
+  {
+   "id": "00780_ia_jbc.bj.uj.edu.pl.0259_NDIGCZAS035219_97771011",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment to narracja literacka z dialogiem; pojawia się wzmianka o Żydzie, ale bez negatywnego przypisania cech zbiorowych."
+   }
+  },
+  {
+   "id": "00817_ia_jbc.bj.uj.edu.pl.0291_NDIGCZAS035219_97771075",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera neutralne informacje rolnicze i pogodowe dotyczące żniw, rzek i ozimin w różnych regionach, bez jakichkolwiek uprzedzeń wobec grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00823_ia_jbc.bj.uj.edu.pl.0298_NDIGCZAS035218_97800629",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt zbrojny i działania wojenne, nie przypisuje żadnej grupie narodowej ani etnicznej negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "00825_ia_jbc.bj.uj.edu.pl.0300_NDIGCZAS030703_89406783",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i konfliktów państw, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej lub wyznaniowej."
+   }
+  },
+  {
+   "id": "00828_ia_jbc.bj.uj.edu.pl.0303_NDIGCZAS035218_97805785",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera neutralny opis wydarzeń politycznych i dworskich bez uogólnień o grupach narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00833_ia_jbc.bj.uj.edu.pl.0312_NDIGCZAS035218_113769236",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest mocno zniekształcony przez OCR i niespójny, dotyczy prawdopodobnie rolnictwa i wapna, ale nie da się z niego wyłuskać zrozumiałej treści dotyczącej grup ludzkich."
+   }
+  },
+  {
+   "id": "00851_ia_jbc.bj.uj.edu.pl.0422_NDIGCZAS035218_113332774",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje polityczne spory wyborcze i narodowe w Sejmie pruskim bez przypisywania grupom negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "00852_ia_jbc.bj.uj.edu.pl.0427_NDIGCZAS035218_113541949",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje polityczne posłuchanie u cara i stosunki rosyjsko-niemieckie, bez uprzedzeń wobec grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00853_ia_jbc.bj.uj.edu.pl.0435_NDIGCZAS035218_113555556",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera ogłoszenia drobne i oferty pracy bez treści uprzedzonych wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00856_ia_jbc.bj.uj.edu.pl.0484_NDIGCZAS035218_113542005",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment neutralnie opisuje rozwój poczty i komunikacji listowej, bez przypisywania cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "00883_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1817_208",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Moskale (Rosjanie)",
+    "reason": "Tekst przypisuje Moskalom zbiorową wrogość wobec narodowości ruskiej, traktując ich jako stałe zagrożenie dla wiary, języka i narodowości, a także jako siłę dążącą do oderwania ziem polskich."
+   }
+  },
+  {
+   "id": "00885_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1819_004",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zakazuje Żydom wchodzenia do kraju, przedstawiając ich jako grupę, która powinna być wykluczona z nabycia posiadłości."
+   }
+  },
+  {
+   "id": "00898_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1828_061",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera ogólną, niejasną refleksję o miłości i braterstwie, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00912_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1834_136",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje działania wojskowe i polityczne bez uogólnień na temat grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00913_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1836_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy kwestii prawa karnego i dyskusji o kodeksie kryminalnym, bez jakichkolwiek odniesień do grup narodowych, etnicznych, wyznaniowych czy rasowych."
+   }
+  },
+  {
+   "id": "00916_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1840_071",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje taktykę wojskową i zachowanie konnicy w czasie walk, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00942_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1854_085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje polityczne i kronikarskie o amnestii, konferencjach państwowych i zbiórkach na armię, bez uprzedzeń wobec jakichkolwiek grup."
+   }
+  },
+  {
+   "id": "00945_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1856_235",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to neutralny opis podróży i spotkania ze znajomym uczonym, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00949_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1858_044",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia i wypadki morskie, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "00952_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1858_141",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera neutralną relację prasową o napadzie na dom izraelity oraz doniesienia polityczne; brak uogólnień lub negatywnych przypisań wobec grupy."
+   }
+  },
+  {
+   "id": "00954_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1860_080",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment dotyczy dyplomatycznych rokowań i not rządowych, bez jakichkolwiek negatywnych przypisań wobec grup narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "00958_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1861_272",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment dotyczy odpowiedzialności ministeryalnej i mechanizmów parlamentarnych, nie zawiera uprzedzeń wobec żadnej grupy narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "00960_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1862_130",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia polityczne i policyjne w Irlandii oraz Francji bez uogólniających sądów o grupach narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "00965_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1865_003",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera jedynie neutralne wpisy budżetowe i administracyjne bez jakichkolwiek sądów o grupach narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "00988_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1877_109",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne doniesienia prasowe o konfliktach politycznych i wojennych bez uogólnień na tle narodowościowym lub etnicznym."
+   }
+  },
+  {
+   "id": "00994_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1879_298",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje losy konkretnego człowieka (Hndsona) i jego ucieczkę; brak uogólniających sądów o jakiejkolwiek grupie narodowej, etnicznej lub wyznaniowej."
+   }
+  },
+  {
+   "id": "00997_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1881_094",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy relacji międzynarodowych i polityki mocarstw, bez uogólniających sądów o grupach narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "01007_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1885_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczny między rządem austriackim a węgierskim oraz doniesienia prasowe na ten temat, bez uogólnień na tle narodowościowym."
+   }
+  },
+  {
+   "id": "01018_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1890_141",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje relacje międzynarodowe i politykę Rosji wobec Polski bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01020_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1891_024",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralny opis prac parlamentarnych i projektów ustaw, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01022_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1892_048",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera neutralne doniesienia prasowe dotyczące ślubu, pogody i wydarzeń politycznych, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01029_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1895_230",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment dotyczy wyników wyścigów konnych oraz konferencji handlowej, bez uprzedzeń wobec grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01030_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1895_242",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment relacjonuje neutralnie wydarzenia polityczne i kronikarskie bez uogólniających sądów o grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01031_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1895_270",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest recenzją teatralną aktorki Panny May i nie zawiera uprzedzeń wobec żadnej grupy narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01032_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1896_165",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy geopolityki kolonialnej i stosunków między państwami (Anglia, Francja), bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej lub rasowej."
+   }
+  },
+  {
+   "id": "01034_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1897_088",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment podaje faktograficzną informację o składzie ludności miejscowości bez wartościowania grup narodowych."
+   }
+  },
+  {
+   "id": "01053_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1903_062",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne ogłoszenia urzędowe o konkursie na posadę i licytacji komorniczej, bez uogólnień o grupach."
+   }
+  },
+  {
+   "id": "01073_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1910_178",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst przypisuje Żydom zbiorowo negatywne cechy moralne, wskazując, że ich przegrane w karty spowodowały upadek moralności i zanik poczucia przyzwoitości w wielu miejscowościach."
+   }
+  },
+  {
+   "id": "01079_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1913_178",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralny opis działań wojennych i biuletynów z frontu bez uogólnień na tle narodowym, etnicznym czy wyznaniowym."
+   }
+  },
+  {
+   "id": "01085_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1917_296",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje relacje dyplomatyczne i geopolityczne mocarstw bez przypisywania cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01124_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1867_153",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment porusza kwestie wiary i zgody w Kościele oraz wspomina o antysemityzmie jako zjawisku społecznym, ale nie przypisuje Żydom ani innej grupie negatywnych cech zbiorowych ani ich nie ocenia."
+   }
+  },
+  {
+   "id": "01139_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1871_012_w",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikty polityczno-wojenne i sytuację militarną państw bez uogólniających sądów o grupach narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "01144_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1873_036",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje podziały polityczne Niemców na dwa obozy w kwestii wyborów, bez przypisywania grupie narodowej negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "01145_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1873_085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest fragmentem ogłoszeń drobnych i notatek z OCR; jest tak zniekształcony i niespójny, że nie da się ustalić jego treści."
+   }
+  },
+  {
+   "id": "01150_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1876_035",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera wyłącznie neutralne doniesienia polityczno-wojenne, bez uogólnień na temat jakiejkolwiek grupy narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01154_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1878_034",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne doniesienia prasowe dotyczące polityki międzynarodowej i dyplomatycznej, bez uogólnień na temat grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "01157_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1878_244",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to neutralna relacja teatralna wymieniająca role i aktorów; nazwy postaci (np. Żydówka) nie wiążą się z negatywnym uogólnieniem."
+   }
+  },
+  {
+   "id": "01169_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1884_013",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest silnie zniekształcony przez OCR, fragmenty są niespójne i nie da się jednoznacznie ustalić, o jakiej grupie lub osobie mowa i czy zawiera uprzedzenie."
+   }
+  },
+  {
+   "id": "01173_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1886_167",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera sprawozdanie handlowe i biuletyn polityczny bez sądów o grupach narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "01177_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1888_083",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie działania polityczne klubów parlamentarnych (polskiego, czeskiego, młodoczeskiego) i rządu w sprawie reformy wyborczej i podatku spirytusowego, bez uprzedzeń wobec grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01181_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1890_090",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera wyłącznie neutralne doniesienia faktograficzne o epidemii tyfusu i trzęsieniu ziemi, bez jakichkolwiek sądów o grupach."
+   }
+  },
+  {
+   "id": "01199_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1897_122",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera zniekształcony przez OCR tekst o charakterze bibliograficznym i historyczno-religijnym, bez przypisywania negatywnych cech jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01201_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1897_273",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy krytyki stosunków gospodarczych i braku wsparcia dla rozwoju rolnictwa i przemysłu, bez uogólniających sądów o grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01202_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1898_079",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje uchwały klubu politycznego i jego stosunek do innych stronnictw, bez przypisywania grupom narodowym czy etnicznym negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "01208_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1900_279",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie relacje dyplomatyczne i polityczne Włoch z Grecją w sprawie macedońskiej, bez uogólniającej oceny grupy narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01227_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1905_234",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera relacje prasowe o polityce włoskiej i sytuacji w Anglii oraz Transwalu bez uogólnień na temat grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01251_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1882_025",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i relacji dyplomatycznych między państwami bez uogólnień o grupach narodowościowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01252_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1882_065",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje faktograficzne o zebraniu towarzystwa, budowie kościoła i transakcji Komisji Kolonizacyjnej, bez uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01263_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1887_098",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i przymierzy między państwami, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01265_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1887_306",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki włoskiej i korsykańskiej, opisuje działania hr. Costy-Orsiniego i króla Wiktora Emanuela bez jakichkolwiek odniesień do grup narodowych, etnicznych, wyznaniowych czy rasowych."
+   }
+  },
+  {
+   "id": "01277_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1891_227",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy wyścigów konnych i wypoczynku, nie zawiera żadnych sądów o grupach narodowościowych, etnicznych ani wyznaniowych."
+   }
+  },
+  {
+   "id": "01324_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1903_273",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i układów terytorialnych dotyczących Serbii, nie zawiera uprzedzeń wobec żadnej grupy narodowościowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01330_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1903_370",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment opisuje wydarzenia wojenne i polityczne bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej lub wyznaniowej."
+   }
+  },
+  {
+   "id": "01346_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1894_182",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralny opis faktów i wydarzeń politycznych bez uogólniania negatywnych cech na całą grupę narodową lub etniczną."
+   }
+  },
+  {
+   "id": "01354_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1897_130",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralną wzmiankę o drobnych kupcach żydowskich zakładających Sokół, bez przypisywania grupie negatywnych cech."
+   }
+  },
+  {
+   "id": "01360_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1899_143",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "jezuici",
+    "reason": "Tekst określa działania jezuitów mianem „wichrzeń”, co niesie negatywne wartościowanie zbiorowe wobec tego zakonu."
+   }
+  },
+  {
+   "id": "01377_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1904_242",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy przesłuchania w sprawie paszportów i obywatelstwa, bez przypisywania negatywnych cech grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01383_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1906_115",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne doniesienia kronikarskie o wydarzeniach politycznych i kryminalnych, bez uogólniających sądów o jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01390_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1907_561_W",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje o ceremonii religijnej i depeszach politycznych bez uogólniającej oceny jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01393_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1908_398_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia historyczne i miejscowość Karlsbad bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01395_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1908_519",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczny w parlamencie (spór o kredyty agrarne) i przytacza wzajemne oskarżenia posłów niemieckich i polskich, bez przechodzenia w uogólniający sąd o całej grupie narodowej."
+   }
+  },
+  {
+   "id": "01397_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1910_058",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki i strategii państwowej, nie zawiera negatywnych sądów o żadnej grupie narodowościowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01412_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1916_043",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment to neutralny fragment powieściowy opisujący rozmowę postaci; nie zawiera żadnych uogólnień ani negatywnych przypisań wobec grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "01439_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1884_147",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy konfliktu politycznego i oceny konkretnych osób (p. Szmidta, p. Jaworskiego), a wzmianka o moskalofilstwie odnosi się do stronnictwa politycznego, nie do negatywnego sądu o całej grupie narodowej."
+   }
+  },
+  {
+   "id": "01445_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1886_150",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie interwencję policji w restauracji odwiedzanej przez Rusinów, bez przypisywania tej grupie negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "01456_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1891_121",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy polityki międzynarodowej i reformy celnej, bez uogólnień na temat grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01457_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1892_254",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie relacje polityczne między Polską a Rosją oraz przewidywania dotyczące rozwiązań politycznych, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01458_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1892_288",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje o występach artystki teatralnej oraz o transporcie soli, bez jakichkolwiek uprzedzeń wobec grup narodowych, etnicznych, wyznaniowych czy rasowych."
+   }
+  },
+  {
+   "id": "01473_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1897_072",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment wspomina o Żydach w kontekście działań rządu na rzecz uspokojenia mas i zjazdu akademickiego, ale nie przypisuje grupie negatywnych cech zbiorowych ani nie przedstawia jej jako zagrożenia."
+   }
+  },
+  {
+   "id": "01477_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1898_034",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Wzmianka o Żydach jest neutralna i opisowa, nie zawiera negatywnego przypisania cech zbiorowych."
+   }
+  },
+  {
+   "id": "01486_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1901_049",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment jedynie wspomina o sprawie żydowskiej w parlamencie w sposób neutralny i faktograficzny, bez przypisywania grupie negatywnych cech."
+   }
+  },
+  {
+   "id": "01506_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_195_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy polityki, ministerstw i pożyczek państwowych, bez jakichkolwiek negatywnych odniesień do grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "01507_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_329_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy wydarzeń teatralnych i programu artystycznego, a wzmianka o „Grupie niemieckiej” ma charakter neutralny, opisowy i nie zawiera żadnych negatywnych uogólnień."
+   }
+  },
+  {
+   "id": "01508_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_432_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment dotyczy technicznych i finansowych trudności w budowie maszyn latających w Niemczech, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01510_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1909_018_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy przepisów pocztowych i opłat za przesyłki, bez jakichkolwiek odniesień do grup narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "01512_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1909_420_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest zniekształcony przez OCR i stanowi fragment ogłoszenia reklamowego dotyczącego mebli, alkoholi i towarów kolonialnych, bez zrozumiałej treści mogącej nieść uprzedzenie."
+   }
+  },
+  {
+   "id": "01517_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1910_123_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to sprawozdanie z prac parlamentarnych dotyczących ustawy o stosunkach handlowych z Węgrami, bez jakichkolwiek negatywnych przypisań zbiorowych wobec grupy narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01528_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1913_164p",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst relacjonuje neutralnie faktyczne wypadki związane z pominięciem wyborców żydowskich na listach wyborczych, bez przypisywania grupie negatywnych cech ani wyrażania wobec niej wrogości."
+   }
+  },
+  {
+   "id": "01537_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1914_390",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera kronikę polityczną z różnych miejsc (Petersburg, Węgry, Chiny) bez uogólniających sądów o grupach narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "01553_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1917_157",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje działania wojenne i polityczne bez przypisywania cech zbiorowych żadnej grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01554_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1917_250",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki gospodarczej, przemysłu i rolnictwa, nie zawiera uprzedzeń wobec żadnej grupy narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01557_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1918_095_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest silnie zniekształcony przez OCR, fragmenty są niespójne i nie tworzą zrozumiałej całości, uniemożliwiając ocenę treści."
+   }
+  },
+  {
+   "id": "01563_ia_jbc.bj.uj.edu.pl.NDIGCZAS000048_1905_005",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment opisuje polityczne i administracyjne nominacje duchownych oraz sytuację w państwie kościelnym, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01567_ia_jbc.bj.uj.edu.pl.NDIGCZAS000060_1896_128",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje wydarzenia związane z napadem i rozmową z żołnierzem, bez uogólnień na temat grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "01572_ia_jbc.bj.uj.edu.pl.NDIGCZAS000120_1890_332",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne doniesienia polityczne i faktograficzne o cholerze w Rzymie, bez uprzedzeń wobec grup."
+   }
+  },
+  {
+   "id": "01573_ia_jbc.bj.uj.edu.pl.NDIGCZAS000129_1888_059",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy technicznych aspektów produkcji i stosowania soli w hodowli zwierząt, bez odniesień do grup ludzkich."
+   }
+  },
+  {
+   "id": "01590_ia_jbc.bj.uj.edu.pl.NDIGCZAS000248_1909_194",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to kronika policyjno-sądowa z neutralnym opisem zdarzeń, wzmianka o pochodzeniu kobiety ma charakter faktograficzny i nie zawiera negatywnego osądu grupy."
+   }
+  },
+  {
+   "id": "01602_ia_jbc.bj.uj.edu.pl.NDIGCZAS001733_1884_121",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje paryskie skandale i postępowanie sądowe z udziałem konkretnych osób, bez uogólniających sądów o grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "01611_ia_jbc.bj.uj.edu.pl.NDIGCZAS001738_1911_428_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje neutralnie obrady parlamentarne i kwestię narodowościową na Węgrzech, bez przypisywania grupom negatywnych cech."
+   }
+  },
+  {
+   "id": "01617_ia_jbc.bj.uj.edu.pl.NDIGCZAS001739_1906_040",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera neutralne doniesienia prasowe o polityce międzynarodowej bez uogólnień o grupach narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01620_ia_jbc.bj.uj.edu.pl.NDIGCZAS001739_1907_134",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczno-wojenny między Szwecją a Danią bez uogólniających sądów o narodach."
+   }
+  },
+  {
+   "id": "01626_ia_jbc.bj.uj.edu.pl.NDIGCZAS001739_1909_067",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst wskazuje na Żydów jako agitatorów wśród robotników, co stanowi negatywne przypisanie zbiorowe łączące grupę narodowościową/wyznaniową z działalnością wywrotową."
+   }
+  },
+  {
+   "id": "01667_ia_jbc.bj.uj.edu.pl.NDIGCZAS002202_1918_048",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy polityki gospodarczej, żeglugi i akcyz, bez odniesień do grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "01675_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1811_101",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest neutralną listą publikacji i treści księgarskich bez jakichkolwiek sądów o grupach."
+   }
+  },
+  {
+   "id": "01678_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1813_011",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje o formowaniu pospolitego ruszenia oraz wkroczeniu wojsk francuskich do Państwa Kościelnego w obronie władzy papieża, bez uogólnień wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01683_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1819_100",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera refleksję o cnocie obywatelskiej oraz krótką notkę z zagranicy; brak negatywnych przypisań wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01690_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1824_085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Tekst opisuje konflikty polityczne i wojenne bez przypisywania grupom negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "01696_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1831_175",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje neutralnie działania wojenne, sytuację militarną i traktat pokojowy bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01698_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1831_256",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przypisuje Żydom zbiorową winę za rzekome nieprzywiązywanie znaczenia do godności i urzędów ojczyznych."
+   }
+  },
+  {
+   "id": "01713_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1843_080",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje biograficzne i kronikarskie, bez uprzedzeń wobec grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01723_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1848_065",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment to kronika wojenno-polityczna o ruchach floty i sprawach administracyjnych, bez negatywnego przypisania cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01724_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1848_210",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje kwestie wydawania gazet i organizacji Macierzy szkolnej, wspominając o Polakach i Rusinach w sposób neutralny, bez przypisywania im negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "01727_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1849_042",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje wydarzenia polityczne i wojskowe we Włoszech bez uogólnień na grupy narodowościowe, etniczne czy wyznaniowe."
+   }
+  },
+  {
+   "id": "01762_ia_jbc.bj.uj.edu.pl.NDIGCZAS003412_1911_023",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment to biograficzny opis kariery muzycznej, bez odniesień do grup narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "01772_ia_jbc.bj.uj.edu.pl.NDIGCZAS005263_1898_001",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Wzmianka o „żydzie-konkurencie” ma charakter identyfikacji konkretnej osoby (pan F. Sz.) w kontekście intrygi finansowej, bez przypisywania negatywnych cech całej grupie."
+   }
+  },
+  {
+   "id": "01785_ia_jbc.bj.uj.edu.pl.NDIGCZAS008541_1891_014",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje strajk robotników introligatorskich i sytuację rolną na Ukrainie bez przypisywania negatywnych cech żadnej grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01788_ia_jbc.bj.uj.edu.pl.NDIGCZAS008541_1909_007",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy sporów politycznych i organizacyjnych w ruchu socjalistycznym, bez uogólnień na tle narodowym, etnicznym lub wyznaniowym."
+   }
+  },
+  {
+   "id": "01804_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1889_188",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralny opis pogody i wydarzeń lokalnych bez jakichkolwiek sądów o grupach narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "01806_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1891_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment podaje neutralną, faktograficzną listę miejscowości i regionów bez przypisywania negatywnych cech jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01822_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1896_176",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy spraw parlamentarnych i konkursów, wzmianka o Żydach w kontekście administracji jest neutralna i nie zawiera negatywnych przypisań zbiorowych."
+   }
+  },
+  {
+   "id": "01835_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1903_071",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera neutralne doniesienia prasowe o śmierci publicysty i stratach w bitwie, bez uogólnień na tle grupowym."
+   }
+  },
+  {
+   "id": "01837_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1904_222",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje nastroje polityczne i epidemię cholery, wspominając napięcia wobec Niemców i Polaków, ale bez przypisywania grupom negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "01842_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1906_173",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy polityki austriackiej i relacji rządu z zakonem jezuitów oraz prasą, bez przypisywania negatywnych cech jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01851_ia_jbc.bj.uj.edu.pl.NDIGCZAS011354_1872_014",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy postaci Roberta i Watrina oraz opinii publicznej; brak negatywnego przypisania cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej lub wyznaniowej."
+   }
+  },
+  {
+   "id": "01853_ia_jbc.bj.uj.edu.pl.NDIGCZAS011540_1829_110",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia polityczno-wojenne i sytuację humanitarną bez uogólniających sądów o grupach narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "01856_ia_jbc.bj.uj.edu.pl.NDIGCZAS011545_1913_1914_006",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera żadnych negatywnych przypisań zbiorowych wobec grup narodowych, etnicznych, wyznaniowych ani rasowych."
+   }
+  },
+  {
+   "id": "01864_ia_jbc.bj.uj.edu.pl.NDIGCZAS012654_1899_032",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest niespójny i zniekształcony przez OCR, ale nie zawiera żadnych negatywnych przypisań zbiorowych wobec grup narodowych, etnicznych, wyznaniowych ani rasowych."
+   }
+  },
+  {
+   "id": "01893_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1902_099",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralną wzmiankę o szpitalu izraelickim oraz sprawozdanie z odczytu historycznego, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01900_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1905_307",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Tekst opisuje konflikt polityczny w parlamencie austriackim i postępowanie czeskich posłów oraz Niemców, bez przypisywania negatywnych cech zbiorowych całym narodom."
+   }
+  },
+  {
+   "id": "01912_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1910_228",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje neutralnie działania polityczne Koła polskiego i Słowenców wobec króla serbskiego oraz kompromis językowy między Czechami i Niemcami, bez przypisywania grupom negatywnych cech."
+   }
+  },
+  {
+   "id": "01919_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1914_006",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przypisuje bycie Żydem jako cechę pogłębiającą „niesmak” i wzbudzającą negatywne reakcje, co stanowi negatywne wartościowanie grupy."
+   }
+  },
+  {
+   "id": "01925_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1916_049",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment opisuje relacje dyplomatyczne między Rosją a Watykanem i krytykuje ton artykułu prasowego, nie zawiera uprzedzeń wobec żadnej grupy narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01928_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1917_002",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje wydarzenia polityczne i napięcia narodowościowe w parlamencie austriackim bez przypisywania cech zbiorowych żadnej grupie."
+   }
+  },
+  {
+   "id": "01957_ia_jbc.bj.uj.edu.pl.NDIGCZAS016866_1911_001",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy hodowli zwierząt i nie zawiera żadnych odniesień do grup narodowych, etnicznych, wyznaniowych ani rasowych."
+   }
+  },
+  {
+   "id": "01969_ia_jbc.bj.uj.edu.pl.NDIGCZAS017172_1912_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje instytucje opiekuńcze i techniczne aspekty telegrafii w Anglii bez przypisywania negatywnych cech jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "01979_ia_jbc.bj.uj.edu.pl.NDIGCZAS017835_1878_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy kwestii teologicicznych i obrzędów chrztu oraz polemiki z konkretną osobą (p. Waliszewskim), bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "01980_ia_jbc.bj.uj.edu.pl.NDIGCZAS017835_1878_010",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie apartament i uczty księcia koburgskiego w Badenie, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01981_ia_jbc.bj.uj.edu.pl.NDIGCZAS017835_1882_014",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment opisuje neutralnie wydarzenia polityczne i dyplomatyczne, bez przypisywania negatywnych cech jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "02007_ia_jbc.bj.uj.edu.pl.NDIGCZAS018703_67418552",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest neutralną reklamą usług ogrodniczych i edukacyjnych, nie zawiera żadnych uprzedzeń wobec grup."
+   }
+  },
+  {
+   "id": "02016_ia_jbc.bj.uj.edu.pl.NDIGCZAS019090_67811226",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy kwestii językowych i tłumaczeń w kontekście polsko-niemieckim, bez przypisywania negatywnych cech grupie narodowej."
+   }
+  },
+  {
+   "id": "02017_ia_jbc.bj.uj.edu.pl.NDIGCZAS019090_67811288",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje kronikarskie o pożegnaniu Marii Konopnickiej, wyborach w Zydaczowie i walnym zgromadzeniu Towarzystwa Strzeleckiego, bez uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "02027_ia_jbc.bj.uj.edu.pl.NDIGCZAS019170_66964798",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy historii psalmów i ich autorów, nie zawiera żadnych negatywnych sądów o grupach narodowych, etnicznych ani wyznaniowych."
+   }
+  },
+  {
+   "id": "02044_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68349166",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment zawiera ogłoszenia drobne: o lekcjach języków i sprzedaży masła, bez jakiejkolwiek wzmianki o grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "02057_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68362137",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne doniesienia faktograficzne o nominacjach ministerialnych, zapłacie podatków i śmierci generała, bez jakichkolwiek uogólnień na tle grupowym."
+   }
+  },
+  {
+   "id": "02060_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68374586",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie ruchy wojsk Serbów i sytuację polityczną w Czechach oraz w Rzymie, bez przypisywania grupom narodowym czy etnicznym negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "02061_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68374637",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczno-wojenny i jego następstwa bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "02063_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68386483",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie ruchy wojsk i działania zbrojne bez uogólnień na grupy narodowe, etniczne lub wyznaniowe."
+   }
+  },
+  {
+   "id": "02067_ia_jbc.bj.uj.edu.pl.NDIGCZAS020288_67948971",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przypisuje Żydom zbiorową rolę sprawców ucisku narodowego oraz zagrożenie polityczne, sugerując, że będą mieli głos decydujący w niekorzystnym dla Polaków podziale."
+   }
+  },
+  {
+   "id": "02080_ia_jbc.bj.uj.edu.pl.NDIGCZAS022296_1887_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy stosunków gospodarczych i narodowościowych na pograniczu włosko-niemieckim, ale nie zawiera negatywnych przypisań zbiorowych wobec żadnej grupy narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "02092_ia_jbc.bj.uj.edu.pl.NDIGCZAS022296_1906_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national",
+     "confessional"
+    ],
+    "target": "Moskale / Rosjanie prawosławni",
+    "reason": "Tekst wyraża nieprzyjaźń wobec Moskali jako wyznawców prawosławia i przypisuje im doktryny religijne, co stanowi negatywne uogólnienie na tle narodowo-wyznaniowym."
+   }
+  },
+  {
+   "id": "02104_ia_jbc.bj.uj.edu.pl.NDIGCZAS023105_73677635",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy roli gazet i umiejętności w oświeceniu powszechnym, bez przypisywania cech negatywnych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "02121_ia_jbc.bj.uj.edu.pl.NDIGCZAS023699_74670168",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera żadnych odniesień do grup narodowych, etnicznych, wyznaniowych ani rasowych; jest osobistą relacją o lekturze i rozmowie."
+   }
+  },
+  {
+   "id": "02125_ia_jbc.bj.uj.edu.pl.NDIGCZAS023822_74669884",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy sztuki miniatur i spraw finansowych we Francji bez odniesień do grup narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "02137_ia_jbc.bj.uj.edu.pl.NDIGCZAS025014_77989495",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "colonial"
+    ],
+    "target": "Hindusi (mieszkańcy Indii Wschodnich)",
+    "reason": "Tekst przypisuje Indiom brak postępu cywilizacyjnego i religijności, uzasadniając potrzebę ich cywilizowania i nawracania przez misjonarzy."
+   }
+  },
+  {
+   "id": "02143_ia_jbc.bj.uj.edu.pl.NDIGCZAS025334_74667443",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje przestępstwa konkretnego urzędnika i wydarzenia kulturalne, bez uogólnień na grupę narodową, etniczną czy wyznaniową."
+   }
+  },
+  {
+   "id": "02158_ia_jbc.bj.uj.edu.pl.NDIGCZAS025334_74687275",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i zdrowia księcia Napoleona, nie zawiera sądów o żadnej grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "02159_ia_jbc.bj.uj.edu.pl.NDIGCZAS025334_74687346",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje prasowe o mundurach wojskowych, polityce francuskiej i kwestii małżeństw mieszanych bez uogólniających sądów o grupach."
+   }
+  },
+  {
+   "id": "02175_ia_jbc.bj.uj.edu.pl.NDIGCZAS025791_78529497",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne wiadomości polityczne z Francji bez jakichkolwiek negatywnych przypisań zbiorowych wobec grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "02177_ia_jbc.bj.uj.edu.pl.NDIGCZAS025791_78530003",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje neutralnie scenę historyczną z udziałem Tatarów jako uczestników konfliktu zbrojnego, bez przypisywania im negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "02196_ia_jbc.bj.uj.edu.pl.NDIGCZAS026631_77819060",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy krytyki ministrów i opisu uroczystości dworskich w Rosji bez uogólniających sądów o grupie narodowej lub etnicznej."
+   }
+  },
+  {
+   "id": "02201_ia_jbc.bj.uj.edu.pl.NDIGCZAS026948_77927742",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy estetyki i sztuki; wzmianka o 'szkole niemieckiej' odnosi się do tradycji literackiej, bez negatywnego uogólnienia o grupie narodowej."
+   }
+  },
+  {
+   "id": "02214_ia_jbc.bj.uj.edu.pl.NDIGCZAS027057_81114434",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki europejskiej i relacji między państwami, bez przypisywania cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "02215_ia_jbc.bj.uj.edu.pl.NDIGCZAS027057_81114650",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera wyłącznie neutralne informacje finansowe i kulturalne bez jakichkolwiek odniesień do grup narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "02243_ia_jbc.bj.uj.edu.pl.NDIGCZAS028381_78908900",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy polityki zagranicznej i konfliktów dyplomatycznych Anglii, bez uogólnień na tle narodowościowym, etnicznym czy wyznaniowym."
+   }
+  },
+  {
+   "id": "02254_ia_jbc.bj.uj.edu.pl.NDIGCZAS028415_79197454",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "target": "",
+    "reason": "Fragment zawiera wyłącznie dane techniczne i statystyczne dotyczące produkcji cukru z buraków; nie ma w nim żadnych odniesień do grup narodowych, etnicznych, wyznaniowych ani rasowych."
+   }
+  },
+  {
+   "id": "02255_ia_jbc.bj.uj.edu.pl.NDIGCZAS028455_81747659",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy polityki finansowej i porównuje wskaźniki gospodarcze Anglii i Rosji bez przypisywania cech zbiorowych narodom."
+   }
+  },
+  {
+   "id": "02266_ia_jbc.bj.uj.edu.pl.NDIGCZAS028512_81762394",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest niespójny i niejasny, prawdopodobnie zniekształcony przez OCR; opisuje zwierzęta lub bestie, ale kontekst odniesienia do grup ludzkich jest nieczytelny."
+   }
+  },
+  {
+   "id": "02285_ia_jbc.bj.uj.edu.pl.NDIGCZAS029529_85149767",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest znieszczony przez OCR i niespójny, nie da się jednoznacznie zrozumieć jego treści i ocenić pod kątem uprzedzeń."
+   }
+  },
+  {
+   "id": "02291_ia_jbc.bj.uj.edu.pl.NDIGCZAS029634_84895754",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje neutralnie trudności geograficzne i materialne mieszkańców pewnej osady bez uogólniającej oceny jakiejkolwiek grupy narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "02300_ia_jbc.bj.uj.edu.pl.NDIGCZAS030381_82247883",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje działania wojenne powstania styczniowego i ucieczkę przed Moskalami, bez uogólniających sądów o grupie narodowej."
+   }
+  },
+  {
+   "id": "02352_ia_jbc.bj.uj.edu.pl.NDIGCZAS049697_1913_238",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Tekst opisuje konflikty wojenne i grabieże dokonywane przez Węgrów jako stronę w wojnie, bez przypisywania negatywnych cech zbiorowych całemu narodowi."
+   }
+  },
+  {
+   "id": "02359_ia_jbc.bj.uj.edu.pl.NDIGCZAS049907_1906_020",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment dotyczy polityki niemieckiej i reakcji prasy na mowę Bülowa, bez uogólnień na grupę narodową, etniczną lub wyznaniową."
+   }
+  },
+  {
+   "id": "02362_ia_jbc.bj.uj.edu.pl.NDIGCZAS049914_1888_016",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy życia parlamentarnego i współpracy stronnictw politycznych, bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "02376_ia_jbc.bj.uj.edu.pl.NDIGCZAS051362_1907_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie posiedzenie polityczne, w tym sprawę ugody z Węgrami, bez przypisywania grupie negatywnych cech."
+   }
+  },
+  {
+   "id": "02378_ia_jbc.bj.uj.edu.pl.NDIGCZAS053478_1861_011",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne wzmianki historyczne o Normanach i Hiszpanach oraz rozważania filozoficzno-religijne bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie."
+   }
+  },
+  {
+   "id": "02392_ia_jbc.bj.uj.edu.pl.NDIGCZAS053792_1912_034",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest neutralnym, statystycznym wykazem miejscowości, w których uruchomiono mleczarnie współdzielcze."
+   }
+  },
+  {
+   "id": "02394_ia_jbc.bj.uj.edu.pl.NDIGCZAS054127_1916_125",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczno-wojenny i porażkę Anglii bez przypisywania negatywnych cech zbiorowych jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  },
+  {
+   "id": "02397_ia_jbc.bj.uj.edu.pl.NDIGCZAS054127_1917_251",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki międzynarodowej i gospodarczej, bez uogólnień na tle narodowościowym, etnicznym czy wyznaniowym."
+   }
+  },
+  {
+   "id": "02413_ia_jbc.bj.uj.edu.pl.NDIGCZAS056099_1895_007",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki austriackiej i stosunków między narodowościami w monarchii habsburskiej, bez przypisywania grupom negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "02419_ia_jbc.bj.uj.edu.pl.NDIGCZAS066260_1884_005",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera notatki biograficzne duchownych oraz zapiski historyczne, bez jakichkolwiek negatywnych przypisań wobec grup narodowych, etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "02430_ia_jbc.bj.uj.edu.pl.NDIGCZAS067964_1879_050",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje prześladowania religijne protestantów przez policję carską, nie przypisuje jednak żadnej grupie negatywnych cech zbiorowych ani jej nie demonizuje."
+   }
+  },
+  {
+   "id": "02433_ia_jbc.bj.uj.edu.pl.NDIGCZAS069086_1900_006",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nawołuje do braterstwa Słowian i wspomina historyczne relacje z Czechami bez przypisywania grupie negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "02436_ia_jbc.bj.uj.edu.pl.NDIGCZAS073456_1874_128",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralnie sytuację oświatową w Galicji, podając dane liczbowe o gimnazjach polskich i ruskich, bez przypisywania grupom narodowym negatywnych cech."
+   }
+  },
+  {
+   "id": "02459_ia_jbc.bj.uj.edu.pl.NDIGCZAS092173_1901_022",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment krytykuje stronnictwa socjalistyczne w Prusach, a nie grupę narodową, etniczną lub wyznaniową."
+   }
+  },
+  {
+   "id": "02463_ia_jbc.bj.uj.edu.pl.NDIGCZAS092185_1904_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "reason": "Fragment opisuje faktograficznie zjazdy katolickie i przemowy biskupów bez przypisywania negatywnych cech jakiejkolwiek grupie narodowej, etnicznej czy wyznaniowej."
+   }
+  },
+  {
+   "id": "02476_ia_jbc.bj.uj.edu.pl.NDIGCZAS094453_1887_1888_009",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje polityczno-społeczne zagrożenie ze strony niemieckiego przemysłu, ale nie przypisuje Niemcom zbiorowych cech moralnych ani nie traktuje ich jako z natury niższych."
+   }
+  },
+  {
+   "id": "02478_ia_jbc.bj.uj.edu.pl.NDIGCZAS094609_1909_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje powodzie i anegdotę o pamiętnikach posła holenderskiego, bez przypisywania cech zbiorowych żadnej grupie."
+   }
+  },
+  {
+   "id": "02539_ia_przysowiapolskie00brzo",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje polityczne niebezpieczeństwa i dylematy królowej, bez przypisywania negatywnych cech jakiejkolwiek grupie narodowej czy etnicznej."
+   }
+  }
+ ]
+}

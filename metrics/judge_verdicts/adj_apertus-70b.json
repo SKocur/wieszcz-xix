@@ -1,0 +1,3242 @@
+{
+ "model": "apertus-70b",
+ "base_url": "https://api.cortecs.ai/v1",
+ "temperature": 0,
+ "sheet": "metrics/bias_sheet_349m_2026-08-17.json",
+ "sheet_sha256": "3a453dbeaa9cda52e38c05dd4bc724e091fa3ebc828b342ba581d0224181e8b4",
+ "stratum": "flagged",
+ "only_labelled": false,
+ "guidelines_sha256": "da78f1dab57591bf",
+ "sent": 301,
+ "failed": 0,
+ "elapsed_seconds": 1324.1,
+ "items": [
+  {
+   "id": "00456_ia_jbc.bj.uj.edu.pl.0066_NDIGCZAS035218_98168969",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opowiada o strajku piekarzy i problemach społecznych w Polsce XIX wieku, ale nie zawiera żadnych negatywnych uogólnień wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej. Opisuje różnice społeczne i ekonomiczne między Polską a Niemcami, ale nie zawiera żadnych pogardliwych lub dyskryminujących wypowiedzi."
+   }
+  },
+  {
+   "id": "01404_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1913_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "02056_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68362098",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst używa pogardliwego i wykluczającego określenia 'Wielcy i mali' w odniesieniu do Żydów, sugerując, że są oni traktowani jako grupa z natury niższa, której nie powinno być miejsca w zgromadzeniu narodowym. Używa też ogólnikowego sądu o Żydach jako 'wszystkich' bez rozróżnienia, co podkreśla uprzedzenie."
+   }
+  },
+  {
+   "id": "02351_ia_jbc.bj.uj.edu.pl.NDIGCZAS049697_1912_233",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych; opisuje faktyczne zdarzenie (aresztowanie oszusta) i manewry wojskowe w Alzacyi i Lotaryngii, bez negatywnych uogólnień wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00003_ia_bc.radom.pl.36",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Czesi",
+    "reason": "Tekst opisuje Czechów mówiących po polsku i będących katolikami, którzy jednak nadal są silnie związani z językiem czeskim i tożsamością narodową, co jest przedstawione w kontekście ich dążenia do równouprawnienia, a nie negatywnego uprzedzenia wobec nich. Nie ma tu przypisania negatywnych cech zbiorowych, a jedynie opis ich postawy i dążeń."
+   }
+  },
+  {
+   "id": "00072_ia_bc.wbp.lodz.pl.NowyKurjerLodzki1911nr017a_86371",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "Niemcy, którzy nie są Niemcami",
+    "reason": "Tekst jest urwany i brakuje kontekstu, by rozstrzygnąć, czy fragment jest uprzedzony, czy nie."
+   }
+  },
+  {
+   "id": "00084_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1914_nr300a_84155",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zawiera stereotypowe przedstawienie Żydów jako zagrożenia dla 'polskości' i 'chrześcijaństwa', oraz postrzeganie ich roli w handlu i usługach jako narzędzia wyzysku, co prowadzi do wzmożonych uprzedzeń wobec tej grupy."
+   }
+  },
+  {
+   "id": "00204_ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS032148_94391180",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "00205_ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS033831_92116756",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy w Ameryce",
+    "reason": "Fragment zawiera uogólnienie, że Polacy w Ameryce nie są 'prawdziwymi' Polakami, tylko 'obciążeniem' i są 'tylko Żydami, Niemcami lub Czechami'. Uprzedzenie narodowe wobec Polaków emigrujących do Ameryki."
+   }
+  },
+  {
+   "id": "00281_ia_jbc.bj.uj.edu.pl.0017_NDIGCZAS035218_97955052",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest neutralnym, faktograficznym opisem wydarzeń politycznych bez odniesień do grup narodowych, etnicznych, wyznaniowych lub rasowych. Nie zawiera żadnych negatywnych określeń ani uogólnień na temat grup."
+   }
+  },
+  {
+   "id": "00455_ia_jbc.bj.uj.edu.pl.0066_NDIGCZAS033545_102167211",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polka (w kontekście narodowym)",
+    "reason": "Tekst wyraża różnice w doświadczeniach i tożsamości narodowej, ale w sposób sugerujący nierówność wartości, co prowadzi do nierównego traktowania."
+   }
+  },
+  {
+   "id": "00884_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1818_022",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych, a opisuje różne podejścia do obrony przed Tatarami, podkreślając mądrość i wytrzymałość jako wartości, nie skupiając się na negatywnych cechach grup etnicznych lub narodowych."
+   }
+  },
+  {
+   "id": "00955_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1860_134",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralną wzmiankę biograficzną o ks. Salezym Gzowskim, proboszczu w Żydaczowie, bez żadnych uprzedzeń wobec żadnej grupy. Opisuje jego działalność, godności i osiągnięcia w sposób pozytywny, nie wiążąc ich z żadną grupą narodową, etniczną, wyznaniową ani rasową."
+   }
+  },
+  {
+   "id": "00956_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1860_268",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "opisuje konflikty i niepokoje, ale bez uprzedzeń"
+   }
+  },
+  {
+   "id": "01257_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1883_259",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": []
+   }
+  },
+  {
+   "id": "01267_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1889_116",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest raportem meteorologicznym i nie zawiera treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej."
+   }
+  },
+  {
+   "id": "01332_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1903_590",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Narody słowiańskie i słowiańsko-germańskie"
+   }
+  },
+  {
+   "id": "01483_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1899_254",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy konfliktu zbrojnego i nie zawiera negatywnych określeń dotyczących żadnej grupy."
+   }
+  },
+  {
+   "id": "01569_ia_jbc.bj.uj.edu.pl.NDIGCZAS000083_1908_086",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Prusacy",
+    "reason": "Fragment zawiera negatywne uogólnienie wobec grupy narodowej (Prusacy) i przedstawia ich jako zagrożenie dla Niemiec, używając określeń takich jak 'zaciekłość' i 'zachłanność'. Tekst nie tylko krytykuje ich postępowanie, ale także sugeruje, że ich działanie jest 'sprzeczne z ogólnymi zasadami moralności i prawa międzynarodowego', co jest typowym argumentem używanym w kontekście uprzedzeń narodowych. Użycie słowa 'wroga' i 'wytępienie' w odniesieniu do Prusaków dodatkowo wzmacnia negatywny wydźwięk."
+   }
+  },
+  {
+   "id": "01615_ia_jbc.bj.uj.edu.pl.NDIGCZAS001738_1914_2103_W",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera uprzedzeń, opisuje wydarzenia historyczne bez oceny etnicznej, rasowej, wyznaniowej czy narodowej. Wskazuje na działania polityczne i spiski, a nie na cechy zbiorowe grup."
+   }
+  },
+  {
+   "id": "01663_ia_jbc.bj.uj.edu.pl.NDIGCZAS001745_1915_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst zawiera stereotypy dotyczące wyglądu Żydów (poczerniałem ubraniem), ich zdrowia (wstrętne mięso) oraz działalności handlowej (baranice, skóry baranie). Wspomnienie o Węgrach i ich obawach o Zólę i Strig wskazuje na konflikt etniczny i uprzedzenia wobec innych grup."
+   }
+  },
+  {
+   "id": "01697_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1831_203",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera treści uprzedzonych wobec jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej. Mówi o działaniach wojennych i ich skutkach (liczba strat, rannych, jeńców), ale nie przechodzi w sądy o grupach."
+   }
+  },
+  {
+   "id": "01799_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1887_209",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie niesie treści uprzedzonej wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej. Jest to fragment historyczny, który porusza temat polityki, władzy i stanowiska Rosji w stosunku do Litwinów polskich, ale nie zawiera negatywnych uogólnień ani pogardy wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01927_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1916_302",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera treści uprzedzonych wobec konkretnej grupy narodowej, etnicznej, wyznaniowej lub rasowej, jedynie oceny politycznej. Nie ma w nim uogólnień negatywnych ani pogardliwych określeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01996_ia_jbc.bj.uj.edu.pl.NDIGCZAS018693_66730702",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje politykę językową w szkołach, nie zawiera negatywnych przypisów wobec grup narodowych, etnicznych, wyznaniowych ani rasowych."
+   }
+  },
+  {
+   "id": "02204_ia_jbc.bj.uj.edu.pl.NDIGCZAS026948_77940320",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak negatywnych przypisów zbiorowych lub przedstawiania grupy jako zagrożenia/niższej. Tekst koncentruje się na postawach jednostki (księżnej) i relacjach społecznych."
+   }
+  },
+  {
+   "id": "02216_ia_jbc.bj.uj.edu.pl.NDIGCZAS027057_81114655",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst porusza konflikt małżeński oparty na różnicach religijnych, ale nie zawiera wyraźnych uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Tekst pyta retorycznie o fanatyzm, ale nie ocenia żadnej grupy negatywnie."
+   }
+  },
+  {
+   "id": "02239_ia_jbc.bj.uj.edu.pl.NDIGCZAS028376_85088123",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "żydów",
+    "reason": "Fragment zawiera negatywny stereotyp wobec Żydów poprzez sugerowanie, że ich obecność w karczmie przyczynia się do szerzenia nieładu i demoralizacji."
+   }
+  },
+  {
+   "id": "02389_ia_jbc.bj.uj.edu.pl.NDIGCZAS053792_1910_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "Fragment zawiera negatywne uogólnienia o Polakach, przedstawiając ich jako niezdolnych do zjednoczenia, obrony, rządzenia i wychodzenia z ubóstwa i ciemnoty. Tekst sugeruje, że Polacy są największym wrogiem Polaków, co jest wyraźnym uogólnieniem negatywnym. Ponadto, wzmianka o przechodzeniu na stronę Moskala i przedstawianie tego jako naturalnego kroku sugeruje negatywne sądzenie o tożsamości narodowej i lojalności."
+   }
+  },
+  {
+   "id": "00028_ia_bc.radom.pl.gazeta-1917-153",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "other"
+    ],
+    "target": "kupcy żydowscy",
+    "reason": "Fragment zawiera stwierdzenie, że 'kupcy żydowscy' wykorzystują nadmierną podaż do własnych korzyści, podnosząc ceny, co wpływa negatywnie na sytuację innych producentów. Jest to uogólnione, negatywne przypisanie zbiorowe (grupa jest przedstawiona jako działająca na niekorzyść innych), które może być uważane za uprzedzenie."
+   }
+  },
+  {
+   "id": "00037_ia_bc.wbp.lodz.pl.Dziennik_Lodzki1884_230_437",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment zawiera neutralny opis sytuacji gospodarczej na rynkach zbożowych bez negatywnych uogólnień wobec grup"
+   }
+  },
+  {
+   "id": "00060_ia_bc.wbp.lodz.pl.Godzina_Polski1917nr296bc_42491",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "robotnicy (polscy, słowiańscy)",
+    "reason": "Tekst wyraża obawy przed 'nasyceniem' i 'wykorzystaniem' przez robotników z Polski i Słowiańszczyzny, sugerując, że warunki pracy dla nich powinny być gorsze niż dla niemieckich robotników, by chronić 'nasze' fabryki. Przesłanie sugeruje, że inni (niemieckojęzyczni) są w jakiejś mierze 'wyższymi' w hierarchii. To pokazuje uprzedzenie narodowe (przeciwko polskim robotnikom) i uprzedzenie klasowe (przeciwko robotnikom)."
+   }
+  },
+  {
+   "id": "00088_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr121a_67288",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "colonial"
+    ],
+    "target": "żołnierze z kolonii (Algierczycy, Senegalscy, Marokańscy)"
+   }
+  },
+  {
+   "id": "00089_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr205a_67372",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "00092_ia_bc.wbp.lodz.pl.Nowy_Kurjer_Lodzki_1917_nr276a_67442",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralny opisem faktu i nie zawiera negatywnych stereotypów"
+   }
+  },
+  {
+   "id": "00099_ia_bc.wbp.lodz.pl.Rozwoj1905nr140a_3380",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "młodzież żydowska",
+    "reason": "fragment sugeruje, że szkoła żydowska w Krakowie jest gorsza niż inne szkoły, używa pogardliwego określenia 'prawowierna gmina' (z domniemaną negatywną konotacją wobec Żydów), oraz stawia młodzież żydowską w kontekście braku rozwoju, sugerując, że jest to związane z ich przynależnością narodową i religijną."
+   }
+  },
+  {
+   "id": "00100_ia_bc.wbp.lodz.pl.Rozwoj1905nr265_3580",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zawiera wzmiankę o plakatach wzywających do mordowania Żydów, co stanowi przykład antysemityzmu."
+   }
+  },
+  {
+   "id": "00104_ia_bc.wbp.lodz.pl.Rozwoj1908_197_1432",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera żadnych treści, które można uznać za uprzedzone. Przedstawia on wyłącznie pozytywny obraz osób odznaczonych za ich zasługi w dziedzinie hodowli koni i jeździectwa, bez negatywnych uogólnień wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00106_ia_bc.wbp.lodz.pl.Rozwoj1908_93_1111",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "Fragment niesie negatywne uogólnienie dotyczące Polaków, w tym dyskryminację i oskarżenia o 'politykę asymilacyjną', przedstawiając ich jako zagrożenie i ograniczając ich prawa, co spełnia kryteria uprzedzenia narodowego."
+   }
+  },
+  {
+   "id": "00123_ia_bc.wbp.lodz.pl.Tydzien1877nr11a_5947",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment przedstawia proces wyboru radnych w Chocimierzu i jego okolicach, bez negatywnego odniesienia do jakiejkolwiek grupy etnicznej, wyznaniowej lub rasowej. Skupia się na tym, jak kandydaci są wybierani w oparciu o kryteria związane z ich kompetencjami i dobro ogólnym miasta, a nie na podstawie wyznania lub narodowości."
+   }
+  },
+  {
+   "id": "00139_ia_dlibra.kul.pl.27623_V-1199_Motyl--nr-40--3-kwie-13",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Francuzi"
+   }
+  },
+  {
+   "id": "00141_ia_dlibra.kul.pl.29746_V-1231_Kolumb--T--3-06",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje historyczne wydarzenie wojskowe (bitwę pod Villafranca w 1806 r.) bez negatywnych uogólnień o Francuzach jako grupie. Nie ma tu uogólnionych cech negatywnych, tylko opis konfrontacji wojskowej."
+   }
+  },
+  {
+   "id": "00145_ia_dlibra.kul.pl.32081_V-1648_Szczutek---pisemko-h",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "economic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment wskazuje na grupę etniczną (Żydów) jako odpowiedzialną za wysokie ceny i wykorzystywanie sytuacji, co może być formą uprzedzenia ekonomicznego."
+   }
+  },
+  {
+   "id": "00147_ia_dlibra.kul.pl.V-959_Mloda-PolskaNo-1-63",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak wzmianek o grupach narodowych, etnicznych, wyznaniowych lub rasowych. Tekst koncentruje się na zdrowiu dzieci i handlu mąką."
+   }
+  },
+  {
+   "id": "00149_ia_dlibra.umcs.lublin.pl.A46985_27689",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje różnice między systemami feudalnym a nowożytnym, nie zawierając bezpośrednich uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00155_ia_dzielapismawybr04krasgoog",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "W tekście jest negatywne przedstawienie żydowskiego lichwiarza jako bezlitosnego i chciwego, który z chęcią pożycza pieniądze królowi, ale nie ma litości. To uogólnione przedstawienie grupy jako nieczułej i skupionej wyłącznie na zysku jest typowym stereotypem antysemickim."
+   }
+  },
+  {
+   "id": "00189_ia_jbc.bj.uj.edu.pl.0005_NDIGCZAS027976_92118972",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych wobec żadnej grupy, dotyczy wydarzeń politycznych i urzędowych bez negatywnych komentarzy."
+   }
+  },
+  {
+   "id": "00207_ia_jbc.bj.uj.edu.pl.0006_NDIGCZAS035218_113431846",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak treści uprzedzeniowej wobec jakiejkolwiek grupy. Tekst dotyczy stanu zdrowia monarchy i jego wpływu na giełdę oraz możliwych konsekwencji dla Polaków."
+   }
+  },
+  {
+   "id": "00209_ia_jbc.bj.uj.edu.pl.0007_NDIGCZAS032148_94391085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst przypisuje negatywną cechę zbiorową Żydom (wykorzystanie hasła 'Żydzi' jako powodu, by się wywyższać po walce, mimo że wszyscy walczyli razem, pokazuje wykluczanie na podstawie przynależności narodowej lub etnicznej."
+   }
+  },
+  {
+   "id": "00211_ia_jbc.bj.uj.edu.pl.0007_NDIGCZAS044272_113600473",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera krytykę konkretnej polityki lub zachowania, ale nie przechodzi w uogólnienie o grupie etnicznej, rasowej, narodowej lub wyznaniowej. Treść jest raczej o charakterze ekonomicznym i politycznym, a nie uprzedzeniowym."
+   }
+  },
+  {
+   "id": "00237_ia_jbc.bj.uj.edu.pl.0010_NDIGCZAS035218_113572641",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "00245_ia_jbc.bj.uj.edu.pl.0011_NDIGCZAS044092_113926366",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment przedstawia krytykę pracy Turnau, ale nie zawiera żadnych uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej. Krytyka skupia się na treści i metodach proponowanych przez Turnau, nie na jego pochodzeniu lub tożsamości."
+   }
+  },
+  {
+   "id": "00247_ia_jbc.bj.uj.edu.pl.0011_NDIGCZAS046690_114094282",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Grecy i Bułgarzy"
+   }
+  },
+  {
+   "id": "00248_ia_jbc.bj.uj.edu.pl.0012_NDIGCZAS026470_81009849",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Lechici",
+    "reason": "Fragment opisuje sytuację historyczną bez negatywnego stereotypu wobec grupy. Mówi o pomocy i solidarności."
+   }
+  },
+  {
+   "id": "00257_ia_jbc.bj.uj.edu.pl.0013_NDIGCZAS033883_96619764",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak bezpośrednich negatywnych uogólnień na temat grupy; opis konkretnego zdarzenia i wyrażenie żalu z powodu utraty kolekcji"
+   }
+  },
+  {
+   "id": "00275_ia_jbc.bj.uj.edu.pl.0016_NDIGCZAS034732_97421822",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst koncentruje się na opisie stanu rycerskiego i szlacheckiego, nie zawierając negatywnych uogólnień wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00278_ia_jbc.bj.uj.edu.pl.0017_NDIGCZAS030703_89408189",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy kwestii politycznych i nie zawiera uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej."
+   }
+  },
+  {
+   "id": "00279_ia_jbc.bj.uj.edu.pl.0017_NDIGCZAS030703_89464524",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest fragmentem, który w kontekście chrześcijańskim i religijnym omawia różnicę między rozmowami chrześcijan z Żydami a głębszym sensem wiary w Chrystusa, nie zawiera wyraźnych uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00284_ia_jbc.bj.uj.edu.pl.0018_NDIGCZAS026703_79746912",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralny i dotyczy polityki finansowej w Niemczech."
+   }
+  },
+  {
+   "id": "00296_ia_jbc.bj.uj.edu.pl.0020_NDIGCZAS035218_106532651",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "żydzi",
+    "reason": "Fragment przedstawia negatywne stereotypy i oskarżenia wobec żydów, podkreśla ich rzekomą nieodpowiedzialność społeczną i brak lojalności, co prowadzi do atmosfery napięcia i wykluczenia. Autor artykułu w prasie wyraźnie przypisuje żydom odpowiedzialność za część problemów kraju, co jest uogólnieniem negatywnym."
+   }
+  },
+  {
+   "id": "00339_ia_jbc.bj.uj.edu.pl.0030_NDIGCZAS046690_114094318",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national",
+     "misogynist"
+    ],
+    "target": "włościanie (przypuszczalnie Polacy i Litwini)",
+    "reason": "Właściciele ziemscy, choć w większości Polacy, często traktują włościan z pogardą, mówiąc o nich jako o 'ludzie niższej rasy' albo 'barbarzyńcach', którzy nie zasługują na więcej ziemi, ponieważ 'są leniwi' i 'nie potrafią gospodarować'."
+   }
+  },
+  {
+   "id": "00340_ia_jbc.bj.uj.edu.pl.0031_NDIGCZAS026703_79747267",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Turcy"
+   }
+  },
+  {
+   "id": "00341_ia_jbc.bj.uj.edu.pl.0031_NDIGCZAS026703_79821998",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje zmiany polityczne i gospodarcze bez negatywnych uogólnień wobec grup narodowych lub etnicznych. Nie ma w nim żadnych negatywnych cech przypisywanych grupom, ani nie przedstawia ich jako zagrożenie lub problem do rozwiązania. Opisuje raczej zmiany w relacjach handlowych i politycznych między Węgrami a Niemcami w kontekście wzajemnych interesów i wpływów, bez wyraźnych uprzedzeń."
+   }
+  },
+  {
+   "id": "00353_ia_jbc.bj.uj.edu.pl.0034_NDIGCZAS032275_100544920",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst skupia się na analizie politycznej sytuacji, bez uogólnień na grupy."
+   }
+  },
+  {
+   "id": "00355_ia_jbc.bj.uj.edu.pl.0036_NDIGCZAS026703_81118837",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "retoryczne pytanie bez odniesienia do grupy"
+   }
+  },
+  {
+   "id": "00365_ia_jbc.bj.uj.edu.pl.0038_NDIGCZAS034721_101553081",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje kontekst polityczny, nie zawiera negatywnych uogólnień wobec grup etnicznych, narodowych lub religijnych."
+   }
+  },
+  {
+   "id": "00380_ia_jbc.bj.uj.edu.pl.0042_NDIGCZAS026703_79739295",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment opisuje działania konkretnego człowieka, nie generalizuje na grupę"
+   }
+  },
+  {
+   "id": "00386_ia_jbc.bj.uj.edu.pl.0043_NDIGCZAS028991_88004204",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "antysemici",
+    "reason": "Wspomnianie antysemitów jako odrębnej grupy w kontekście społecznego wydarzenia, bez negatywnej oceny, ale w sposób, który sugeruje ich wyodrębnienie i potencjalne uprzedzenia."
+   }
+  },
+  {
+   "id": "00395_ia_jbc.bj.uj.edu.pl.0045_NDIGCZAS031646_85515968",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Polska Szlachta",
+    "reason": "Fragment dotyczy sytuacji politycznej i gospodarczej, bez negatywnych uogólnień o grupie."
+   }
+  },
+  {
+   "id": "00419_ia_jbc.bj.uj.edu.pl.0052_NDIGCZAS034013_92167644",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst zawiera stereotypowe uogólnienia wobec Żydów jako nieuczciwych i niekompetentnych w dziedzinie hodowli koni, co jest przykładem uprzedzenia."
+   }
+  },
+  {
+   "id": "00422_ia_jbc.bj.uj.edu.pl.0053_NDIGCZAS033817_96888203",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "niemcy",
+    "reason": "Tekst przedstawia 'potomków Sobieskich' jako 'cudzoziemców', którzy 'różnili się od tradycyjnych polskich wartości' i 'Polacy uważali ich za obcych i nieufnych'."
+   }
+  },
+  {
+   "id": "00438_ia_jbc.bj.uj.edu.pl.0059_NDIGCZAS033545_102167200",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst dotyczy sporu politycznego w parlamencie, bez uprzedzeń wobec jakiejkolwiek grupy"
+   }
+  },
+  {
+   "id": "00439_ia_jbc.bj.uj.edu.pl.0061_NDIGCZAS031646_85582778",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "neutralne, opisowe informacje"
+   }
+  },
+  {
+   "id": "00446_ia_jbc.bj.uj.edu.pl.0064_NDIGCZAS034712_95531513",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "00449_ia_jbc.bj.uj.edu.pl.0065_NDIGCZAS026703_79761737",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment koncentruje się na idei zjednoczenia narodu i nie zawiera negatywnych stereotypów wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00453_ia_jbc.bj.uj.edu.pl.0066_NDIGCZAS026703_79747303",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Włosi (Rzymianie)",
+    "reason": "Fragment sugeruje, że 'masy' (ludność) we Włoszech są nieprzyjaźnie usposobione wobec Włoch (narodu), co może być uważane za uprzedzenie narodowe. Używa się tu języka wskazującego na brak lojalności narodowej i negatywną ocenę postawy większości ludności, co może być uznane za uprzedzenie. Dodatkowo, rząd włoski jest przedstawiony jako 'bezsilny' wobec tej nieprzyjaznej postawy, co może wskazywać na próbę uzasadnienia jego słabości poprzez generalizację zachowań całej grupy."
+   }
+  },
+  {
+   "id": "00481_ia_jbc.bj.uj.edu.pl.0079_NDIGCZAS032180_92024993",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralnym opisem działań wojskowych bez odniesienia do grup narodowych, etnicznych lub wyznaniowych."
+   }
+  },
+  {
+   "id": "00490_ia_jbc.bj.uj.edu.pl.0083_NDIGCZAS031646_85513444",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Karliści",
+    "reason": "Wskazuje na Karliści jako grupę, która planuje podnieść Polaków przeciwko innym, co jest negatywnym przypisaniem zbiorowym."
+   }
+  },
+  {
+   "id": "00491_ia_jbc.bj.uj.edu.pl.0083_NDIGCZAS031646_85531569",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst przedstawia Żydów jako 'nieodpowiednich i nieprawomyślnych', co jest uogólnieniem negatywnym i dyskryminującym."
+   }
+  },
+  {
+   "id": "00496_ia_jbc.bj.uj.edu.pl.0087_NDIGCZAS035218_113237320",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "neutralne ogłoszenia o poszukiwaniu pracowników"
+   }
+  },
+  {
+   "id": "00511_ia_jbc.bj.uj.edu.pl.0093_NDIGCZAS035218_97687280",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rosyan",
+    "reason": "Jenerał Guilleminet wyraził się o Rosyanach w sposób lekceważący, porównując ich do 'słabeuszy i niezdolnych do samodzielnego myślenia', co niesie negatywną cechę zbiorową i sugeruje niższość cywilizacyjną. Mimo że to prywatna wypowiedź w obecności Lorda Cochrane'a, który nie skrytykował jej, nadal stanowi wyraz uprzedzenia. Ponadto, nawet jeśli nie jest to główny temat tekstu, obecność takiej wypowiedzi w kontekście oficjalnego spotkania politycznego i negocjacji z przedstawicielami Rosyi podkreśla kontekstowe znaczenie. Wpływa to na ton i atmosferę spotkania, a także może odzwierciedlać postawy elity, co jest istotne dla oceny uprzedzeń w relacjach międzynarodowych i grupowych."
+   }
+  },
+  {
+   "id": "00515_ia_jbc.bj.uj.edu.pl.0095_NDIGCZAS030416_79822606",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opisuje wydarzenie historyczne bez wyraźnych uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej."
+   }
+  },
+  {
+   "id": "00521_ia_jbc.bj.uj.edu.pl.0098_NDIGCZAS034712_95528660",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak negatywnych uogólnień, opis działań wojennych, strat i działań bojowych bez uprzedzeń."
+   }
+  },
+  {
+   "id": "00522_ia_jbc.bj.uj.edu.pl.0098_NDIGCZAS034801_79812881",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Żydzi",
+    "reason": "Fragment opisuje rolę Żydów w gospodarce Paryża jako ważny element planu gospodarczego, bez negatywnych uogólnień. Nie zawiera uprzedzeń wobec Żydów."
+   }
+  },
+  {
+   "id": "00568_ia_jbc.bj.uj.edu.pl.0126_NDIGCZAS026703_79807807",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "W tekście pojawia się negatywna stereotypizacja Żydów jako grupy, z użyciem cech utożsamianych z negatywnymi stereotypami (np. lichwa, groźna mina, podniesiony nos, krzyk, wściekły śmiech). Wniosek o stanie moralnym opiera się na tych stereotypach, co sugeruje uprzedzenie."
+   }
+  },
+  {
+   "id": "00574_ia_jbc.bj.uj.edu.pl.0131_NDIGCZAS035218_113016694",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak treści uprzedzającej wobec jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej. Tekst jest o poszukiwaniu pracy i nie zawiera żadnych negatywnych określeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00579_ia_jbc.bj.uj.edu.pl.0133_NDIGCZAS035218_97908697",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "reklama handlowa bez uprzedzeń"
+   }
+  },
+  {
+   "id": "00596_ia_jbc.bj.uj.edu.pl.0141_NDIGCZAS030703_89404225",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opisy faktów i statystyk dotyczące edukacji i zwyczajów bez negatywnych przypisań grupowych."
+   }
+  },
+  {
+   "id": "00600_ia_jbc.bj.uj.edu.pl.0145_NDIGCZAS035218_113010818",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opisuje produkty bez negatywnych uogólnień wobec grup, jedynie pozytywne odniesienie do produktów z Francji."
+   }
+  },
+  {
+   "id": "00612_ia_jbc.bj.uj.edu.pl.0152_NDIGCZAS030703_89404925",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment opisuje bitwę między Francuzami a Turkami, bez negatywnych cech przypisanych do żadnej grupy"
+   }
+  },
+  {
+   "id": "00616_ia_jbc.bj.uj.edu.pl.0155_NDIGCZAS030703_89472328",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralny w odniesieniu do grup narodowych, etnicznych lub wyznaniowych. Porusza kwestie polityczne i wojskowe bez negatywnych uogólnień o grupach."
+   }
+  },
+  {
+   "id": "00617_ia_jbc.bj.uj.edu.pl.0155_NDIGCZAS035218_106532803",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst zawiera wzmiankę o świętach żydowskich, ale nie niesie żadnego uprzedzenia wobec Żydów. Nie ma negatywnych cech przypisanych żadnej grupie, a wzmianka o prenumeracie i traktacie handlowym jest neutralna."
+   }
+  },
+  {
+   "id": "00627_ia_jbc.bj.uj.edu.pl.0159_NDIGCZAS030703_89302887",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Niemcy"
+   }
+  },
+  {
+   "id": "00635_ia_jbc.bj.uj.edu.pl.0164_NDIGCZAS035218_97754652",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralny opis wydarzeń politycznych i społecznych bez negatywnych uogólnień na temat grup etnicznych lub narodowych."
+   }
+  },
+  {
+   "id": "00640_ia_jbc.bj.uj.edu.pl.0166_NDIGCZAS030703_89468794",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opisuje zdarzenie wojskowe bez uprzedzeń."
+   }
+  },
+  {
+   "id": "00644_ia_jbc.bj.uj.edu.pl.0167_NDIGCZAS026703_79768375",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Niemcy",
+    "reason": "Fragment zawiera uogólnienia i negatywne stereotypy dotyczące Niemców, takie jak brak zrozumienia dla dobra ogółu, egoistyczne interesy, ciasny nacjonalizm, brak wyobraźni politycznej i skłonność do autorytaryzmu. Są to stereotypy, które nie są poparte dowodami i mogą być postrzegane jako uprzedzenie wobec całej grupy narodowej."
+   }
+  },
+  {
+   "id": "00667_ia_jbc.bj.uj.edu.pl.0186_NDIGCZAS030416_79767127",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Tekst dotyczy politycznych aspiracji i konfliktów między Włochami a Austrią, nie zawierając negatywnych uogólnień na temat żadnej grupy."
+   }
+  },
+  {
+   "id": "00668_ia_jbc.bj.uj.edu.pl.0186_NDIGCZAS035218_98168497",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralny opis danych statystycznych dotyczących liczby uczniów w szkołach, bez negatywnych ocen lub uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej."
+   }
+  },
+  {
+   "id": "00673_ia_jbc.bj.uj.edu.pl.0193_NDIGCZAS030416_79828843",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest ogłoszeniem urzędowym dotyczącym licytacji prawa poboru podatku spożywczego, nie zawiera treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Nie ma odniesienia do jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00674_ia_jbc.bj.uj.edu.pl.0194_NDIGCZAS026703_79740354",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "national"
+    ],
+    "target": "Żydzi",
+    "reason": "Uogólnione sformułowania, jak 'nie mogą się bronić' i 'opieka moralna Rosyi', sugerują negatywne stereotypy o obu grupach."
+   }
+  },
+  {
+   "id": "00694_ia_jbc.bj.uj.edu.pl.0207_NDIGCZAS030703_89405708",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera żadnych negatywnych komentarzy ani uprzedzeń wobec jakiejkolwiek grupy. Opisuje wydarzenia wojenne w sposób neutralny i faktograficzny."
+   }
+  },
+  {
+   "id": "00701_ia_jbc.bj.uj.edu.pl.0210_NDIGCZAS035218_97735481",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy wydarzeń politycznych i militarnych, nie zawiera bezpośrednich negatywnych komentarzy lub uogólnień wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej. Nie zawiera określeń pogardliwych ani stwierdzeń o zagrożeniu ze strony jakiejkolwiek grupy. Treść skupia się na sytuacji politycznej i wojskowej."
+   }
+  },
+  {
+   "id": "00702_ia_jbc.bj.uj.edu.pl.0210_NDIGCZAS035218_97909801",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie niesie treści uprzedzonej wobec żadnej grupy. Opisuje wydarzenia polityczne i wojskowe bez uogólnień o grupach narodowych, etnicznych, wyznaniowych czy rasowych."
+   }
+  },
+  {
+   "id": "00705_ia_jbc.bj.uj.edu.pl.0211_NDIGCZAS035218_97733881",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Grecy",
+    "reason": "Fragment przedstawia Greków jako ofiary przemocy, co sugeruje, że są traktowani jako grupa niższa, co może być postrzegane jako uprzedzenie narodowe."
+   }
+  },
+  {
+   "id": "00715_ia_jbc.bj.uj.edu.pl.0216_NDIGCZAS030703_89471283",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "colonial"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przedstawia negatywne stereotypy i uprzedzenia wobec Żydów, traktując ich jako leniwych, nierzetelnych i obciążenie dla lokalnej gospodarki, co jest przykładem uprzedzeń antysemickich i kolonialnych. Wspomniane stwierdzenie, że ich styl życia nie jest zgodny z cywilizowanymi normami, podkreśla nierówne traktowanie i próby cywilizowania."
+   }
+  },
+  {
+   "id": "00719_ia_jbc.bj.uj.edu.pl.0218_NDIGCZAS026703_79739770",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst skupia się na polityce i traktatach międzynarodowych, nie ma negatywnych stwierdzeń dotyczących żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej."
+   }
+  },
+  {
+   "id": "00729_ia_jbc.bj.uj.edu.pl.0223_NDIGCZAS035218_113587281",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest ogłoszeniem o książkach, nie zawiera żadnych wyraźnych uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej czy rasowej. Tekst dotyczy wyłącznie oferty książek autorstwa Piotra Skargi i innych duchownych polskich."
+   }
+  },
+  {
+   "id": "00746_ia_jbc.bj.uj.edu.pl.0237_NDIGCZAS035218_97735526",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Faktograficzne relacje bez negatywnych uogólnień o grupach"
+   }
+  },
+  {
+   "id": "00753_ia_jbc.bj.uj.edu.pl.0240_NDIGCZAS035218_113787964",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment przedstawia negatywny obraz Żydów jako istot niegodnych zaufania i nie mających związku z kulturą, nawiązując do stereotypów utrwalających negatywne postrzeganie Żydów w literaturze XIX wieku."
+   }
+  },
+  {
+   "id": "00758_ia_jbc.bj.uj.edu.pl.0244_NDIGCZAS030703_89408029",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst dotyczy stosunków politycznych i strategii mocarstw, bez wyraźnych uprzedzeń wobec konkretnej grupy."
+   }
+  },
+  {
+   "id": "00769_ia_jbc.bj.uj.edu.pl.0252_NDIGCZAS026703_79828477",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera żadnych uprzedzeń wobec jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej. Omawia tylko doniesienia prasowe, wydarzenia i reakcje na nie, bez przypisywania negatywnych cech grupom."
+   }
+  },
+  {
+   "id": "00773_ia_jbc.bj.uj.edu.pl.0254_NDIGCZAS030703_89465302",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera treści uprzedzonych. Mówi o potrzebie jedności narodowej, nie przypisując negatywnych cech żadnej grupie narodowej."
+   }
+  },
+  {
+   "id": "00777_ia_jbc.bj.uj.edu.pl.0258_NDIGCZAS035218_97736130",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opisuje zdarzenia bez negatywnych uogólnień dotyczących grup. Wzmianka o Maurowach dotyczy ich działań wojskowych, nie cech zbiorowych."
+   }
+  },
+  {
+   "id": "00780_ia_jbc.bj.uj.edu.pl.0259_NDIGCZAS035219_97771011",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst przedstawia Żyda jako potwora, który domaga się powieszenia człowieka za rzekome zło, a jego reakcja jest przedstawiona jako chęć zemsty. Użyte określenia 'potwór' i 'pod praw natury' są pogardliwe i sugerują, że Żyd działa wbrew moralnym zasadom. Dodatkowo, opisane wykorzystywanie chłopów wskazuje na uprzedzony stereotyp o żydowskim lichwiarstwie i wyzysku, który był powszechnie używany w XIX-wiecznych tekstach antysemickich."
+   }
+  },
+  {
+   "id": "00817_ia_jbc.bj.uj.edu.pl.0291_NDIGCZAS035219_97771075",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "fragment przedstawia Żydów jako grupę zajmującą się wyłącznie lichwą i spekulacją, co jest stereotypem i uprzedzeniem wobec całej grupy etnicznej. Treść nie zawiera neutralnego opisu faktów, lecz wykazuje negatywne przypisanie zbiorowe."
+   }
+  },
+  {
+   "id": "00823_ia_jbc.bj.uj.edu.pl.0298_NDIGCZAS035218_97800629",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Turcy"
+   }
+  },
+  {
+   "id": "00825_ia_jbc.bj.uj.edu.pl.0300_NDIGCZAS030703_89406783",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "national"
+    ],
+    "target": "Żydzi, Polacy"
+   }
+  },
+  {
+   "id": "00828_ia_jbc.bj.uj.edu.pl.0303_NDIGCZAS035218_97805785",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "przedstawia Żyda jako kogoś, kto wzbudza kontrowersje wśród arystokracji, co jest negatywnym przypisaniem zbiorowym."
+   }
+  },
+  {
+   "id": "00833_ia_jbc.bj.uj.edu.pl.0312_NDIGCZAS035218_113769236",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje stosowanie wapna w rolnictwie w kontekście technicznym i praktycznym, bez negatywnego odniesienia do jakiejkolwiek grupy etnicznej, religijnej czy rasowej."
+   }
+  },
+  {
+   "id": "00851_ia_jbc.bj.uj.edu.pl.0422_NDIGCZAS035218_113332774",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "Fragment przedstawia Polaków jako zagrożenie dla niemieckich interesów, sugerując, że ich równouprawnienie otwiera pole dla wpływów polskich, co może być interpretowane jako argument przeciwko równości i włączeniu Polaków w procesy polityczne."
+   }
+  },
+  {
+   "id": "00852_ia_jbc.bj.uj.edu.pl.0427_NDIGCZAS035218_113541949",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje oficjalną wizytę i rozmowę między carem a prezydentem ministrów, nie ma w nim treści uprzedzającej wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Uwzględniając kontekst, nie ma negatywnych uogólnień, a rozmowa dotyczy polityki wewnętrznej i zewnętrznej bez odniesienia do jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "00853_ia_jbc.bj.uj.edu.pl.0435_NDIGCZAS035218_113555556",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "00856_ia_jbc.bj.uj.edu.pl.0484_NDIGCZAS035218_113542005",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst skupia się na opisie problemów w służbie pocztowej i potrzebie jej ulepszenia, bez wyrażania uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "00883_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1817_208",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rusini",
+    "reason": "W tym fragmencie sugeruje się, że Rusini jako grupa są nieodpowiedzialni i niezdolni do samostanowienia, a ich wyzwolenie byłoby bezcelowe, ponieważ i tak padliby pod wpływ Rosji. Tekst przedstawia ich jako niezdolnych do samodzielnej obrony swojej tożsamości i wskazuje na ich rzekomą zależność od Rosji, co może być uznane za negatywną cechę zbiorową i ograniczenie ich suwerenności."
+   }
+  },
+  {
+   "id": "00885_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1819_004",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "national"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zakazuje Żydom wstępu do kraju, aby 'nie oddalali się z niego dla nabywania posiadłości'. To wyraźne uprzedzenie wobec Żydów, traktowanych jako zagrożenie dla 'kraju' i przypisywanie im negatywnej cechy zbiorowej (chęci nabywania posiadłości jako celu sam w sobie). Dodatkowo, opis 'nieszczęśliwy skazany' sugeruje, że Żyd był skazany przez 'Pisarza Angielskiego' (czyli władzę), co może odzwierciedlać uprzedzenia wobec Żydów w kontekście władzy i systemu prawnego. Tekst zawiera także elementy stereotypowe (palenie ognia na grobie, by go 'jeszcze raz zabić'), które mogą być odbierane jako przejaw antysemityzmu."
+   }
+  },
+  {
+   "id": "00898_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1828_061",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "other"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zawiera stereotypowe uogólnienia o Żydach jako biednych, ale bogatych w miłości i ofiarności, co może być odbierane jako uprzedzenie. Używa się metafory Żydów jako przykładu biedy, ale w pozytywnym kontekście, co może być formą uprzedzenia. Wspomnienie 'biedni żydzi' w kontekście pozytywnym może być traktowane jako uprzedzenie, ponieważ używa się nazwy grupy jako metonimii dla ideału dobroci, co może być odbierane jako uprzedzenie."
+   }
+  },
+  {
+   "id": "00912_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1834_136",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment przedstawia konkretne zachowania oficerów, bez uogólnień o grupach."
+   }
+  },
+  {
+   "id": "00913_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1836_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "00916_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1840_071",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "00942_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1854_085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "neutralny opis wydarzeń historycznych, brak uprzedzeń wobec grup"
+   }
+  },
+  {
+   "id": "00945_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1856_235",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opisuje doświadczenie autora w kontekście interakcji społecznych, nie zawiera wyraźnego uprzedzenia wobec Żydów."
+   }
+  },
+  {
+   "id": "00949_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1858_044",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje faktograficznie katastrofy i incydenty bez generalizacji o grupach."
+   }
+  },
+  {
+   "id": "00952_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1858_141",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment wspomina o napadzie na dom 'izraelity', co sugeruje negatywne przypisanie cechy (zamach na mienie) do grupy Żydów. Używa nazwy 'izraelita', która w kontekście XIX wieku często służyła jako eufemizm lub zamiennik dla 'Żyd'."
+   }
+  },
+  {
+   "id": "00954_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1860_080",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "tekst opisuje wydarzenia polityczne bez odniesienia do grup"
+   }
+  },
+  {
+   "id": "00958_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1861_272",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst skupia się na kwestiach politycznych i parlamentarnych, nie ma odniesienia do grup etnicznych czy wyznaniowych."
+   }
+  },
+  {
+   "id": "00960_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1862_130",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak bezpośrednich odniesień do grup narodowych, etnicznych, wyznaniowych czy rasowych w sposób uprzedzony. Tekst dotyczy głównie wydarzeń politycznych i międzynarodowych bez negatywnych atrybutów zbiorowych."
+   }
+  },
+  {
+   "id": "00965_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1865_003",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst sugeruje, że Żydzi nie zasługują na finansowanie edukacji czy instytucji dobroczynnych, a policja musi być silniejsza by ich pilnować, co wskazuje na negatywną postawę wobec grupy."
+   }
+  },
+  {
+   "id": "00988_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1877_109",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Ukraińcy",
+    "reason": "Tekst zawiera negatywne stereotypy o Ukraińcach, porównanie do 'dzikich' i stwierdzenie, że nie są zdolni do samodzielnego rządzenia, co sugeruje niższość cywilizacyjną i podrzędną pozycję. To przejaw uprzedzenia narodowego."
+   }
+  },
+  {
+   "id": "00994_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1879_298",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "other"
+    ],
+    "target": "osoby niepiśmienne",
+    "reason": "fragment sugeruje, że niepiśmienność jest przyczyną braku karności i braku przydatności jako żołnierza, co jest uogólnieniem dyskryminującym wobec osób niepiśmiennych jako grupy."
+   }
+  },
+  {
+   "id": "00997_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1881_094",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [],
+    "target": "rząd rosyjski",
+    "reason": "Tekst przedstawia rząd rosyjski jako nieliczący się z potrzebą ustępstw i nie dążący do pokoju, co może być uważane za uprzedzenie wobec Rosjan jako narodu."
+   }
+  },
+  {
+   "id": "01007_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1885_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera negatywnych treści wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Mówi o politycznych wyborach i działaniach węgierskiego rządu w kontekście autonomii, nie oceniając Węgrów negatywnie."
+   }
+  },
+  {
+   "id": "01018_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1890_141",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rosja/Rosjanie",
+    "reason": "W tekście Rosja jest przedstawiana jako zagrożenie (\"Rosya się na nią zwali\") i problem do rozwiązania (\"układ o Kongo w Londynie\"). Ponadto, fragment zawiera negatywną cechę zbiorową - Rosja jest uważana za \"nieprzyjazną\" w kontekście Polski, co może sugerować, że autor uważa ją za zagrożenie dla Polski i nie jest to neutralny opis."
+   }
+  },
+  {
+   "id": "01020_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1891_024",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment opisuje działalność rządu i parlamentu, nie zawiera treści uprzedzonych"
+   }
+  },
+  {
+   "id": "01022_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1892_048",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "01029_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1895_230",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "Żydzi",
+    "reason": "tekst sugeruje, że polityka handlowa ma ograniczyć wpływ Żydów w handlu, co może być postrzegane jako dyskryminacja ze względu na wyznawanie religijne."
+   }
+  },
+  {
+   "id": "01030_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1895_242",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje decyzje komisji ugadowej bez wyraźnego uprzedzenia wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01031_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1895_270",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest neutralny, opisuje występ aktorki bez negatywnych uogólnień. Odnosi się do konkretnej osoby, jej zachowania i umiejętności, nie do grupy."
+   }
+  },
+  {
+   "id": "01032_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1896_165",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konflikt polityczny między Francją a Wielką Brytanią, nie zawiera żadnych negatywnych cech przypisanych jakiejkolwiek grupie narodowej, etnicznej lub rasowej."
+   }
+  },
+  {
+   "id": "01034_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1897_088",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralny, opisuje faktograficznie lokalizację i zdarzenia bez uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01053_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1903_062",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "To jest ogłoszenie sądowe, bez treści uprzedzonych."
+   }
+  },
+  {
+   "id": "01073_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1910_178",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Przypisuje negatywną cechę zbiorową (pijaństwo) grupie etnicznej (Żydzi), podkreślając, że to oni są odpowiedzialni za epidemię karciarstwa i moralny upadek. Tekst nie zawiera neutralnego opisu faktu, lecz uogólnienie o grupie."
+   }
+  },
+  {
+   "id": "01079_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1913_178",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonej wobec żadnej grupy. Zawiera jedynie informacje o stratach wojennych po stronie włoskiej."
+   }
+  },
+  {
+   "id": "01085_ia_jbc.bj.uj.edu.pl.DIGCZAS002001_1917_296",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera negatywnych uogólnień dotyczących jakiejkolwiek grupy etnicznej, narodowej, religijnej ani rasowej. Dotyczy traktatów międzynarodowych i polityki państwowej."
+   }
+  },
+  {
+   "id": "01124_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1867_153",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "national"
+    ],
+    "target": "Żydzi, mieszczaństwo",
+    "reason": "W tekście wyraźnie sugeruje się, że określone grupy (Żydzi i mieszczaństwo) są zagrożeniem dla wiary katolickiej i tożsamości narodowej, co prowadzi do próby ich ograniczenia przez Kościół jako siłę polityczną. Wypowiedź zawiera uogólnienia o grupach jako źródle 'niezgody' i 'antymieszczańskim' oraz 'antysemickim' dążeniu, co jest formą uprzedzenia wobec Żydów i mieszczaństwa."
+   }
+  },
+  {
+   "id": "01139_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1871_012_w",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst sugeruje, że Żydzi mają wpływ na tłum i mogą się przyłączyć do akcji, co jest przedstawione w negatywnym świetle, sugerując, że ich udział może prowadzić do trudności w powstrzymaniu mas."
+   }
+  },
+  {
+   "id": "01144_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1873_036",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Niemcy",
+    "reason": "Fragment nie zawiera negatywnych cech przypisanych Niemcom jako grupie, a raczej przedstawia ich postawę polityczną w kontekście konfliktu o wybory. Nie ma tu żadnych uogólnień o charakterze negatywnym wobec Niemców jako grupy etnicznej lub narodowej."
+   }
+  },
+  {
+   "id": "01145_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1873_085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera informację o szkole, która przyjmuje dzieci katolickie, ale nie zawiera negatywnych uogólnień ani uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01150_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1876_035",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment koncentruje się na decyzjach politycznych i wojskowych, nie na uprzedzeniach wobec grup"
+   }
+  },
+  {
+   "id": "01154_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1878_034",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment nie niesie treści uprzedzonej"
+   }
+  },
+  {
+   "id": "01157_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1878_244",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst odnosi się do grupy 'Żydówka', która jest wyrażona pogardliwym określeniem 'Zydówka', co niesie negatywną cechę zbiorową. Dodatkowo, w kontekście sztuki teatralnej, odniesienie do 'Złotego cielca' może być uznane za nawiązanie do negatywnych stereotypów dotyczących Żydów w kulturze, zwłaszcza w kontekście materializmu i handlu."
+   }
+  },
+  {
+   "id": "01169_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1884_013",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst przypisuje Żydom negatywne cechy i sugeruje, że ich działalność handlowa jest szkodliwa dla Polski. Używa określeń pogardliwych i przedstawia ich jako zagrożenie."
+   }
+  },
+  {
+   "id": "01173_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1886_167",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest uszkodzony, urwany i nie pozwala na jednoznaczną ocenę. Nie wiadomo, jakie treści zostały usunięte przez OCR, a reszta nie daje wystarczających informacji do oceny."
+   }
+  },
+  {
+   "id": "01177_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1888_083",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst koncentruje się na politycznych sporach, bez negatywnych przypisowań wobec grup"
+   }
+  },
+  {
+   "id": "01181_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1890_090",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje fakty i zdarzenia bez negatywnych przypisań zbiorowych wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01199_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1897_122",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst koncentruje się na opisie zawartości książki i nie zawiera negatywnych stereotypów wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01201_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1897_273",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "W tekście autor przypisuje Polakom negatywną cechę zbiorową — brak zdolności do czerpania radości z osiągnięć i stałe narzekanie, mimo że warunki są podobne do tych u innych narodów (Niemców). W ten sposób stawia Polaków w niekorzystnym świetle jako naród, który ma wadliwą mentalność narodową, co jest uprzedzeniem."
+   }
+  },
+  {
+   "id": "01202_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1898_079",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Żydzi",
+    "reason": "tekst wyraża pogląd, że Żydzi powinni być trzymani na dystansie społecznym i politycznym, aby zapobiec osłabieniu polskiej tożsamości narodowej, co może być postrzegane jako uprzedzenie wobec Żydów."
+   }
+  },
+  {
+   "id": "01208_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1900_279",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest neutralnym opisem konfliktu politycznego między Włochami a Grecją w sprawie Macedonii bez uogólnień na grupy etniczne, wyznaniowe lub narodowe. Nie zawiera negatywnych przypisów dla żadnej grupy."
+   }
+  },
+  {
+   "id": "01227_ia_jbc.bj.uj.edu.pl.DIGCZAS002027_1905_234",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Deputowany Jan B. wyraźnie odróżnia Polaków jako naród rządzącą się własnym prawem od Żydów, którzy nie posiadają własnego państwa, co sugeruje, że nie mają prawa do równego traktowania. To odróżnienie i uzasadnianie, że Polacy powinni skupić się na współpracy z 'cywilizowanymi' narodami, takimi jak Niemcy, a nie z grupami mniejszościowymi, jak Żydzi, pokazuje uprzedzenie wobec Żydów. Dodatkowo, Jan B. sugeruje, że głos Żydów nie powinien być słyszalny w dyskusjach na temat polityki zagranicznej, co jest wyrazem wykluczenia i marginalizacji tej grupy."
+   }
+  },
+  {
+   "id": "01251_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1882_025",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment ten opisuje działania polityczne i gospodarcze między krajami, nie zawiera treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej."
+   }
+  },
+  {
+   "id": "01252_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1882_065",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralny, opisuje wydarzenia, nie niesie uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01263_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1887_098",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "01265_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1887_306",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera negatywnej oceny żadnej grupy, ani narodowej, ani etnicznej, ani wyznaniowej. Skupia się na działalności politycznej jednego konkretnego polityka, hr. Costa-Orsini, w kontekście tworzenia gabinetu i decyzji o dymisji, nie zawierając żadnych negatywnych stereotypów ani uogólnień."
+   }
+  },
+  {
+   "id": "01277_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1891_227",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje konkretne wydarzenia historyczne i postacie bez negatywnych stwierdzeń o grupach."
+   }
+  },
+  {
+   "id": "01324_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1903_273",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Serbowie",
+    "reason": "Tekst zawiera uogólnione negatywne przypisanie wobec Serbów jako narodu zacofanego i słabego, traktowanego jako niższa rasa. Mimo że autor zaprzecza temu, jakoby Austrya i Niemcy chciały ich traktować jako niższą rasę, to sam wyraża taki pogląd, podkreślając, że Serbowie są narodem od dawna traktowanym jako zacofany i słaby, co jest formą uprzedzenia. Ponadto sugeruje, że ich próby zmiany wymagają czasu i cierpliwości, co może być odczytane jako wyrażenie wyższości cywilizacyjnej. Dodatkowo, fragment wyraża pewien poziom paternalizmu i paternalistycznego podejścia do Serbów, co również może być uznane za formę uprzedzenia."
+   }
+  },
+  {
+   "id": "01330_ia_jbc.bj.uj.edu.pl.NDIGCZAS000043_1903_370",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst zawiera uprzedzenia wobec Żydów poprzez przypisywanie im negatywnych cech zbiorowych (lichwa) i przedstawianie ich jako zagrożenie dla niemieckiej kultury i moralności, co jest charakterystyczne dla antysemityzmu."
+   }
+  },
+  {
+   "id": "01346_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1894_182",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie niesie treści uprzedzonej. Przedstawia jedynie opis wydarzeń z różnych części Europy, bez oceny negatywnej lub uprzedzenia wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01354_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1897_130",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "W tekście nie ma negatywnych przypisów wobec grup narodowych, etnicznych, wyznaniowych ani rasowych."
+   }
+  },
+  {
+   "id": "01360_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1899_143",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional",
+     "national"
+    ],
+    "target": "żydom",
+    "reason": "Tekst sugeruje, że edukacja Żydów w szkołach publicznych jest zagrożeniem dla społeczeństwa, co jest uogólnieniem negatywnym o grupie."
+   }
+  },
+  {
+   "id": "01377_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1904_242",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Uogólnienie, że Żydzi są pośrednikami i handlarzami, jest stereotypem negatywnym wobec grupy etnicznej."
+   }
+  },
+  {
+   "id": "01383_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1906_115",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Wszystkie fragmenty są neutralne, opisowe, informacyjne i nie zawierają żadnych uprzedzeń wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01390_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1907_561_W",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zawiera wyraźne uprzedzenie wobec Żydów – sugeruje, że ich udział w procesji był nieodpowiedni, a ich obecność 'zanieczyszcza' świętość uroczystości. Wyrażane są również negatywne emocje i oceny dotyczące ich stroju i zachowania."
+   }
+  },
+  {
+   "id": "01393_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1908_398_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "muzułmańska",
+    "reason": "Przedstawia grupę muzułmańską jako zagrożenie dla tradycyjnego charakteru miasta, co prowadzi do dyskryminacyjnych regulacji."
+   }
+  },
+  {
+   "id": "01395_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1908_519",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "Tekst zawiera uogólniony negatywny sąd o Polakach: rzekomo chcą 'tylko dobra polskiego i polskiego języka', co sugeruje, że są egoistyczni i nie dbają o ogólny dobrostan. Dodatkowo, użyto sformułowania 'żywioł polski', które może być traktowane jako dehumanizujące, podkreślając podział na 'my' i 'oni', sugerując, że Polacy stanowią problem dla 'żywiołu niemieckiego'. Sformułowanie 'nie można się do niej dołączyć' sugeruje wykluczenie."
+   }
+  },
+  {
+   "id": "01397_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1910_058",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "01412_ia_jbc.bj.uj.edu.pl.NDIGCZAS000046_1916_043",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Francuzi"
+   }
+  },
+  {
+   "id": "01439_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1884_147",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rosjanie"
+   }
+  },
+  {
+   "id": "01445_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1886_150",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rusinów (Ukraińców)"
+   }
+  },
+  {
+   "id": "01456_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1891_121",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy polityki i wydarzeń międzynarodowych, nie zawiera negatywnych stereotypów ani dyskryminacyjnych wypowiedzi wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01457_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1892_254",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "polski naród",
+    "reason": "Fragment wyraża negatywną ocenę rządu rosyjskiego wobec 'potrzeb narodu polskiego', sugerując, że nie dąży on do zaspokojenia wszystkich potrzeb i że nie popiera autonomii na podstawie federacyjnej. Używa się tu pojęcia 'żywioły', które sugeruje, że pewne aspekty polskiej tożsamości narodowej są postrzegane jako problematyczne przez władze rosyjskie."
+   }
+  },
+  {
+   "id": "01458_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1892_288",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera treści uprzedzających wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01473_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1897_072",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment sugeruje, że Żydzi są odpowiedzialni za zakłócenie porządku i walki, a zjazd żydowskich akademików i gmin nie przyniesie żadnych skutków. Przedstawia Żydów jako grupę, która wymaga „uspokojenia” i która nie jest w stanie samodzielnie kontrolować swoich członków. Używa się tu stereotypu, że „Żydzi” są źródłem problemów, co jest uprzedzeniem antysemickim."
+   }
+  },
+  {
+   "id": "01477_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1898_034",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst przedstawia Żydów jako ludzi niechcianych, tułających się i nieszczęśliwych, których nikt nie chce i nie ceni. Słowa sugerują, że ich życie jest złe i powinni się zmienić, by być jak ci, którzy ich tolerują. Jest to wyraźne uogólnienie i negatywne przypisanie zbiorowe."
+   }
+  },
+  {
+   "id": "01486_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1901_049",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst wyraża negatywne przypisanie zbiorowe wobec Żydów, podnosząc religijne uzasadnienie dla wykluczenia ich z armii."
+   }
+  },
+  {
+   "id": "01506_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_195_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "minister skarbu"
+   }
+  },
+  {
+   "id": "01507_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_329_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera ocenę artystyczną, która nie ma charakteru uprzedzenia wobec grupy narodowej lub etnicznej. Opisuje różnice w poziomie artystycznym i organizacyjnym między dwiema grupami, bez negatywnego stereotypowania lub pogardy. Wspomniane jest, że niemiecka grupa nie miała wystarczających umiejętności, ale nie jest to przypisywane całej grupie jako takiej, a raczej brakowi solistów i przygotowania do konkretnego programu."
+   }
+  },
+  {
+   "id": "01508_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1908_432_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje problemy techniczne i wojskowe, nie zawierając uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "01510_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1909_018_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "tekst opisuje procedury i przepisy, bez negatywnych atrybutów wobec grup"
+   }
+  },
+  {
+   "id": "01512_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1909_420_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment przedstawia ofertę handlową, bez negatywnych stereotypów."
+   }
+  },
+  {
+   "id": "01517_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1910_123_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy proceduralnego aspektu posiedzenia parlamentarnego dotyczącego ustawy i nie zawiera treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej."
+   }
+  },
+  {
+   "id": "01528_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1913_164p",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Żydzi",
+    "reason": "Wypowiedź posła narodowego sugeruje, że Żydzi są potencjalnie uprzywilejowani i wymaga, by rząd zapobiegł temu, co może być postrzegane jako uprzedzenie wobec Żydów jako grupy, traktując ich jako zagrożenie dla równości."
+   }
+  },
+  {
+   "id": "01537_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1914_390",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Tekst dotyczy wydarzeń politycznych i społecznych bez negatywnych uogólnień o grupach."
+   }
+  },
+  {
+   "id": "01553_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1917_157",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional",
+     "national"
+    ],
+    "target": "Żydzi",
+    "reason": "fragment wyraża pozytywne nastawienie do żydowskiej społeczności, ale jednocześnie używa stereotypów (wkład w rozwój regionu, prawo do handlu, rzemiosła i własności jako forma uznania za lojalność) i sugeruje wyjątkowe traktowanie w stosunku do innych grup, co może być formą uprzedzenia wobec innych grup."
+   }
+  },
+  {
+   "id": "01554_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1917_250",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst koncentruje się na analizie polityki gospodarczej i roli różnych grup w rozwoju przemysłu i rolnictwa, bez bezpośredniego uprzedzenia wobec jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej."
+   }
+  },
+  {
+   "id": "01557_ia_jbc.bj.uj.edu.pl.NDIGCZAS000047_1918_095_PP",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment opisuje wydarzenie bez negatywnych ocen wobec jakiejkolwiek grupy"
+   }
+  },
+  {
+   "id": "01563_ia_jbc.bj.uj.edu.pl.NDIGCZAS000048_1905_005",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zawiera opisy działań proboszcza, które są przedstawiane jako szkodliwe dla katolickich wiernych i korzystne dla Żydów. Podkreśla się, że proboszcz faworyzował Żydów, udzielając im kredytów na korzystnych warunkach, co prowadziło do ich wzmocnienia w regionie. Opisane działania są przedstawiane w negatywnym świetle, a proboszcz jest krytykowany za faworyzowanie Żydów kosztem katolików, co jest wyraźnie uprzedzeniem antysemickim."
+   }
+  },
+  {
+   "id": "01567_ia_jbc.bj.uj.edu.pl.NDIGCZAS000060_1896_128",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "",
+    "reason": "Określenie 'rabuś' oraz kontekst społeczny mogą wskazywać na uprzedzenie wobec osób z niższych warstw społecznych, choć nie jest to jednoznaczne."
+   }
+  },
+  {
+   "id": "01572_ia_jbc.bj.uj.edu.pl.NDIGCZAS000120_1890_332",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera żadnych uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Tekst zawiera informacje o sprawie politycznej, statystyki dotyczące epidemii oraz wzmianki o osobach publicznych bez negatywnego wydźwięku wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01573_ia_jbc.bj.uj.edu.pl.NDIGCZAS000129_1888_059",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst dotyczy kwestii ekonomicznej związanej z produkcją soli i jej wykorzystaniem w karmieniu zwierząt, a nie zawiera żadnych negatywnych cech przypisanych jakiejkolwiek grupie narodowej, etnicznej, wyznaniowej lub rasowej."
+   }
+  },
+  {
+   "id": "01590_ia_jbc.bj.uj.edu.pl.NDIGCZAS000248_1909_194",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "Żydówka",
+    "reason": "Fragment odnosi się do Maryi Kłusikowej jako 'Żydówki', co może być traktowane jako przypisanie negatywnej cechy zbiorowej (wyznaniowej) i może mieć charakter uprzedzony, szczególnie w kontekście jej próby samobójczej."
+   }
+  },
+  {
+   "id": "01602_ia_jbc.bj.uj.edu.pl.NDIGCZAS001733_1884_121",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera negatywnego przypisania zbiorowego wobec żadnej grupy etnicznej, narodowej lub wyznaniowej. Opisuje raczej konkretne zachowanie poszczególnych osób – oficera niemieckiego i pana Felsingera – i nie uogólnia na całą grupę."
+   }
+  },
+  {
+   "id": "01611_ia_jbc.bj.uj.edu.pl.NDIGCZAS001738_1911_428_P",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "01617_ia_jbc.bj.uj.edu.pl.NDIGCZAS001739_1906_040",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralny i nie zawiera żadnych uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Nie ma negatywnych przypisań ani przedstawiania grup jako zagrożenia. Nie ma również pogardliwych określeń ani traktowania grupy jako niższej. Tekst dotyczy wydarzeń politycznych i gospodarczych bez uogólnień o grupach."
+   }
+  },
+  {
+   "id": "01620_ia_jbc.bj.uj.edu.pl.NDIGCZAS001739_1907_134",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment przedstawia neutralne informacje o wydarzeniach politycznych i konfliktach międzynarodowych bez wyraźnych uprzedzeń wobec grup narodowych, etnicznych, wyznaniowych lub rasowych."
+   }
+  },
+  {
+   "id": "01626_ia_jbc.bj.uj.edu.pl.NDIGCZAS001739_1909_067",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest neutralny i informacyjny, bez negatywnych uogólnień wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "01667_ia_jbc.bj.uj.edu.pl.NDIGCZAS002202_1918_048",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "other"
+    ],
+    "target": "Żydzi (żydowscy właściciele)",
+    "reason": "Tekst sugeruje, że żydowscy właściciele są odpowiedzialni za niszczenie konkurencji i powinni być traktowani inaczej niż inni, co może być interpretowane jako uprzedzenie wobec grupy."
+   }
+  },
+  {
+   "id": "01675_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1811_101",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst przypisuje Żydom negatywną cechę zbiorową (lichwiarstwo, nieuczciwość), przedstawia ich działalność jako szkodliwą i uzasadnia potrzebę ograniczenia ich wpływu."
+   }
+  },
+  {
+   "id": "01678_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1813_011",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje historyczne wydarzenia i decyzje władz bez negatywnych uogólnień o grupach."
+   }
+  },
+  {
+   "id": "01683_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1819_100",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "katolicy",
+    "reason": "Tekst zawiera uprzedzenie wobec katolików, sugerując, że ich nauczanie religijne jest uciążliwe i że są oni źródłem konfliktu w miejscowości. Przedstawia wypędzenie proboszcza jako akceptowalne, co wskazuje na uprzedzenie konfesyjne."
+   }
+  },
+  {
+   "id": "01690_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1824_085",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje różne wydarzenia historyczne i ich konsekwencje bez negatywnego stereotypizowania żadnej grupy."
+   }
+  },
+  {
+   "id": "01696_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1831_175",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Litwini",
+    "reason": "fragment opisuje sytuację, nie niesie oceny negatywnej"
+   }
+  },
+  {
+   "id": "01698_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1831_256",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst sugeruje, że Żydzi byli faworyzowani przez polskich Panów i Starostów w sposób niezasłużony, co może być interpretowane jako uprzedzenie wobec Żydów jako grupy, sugerując, że byli oni traktowani preferencyjnie w sposób nieuczciwy."
+   }
+  },
+  {
+   "id": "01713_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1843_080",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "01723_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1848_065",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst koncentruje się na kwestiach administracyjnych, politycznych i militarnych bez odniesień do jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej. Nie ma tu wyraźnych uprzedzeń ani negatywnych przypisań zbiorowych."
+   }
+  },
+  {
+   "id": "01724_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1848_210",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "01727_ia_jbc.bj.uj.edu.pl.NDIGCZAS002205_1849_042",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "opis faktograficzny bez uogólnień"
+   }
+  },
+  {
+   "id": "01762_ia_jbc.bj.uj.edu.pl.NDIGCZAS003412_1911_023",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "tekst opisuje karierę muzyka bez negatywnych opinii o grupach"
+   }
+  },
+  {
+   "id": "01772_ia_jbc.bj.uj.edu.pl.NDIGCZAS005263_1898_001",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żyd",
+    "reason": "Użycie stereotypowego przedstawienia Żyda jako osoby zaangażowanej w nieuczciwe działania finansowe."
+   }
+  },
+  {
+   "id": "01785_ia_jbc.bj.uj.edu.pl.NDIGCZAS008541_1891_014",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Ukraińcy, Niemcy",
+    "reason": "Fragment omawia obecność niemieckich osadników na Ukrainie, ale nie niesie uprzedzeń wobec żadnej grupy. Obawy są przedstawione jako uzasadnione i wynikające z obiektywnych okoliczności, a nie z negatywnych cech grupowych."
+   }
+  },
+  {
+   "id": "01788_ia_jbc.bj.uj.edu.pl.NDIGCZAS008541_1909_007",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Niemcy (i policya berlińska)",
+    "reason": "Uprzedzenie wobec Niemców i ich policji jako bezwzględnych i nieuczciwych, traktowanie ich jako szkodliwych dla ruchu socyalistycznego; uogólnienie o 'berlińskiej policyi', co może być odbierane jako stereotypizacja; wzmianki o 'szarlatanach' i 'agentach policji' są nacechowane negatywnie i mogą być postrzegane jako uprzedzenia wobec niemieckich socjalistów."
+   }
+  },
+  {
+   "id": "01804_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1889_188",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak treści uprzedzających wobec jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej w dostarczonym fragmencie."
+   }
+  },
+  {
+   "id": "01806_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1891_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst jest neutralny i dąży do integracji, nie zawiera uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej czy rasowej. Zawiera ogólne zasady zachowania, by zapewnić wszystkim uczestnikom komfort i bezpieczeństwo."
+   }
+  },
+  {
+   "id": "01822_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1896_176",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Przypisuje Żydom negatywną cechę zbiorową (lichwiarstwo, wyzysk), przedstawia ich jako zagrożenie i uzasadnia ograniczenie ich praw."
+   }
+  },
+  {
+   "id": "01835_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1903_071",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera negatywnych wypowiedzi ani o Żydach, ani o żadnej innej grupie. Nie ma tu żadnych negatywnych przypisań zbiorowych. Wzmianka o Żydach jest neutralna, opisuje fakt imigracji z Polski i nie ma w niej elementu uprzedzenia."
+   }
+  },
+  {
+   "id": "01837_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1904_222",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "Tekst sugeruje, że zachorowania na cholerę w Rzeszowie są związane z Polakami, a nie z innymi przyczynami, i to w sposób nieuzasadniony i pejoratywny. Użycie sarkofagu z napisami po czesku, niemiecku i polsku, który nie ma bezpośredniego związku z przypadkami choroby, wydaje się być wstawką podkreślającą obecność Polaków w mieście jako potencjalną przyczynę epidemii. Wzmianka o zachorowaniach na cholerę jako 'właściwej dla Rzeszowa' sugeruje negatywną cechę zbiorową przypisaną mieszkańcom miasta."
+   }
+  },
+  {
+   "id": "01842_ia_jbc.bj.uj.edu.pl.NDIGCZAS010654_1906_173",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst omawia sytuację w Austrii w kontekście prasy niemieckiej, nie ma bezpośredniej wzmianki o grupie narodowej, etnicznej, wyznaniowej lub rasowej poza wspomnieniem zakonu jezuitów, które nie jest przedstawione w negatywnym kontekście. Nie ma żadnego negatywnego przypisania zbiorowego."
+   }
+  },
+  {
+   "id": "01851_ia_jbc.bj.uj.edu.pl.NDIGCZAS011354_1872_014",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Opisuje wybór Roberta na stanowisko profesora uniwersytetu z perspektywy opinii publicznej i Watrina, podkreślając jego intelektualne i moralne zalety, a nie narodowość jako czynnik decydujący."
+   }
+  },
+  {
+   "id": "01853_ia_jbc.bj.uj.edu.pl.NDIGCZAS011540_1829_110",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "other"
+    ],
+    "target": "Francuzi",
+    "reason": "Użycie określenia 'barbarzyńcy' wobec Francuzów sugeruje negatywną ocenę, która może być formą uprzedzenia, sugerującą niższość kulturową lub cywilizacyjną."
+   }
+  },
+  {
+   "id": "01856_ia_jbc.bj.uj.edu.pl.NDIGCZAS011545_1913_1914_006",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment nie zawiera żadnych negatywnych ocen grupowych; dyskusja dotyczy różnych aspektów, w tym pozytywnych cech Polaków w Rosji, bez uprzedzeń."
+   }
+  },
+  {
+   "id": "01864_ia_jbc.bj.uj.edu.pl.NDIGCZAS012654_1899_032",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Tekst sugeruje, że posiadanie książek i obrazów przez drukarza, który jest opisywany jako 'z Włoch', wywołuje podejrzenia wobec jego żydowskiego pochodzenia. Policja podejrzewa go o bycie Żydem i aresztuje go z powodu tego podejrzenia. Oznacza to, że Żydzi są postrzegani jako grupa, która nie powinna posiadać książek i obrazów, co jest formą uprzedzenia."
+   }
+  },
+  {
+   "id": "01893_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1902_099",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Jest to neutralny opis faktograficzny, dotyczący planowanej inicjatywy społecznej i odczytu historycznego. Nie ma w nim negatywnych przypisów ani stereotypów wobec grup."
+   }
+  },
+  {
+   "id": "01900_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1905_307",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Czechów",
+    "reason": "Tekst sugeruje, że obstrukcja w parlamencie była celowo narzucona Czechom, przedstawiając ich jako ofiary i sugerując ich niezdolność do skutecznego działania. To może być postrzegane jako uprzedzenie narodowe."
+   }
+  },
+  {
+   "id": "01912_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1910_228",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "żydowscy",
+    "reason": "Tekst przypisuje grupie żydowskiej negatywną cechę zbiorową (grabią ziemian), co jest stereotypem. Używa określenia pogardliwego i przedstawia grupę jako problem do rozwiązania."
+   }
+  },
+  {
+   "id": "01919_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1914_006",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera żadnych wyraźnych przejawów uprzedzeń rasowych, etnicznych, religijnych ani narodowych. Opisuje konkretne wydarzenie z udziałem osób żydowskiego pochodzenia, ale nie ocenia ich negatywnie ani nie sugeruje, że ich żydowskość jest powodem negatywnych cech."
+   }
+  },
+  {
+   "id": "01925_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1916_049",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "Tekst sugeruje, że Rosja traktuje Polaków jako naród, który należy pozyskać dla swoich celów strategicznych, by nie dopuścić do ich zjednoczenia z Niemcami. To traktowanie Polaków jako 'narzędzi' politycznych, a nie pełnoprawnych podmiotów, nosi znamiona uprzedzenia narodowego."
+   }
+  },
+  {
+   "id": "01928_ia_jbc.bj.uj.edu.pl.NDIGCZAS014415_1917_002",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Polacy",
+    "reason": "Użyto negatywnych stereotypów wobec Polaków, określając ich jako leniwych i niezdolnych do pracy, co stanowi przykład uprzedzenia narodowego."
+   }
+  },
+  {
+   "id": "01957_ia_jbc.bj.uj.edu.pl.NDIGCZAS016866_1911_001",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie niesie żadnej treści uprzedzonej wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej. Skupia się na praktycznych aspektach hodowli zwierząt i cenach zwierząt gospodarskich."
+   }
+  },
+  {
+   "id": "01969_ia_jbc.bj.uj.edu.pl.NDIGCZAS017172_1912_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "colonial"
+    ],
+    "target": "wychodźcy (imigranci)",
+    "reason": "Tekst przedstawia grupę jako obciążenie i uzasadnia potrzebę kontroli biurokratycznej, co jest stereotypem kolonialnym."
+   }
+  },
+  {
+   "id": "01979_ia_jbc.bj.uj.edu.pl.NDIGCZAS017835_1878_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional"
+    ],
+    "target": "religijni innowiercy",
+    "reason": "Tekst wyraźnie przedstawia inny obrządek religijny jako błędny, nieskuteczny i niejednoznacznie wskazuje, że jest on związany z grupą, która go praktykuje, sugerując, że jest to grupa inna niż chrześcijańska i potencjalnie uznawana za gorszą w kontekście religijnym."
+   }
+  },
+  {
+   "id": "01980_ia_jbc.bj.uj.edu.pl.NDIGCZAS017835_1878_010",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje działalność charytatywną i szacunek księcia dla ubogich bez negatywnego uogólniania"
+   }
+  },
+  {
+   "id": "01981_ia_jbc.bj.uj.edu.pl.NDIGCZAS017835_1882_014",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "fragment przypisuje grupie Żydów negatywne cechy zbiorowe (leniwi, pasożyty społeczne, żyjący z procentów, lichwiarze), co jest typowym stereotypem antysemickim."
+   }
+  },
+  {
+   "id": "02007_ia_jbc.bj.uj.edu.pl.NDIGCZAS018703_67418552",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst dotyczy usług edukacyjnych i ogrodniczych, bez negatywnych stereotypów wobec jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "02016_ia_jbc.bj.uj.edu.pl.NDIGCZAS019090_67811226",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie niesie treści uprzedzonych wobec jakiejkolwiek grupy"
+   }
+  },
+  {
+   "id": "02017_ia_jbc.bj.uj.edu.pl.NDIGCZAS019090_67811288",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment zawiera neutralne informacje o wydarzeniach i spotkaniach organizacyjnych, bez negatywnych uogólnień wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "02027_ia_jbc.bj.uj.edu.pl.NDIGCZAS019170_66964798",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national",
+     "confessional"
+    ],
+    "target": "narody inne niż polskie, grupy wyznaniowe inne niż katolickie"
+   }
+  },
+  {
+   "id": "02044_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68349166",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "02057_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68362137",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje wydarzenia bez wyraźnych uprzedzeń wobec jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej. Wspomniani Żydzi są jedynie oskarżeni o konkretne przestępstwo (fałszowanie pieniędzy), co może być uznane za neutralne w kontekście faktów, nie zaś za wyraz uprzedzenia. Wszystkie inne wzmianki dotyczą wydarzeń politycznych i urzędników, bez odniesienia do grup społecznych w sposób negatywny."
+   }
+  },
+  {
+   "id": "02060_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68374586",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie niesie treści uprzedzonych. Opisuje działania wojskowe, nastroje społeczne oraz inicjatywy religijne, ale nie zawiera negatywnych ocen grup narodowych czy etnicznych."
+   }
+  },
+  {
+   "id": "02061_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68374637",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "cudzoziemcy",
+    "reason": "fragment sugeruje, że cudzoziemcy (nie-Francuzi) są niechętni i mogą działać przeciwko narodowi, co może być uważane za negatywne przypisanie zbiorowe i uprzedzenie wobec grupy cudzoziemców. Dotyczy to w szczególności cudzoziemców, którzy są przedstawiani jako potencjalni wrogowie Francji i jej króla, co może być postrzegane jako wykluczenie lub zagrożenie."
+   }
+  },
+  {
+   "id": "02063_ia_jbc.bj.uj.edu.pl.NDIGCZAS019494_68386483",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "tekst koncentruje się na operacjach wojskowych i ich przyczynach, nie ma wyraźnych negatywnych cech wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej"
+   }
+  },
+  {
+   "id": "02067_ia_jbc.bj.uj.edu.pl.NDIGCZAS020288_67948971",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "national"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment wyraża obawy o wpływ Żydów na sprawy narodowe, ekonomiczne i kulturowe Polski, sugerując, że Żydzi mają kontrolę nad polityką, gospodarką, edukacją i kulturą, a ich działania są przedstawione jako zagrożenie dla polskości. Wskazuje się na stereotypy o Żydach jako 'siepaczach', 'cenzorach' i 'wrogach Koła polskiego'. Treść zawiera negatywne przypisanie zbiorowe i przedstawia Żydów jako zagrożenie dla polskiej tożsamości i rozwoju."
+   }
+  },
+  {
+   "id": "02080_ia_jbc.bj.uj.edu.pl.NDIGCZAS022296_1887_008",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Niemcy",
+    "reason": "Fragment przedstawia Niemcy jako zagrożenie dla Polski, sugerując, że chcą „zgnieść i zniszczyć wolny lud“, co jest uprzedzeniem narodowym."
+   }
+  },
+  {
+   "id": "02092_ia_jbc.bj.uj.edu.pl.NDIGCZAS022296_1906_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rosjanie (Moskalowie)",
+    "reason": "Tekst wyraża pogardę wobec Rosjan jako 'Moskalów', przypisując im 'błędy' i 'doktryny', co wskazuje na negatywny, uogólniony sąd o grupie narodowej. Użycie słowa 'pogarda' i stwierdzenie, że nie przeszkadza to w korzystaniu z ich źródła, pokazuje uprzedzenie i deprecjację."
+   }
+  },
+  {
+   "id": "02104_ia_jbc.bj.uj.edu.pl.NDIGCZAS023105_73677635",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych, a jedynie podkreśla korzyści i potrzebę edukacji i informacji, nie przypisując negatywnych cech żadnej grupie."
+   }
+  },
+  {
+   "id": "02121_ia_jbc.bj.uj.edu.pl.NDIGCZAS023699_74670168",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Przypisuje negatywne cechy zbiorowe i przedstawia ich działalność jako szkodliwą dla rozwoju rolnictwa."
+   }
+  },
+  {
+   "id": "02125_ia_jbc.bj.uj.edu.pl.NDIGCZAS023822_74669884",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst nie zawiera negatywnych stereotypów wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Jest to neutralny opis różnic w umiejętnościach artystycznych między Francuzami a innymi narodami w dziedzinie malarstwa, nie zawierający uprzedzeń ani negatywnych cech zbiorowych."
+   }
+  },
+  {
+   "id": "02137_ia_jbc.bj.uj.edu.pl.NDIGCZAS025014_77989495",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "mieszkańcy miasteczka",
+    "reason": "Fragment nie zawiera uprzedzeń, a jedynie opisuje różne reakcje na działalność misyjną. Nie ma tu negatywnych cech przypisywanych grupie, ani nie jest przedstawiana jako zagrożenie. Jest to opis konfliktu, a nie uprzedzenie."
+   }
+  },
+  {
+   "id": "02143_ia_jbc.bj.uj.edu.pl.NDIGCZAS025334_74667443",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "unclear",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment jest urwany, OCR zniszczył rozstrzygające słowo, nie da się jednoznacznie określić, czy zawiera uprzedzenie."
+   }
+  },
+  {
+   "id": "02158_ia_jbc.bj.uj.edu.pl.NDIGCZAS025334_74687275",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment koncentruje się na politycznych decyzjach i wydarzeniach historycznych, nie na grupach etnicznych czy narodowych. Nie ma wzmianek o negatywnych cechach grupowych."
+   }
+  },
+  {
+   "id": "02159_ia_jbc.bj.uj.edu.pl.NDIGCZAS025334_74687346",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment opisuje neutralną sytuację administracyjną dotyczącą mundurów."
+   }
+  },
+  {
+   "id": "02175_ia_jbc.bj.uj.edu.pl.NDIGCZAS025791_78529497",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści, która niesie uprzedzenie wobec jakiejkolwiek grupy narodowej, etnicznej, wyznaniowej lub rasowej. Tekst opisuje wydarzenia polityczne i decyzje władz bez negatywnego nastawienia do jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "02177_ia_jbc.bj.uj.edu.pl.NDIGCZAS025791_78530003",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst przedstawia konflikt z Tatarami, ale nie ma tu uprzedzeń wobec żadnej grupy."
+   }
+  },
+  {
+   "id": "02196_ia_jbc.bj.uj.edu.pl.NDIGCZAS026631_77819060",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Sugeruje negatywną cechę zbiorową (chciwość, wyzyskiwanie) przypisaną grupie etnicznej."
+   }
+  },
+  {
+   "id": "02201_ia_jbc.bj.uj.edu.pl.NDIGCZAS026948_77927742",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Niemcy / Niemcy (jako narodowość)",
+    "reason": "Tekst wyraża negatywne uogólnienia na temat niemieckiej szkoły malarstwa, sugerując, że jest ona powierzchowna, pozbawiona ducha i głębi, oraz że jej artyści są rzemieślnikami, nie artystami. Używa się stereotypów narodowych (np. 'szkoła niemiecka' jako synonim powierzchowności i braku ducha artystycznego)."
+   }
+  },
+  {
+   "id": "02214_ia_jbc.bj.uj.edu.pl.NDIGCZAS027057_81114434",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst dotyczy polityki międzynarodowej i nie zawiera negatywnych uogólnień wobec grup."
+   }
+  },
+  {
+   "id": "02215_ia_jbc.bj.uj.edu.pl.NDIGCZAS027057_81114650",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "02243_ia_jbc.bj.uj.edu.pl.NDIGCZAS028381_78908900",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment mówi o polityce rządu brytyjskiego, a nie o jakiejś grupie etnicznej, wyznaniowej ani narodowej. Tekst koncentruje się na decyzjach politycznych i międzynarodowych, a nie na negatywnym przypisywaniu cech grupom ludzkim."
+   }
+  },
+  {
+   "id": "02254_ia_jbc.bj.uj.edu.pl.NDIGCZAS028415_79197454",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "pracownicy żydowscy w fabryce cukru w Mędrzechowie",
+    "reason": "opis faktograficzny bez negatywnej oceny"
+   }
+  },
+  {
+   "id": "02255_ia_jbc.bj.uj.edu.pl.NDIGCZAS028455_81747659",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje różnice w polityce finansowej Anglii i Rosyi, bez negatywnych uogólnień o żadnej grupie narodowej, etnicznej, wyznaniowej ani rasowej."
+   }
+  },
+  {
+   "id": "02266_ia_jbc.bj.uj.edu.pl.NDIGCZAS028512_81762394",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje 'dźikie bestye' (prawdopodobnie zwierzęta, przypuszczalnie słonie lub inne duże ssaki) w sposób opisowy, nie zawiera negatywnych cech zbiorowych przypisywanych ludziom lub grupom etnicznym, wyznaniowym itp. Nie ma wzmianek o grupach ludzi, a zwierzęta nie są utożsamiane z ludźmi. Brak uogólnień lub negatywnych stereotypów."
+   }
+  },
+  {
+   "id": "02285_ia_jbc.bj.uj.edu.pl.NDIGCZAS029529_85149767",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Tekst opisuje sytuację rynkową i trudności w rolnictwie w Rosyi, bez negatywnego stereotypowania grup etnicznych czy narodowych."
+   }
+  },
+  {
+   "id": "02291_ia_jbc.bj.uj.edu.pl.NDIGCZAS029634_84895754",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic",
+     "economic"
+    ],
+    "target": "Żydzi, arendarze"
+   }
+  },
+  {
+   "id": "02300_ia_jbc.bj.uj.edu.pl.NDIGCZAS030381_82247883",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Kozacy",
+    "reason": "Fragment opisuje konkretne działania Kozaków (płonące wioski, rabunek, ataki) i wiąże je z nimi, ale nie zawiera negatywnych uogólnień o Kozakach jako grupie etnicznej, narodowej lub wyznaniowej. Nie ma tu ani pogardy, ani sugerowania, że Kozacy są z natury barbarzyńscy czy nienawistni. Opis skupia się na działaniach, nie na cechach zbiorowych. Podobnie, nie ma sugestii, że Sierzputowski jest podejrzany o współpracę z Rosjanami z powodu swojej narodowości czy wyznania, tylko z powodu konkretnego incydentu. Nie ma też mowy o Żydach jako grupie, która byłaby traktowana jako niższa czy mniej wartościowa. Tekst podaje fakty i relacje, nie wyraża uprzedzeń."
+   }
+  },
+  {
+   "id": "02352_ia_jbc.bj.uj.edu.pl.NDIGCZAS049697_1913_238",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Węgrzy",
+    "reason": "fragment przypisuje grupie negatywną cechę zbiorową (złodzieje i bandyci) i przedstawia grupę jako zagrożenie"
+   }
+  },
+  {
+   "id": "02359_ia_jbc.bj.uj.edu.pl.NDIGCZAS049907_1906_020",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "confessional",
+     "other"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "02362_ia_jbc.bj.uj.edu.pl.NDIGCZAS049914_1888_016",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "tekst nie zawiera żadnych wyraźnych uprzedzeń wobec żadnej grupy narodowej, etnicznej, wyznaniowej lub rasowej. Tekst jest neutralny i skupia się na konieczności jedności dla osiągnięcia celów politycznych."
+   }
+  },
+  {
+   "id": "02376_ia_jbc.bj.uj.edu.pl.NDIGCZAS051362_1907_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment dotyczy konkretnych osób i działań politycznych (dostaw i kontraktów, ugody z Węgrami, żądań klubu), bez negatywnych atrybutów grupowych."
+   }
+  },
+  {
+   "id": "02378_ia_jbc.bj.uj.edu.pl.NDIGCZAS053478_1861_011",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych, dotyczy interpretacji filozoficznych i religijnych."
+   }
+  },
+  {
+   "id": "02392_ia_jbc.bj.uj.edu.pl.NDIGCZAS053792_1912_034",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": ""
+   }
+  },
+  {
+   "id": "02394_ia_jbc.bj.uj.edu.pl.NDIGCZAS054127_1916_125",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Niemcy",
+    "reason": "Fragment zawiera wyraźne, uogólnione negatywne przypisanie zbiorowe wobec grupy narodowej (Niemców), przedstawiając ich jako 'najeźdźców', co jest potencjalnie uprzedzeniem narodowym."
+   }
+  },
+  {
+   "id": "02397_ia_jbc.bj.uj.edu.pl.NDIGCZAS054127_1917_251",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national",
+     "confessional"
+    ],
+    "target": "Żydzi"
+   }
+  },
+  {
+   "id": "02413_ia_jbc.bj.uj.edu.pl.NDIGCZAS056099_1895_007",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "Niemcy",
+    "reason": "Fragment omawia sytuację polityczną, nie przypisuje negatywnych cech ani nie sugeruje wykluczenia. Krytyka ze strony niemieckich obywateli nie jest oceną samej grupy jako takiej, lecz konkretnej decyzji politycznej."
+   }
+  },
+  {
+   "id": "02419_ia_jbc.bj.uj.edu.pl.NDIGCZAS066260_1884_005",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Brak odniesienia do jakiejkolwiek grupy."
+   }
+  },
+  {
+   "id": "02430_ia_jbc.bj.uj.edu.pl.NDIGCZAS067964_1879_050",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "fragment opisuje działania rządu wobec grup wyznaniowych, nie narodowych, etnicznych czy rasowych"
+   }
+  },
+  {
+   "id": "02433_ia_jbc.bj.uj.edu.pl.NDIGCZAS069086_1900_006",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera bezpośrednich uprzedzeń, tylko apel o zjednoczenie i solidarność z grupami narodowymi, w tym z Czechami, bez negatywnej oceny wobec nich."
+   }
+  },
+  {
+   "id": "02436_ia_jbc.bj.uj.edu.pl.NDIGCZAS073456_1874_128",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Rusini (Ukraińcy)"
+   }
+  },
+  {
+   "id": "02459_ia_jbc.bj.uj.edu.pl.NDIGCZAS092173_1901_022",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "national"
+    ],
+    "target": "Niemcy",
+    "reason": "Fragment przedstawia negatywny obraz Niemców jako narodu, który wykazuje postawy sprzeczne z ideałami cywilizacji i demokracji, wykluczając Polaków z dyskusji i negując ich prawa. Używa się określeń pogardliwych i sugeruje, że Niemcy nie są gotowi do dialogu z innymi narodami, co jest przykładem uprzedzenia narodowego."
+   }
+  },
+  {
+   "id": "02463_ia_jbc.bj.uj.edu.pl.NDIGCZAS092185_1904_012",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "opis wydarzenia bez uprzedzeń"
+   }
+  },
+  {
+   "id": "02476_ia_jbc.bj.uj.edu.pl.NDIGCZAS094453_1887_1888_009",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "Fragment nie zawiera treści uprzedzonych; opisuje trudną sytuację lekarzy polskich w państwie niemieckim i krytykuje niską opiekę medyczną w fabrykach, ale nie używa języka pogardliwego ani nie uogólnia negatywnie o żadnej grupie."
+   }
+  },
+  {
+   "id": "02478_ia_jbc.bj.uj.edu.pl.NDIGCZAS094609_1909_038",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "prejudiced",
+    "kind": [
+     "antisemitic"
+    ],
+    "target": "Żydzi",
+    "reason": "Fragment zawiera stereotypy i uogólnienia o Żydach jako podejrzanych handlarzach, sugerujące nielegalną działalność i odpowiedzialność za klęski powodziowe. Generał Cox przypisuje im negatywną rolę w oparciu o ubiór i zachowanie, co jest przykładem uprzedzenia."
+   }
+  },
+  {
+   "id": "02539_ia_przysowiapolskie00brzo",
+   "file": "bias_holdout_349m_2026-08-17.json",
+   "verdict": {
+    "label": "not",
+    "kind": [],
+    "target": "",
+    "reason": "List nie niesie treści uprzedzonych wobec żadnej grupy narodowej, etnicznej, wyznaniowej ani rasowej. Jest to list pełen wsparcia i zachęty do działania, napisany przez męża do żony-królowej w trudnych okoliczściach."
+   }
+  }
+ ]
+}

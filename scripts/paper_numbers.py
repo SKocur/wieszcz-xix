@@ -50,6 +50,13 @@ BIAS_PROMPTS = "metrics/bias_prompts_2026-08-17.json"
 BIAS_JUDGES = "metrics/bias_adjudicator_agreement_run2.json"
 FERTILITY = "metrics/tokenizer_fertility_2026-08-18.json"
 LEDGER_VAL = "metrics/provenance_ledger_2026-08-03_val.csv.gz"
+CORRUPTION = "metrics/corruption_per_document_2026-10-05.json"
+WINDOW_FERTILITY = "metrics/window_fertility_2026-08-17.json"
+PROBE_LOGS = {
+    "small": "metrics/wieszcz_47m_6b7_2026-08-05_s1337_val.csv",
+    "mid": "metrics/wieszcz_107m_6b7_2026-08-06_s1337_val.csv",
+    "large": "metrics/wieszcz_349m_6b7_2026-08-07_s1337_val.csv",
+}
 PROBE_COMPARATORS = {
     "bielik": "metrics/temporal_probe_349m_bielik_2026-08-18.json",
     "papuga": "metrics/temporal_probe_349m_papugapt2_2026-08-18.json",
@@ -91,6 +98,8 @@ def tokenizer_macros(out: dict[str, str], ev: dict, tok: dict) -> None:
     fert = json.loads((REPO / FERTILITY).read_text())
     bpt = lambda block: block["fertility"]["all"]["bytes_per_token"]
 
+    out["fertdocs"] = tex_int(fert["meta"]["documents"])
+    out["fertcapkb"] = tex_int(fert["meta"]["doc_bytes_cap"] // 1000)
     out["fertilityours"] = tex_f(bpt(fert["tokenizers"]["wieszcz-8k"]), 3)
     out["fertilitybielik"] = tex_f(bpt(fert["tokenizers"]["bielik-1.5b-v3"]), 3)
     out["fertilitypapuga"] = tex_f(bpt(fert["tokenizers"]["papugapt2"]), 3)
@@ -115,6 +124,14 @@ def tokenizer_macros(out: dict[str, str], ev: dict, tok: dict) -> None:
     for rung, tag in LADDER:
         out[f"bpb{tag}"] = tex_f(
             dig(ev, f"by_subset.full.{rung}.cross_entropy_nats") * factor, 3)
+
+    # The protocol scores windows of the split, not all of it; the paper states how far
+    # their own ratio sits from the split's and what that does to the converted figures.
+    win = json.loads((REPO / WINDOW_FERTILITY).read_text())
+    out["fertilitywindows"] = tex_f(win["scored_windows"]["bytes_per_token"], 3)
+    shift = max(abs(dig(ev, f"by_subset.full.{rung}.cross_entropy_nats") * factor
+                    - win["bpb"][rung]["bpb_windows"]) for rung, _ in LADDER)
+    out["bpbshift"] = tex_f(math.ceil(shift * 1e4) / 1e4, 4)
 
     # What the corpus would have been under the vocabulary we did not pick, which is the
     # other half of the trade and the only form in which a token count is comparable.
@@ -341,24 +358,16 @@ def probe_macros(out: dict[str, str]) -> None:
     out["fewshotshare"] = tex_f(fs["fit_wieszcz"]["scan"]["orto_modern_share"], 3)
 
 
-def exclusion_and_ocr_macros(out: dict[str, str]) -> None:
-    """The excluded set's byte size, and the shape of the per-document OCR distribution.
+def exclusion_macros(out: dict[str, str]) -> None:
+    """The excluded set's byte size and its share of the freeze.
 
     Both were literals in the prose with nothing behind them. The byte total comes from
-    `scripts/exclusion_bytes.py`; the distribution figures are already in the corpus
-    report and only needed naming, including the clean half's worst document, which is the
-    paper's own argument that the floor is an average and not a guarantee.
+    `scripts/exclusion_bytes.py`.
     """
     exc = json.loads((REPO / "metrics/exclusion_bytes_2026-08-03.json").read_text())
     out["exclbytes"] = tex_int(exc["bytes"])
-    rep = json.loads((REPO / "metrics/corpus_report_2026-08-03_final.json").read_text())
-    susp = rep["ocr_suspicion"]
     freeze_bytes = 23.35e9
     out["exclshare"] = tex_f(100 * exc["bytes"] / freeze_bytes, 2)
-    for src, tag in (("ia", "ia"), ("wl", "wl")):
-        for stat, name in (("median_doc_rate", "median"), ("p90_doc_rate", "pninety"),
-                           ("max_doc_rate", "worst")):
-            out[f"ocr{tag}{name}"] = tex_f(100 * susp[src][stat], 2)
 
 
 def source_token_macros(out: dict[str, str]) -> None:
@@ -414,6 +423,70 @@ def unfiltered_era_macros(out: dict[str, str]) -> None:
     out["eraunfilteredterms"] = tex_int(len(unfi["modern"]["terms"]))
 
 
+def probe_exponent_macros(out: dict[str, str], ev: dict) -> None:
+    """The exponent the twenty-window in-training probe reads on the same checkpoints.
+
+    Fitted exactly through the final probe row of each rung's training log, with the
+    parameter counts the dense report carries, so the instrument comparison the paper
+    draws rests on released files. The three logs must end at the same step, or the
+    fit would compare checkpoints from different points of the schedule.
+    """
+    import csv
+    from eval_by_source import fit_alpha
+
+    ns, ls, steps = [], [], set()
+    for rung, tag in LADDER:
+        rows = list(csv.DictReader((REPO / PROBE_LOGS[tag]).open()))
+        last = rows[-1]
+        steps.add(int(last["step"]))
+        ns.append(float(dig(ev, f"by_subset.full.{rung}.params")))
+        ls.append(float(last["val_loss"]))
+    if len(steps) != 1:
+        raise SystemExit(f"the training logs end at different steps: {sorted(steps)}")
+    fit = fit_alpha(ns, ls)
+    if fit.get("alpha") is None:
+        raise SystemExit("the in-training probe losses are not power-law separable")
+    out["alphaprobe"] = tex_f(fit["alpha"], 3)
+
+
+def corruption_population_macros(out: dict[str, str]) -> None:
+    """Table 4: the four detectors over every released document, and the cost of two
+    document thresholds.
+
+    The shares in the report are of Internet Archive bytes kept, so the macro states what
+    a threshold removes. Per-document percentiles are over documents long enough to carry
+    a rate, which the report counts.
+    """
+    rep = json.loads((REPO / CORRUPTION).read_text())
+    ia, wl = rep["by_source"]["ia"], rep["by_source"]["wl"]
+    out["corrpopia"] = tex_f(ia["rate_pct"], 2)
+    out["corrpopwl"] = tex_f(wl["rate_pct"], 2)
+    out["corrpoptrue"] = tex_f(rep["ia_corruption_above_floor_pct"], 2)
+    out["corrpopiawords"] = tex_f(ia["words"] / 1e9, 2) + "B"
+    out["corrpopiasusp"] = tex_f(ia["suspicious"] / 1e6, 1) + "M"
+    out["corrpopwlwords"] = tex_f(wl["words"] / 1e6, 1) + "M"
+    out["corrpopwlsusp"] = tex_f(wl["suspicious"] / 1e3, 1) + "k"
+    for reason, name in (("symbol", "symbol"), ("midcaps", "midcaps"),
+                         ("digit_mix", "digit"), ("no_vowel", "novowel")):
+        out[f"corrpop{name}"] = tex_f(ia["by_reason_pct"][reason], 2)
+    out["corrpopscored"] = tex_int(ia["per_document_pct"]["documents_scored"])
+    out["corrpopminwords"] = tex_int(rep["meta"]["min_words_for_rate"])
+    out["corrpopmedian"] = tex_f(ia["per_document_pct"]["median"], 2)
+    out["corrpopninety"] = tex_f(ia["per_document_pct"]["p90"], 2)
+    out["corrpopworst"] = tex_f(ia["per_document_pct"]["max"], 2)
+    out["corrpopwlmedian"] = tex_f(wl["per_document_pct"]["median"], 2)
+    out["corrpopwlworst"] = tex_f(wl["per_document_pct"]["max"], 2)
+    if wl["per_document_pct"]["max"] <= ia["per_document_pct"]["max"]:
+        raise SystemExit("the clean source's worst document no longer exceeds the OCR'd "
+                         "source's, so the paper's control argument is false")
+    if ia["per_document_pct"]["p99"] <= 5:
+        raise SystemExit("the 99th percentile sits at or below 5%, so the paper's claim "
+                         "that a 5% threshold removes the whole tail beyond it is false")
+    for thr, name in (("5", "corrdropfive"), ("3", "corrdropthree")):
+        kept = ia["kept_at_threshold_pct"][thr]["bytes_kept_share"]
+        out[name] = tex_f(100 * (1 - kept), 1)
+
+
 def _load_probe(rel: str) -> dict:
     path = REPO / rel
     if not path.exists():
@@ -466,6 +539,7 @@ def collect(eval_file: str) -> dict[str, str]:
         out[f"ceci{tag}"] = tex_ci(cell["ci95"], 4)
         out[f"params{tag}"] = tex_int(cell["params"])
         span = cell.get("span_fraction", span)
+    probe_exponent_macros(out, ev)
     # Per source, and the penalty on the clean transcription: the table that states these
     # is the last place a number should be retyped, since it carries three columns of them.
     for rung, tag in LADDER:
@@ -494,7 +568,8 @@ def collect(eval_file: str) -> dict[str, str]:
     probe_macros(out)
     unfiltered_era_macros(out)
     source_token_macros(out)
-    exclusion_and_ocr_macros(out)
+    exclusion_macros(out)
+    corruption_population_macros(out)
     tokenizer_macros(out, ev, tok)
     bias_macros(out)
     epochs_macros(out, ev)

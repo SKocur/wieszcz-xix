@@ -1,0 +1,32 @@
+{
+ "meta": {
+  "script": "scripts/window_fertility.py",
+  "val": "val_2026-08-03.bin",
+  "tokenizer": "vocab.json",
+  "eval": "eval_by_source_2026-08-17_fullspan.json",
+  "block": 1024,
+  "windows": 8192
+ },
+ "scored_windows": {
+  "bytes": 28158193,
+  "tokens": 8388608,
+  "bytes_per_token": 3.3567181825637817
+ },
+ "split_decoded": {
+  "bytes_per_token": 3.3563150663599894
+ },
+ "bpb": {
+  "47M": {
+   "cross_entropy_nats": 3.10094,
+   "bpb_windows": 1.3327632874670783
+  },
+  "107M": {
+   "cross_entropy_nats": 2.90464,
+   "bpb_windows": 1.2483948594001737
+  },
+  "349M": {
+   "cross_entropy_nats": 2.67264,
+   "bpb_windows": 1.1486828099273163
+  }
+ }
+}

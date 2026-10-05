@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "script": "scripts/corruption_per_document.py",
+  "split": "doc_split_2026-08-03.json",
+  "corpus": "data/clean",
+  "date": "2026-10-05",
+  "detectors": "src/analyze_ocr.py",
+  "min_words_for_rate": 50,
+  "rows": "corruption_per_document_2026-10-05.csv.gz"
+ },
+ "documents": 294369,
+ "by_source": {
+  "ia": {
+   "documents": 291655,
+   "bytes": 22604507719,
+   "words": 3107627847,
+   "suspicious": 56914926,
+   "rate_pct": 1.8315,
+   "by_reason_pct": {
+    "symbol": 1.325,
+    "digit_mix": 0.1786,
+    "midcaps": 0.3458,
+    "no_vowel": 0.0274
+   },
+   "per_document_pct": {
+    "documents_scored": 291140,
+    "median": 1.593,
+    "p90": 3.3,
+    "p99": 5.497,
+    "max": 20.886
+   },
+   "kept_at_threshold_pct": {
+    "1": {
+     "documents_kept": 67048,
+     "documents_kept_share": 0.2299,
+     "bytes_kept_share": 0.2532
+    },
+    "2": {
+     "documents_kept": 188435,
+     "documents_kept_share": 0.6461,
+     "bytes_kept_share": 0.6643
+    },
+    "3": {
+     "documents_kept": 251518,
+     "documents_kept_share": 0.8624,
+     "bytes_kept_share": 0.8672
+    },
+    "5": {
+     "documents_kept": 286952,
+     "documents_kept_share": 0.9839,
+     "bytes_kept_share": 0.9792
+    },
+    "10": {
+     "documents_kept": 291538,
+     "documents_kept_share": 0.9996,
+     "bytes_kept_share": 0.9983
+    }
+   }
+  },
+  "wl": {
+   "documents": 2714,
+   "bytes": 168200161,
+   "words": 23392985,
+   "suspicious": 60064,
+   "rate_pct": 0.2568,
+   "by_reason_pct": {
+    "symbol": 0.1715,
+    "digit_mix": 0.0006,
+    "midcaps": 0.0468,
+    "no_vowel": 0.0383
+   },
+   "per_document_pct": {
+    "documents_scored": 2614,
+    "median": 0.0,
+    "p90": 0.798,
+    "p99": 5.335,
+    "max": 77.193
+   },
+   "kept_at_threshold_pct": {
+    "1": {
+     "documents_kept": 2521,
+     "documents_kept_share": 0.9289,
+     "bytes_kept_share": 0.9579
+    },
+    "2": {
+     "documents_kept": 2632,
+     "documents_kept_share": 0.9698,
+     "bytes_kept_share": 0.9815
+    },
+    "3": {
+     "documents_kept": 2659,
+     "documents_kept_share": 0.9797,
+     "bytes_kept_share": 0.983
+    },
+    "5": {
+     "documents_kept": 2687,
+     "documents_kept_share": 0.9901,
+     "bytes_kept_share": 0.9944
+    },
+    "10": {
+     "documents_kept": 2702,
+     "documents_kept_share": 0.9956,
+     "bytes_kept_share": 0.9999
+    }
+   }
+  }
+ },
+ "false_positive_floor_pct": 0.2568,
+ "ia_corruption_above_floor_pct": 1.5747
+}
