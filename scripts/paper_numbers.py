@@ -52,6 +52,13 @@ FERTILITY = "metrics/tokenizer_fertility_2026-08-18.json"
 LEDGER_VAL = "metrics/provenance_ledger_2026-08-03_val.csv.gz"
 CORRUPTION = "metrics/corruption_per_document_2026-10-05.json"
 WINDOW_FERTILITY = "metrics/window_fertility_2026-08-17.json"
+COMPOSITION = "metrics/corpus_composition_2026-10-06.json"
+CLEANING = "metrics/cleaning_effect_2026-10-06.json"
+WL_TRANSLATIONS = "metrics/wl_translations_2026-10-06.json"
+DOCUMENT_METADATA = "ledger/document_metadata_2026-10-06.json"
+DEATH_YEARS = "metrics/creator_death_years_2026-10-06.json"
+COMPARATOR_HELDOUT = {"bielik": "metrics/comparator_heldout_bielik_2026-10-06.json",
+                      "papuga": "metrics/comparator_heldout_papugapt2_2026-10-06.json"}
 PROBE_LOGS = {
     "small": "metrics/wieszcz_47m_6b7_2026-08-05_s1337_val.csv",
     "mid": "metrics/wieszcz_107m_6b7_2026-08-06_s1337_val.csv",
@@ -77,6 +84,17 @@ def tex_int(v) -> str:
 
 def tex_f(v, places: int) -> str:
     return f"{float(v):.{places}f}"
+
+
+SMALL_NUMBERS = ("zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+                 "nine")
+
+
+def tex_word(n: int) -> str:
+    """Counts below ten are spelled out in running text, as APA style asks."""
+    if not 0 <= n < 10:
+        raise SystemExit(f"{n} is not a count the prose spells out")
+    return SMALL_NUMBERS[n]
 
 
 def tex_ci(v, places: int = 3) -> str:
@@ -177,6 +195,10 @@ def bias_macros(out: dict[str, str]) -> None:
         raise SystemExit("the two rungs were screened over different generation counts")
     out["biasmentionrate"] = tex_f(100 * bf["mention_rate"], 2)
     out["biasmentionratemid"] = tex_f(100 * bm["mention_rate"], 2)
+    for name, block in (("biasmentionrateci", bf), ("biasmentionratemidci", bm)):
+        rate, n = block["mention_rate"], block["generations"]
+        half = 1.96 * math.sqrt(rate * (1 - rate) / n)
+        out[name] = tex_ci([100 * (rate - half), 100 * (rate + half)], 1)
 
     # The adjudication as far as it has been read. Emitted from the scored file rather than
     # from the sheet, so the paper cannot describe a state the rate was not computed in:
@@ -204,7 +226,10 @@ def bias_macros(out: dict[str, str]) -> None:
     out["biasunflagged"] = tex_int(bf["unflagged"])
     out["biasaudit"] = tex_int(bf["audit_drawn"])
     out["biassheet"] = tex_int(len(sheet["rows"]))
-    out["biasjudges"] = tex_int(len(json.loads((REPO / BIAS_JUDGES).read_text())))
+    n_judges = len(json.loads((REPO / BIAS_JUDGES).read_text()))
+    out["biasjudges"] = tex_int(n_judges)
+    out["biasjudgesword"] = tex_word(n_judges)
+    out["biasjudgesWord"] = tex_word(n_judges).capitalize()
     judge_macros(out)
 
 
@@ -250,6 +275,7 @@ def judge_macros(out: dict[str, str]) -> None:
     if len(held) != 1:
         raise SystemExit(f"expected exactly one judge at an unchanged criterion, got {held}")
     out["judgeamended"] = tex_int(len(moved))
+    out["judgeamendedword"] = tex_word(len(moved))
     out["judgeunclearbefore"] = tex_int(sum(counts(runs["prelim"][m])[2] for m in moved))
     out["judgeunclearafter"] = tex_int(sum(counts(runs["run2"][m])[2] for m in moved))
     out["judgecontrolbefore"] = tex_int(counts(runs["prelim"][held[0]])[2])
@@ -350,8 +376,20 @@ def probe_macros(out: dict[str, str]) -> None:
         raise SystemExit("probe reports disagree on the exemplars, so their orthography "
                          f"shares are not comparable: {sorted(preambles)}")
 
+    # A share lies in [0, 1]; the probe's normal-approximation interval can step outside.
+    interval = lambda block: tex_ci(
+        [min(1.0, max(0.0, v)) for v in block["orto_modern_share"]["ci95"]], 2)
+    for tag, path in PROBE_RUNGS.items():
+        ev = _load_probe(path)
+        out[f"orto{tag}ci"] = interval(ev["generations_wieszcz"])
+        out[f"orto{tag}fewshotci"] = interval(ev["generations_wieszcz_fewshot"])
+    for tag, path in PROBE_COMPARATORS.items():
+        out[f"orto{tag}fewshotci"] = interval(
+            _load_probe(path)["generations_modern_lm_fewshot"])
+
     ev = _load_probe(PROBE_COMPARATORS["bielik"])
     out["ortocorpus"] = share(ev["corpus_reference"])
+    out["ortocorpusci"] = interval(ev["corpus_reference"])
     fs = ev["fewshot"]
     out["fewshotpassages"] = tex_int(len(fs["passages"]))
     out["fewshotchars"] = tex_int(fs["fit_wieszcz"]["chars"])
@@ -465,6 +503,7 @@ def corruption_population_macros(out: dict[str, str]) -> None:
     out["corrpopiawords"] = tex_f(ia["words"] / 1e9, 2) + "B"
     out["corrpopiasusp"] = tex_f(ia["suspicious"] / 1e6, 1) + "M"
     out["corrpopwlwords"] = tex_f(wl["words"] / 1e6, 1) + "M"
+    out["corpuswordsbillions"] = tex_f((ia["words"] + wl["words"]) / 1e9, 1)
     out["corrpopwlsusp"] = tex_f(wl["suspicious"] / 1e3, 1) + "k"
     for reason, name in (("symbol", "symbol"), ("midcaps", "midcaps"),
                          ("digit_mix", "digit"), ("no_vowel", "novowel")):
@@ -485,6 +524,157 @@ def corruption_population_macros(out: dict[str, str]) -> None:
     for thr, name in (("5", "corrdropfive"), ("3", "corrdropthree")):
         kept = ia["kept_at_threshold_pct"][thr]["bytes_kept_share"]
         out[name] = tex_f(100 * (1 - kept), 1)
+
+
+def cleaning_macros(out: dict[str, str]) -> None:
+    """What fetch-time cleaning removed, on the documents whose as-fetched text was kept."""
+    rep = json.loads((REPO / CLEANING).read_text())
+    out["cleanrawshare"] = tex_f(rep["share_documents_with_raw"], 1)
+    out["cleanremoved"] = tex_f(rep["removed_share_bytes"], 1)
+    out["cleanlowalphalines"] = tex_f(rep["low_alpha_share_lines"], 1)
+    out["cleanlowalphabytes"] = tex_f(rep["low_alpha_share_bytes"], 1)
+    out["cleanjunkbytes"] = tex_f(rep["junk_share_bytes"], 1)
+    out["cleanwhitespacebytes"] = tex_f(rep["whitespace_share_bytes"], 1)
+    out["cleanreplaymatch"] = tex_f(rep["replay_equals_clean_share_documents"], 1)
+    out["cleandigits"] = tex_f(rep["low_alpha_share_digits"], 0)
+    out["cleanyears"] = tex_f(rep["low_alpha_share_years_post1918"], 0)
+
+
+def wl_macros(out: dict[str, str]) -> None:
+    """What the Wolne Lektury records say about translations and later text."""
+    rep = json.loads((REPO / WL_TRANSLATIONS).read_text())
+    summary = rep["summary"]
+    for name, key in (("wltranslations", "translation"),
+                      ("wltranslatorlate", "translation_translator_alive_after_1918"),
+                      ("wlauthorlate", "original_author_alive_after_1918"),
+                      ("wlfreelicence", "free_licence"),
+                      ("wlcertain", "certain_post1918"),
+                      ("wlpossible", "possibly_post1918"),
+                      ("wlnotpolish", "not_polish")):
+        out[name] = tex_int(summary[key]["documents"])
+        out[f"{name}share"] = tex_f(summary[key]["share_corpus_bytes"], 2)
+    out["wlcertainproust"] = tex_int(summary["certain_post1918"]["documents"]
+                                     - summary["free_licence"]["documents"])
+    out["wlpossiblewlshare"] = tex_f(summary["possibly_post1918"]["share_wl_bytes"], 0)
+
+
+def rights_macros(out: dict[str, str]) -> None:
+    """Rights basis of the Internet Archive documents beyond the library statement."""
+    basis = json.loads((REPO / DOCUMENT_METADATA).read_text())["by_rights_basis"]
+    ia = ("library_public_domain_statement", "scanning_institution_assertion",
+          "other_statement", "none")
+    ia_bytes = sum(basis[k]["bytes"] for k in ia)
+    for name, key in (("rightsscanner", "scanning_institution_assertion"),
+                      ("rightsnone", "none")):
+        out[f"{name}docs"] = tex_int(basis[key]["documents"])
+        out[f"{name}bytes"] = tex_f(100 * basis[key]["bytes"] / ia_bytes, 1)
+    deaths = json.loads((REPO / DEATH_YEARS).read_text())
+    out["rightslatecreatordocs"] = tex_int(deaths["counts"]["creator_died_in_term"])
+    out["rightslatecreatorperiodical"] = tex_int(
+        deaths["by_type"]["periodical"]["creator_died_in_term"])
+    out["rightslatecreatoryear"] = str(deaths["meta"]["first_protected_death_year"])
+
+
+def comparator_heldout_macros(out: dict[str, str]) -> None:
+    """Bits per byte of the comparators and the rungs on the dense protocol's windows."""
+    reports = {tag: json.loads((REPO / path).read_text())["by_subset"]
+               for tag, path in COMPARATOR_HELDOUT.items()}
+    interval = lambda ci: f"[{ci[0]:.3f}, {ci[1]:.3f}]"  # noqa: E731
+    for subset in ("full", "ia", "wl"):
+        for tag, rep in reports.items():
+            out[f"cmpbpb{tag}{subset}"] = tex_f(rep[subset]["bits_per_byte"], 3)
+        for rung, tag in LADDER:
+            out[f"cmpbpb{tag}{subset}"] = tex_f(
+                reports["bielik"][subset]["rungs"][rung]["bits_per_byte"], 3)
+    out["cmpwindowswl"] = tex_int(reports["bielik"]["wl"]["windows"])
+    import numpy as np
+    windows = np.load(REPO / COMPARATOR_HELDOUT["bielik"].replace(".json", ".windows.npz"))
+    block = json.loads((REPO / COMPARATOR_HELDOUT["bielik"]).read_text())["meta"]["block"]
+    for subset in ("ia", "wl"):
+        scored = windows[f"{subset}_rung_bytes"]
+        out[f"fertilitywindows{subset}"] = tex_f(float(scored.sum()) / (len(scored) * block), 2)
+    for name, tag, rung in (("cmpdiffmatched", "papuga", "107M"),
+                            ("cmpdiffbielik", "bielik", "349M"),
+                            ("cmpdiffbieliksmall", "bielik", "47M")):
+        row = reports[tag]["full"]["rungs"][rung]
+        out[name] = tex_f(row["comparator_minus_rung"], 3)
+        out[f"{name}ci"] = interval(row["comparator_minus_rung_ci95"])
+    for tag in reports:
+        row = reports[tag]["wl"]["rungs"]["349M"]
+        out[f"cmpdiff{tag}wl"] = tex_f(row["comparator_minus_rung"], 3)
+        out[f"cmpdiff{tag}wlci"] = interval(row["comparator_minus_rung_ci95"])
+
+
+def crossover_macros(out: dict[str, str]) -> None:
+    """The levels behind the era contrast, and the paired difference on period terms.
+
+    The interaction says our gap is larger than a comparator's. That a model is better on
+    one set and worse on the other needs the levels: per term, our score minus the
+    comparator's, averaged over the period set, with the interval the probe uses for the
+    interaction (mean plus or minus 1.96 standard errors over the terms).
+    """
+    pairs = {"bielik": PROBE_COMPARATORS["bielik"], "papuga": PROBE_COMPARATORS["papuga"],
+             "matched": "metrics/temporal_probe_107m_papugapt2_2026-08-18.json"}
+    for tag, path in pairs.items():
+        era = _load_probe(path)["era_interaction"]["per_era"]
+        for which in ("period", "modern"):
+            terms = era[which]["terms"]
+            n = len(terms)
+            deltas = [t["delta_bpb"] for t in terms]
+            mean = sum(deltas) / n
+            sem = math.sqrt(sum((d - mean) ** 2 for d in deltas) / (n - 1) / n)
+            out[f"era{which}{tag}"] = tex_f(sum(t["modern_lm_bpb"] for t in terms) / n, 3)
+            out[f"era{which}delta{tag}"] = tex_f(mean, 2)
+            out[f"era{which}delta{tag}ci"] = tex_ci([mean - 1.96 * sem, mean + 1.96 * sem], 2)
+            if which == "period" and mean + 1.96 * sem >= 0:
+                raise SystemExit(f"the period-term difference against {tag} does not "
+                                 "exclude zero, so the crossover claim fails for it")
+
+
+def composition_macros(out: dict[str, str]) -> None:
+    """The composition table: catalogue type and state of publication of the Internet
+    Archive documents, the libraries' rights statements, and the post-reform spelling
+    share by place. Shares are per cent of documents and of bytes. The per-decade series
+    are drawn by plot_composition.py from the same report."""
+    rep = json.loads((REPO / COMPOSITION).read_text())
+
+    def pair(name: str, row: dict) -> None:
+        out[name + "docs"] = tex_f(row["share_documents"], 1)
+        out[name + "bytes"] = tex_f(row["share_bytes"], 1)
+
+    for key, name in (("periodical", "periodical"), ("book", "book"),
+                      ("ephemera", "ephemera"), ("unspecified", "unspec")):
+        pair("comptype" + name, rep["by_type"][key])
+    if set(rep["by_decade"]) != {str(d) for d in range(1800, 1911, 10)}:
+        raise SystemExit("composition report has a decade outside 1800-1918 or undated rows")
+    for key, name in (("austria_hungary", "austria"), ("russian_empire", "russia"),
+                      ("german_empire", "germany"), ("elsewhere", "elsewhere"),
+                      ("no_place", "noplace"), ("unclassified", "unclassified")):
+        pair("compstate" + name, rep["by_state"][key])
+    out["compyearagree"] = tex_f(rep["year_check"]["agreement"], 1)
+    out["compyearcomparable"] = tex_int(rep["year_check"]["comparable"])
+    pair("comprightspd", rep["by_rights"]["public_domain_statement"])
+
+    orto = rep["orto"]
+    out["ortocorpusall"] = tex_f(orto["all"]["share_modern"], 3)
+    for key, name in (("austria_hungary", "austria"), ("russian_empire", "russia"),
+                      ("german_empire", "germany")):
+        out["ortostate" + name] = tex_f(orto["by_state"][key]["share_modern"], 3)
+    out["ortomassaustria"] = tex_f(orto["modern_mass_by_state"]["austria_hungary"], 0)
+    out["ortomassrussia"] = tex_f(orto["modern_mass_by_state"]["russian_empire"], 0)
+    cells = orto["plotted_cells"]
+    out["ortocellmindocs"] = tex_int(cells["fewest_documents"])
+    out["ortocelltopmedian"] = tex_f(cells["median_top_title_share_forms"], 0)
+    titles = orto["by_title"]
+    out["ortotitlecount"] = tex_int(titles["titles"])
+    out["ortotitleminforms"] = tex_int(titles["min_forms"])
+    out["ortotitlelow"] = tex_f(titles["share_forms_in_titles_at_most_0.1"], 0)
+    out["ortotitlehigh"] = tex_f(titles["share_forms_in_titles_at_least_0.9"], 0)
+    for key, name in (("Lwów / Gazeta Lwowska", "gazetalwowska"),
+                      ("Lwów / Dziennik Polski", "dziennikpolski"),
+                      ("Warszawa / Kurjer Warszawski", "kurjerwarszawski"),
+                      ("Kraków / Czas", "czas")):
+        out["ortotitle" + name] = tex_f(titles["named"][key]["share_modern"], 2)
 
 
 def _load_probe(rel: str) -> dict:
@@ -570,6 +760,12 @@ def collect(eval_file: str) -> dict[str, str]:
     source_token_macros(out)
     exclusion_macros(out)
     corruption_population_macros(out)
+    composition_macros(out)
+    crossover_macros(out)
+    cleaning_macros(out)
+    wl_macros(out)
+    rights_macros(out)
+    comparator_heldout_macros(out)
     tokenizer_macros(out, ev, tok)
     bias_macros(out)
     epochs_macros(out, ev)

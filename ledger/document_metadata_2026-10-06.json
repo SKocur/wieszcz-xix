@@ -1,0 +1,80 @@
+{
+ "meta": {
+  "script": "scripts/document_metadata.py",
+  "script_sha256": "5eb285c354a77025",
+  "timestamp_utc": "2026-10-06T15:34:50+00:00",
+  "host": "MacBook-Pro-Szymon.local",
+  "catalogue": "metrics/ia_catalogue_metadata_2026-10-06.jsonl.gz",
+  "death_years": "metrics/creator_death_years_2026-10-06.json",
+  "wl": "metrics/wl_translations_2026-10-06.json",
+  "table": "ledger/document_metadata_2026-10-06.csv.gz",
+  "table_sha256": "9c921cc7e8b52c9331323848648a85063dad836c4d02a08984c2c3beb72f2e72",
+  "columns": [
+   "document_id",
+   "source",
+   "source_identifier",
+   "bytes",
+   "split",
+   "provider",
+   "year",
+   "place",
+   "state_1914",
+   "type",
+   "title",
+   "language",
+   "rights_basis",
+   "creator_died_in_term",
+   "wl_certain_post1918",
+   "wl_possibly_post1918",
+   "wl_author",
+   "wl_translator",
+   "wl_rights_note"
+  ]
+ },
+ "documents": 294369,
+ "bytes": 22772707880,
+ "by_rights_basis": {
+  "creator_died_in_term": {
+   "documents": 915,
+   "bytes": 99905811,
+   "share_documents": 0.311,
+   "share_bytes": 0.439
+  },
+  "free_licence": {
+   "documents": 79,
+   "bytes": 5306443,
+   "share_documents": 0.027,
+   "share_bytes": 0.023
+  },
+  "library_public_domain_statement": {
+   "documents": 271298,
+   "bytes": 19019418821,
+   "share_documents": 92.163,
+   "share_bytes": 83.518
+  },
+  "none": {
+   "documents": 17386,
+   "bytes": 1728661490,
+   "share_documents": 5.906,
+   "share_bytes": 7.591
+  },
+  "other_statement": {
+   "documents": 10,
+   "bytes": 1894615,
+   "share_documents": 0.003,
+   "share_bytes": 0.008
+  },
+  "scanning_institution_assertion": {
+   "documents": 2961,
+   "bytes": 1854532793,
+   "share_documents": 1.006,
+   "share_bytes": 8.144
+  },
+  "wolne_lektury_public_domain_note": {
+   "documents": 2635,
+   "bytes": 162893718,
+   "share_documents": 0.895,
+   "share_bytes": 0.715
+  }
+ }
+}

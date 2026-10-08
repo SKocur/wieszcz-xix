@@ -159,10 +159,10 @@ datasets:
 
 # wieszcz-xix-{rung}
 
-A {params_m:.0f}M-parameter decoder-only language model trained **from scratch**, and only
-on Polish text published between 1800 and 1918. It writes in the language of that period,
-in pre-reform orthography, and knows nothing of the world after its cutoff. It is a base
-model: it continues text and does not answer questions.
+A {params_m:.0f}M-parameter decoder-only language model trained **from scratch** on a corpus
+of Polish text published between 1800 and 1918. It writes in the language of that period,
+in pre-reform orthography. It is a base model: it continues text and does not answer
+questions.
 
 This is the {rung.upper()} rung of a three-model ladder ({", ".join(RUNGS).upper()}) trained on one
 frozen corpus with the same steps, batch and seed, so the rungs differ only in parameter
@@ -280,11 +280,17 @@ The corpus is OCR of period scans, so the model learned some of that damage and
 occasionally writes it back. Generation stays in period register by construction, which
 means a modern prompt does not produce a modern answer.
 
+The temporal bound has a measured residue. 90 documents of the training split, all from
+the transcribed Wolne Lektury source and 0.04% of the corpus bytes, are later than 1918:
+79 modern translations and eleven volumes of Proust in a translation of the 1930s. Up to
+0.38% of the bytes are translations or works by people who lived past 1918. The paper's
+audit section gives the counts.
+
 ## Citation
 
 ```bibtex
 @misc{{kocur2026wieszcz,
-  title  = {{A pre-1918 Polish corpus and a ladder of time-capsule language models}},
+  title  = {{Wieszcz-XIX: A 3.1-Billion-Word Corpus of Pre-1918 Polish and Temporally Bounded Language Models Trained From Scratch}},
   author = {{Kocur, Szymon}},
   year   = {{2026}},
   doi    = {{{DOI_PAPER}}},

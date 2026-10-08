@@ -16,11 +16,19 @@ each stage consumes the frozen output of the last.
 | `ia_collection_sweep.py` | `metrics/ia_collection_sweep_*.json`, collection membership per document | *Filtering*, and the lending-library exclusions |
 | `wl_epoch_sweep.py` | `metrics/wl_epochs_*.json`, every Wolne Lektury document by catalogue epoch | *Filtering*, the epoch-based arm of the exclusion rule |
 | `src/clean_ocr.py`, `clean_corpus.py` | `data/clean/` | *Filtering* |
+| `cleaning_effect.py` | `metrics/cleaning_effect_*.json`, bytes and lines removed by fetch-time cleaning, replayed on the as-fetched text | *The frozen crawl* |
 | `dedup_corpus.py` | `metrics/dedup_*.json`, exact and near-duplicate verdicts | *Deduplication* |
 | `anachronism_audit.py` | `metrics/anachronism_audit_*.json`, post-1918 content markers | *The temporal bound* |
 | `make_exclusion_list.py` | `exclusions/exclusions_*.json`, the 3,733 removed documents with the rule that selected each | *The temporal bound* |
 | `corpus_freeze.py` | `metrics/crawl_universe_*.sha256.gz`, the manifest every later copy is verified against | *The frozen crawl* |
 | `build_provenance_ledger.py` | `ledger/provenance_ledger_*.csv.gz`, one row per document | *Sources and rights*, and the archival record |
+| `ia_catalogue_metadata.py` | `metrics/ia_catalogue_metadata_*.jsonl.gz`, the catalogue record of every Internet Archive document (date, type, place, rights) | *Who digitised it*, the composition table |
+| `orto_per_document.py` | `metrics/orto_per_document_*.csv.gz`, post-reform and period spellings counted in every document | *Who digitised it*, the spelling share by place |
+| `corpus_composition.py` | `metrics/corpus_composition_*.json`, documents by type, decade, state of publication and rights statement | *Who digitised it*, the composition table |
+| `creator_death_years.py` | `metrics/creator_death_years_*.json`, documents whose catalogue creator died within the last 70 years, with their identifiers | the rights limitation |
+| `wl_translation_sweep.py` | `metrics/wl_translations_*.json`, the Wolne Lektury record of every transcribed document: translator, language, rights note, and which documents are later than 1918 | *The temporal bound*, the limitation on it |
+| `document_metadata.py` | `ledger/document_metadata_*.csv.gz`, one row per document with split, provider, year, place, type, title, language and rights basis | *Availability* |
+| `plot_composition.py` | the paper's `figures/composition.pdf`, documents per decade and the spelling share by place and decade | *Who digitised it*, the composition figure |
 
 ## 2. Measure it
 
@@ -63,6 +71,7 @@ each stage consumes the frozen output of the last.
 | `src/eval_val.py` | `metrics/eval_*.json` and `*.windows.npy`, per-window losses | *A dense held-out protocol*, *What each rung buys* |
 | `eval_by_source.py` | `metrics/eval_by_source_*.json`, the split as a whole and each source alone | *Validation-split source bias* |
 | `temporal_probe.py` | `metrics/temporal_probe_*.json` against papuGaPT2 and Bielik | *Is the model temporally bounded?* |
+| `comparator_heldout.py` | `metrics/comparator_heldout_*.json`, bits per byte of Bielik and papuGaPT2 on the dense protocol's own held-out windows, against the ladder | *Is the model temporally bounded?* |
 | `src/sample.py`, `make_samples.py` | `output/samples_ladder_*.md`, matched registers across rungs | appendix, *Generation samples* |
 | `plot_ladder_curves.py` | `figures/loss_ladder` | *Training the ladder* |
 | `plot_350m_curve.py` | `figures/loss_350m` | *Validation-split source bias*, the defect seen from inside a run |

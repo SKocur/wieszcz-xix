@@ -1,0 +1,53 @@
+{
+ "meta": {
+  "script": "scripts/ia_catalogue_metadata.py",
+  "script_sha256": "adc70fc325eed84c",
+  "timestamp_utc": "2026-10-06T13:31:07+00:00",
+  "host": "MacBook-Pro-Szymon.local",
+  "query": "(language:(pol) OR language:(Polish)) AND year:[1800 TO 1918] AND mediatype:texts",
+  "fields": [
+   "identifier",
+   "date",
+   "year",
+   "title",
+   "creator",
+   "publisher",
+   "subject",
+   "coverage",
+   "source",
+   "rights",
+   "contributor",
+   "collection",
+   "language",
+   "licenseurl",
+   "possible-copyright-status"
+  ],
+  "ledger": "ledger/provenance_ledger_2026-08-03_*.csv.gz"
+ },
+ "ledger_documents": 291655,
+ "pulled": 291655,
+ "via": {
+  "scrape": 291644,
+  "item": 11
+ },
+ "not_retrieved": [],
+ "field_coverage": {
+  "identifier": 291655,
+  "date": 291655,
+  "year": 291644,
+  "title": 291655,
+  "creator": 237180,
+  "publisher": 239943,
+  "subject": 273519,
+  "coverage": 270896,
+  "source": 289999,
+  "rights": 271302,
+  "contributor": 274861,
+  "collection": 291655,
+  "language": 291655,
+  "licenseurl": 465,
+  "possible-copyright-status": 2507
+ },
+ "rows": "ia_catalogue_metadata_2026-10-06.jsonl.gz",
+ "rows_sha256": "f0f43dbbbf163a1fd2fb6e7ce8cfb4f58fe177f406276509a09072684edad20d"
+}
