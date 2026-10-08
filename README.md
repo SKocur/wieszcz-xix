@@ -1,7 +1,7 @@
 # wieszcz-xix
 
-A small language model trained **from scratch** on **19th-century Polish public-domain
-text only**: a "time capsule" model that speaks in the authentic voice, spelling, and
+A small language model trained **from scratch** on **Polish text published between 1800 and
+1918**: a "time capsule" model that speaks in the authentic voice, spelling, and
 worldview of the era, and knows nothing of the world after its cutoff.
 
 Inspired by [TimeCapsuleLLM](https://github.com/haykgrigo/TimeCapsuleLLM) and its
@@ -29,8 +29,9 @@ net = AutoModelForCausalLM.from_pretrained(name, trust_remote_code=True)
 
 **Nothing after the cutoff.** The corpus is bounded by **publication date: 1800–1918**,
 enforced at the crawl and then audited by content and provenance before tokenisation;
-3,733 documents held by the crawl were excluded from the frozen build. No modern Polish,
-no modernized editions. That constraint *is* the project, and any leak of modern data
+3,733 documents held by the crawl were excluded from the frozen build. A measured residue
+remains in the transcribed Wolne Lektury part (0.7% of the corpus, in modernised spelling):
+90 documents there are certainly later text, 0.04% of the corpus bytes. That constraint *is* the project, and any leak of modern data
 defeats the purpose.
 
 Two dates get confused here, so both are stated: **1918** is the bound on the corpus, and
@@ -42,7 +43,8 @@ actually enforces.
 
 - **Period:** publication 1800–1918 (Romanticism, Positivism, early Young Poland), in
   pre-1936 orthography.
-- **Language:** Polish, original spelling preserved (no normalization).
+- **Language:** Polish, original spelling preserved in the scanned text (no normalization);
+  the Wolne Lektury transcriptions are in modernised spelling.
 - **Model:** decoder-only Transformer. A matched ladder at 47M, 107M and 349M parameters,
   trained on the same frozen corpus for the same steps from the same seed, so the rungs
   differ only in size. These are base models (text continuation), not instruction-tuned
@@ -79,7 +81,8 @@ python src/train.py --config configs/wieszcz_47m_6b7.json \
 ```
 
 Pass `--data` and `--val-data`. Without them `train.py` tokenizes a sorted glob and holds
-out the positional final 1%, which is the split defect Section 5 of the paper is about:
+out the positional final 1%, which is the split defect the paper's section on
+validation-split source bias is about:
 filenames carry a source prefix, so the tail of the stream is one source rather than a
 sample of the corpus.
 
@@ -125,12 +128,19 @@ filtering layer and visible framing.
 
 ## Data licensing
 
-The underlying 19th-century works are public domain, their authors having died more than
-70 years ago. What actually binds when redistributing a harvested collection is the EU
-**sui generis database right** over the compilation, together with each platform's terms
-of use. The released corpus therefore carries CC0 1.0 over the compilation and database
-layer, leaving the texts where they already are. Sources, the per-document ledger and the
-rights review are in [`data/PROVENANCE.md`](data/PROVENANCE.md).
+The texts were published between 1800 and 1918, and the catalogue records of 93% of the
+Internet Archive documents carry the holding library's public-domain statement. Author
+death dates were not checked document by document, so a work whose author died after 1955
+may still be protected where the term is life plus 70 years. The Public Domain Mark is
+applied only where a library states public domain; documents without a statement carry no
+rights mark. 79 Wolne Lektury translations are still in copyright and keep the licence that
+library publishes them under (CC BY-SA 3.0 or the Free Art Licence 1.3).
+`ledger/document_metadata_2026-10-06.csv.gz` gives the rights basis of every document and
+names author, translator and licence for the Wolne Lektury rows. Redistributing a harvested
+collection is also bound by the EU **sui generis database right** over the compilation and
+by each platform's terms of use. The released corpus carries CC0 1.0 over the compilation and database layer only. Sources and the per-document ledger are described in
+[`data/PROVENANCE.md`](data/PROVENANCE.md); the per-source rights review is archived with
+the corpus record on Zenodo.
 
 > Not legal advice. For publication or commercial use, consult a specialist.
 
@@ -138,7 +148,7 @@ rights review are in [`data/PROVENANCE.md`](data/PROVENANCE.md).
 
 ```bibtex
 @misc{kocur2026wieszcz,
-  title  = {Wieszcz-XIX: A 6.7-Billion-Token Corpus of Nineteenth-Century Polish
+  title  = {Wieszcz-XIX: A 3.1-Billion-Word Corpus of Pre-1918 Polish
             and Temporally Bounded Language Models Trained From Scratch},
   author = {Kocur, Szymon},
   year   = {2026},

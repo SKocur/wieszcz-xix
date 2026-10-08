@@ -34,7 +34,7 @@ identifiers:
     description: All nine checkpoints of the ladder
 preferred-citation:
   type: article
-  title: "Wieszcz-XIX: A 6.7-Billion-Token Corpus of Nineteenth-Century Polish and Temporally Bounded Language Models Trained From Scratch"
+  title: "Wieszcz-XIX: A 3.1-Billion-Word Corpus of Pre-1918 Polish and Temporally Bounded Language Models Trained From Scratch"
   authors:
     - family-names: Kocur
       given-names: Szymon

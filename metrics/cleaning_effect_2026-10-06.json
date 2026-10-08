@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "script": "scripts/cleaning_effect.py",
+  "script_sha256": "9a56a624f32f4a7c",
+  "timestamp_utc": "2026-10-06T14:19:49+00:00",
+  "host": "MacBook-Pro-Szymon.local",
+  "ledger": "ledger/provenance_ledger_2026-08-03_*.csv.gz",
+  "line_min_words": 4,
+  "line_min_alpha": 0.55,
+  "year_pattern": "(?<!\\d)(?:1919|19[2-9]\\d|20[0-2]\\d)(?!\\d)"
+ },
+ "internet_archive_documents": 291655,
+ "documents_with_raw": 266330,
+ "share_documents_with_raw": 91.317,
+ "totals": {
+  "raw_bytes": 21510278573,
+  "boilerplate_bytes": 1231458,
+  "low_alpha_bytes": 2637780875,
+  "junk_bytes": 56525985,
+  "whitespace_bytes": 759416730,
+  "replay_bytes": 18055323525,
+  "clean_bytes": 18066397693,
+  "replay_equals_clean": 266148,
+  "lines": 582032424,
+  "low_alpha_lines": 57345720,
+  "digits": 365064814,
+  "low_alpha_digits": 189475691,
+  "years_post1918": 359387,
+  "low_alpha_years_post1918": 169766
+ },
+ "removed_share_bytes": 16.062,
+ "removed_share_bytes_on_disk": 16.01,
+ "replay_equals_clean_share_documents": 99.932,
+ "low_alpha_share_bytes": 12.263,
+ "junk_share_bytes": 0.263,
+ "boilerplate_share_bytes": 0.006,
+ "whitespace_share_bytes": 3.53,
+ "low_alpha_share_lines": 9.853,
+ "low_alpha_share_digits": 51.902,
+ "low_alpha_share_years_post1918": 47.238
+}

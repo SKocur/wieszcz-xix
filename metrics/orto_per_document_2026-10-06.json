@@ -1,0 +1,19 @@
+{
+ "meta": {
+  "script": "scripts/orto_per_document.py",
+  "script_sha256": "2ef4429e721294fd",
+  "timestamp_utc": "2026-10-06T13:39:02+00:00",
+  "host": "MacBook-Pro-Szymon.local",
+  "ledger": "ledger/provenance_ledger_2026-08-03_*.csv.gz",
+  "patterns": {
+   "orto_modern": "\\b\\w+[csz]j[aeięąo]\\w*\\b",
+   "orto_period": "\\b\\w+[csz]y[aeięąo]\\w*\\b"
+  }
+ },
+ "documents": 294369,
+ "orto_modern": 9197981,
+ "orto_period": 23015856,
+ "share_modern": 0.2855,
+ "rows": "orto_per_document_2026-10-06.csv.gz",
+ "rows_sha256": "52d6215afe5084a4f3f19dfbc4ed3f268459979e9365a6e8b8465f06681c6d89"
+}

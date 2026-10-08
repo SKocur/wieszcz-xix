@@ -58,6 +58,20 @@ Two families of files supersede each other in place:
   the per-document quantiles and the share of documents and bytes each threshold keeps.
   Produced by `scripts/corruption_per_document.py`.
 
+- The files dated 2026-10-06 describe the frozen build without changing it.
+  `ia_catalogue_metadata_*.jsonl.gz` is the Internet Archive catalogue record of every
+  document, and `corpus_composition_*.json` tabulates it by type, decade, state of
+  publication and rights statement; `orto_per_document_*.csv.gz` holds the -cja and -cya
+  counts behind the spelling shares. `cleaning_effect_*.json` replays fetch-time cleaning
+  on the as-fetched text. `creator_death_years_*.json` lists the documents whose
+  catalogue creator died in 1956 or later. `wl_translations_*.json` is the Wolne Lektury
+  source record of each transcribed document (translator, language, rights note) and
+  marks the documents that are later than 1918 or under a free licence.
+  `comparator_heldout_{bielik,papugapt2}_*.json` score the two modern comparators on the
+  dense protocol's windows, with per-window bits and bytes in the `.windows.npz` beside
+  each. The per-document table that joins these to the ledger is
+  `ledger/document_metadata_2026-10-06.csv.gz`.
+
 ## judge_verdicts/
 
 Per-item verdicts from the five adjudicators named in the paper, one file per model and

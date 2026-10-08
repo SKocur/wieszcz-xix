@@ -1,0 +1,1034 @@
+{
+ "meta": {
+  "script": "scripts/corpus_composition.py",
+  "script_sha256": "e42074c30ca98355",
+  "timestamp_utc": "2026-10-06T13:54:49+00:00",
+  "host": "MacBook-Pro-Szymon.local",
+  "ledger": "ledger/provenance_ledger_2026-08-03_*.csv.gz",
+  "catalogue": "metrics/ia_catalogue_metadata_2026-10-06.jsonl.gz",
+  "orto": "metrics/orto_per_document_2026-10-06.csv.gz",
+  "borders": "state of publication under the borders of 1914"
+ },
+ "internet_archive": {
+  "documents": 291655,
+  "bytes": 22604507719
+ },
+ "by_type": {
+  "book": {
+   "documents": 5840,
+   "bytes": 2336490618,
+   "share_documents": 2.0,
+   "share_bytes": 10.34
+  },
+  "ephemera": {
+   "documents": 3172,
+   "bytes": 2228274,
+   "share_documents": 1.09,
+   "share_bytes": 0.01
+  },
+  "periodical": {
+   "documents": 274835,
+   "bytes": 18357922179,
+   "share_documents": 94.23,
+   "share_bytes": 81.21
+  },
+  "unspecified": {
+   "documents": 7808,
+   "bytes": 1907866648,
+   "share_documents": 2.68,
+   "share_bytes": 8.44
+  }
+ },
+ "by_decade": {
+  "1800": {
+   "documents": 1837,
+   "bytes": 104810802,
+   "share_documents": 0.63,
+   "share_bytes": 0.46
+  },
+  "1810": {
+   "documents": 5808,
+   "bytes": 206159842,
+   "share_documents": 1.99,
+   "share_bytes": 0.91
+  },
+  "1820": {
+   "documents": 11968,
+   "bytes": 402096556,
+   "share_documents": 4.1,
+   "share_bytes": 1.78
+  },
+  "1830": {
+   "documents": 15498,
+   "bytes": 495917317,
+   "share_documents": 5.31,
+   "share_bytes": 2.19
+  },
+  "1840": {
+   "documents": 18486,
+   "bytes": 707604276,
+   "share_documents": 6.34,
+   "share_bytes": 3.13
+  },
+  "1850": {
+   "documents": 17459,
+   "bytes": 1059205607,
+   "share_documents": 5.99,
+   "share_bytes": 4.69
+  },
+  "1860": {
+   "documents": 22294,
+   "bytes": 1756634327,
+   "share_documents": 7.64,
+   "share_bytes": 7.77
+  },
+  "1870": {
+   "documents": 26993,
+   "bytes": 2462246546,
+   "share_documents": 9.26,
+   "share_bytes": 10.89
+  },
+  "1880": {
+   "documents": 36212,
+   "bytes": 3560663280,
+   "share_documents": 12.42,
+   "share_bytes": 15.75
+  },
+  "1890": {
+   "documents": 43125,
+   "bytes": 4009823280,
+   "share_documents": 14.79,
+   "share_bytes": 17.74
+  },
+  "1900": {
+   "documents": 50599,
+   "bytes": 4660955540,
+   "share_documents": 17.35,
+   "share_bytes": 20.62
+  },
+  "1910": {
+   "documents": 41376,
+   "bytes": 3178390346,
+   "share_documents": 14.19,
+   "share_bytes": 14.06
+  }
+ },
+ "year_check": {
+  "comparable": 166648,
+  "agree": 164347,
+  "agreement": 98.62
+ },
+ "by_state": {
+  "austria_hungary": {
+   "documents": 180734,
+   "bytes": 13251035227,
+   "share_documents": 61.97,
+   "share_bytes": 58.62
+  },
+  "elsewhere": {
+   "documents": 4808,
+   "bytes": 446886343,
+   "share_documents": 1.65,
+   "share_bytes": 1.98
+  },
+  "german_empire": {
+   "documents": 17686,
+   "bytes": 918557074,
+   "share_documents": 6.06,
+   "share_bytes": 4.06
+  },
+  "no_place": {
+   "documents": 20869,
+   "bytes": 3608080279,
+   "share_documents": 7.16,
+   "share_bytes": 15.96
+  },
+  "russian_empire": {
+   "documents": 66587,
+   "bytes": 4282949159,
+   "share_documents": 22.83,
+   "share_bytes": 18.95
+  },
+  "unclassified": {
+   "documents": 971,
+   "bytes": 96999637,
+   "share_documents": 0.33,
+   "share_bytes": 0.43
+  }
+ },
+ "place_table_reach": 99.64,
+ "top_places": {
+  "Kraków": {
+   "documents": 86385,
+   "share_documents": 29.62,
+   "share_bytes": 26.86
+  },
+  "Lwów": {
+   "documents": 84975,
+   "share_documents": 29.14,
+   "share_bytes": 29.91
+  },
+  "Warszawa": {
+   "documents": 50814,
+   "share_documents": 17.42,
+   "share_bytes": 15.16
+  },
+  "Poznań": {
+   "documents": 11512,
+   "share_documents": 3.95,
+   "share_bytes": 2.86
+  },
+  "Wilno": {
+   "documents": 4920,
+   "share_documents": 1.69,
+   "share_bytes": 1.22
+  }
+ },
+ "by_rights": {
+  "none": {
+   "documents": 20353,
+   "bytes": 3584874820,
+   "share_documents": 6.98,
+   "share_bytes": 15.86
+  },
+  "other_statement": {
+   "documents": 4,
+   "bytes": 214078,
+   "share_documents": 0.0,
+   "share_bytes": 0.0
+  },
+  "public_domain_statement": {
+   "documents": 271298,
+   "bytes": 19019418821,
+   "share_documents": 93.02,
+   "share_bytes": 84.14
+  }
+ },
+ "orto": {
+  "all": {
+   "orto_modern": 9130945,
+   "orto_period": 23008689,
+   "share_modern": 0.2841
+  },
+  "by_state": {
+   "austria_hungary": {
+    "orto_modern": 5122846,
+    "orto_period": 16192720,
+    "share_modern": 0.2403
+   },
+   "elsewhere": {
+    "orto_modern": 104089,
+    "orto_period": 413721,
+    "share_modern": 0.201
+   },
+   "german_empire": {
+    "orto_modern": 69982,
+    "orto_period": 949422,
+    "share_modern": 0.0686
+   },
+   "no_place": {
+    "orto_modern": 1081484,
+    "orto_period": 2839785,
+    "share_modern": 0.2758
+   },
+   "russian_empire": {
+    "orto_modern": 2745912,
+    "orto_period": 2537198,
+    "share_modern": 0.5198
+   },
+   "unclassified": {
+    "orto_modern": 6632,
+    "orto_period": 75843,
+    "share_modern": 0.0804
+   }
+  },
+  "by_state_period": {
+   "austria_hungary.before_1905": {
+    "orto_modern": 4563744,
+    "orto_period": 10791719,
+    "share_modern": 0.2972
+   },
+   "austria_hungary.from_1905": {
+    "orto_modern": 559102,
+    "orto_period": 5401001,
+    "share_modern": 0.0938
+   },
+   "elsewhere.before_1905": {
+    "orto_modern": 83224,
+    "orto_period": 323352,
+    "share_modern": 0.2047
+   },
+   "elsewhere.from_1905": {
+    "orto_modern": 20865,
+    "orto_period": 90369,
+    "share_modern": 0.1876
+   },
+   "german_empire.before_1905": {
+    "orto_modern": 67751,
+    "orto_period": 869285,
+    "share_modern": 0.0723
+   },
+   "german_empire.from_1905": {
+    "orto_modern": 2231,
+    "orto_period": 80137,
+    "share_modern": 0.0271
+   },
+   "no_place.before_1905": {
+    "orto_modern": 290690,
+    "orto_period": 1906936,
+    "share_modern": 0.1323
+   },
+   "no_place.from_1905": {
+    "orto_modern": 790794,
+    "orto_period": 932849,
+    "share_modern": 0.4588
+   },
+   "russian_empire.before_1905": {
+    "orto_modern": 2452612,
+    "orto_period": 1735433,
+    "share_modern": 0.5856
+   },
+   "russian_empire.from_1905": {
+    "orto_modern": 293300,
+    "orto_period": 801765,
+    "share_modern": 0.2678
+   },
+   "unclassified.before_1905": {
+    "orto_modern": 3177,
+    "orto_period": 44916,
+    "share_modern": 0.0661
+   },
+   "unclassified.from_1905": {
+    "orto_modern": 3455,
+    "orto_period": 30927,
+    "share_modern": 0.1005
+   }
+  },
+  "by_place_period": {
+   "Kraków.before_1905": {
+    "orto_modern": 1155504,
+    "orto_period": 4588850,
+    "share_modern": 0.2012
+   },
+   "Kraków.from_1905": {
+    "orto_modern": 301105,
+    "orto_period": 3418857,
+    "share_modern": 0.0809
+   },
+   "Lwów.before_1905": {
+    "orto_modern": 3390886,
+    "orto_period": 5913607,
+    "share_modern": 0.3644
+   },
+   "Lwów.from_1905": {
+    "orto_modern": 244824,
+    "orto_period": 1793381,
+    "share_modern": 0.1201
+   },
+   "Warszawa.before_1905": {
+    "orto_modern": 2405353,
+    "orto_period": 1255193,
+    "share_modern": 0.6571
+   },
+   "Warszawa.from_1905": {
+    "orto_modern": 185692,
+    "orto_period": 160813,
+    "share_modern": 0.5359
+   },
+   "Poznań.before_1905": {
+    "orto_modern": 45021,
+    "orto_period": 686130,
+    "share_modern": 0.0616
+   },
+   "Poznań.from_1905": {
+    "orto_modern": 1828,
+    "orto_period": 61197,
+    "share_modern": 0.029
+   },
+   "Wilno.before_1905": {
+    "orto_modern": 12363,
+    "orto_period": 308982,
+    "share_modern": 0.0385
+   },
+   "Wilno.from_1905": {
+    "orto_modern": 7966,
+    "orto_period": 909,
+    "share_modern": 0.8976
+   }
+  },
+  "modern_mass_by_state": {
+   "austria_hungary": 56.1,
+   "elsewhere": 1.1,
+   "german_empire": 0.8,
+   "no_place": 11.8,
+   "russian_empire": 30.1,
+   "unclassified": 0.1
+  },
+  "by_place_decade": {
+   "Kraków": {
+    "1800": {
+     "orto_modern": 749,
+     "orto_period": 49506,
+     "share_modern": 0.0149,
+     "documents": 681,
+     "top_title": "Gazeta Krakowska",
+     "top_title_share_forms": 95.0
+    },
+    "1810": {
+     "orto_modern": 833,
+     "orto_period": 60273,
+     "share_modern": 0.0136,
+     "documents": 1175,
+     "top_title": "Gazeta Krakowska",
+     "top_title_share_forms": 83.7
+    },
+    "1820": {
+     "orto_modern": 2065,
+     "orto_period": 57089,
+     "share_modern": 0.0349,
+     "documents": 1612,
+     "top_title": "Gazeta Krakowska",
+     "top_title_share_forms": 81.8
+    },
+    "1830": {
+     "orto_modern": 7720,
+     "orto_period": 61118,
+     "share_modern": 0.1121,
+     "documents": 3366,
+     "top_title": "Gazeta Krakowska",
+     "top_title_share_forms": 59.3
+    },
+    "1840": {
+     "orto_modern": 3198,
+     "orto_period": 100768,
+     "share_modern": 0.0308,
+     "documents": 3372,
+     "top_title": "Gazeta Krakowska",
+     "top_title_share_forms": 55.9
+    },
+    "1850": {
+     "orto_modern": 17803,
+     "orto_period": 306103,
+     "share_modern": 0.055,
+     "documents": 3475,
+     "top_title": "Czas",
+     "top_title_share_forms": 89.7
+    },
+    "1860": {
+     "orto_modern": 77214,
+     "orto_period": 528465,
+     "share_modern": 0.1275,
+     "documents": 5244,
+     "top_title": "Czas",
+     "top_title_share_forms": 74.9
+    },
+    "1870": {
+     "orto_modern": 251177,
+     "orto_period": 559821,
+     "share_modern": 0.3097,
+     "documents": 7522,
+     "top_title": "Czas",
+     "top_title_share_forms": 60.8
+    },
+    "1880": {
+     "orto_modern": 72769,
+     "orto_period": 1044358,
+     "share_modern": 0.0651,
+     "documents": 9162,
+     "top_title": "Czas",
+     "top_title_share_forms": 42.4
+    },
+    "1890": {
+     "orto_modern": 482094,
+     "orto_period": 1020809,
+     "share_modern": 0.3208,
+     "documents": 12361,
+     "top_title": "Nowa Reforma",
+     "top_title_share_forms": 28.8
+    },
+    "1900": {
+     "orto_modern": 446124,
+     "orto_period": 2022004,
+     "share_modern": 0.1808,
+     "documents": 19934,
+     "top_title": "Naprzód",
+     "top_title_share_forms": 18.7
+    },
+    "1910": {
+     "orto_modern": 94863,
+     "orto_period": 2197393,
+     "share_modern": 0.0414,
+     "documents": 18481,
+     "top_title": "Naprzód",
+     "top_title_share_forms": 15.0
+    }
+   },
+   "Lwów": {
+    "1800": {
+     "orto_modern": 2,
+     "orto_period": 124,
+     "share_modern": 0.0159,
+     "documents": 1,
+     "top_title": "Goniec Polski.R.2",
+     "top_title_share_forms": 100.0
+    },
+    "1810": {
+     "orto_modern": 786,
+     "orto_period": 41530,
+     "share_modern": 0.0186,
+     "documents": 1236,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 93.0
+    },
+    "1820": {
+     "orto_modern": 911,
+     "orto_period": 43366,
+     "share_modern": 0.0206,
+     "documents": 2144,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 68.5
+    },
+    "1830": {
+     "orto_modern": 3046,
+     "orto_period": 27152,
+     "share_modern": 0.1009,
+     "documents": 1886,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 74.5
+    },
+    "1840": {
+     "orto_modern": 3245,
+     "orto_period": 55769,
+     "share_modern": 0.055,
+     "documents": 2341,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 45.3
+    },
+    "1850": {
+     "orto_modern": 11434,
+     "orto_period": 233264,
+     "share_modern": 0.0467,
+     "documents": 4339,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 78.2
+    },
+    "1860": {
+     "orto_modern": 355301,
+     "orto_period": 332636,
+     "share_modern": 0.5165,
+     "documents": 7057,
+     "top_title": "Gazeta Narodowa",
+     "top_title_share_forms": 43.0
+    },
+    "1870": {
+     "orto_modern": 658433,
+     "orto_period": 750075,
+     "share_modern": 0.4675,
+     "documents": 9921,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 35.2
+    },
+    "1880": {
+     "orto_modern": 1235317,
+     "orto_period": 1183681,
+     "share_modern": 0.5107,
+     "documents": 14609,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 27.7
+    },
+    "1890": {
+     "orto_modern": 750026,
+     "orto_period": 2046418,
+     "share_modern": 0.2682,
+     "documents": 18640,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 23.6
+    },
+    "1900": {
+     "orto_modern": 509018,
+     "orto_period": 2227105,
+     "share_modern": 0.186,
+     "documents": 17541,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 24.9
+    },
+    "1910": {
+     "orto_modern": 108191,
+     "orto_period": 765868,
+     "share_modern": 0.1238,
+     "documents": 5260,
+     "top_title": "Gazeta Lwowska",
+     "top_title_share_forms": 48.8
+    }
+   },
+   "Warszawa": {
+    "1800": {
+     "orto_modern": 382,
+     "orto_period": 18719,
+     "share_modern": 0.02,
+     "documents": 94,
+     "top_title": "Nowy Pamiętnik Warszawski",
+     "top_title_share_forms": 38.3
+    },
+    "1810": {
+     "orto_modern": 3732,
+     "orto_period": 34939,
+     "share_modern": 0.0965,
+     "documents": 980,
+     "top_title": "Pamiętnik Warszawski",
+     "top_title_share_forms": 20.6
+    },
+    "1820": {
+     "orto_modern": 68455,
+     "orto_period": 96139,
+     "share_modern": 0.4159,
+     "documents": 5464,
+     "top_title": "Kurjer Warszawski",
+     "top_title_share_forms": 25.1
+    },
+    "1830": {
+     "orto_modern": 106100,
+     "orto_period": 62137,
+     "share_modern": 0.6307,
+     "documents": 5606,
+     "top_title": "Kurjer Warszawski",
+     "top_title_share_forms": 47.1
+    },
+    "1840": {
+     "orto_modern": 110382,
+     "orto_period": 44502,
+     "share_modern": 0.7127,
+     "documents": 5368,
+     "top_title": "Kurjer Warszawski",
+     "top_title_share_forms": 64.2
+    },
+    "1850": {
+     "orto_modern": 207675,
+     "orto_period": 66846,
+     "share_modern": 0.7565,
+     "documents": 6254,
+     "top_title": "Kurjer Warszawski",
+     "top_title_share_forms": 39.4
+    },
+    "1860": {
+     "orto_modern": 500692,
+     "orto_period": 110682,
+     "share_modern": 0.819,
+     "documents": 6457,
+     "top_title": "Dziennik Warszawski",
+     "top_title_share_forms": 28.1
+    },
+    "1870": {
+     "orto_modern": 454981,
+     "orto_period": 154080,
+     "share_modern": 0.747,
+     "documents": 5376,
+     "top_title": "Kurjer Warszawski",
+     "top_title_share_forms": 56.6
+    },
+    "1880": {
+     "orto_modern": 566494,
+     "orto_period": 312923,
+     "share_modern": 0.6442,
+     "documents": 7112,
+     "top_title": "Kurjer Warszawski",
+     "top_title_share_forms": 65.0
+    },
+    "1890": {
+     "orto_modern": 373869,
+     "orto_period": 258633,
+     "share_modern": 0.5911,
+     "documents": 4808,
+     "top_title": "Kurjer Warszawski",
+     "top_title_share_forms": 58.4
+    },
+    "1900": {
+     "orto_modern": 84868,
+     "orto_period": 165473,
+     "share_modern": 0.339,
+     "documents": 1794,
+     "top_title": "(no title)",
+     "top_title_share_forms": 28.1
+    },
+    "1910": {
+     "orto_modern": 113415,
+     "orto_period": 90933,
+     "share_modern": 0.555,
+     "documents": 1501,
+     "top_title": "(no title)",
+     "top_title_share_forms": 32.3
+    }
+   },
+   "Poznań": {
+    "1800": {
+     "orto_modern": 51,
+     "orto_period": 6992,
+     "share_modern": 0.0072,
+     "documents": 123,
+     "top_title": "Gazeta Południowo-Pruska",
+     "top_title_share_forms": 89.3
+    },
+    "1810": {
+     "orto_modern": 252,
+     "orto_period": 7568,
+     "share_modern": 0.0322,
+     "documents": 108,
+     "top_title": "Gazeta Wielkiego Xięstwa Poznańskiego",
+     "top_title_share_forms": 56.3
+    },
+    "1820": {
+     "orto_modern": 100,
+     "orto_period": 22681,
+     "share_modern": 0.0044,
+     "documents": 287,
+     "top_title": "Gazeta Wielkiego Xięstwa Poznańskiego",
+     "top_title_share_forms": 99.4
+    },
+    "1830": {
+     "orto_modern": 1155,
+     "orto_period": 57358,
+     "share_modern": 0.0197,
+     "documents": 1841,
+     "top_title": "Gazeta Wielkiego Xięstwa Poznańskiego",
+     "top_title_share_forms": 94.4
+    },
+    "1840": {
+     "orto_modern": 8922,
+     "orto_period": 156710,
+     "share_modern": 0.0539,
+     "documents": 3493,
+     "top_title": "Gazeta W",
+     "top_title_share_forms": 42.5
+    },
+    "1850": {
+     "orto_modern": 5362,
+     "orto_period": 156104,
+     "share_modern": 0.0332,
+     "documents": 1777,
+     "top_title": "Gazeta W",
+     "top_title_share_forms": 67.0
+    },
+    "1860": {
+     "orto_modern": 8183,
+     "orto_period": 92972,
+     "share_modern": 0.0809,
+     "documents": 1515,
+     "top_title": "Gazeta W",
+     "top_title_share_forms": 61.3
+    },
+    "1870": {
+     "orto_modern": 14242,
+     "orto_period": 43731,
+     "share_modern": 0.2457,
+     "documents": 775,
+     "top_title": "(no title)",
+     "top_title_share_forms": 21.5
+    },
+    "1880": {
+     "orto_modern": 2937,
+     "orto_period": 46250,
+     "share_modern": 0.0597,
+     "documents": 483,
+     "top_title": "Przegląd Kościelny",
+     "top_title_share_forms": 72.7
+    },
+    "1890": {
+     "orto_modern": 2400,
+     "orto_period": 59084,
+     "share_modern": 0.039,
+     "documents": 337,
+     "top_title": "Przegląd Poznański",
+     "top_title_share_forms": 48.6
+    },
+    "1900": {
+     "orto_modern": 2416,
+     "orto_period": 68095,
+     "share_modern": 0.0343,
+     "documents": 425,
+     "top_title": "Praca: tygodnik illustrowany",
+     "top_title_share_forms": 46.3
+    },
+    "1910": {
+     "orto_modern": 829,
+     "orto_period": 29782,
+     "share_modern": 0.0271,
+     "documents": 348,
+     "top_title": "Praca: tygodnik polityczny i literacki, illustrowany",
+     "top_title_share_forms": 23.2
+    }
+   },
+   "Wilno": {
+    "1800": {
+     "orto_modern": 573,
+     "orto_period": 44878,
+     "share_modern": 0.0126,
+     "documents": 849,
+     "top_title": "Kuryer Litewski",
+     "top_title_share_forms": 84.3
+    },
+    "1810": {
+     "orto_modern": 2245,
+     "orto_period": 71885,
+     "share_modern": 0.0303,
+     "documents": 1252,
+     "top_title": "Kuryer Litewski",
+     "top_title_share_forms": 88.1
+    },
+    "1820": {
+     "orto_modern": 3390,
+     "orto_period": 123544,
+     "share_modern": 0.0267,
+     "documents": 1805,
+     "top_title": "Kuryer Litewski",
+     "top_title_share_forms": 74.5
+    },
+    "1830": {
+     "orto_modern": 1584,
+     "orto_period": 51367,
+     "share_modern": 0.0299,
+     "documents": 805,
+     "top_title": "Kuryer Litewski",
+     "top_title_share_forms": 78.8
+    },
+    "1840": {
+     "orto_modern": 1330,
+     "orto_period": 4078,
+     "share_modern": 0.2459,
+     "documents": 68,
+     "top_title": "(no title)",
+     "top_title_share_forms": 66.5
+    },
+    "1850": {
+     "orto_modern": 1455,
+     "orto_period": 6813,
+     "share_modern": 0.176,
+     "documents": 46,
+     "top_title": "(no title)",
+     "top_title_share_forms": 81.0
+    },
+    "1860": {
+     "orto_modern": 1355,
+     "orto_period": 3695,
+     "share_modern": 0.2683,
+     "documents": 30,
+     "top_title": "(no title)",
+     "top_title_share_forms": 69.6
+    },
+    "1870": {
+     "orto_modern": 6,
+     "orto_period": 312,
+     "share_modern": 0.0189,
+     "documents": 1,
+     "top_title": "(no title)",
+     "top_title_share_forms": 100.0
+    },
+    "1880": {
+     "orto_modern": 425,
+     "orto_period": 2410,
+     "share_modern": 0.1499,
+     "documents": 8,
+     "top_title": "(no title)",
+     "top_title_share_forms": 97.5
+    },
+    "1900": {
+     "orto_modern": 600,
+     "orto_period": 59,
+     "share_modern": 0.9105,
+     "documents": 7,
+     "top_title": "(no title)",
+     "top_title_share_forms": 100.0
+    },
+    "1910": {
+     "orto_modern": 7366,
+     "orto_period": 850,
+     "share_modern": 0.8965,
+     "documents": 49,
+     "top_title": "Litwa i Ruś",
+     "top_title_share_forms": 35.6
+    }
+   }
+  },
+  "plotted_cells": {
+   "places": [
+    "Kraków",
+    "Lwów",
+    "Warszawa"
+   ],
+   "min_documents": 50,
+   "cells": 35,
+   "fewest_documents": 94,
+   "fewest_forms": 19101,
+   "median_top_title_share_forms": 47.1
+  },
+  "by_title": {
+   "min_forms": 1000,
+   "titles": 882,
+   "share_forms_in_titles_at_most_0.1": 61.7,
+   "share_forms_in_titles_at_least_0.9": 18.5,
+   "named": {
+    "Lwów / Gazeta Lwowska": {
+     "orto_modern": 177677,
+     "orto_period": 3219283,
+     "share_modern": 0.0523
+    },
+    "Lwów / Dziennik Polski": {
+     "orto_modern": 1036158,
+     "orto_period": 19836,
+     "share_modern": 0.9812
+    },
+    "Warszawa / Kurjer Warszawski": {
+     "orto_modern": 1702080,
+     "orto_period": 70588,
+     "share_modern": 0.9602
+    },
+    "Kraków / Czas": {
+     "orto_modern": 74777,
+     "orto_period": 1965666,
+     "share_modern": 0.0366
+    }
+   },
+   "largest": [
+    {
+     "place": "Lwów",
+     "title": "Gazeta Lwowska",
+     "orto_modern": 177677,
+     "orto_period": 3219283,
+     "share_modern": 0.0523
+    },
+    {
+     "place": "Kraków",
+     "title": "Czas",
+     "orto_modern": 74777,
+     "orto_period": 1965666,
+     "share_modern": 0.0366
+    },
+    {
+     "place": "Lwów",
+     "title": "Gazeta Narodowa",
+     "orto_modern": 1255447,
+     "orto_period": 687897,
+     "share_modern": 0.646
+    },
+    {
+     "place": "Warszawa",
+     "title": "Kurjer Warszawski",
+     "orto_modern": 1702080,
+     "orto_period": 70588,
+     "share_modern": 0.9602
+    },
+    {
+     "place": "Kraków",
+     "title": "Nowa Reforma",
+     "orto_modern": 47781,
+     "orto_period": 1093112,
+     "share_modern": 0.0419
+    },
+    {
+     "place": "Lwów",
+     "title": "Dziennik Polski",
+     "orto_modern": 1036158,
+     "orto_period": 19836,
+     "share_modern": 0.9812
+    },
+    {
+     "place": "Lwów",
+     "title": "Przegląd polityczny, społeczny i literacki",
+     "orto_modern": 311810,
+     "orto_period": 742609,
+     "share_modern": 0.2957
+    },
+    {
+     "place": "Kraków",
+     "title": "Głos Narodu",
+     "orto_modern": 610622,
+     "orto_period": 281736,
+     "share_modern": 0.6843
+    },
+    {
+     "place": "Kraków",
+     "title": "Naprzód",
+     "orto_modern": 12633,
+     "orto_period": 829679,
+     "share_modern": 0.015
+    },
+    {
+     "place": "Kijów",
+     "title": "Dziennik Kijowski",
+     "orto_modern": 20729,
+     "orto_period": 487563,
+     "share_modern": 0.0408
+    },
+    {
+     "place": "Kraków",
+     "title": "Nowa Reforma (numer popołudniowy)",
+     "orto_modern": 15137,
+     "orto_period": 374481,
+     "share_modern": 0.0389
+    },
+    {
+     "place": null,
+     "title": "Rozwój",
+     "orto_modern": 26165,
+     "orto_period": 303597,
+     "share_modern": 0.0793
+    },
+    {
+     "place": "Kraków",
+     "title": "Gazeta Krakowska",
+     "orto_modern": 14333,
+     "orto_period": 299590,
+     "share_modern": 0.0457
+    },
+    {
+     "place": "Kraków",
+     "title": "Kraj",
+     "orto_modern": 244937,
+     "orto_period": 12804,
+     "share_modern": 0.9503
+    },
+    {
+     "place": "Warszawa",
+     "title": "Dziennik Warszawski",
+     "orto_modern": 251952,
+     "orto_period": 3415,
+     "share_modern": 0.9866
+    },
+    {
+     "place": "Poznań",
+     "title": "Gazeta W",
+     "orto_modern": 7696,
+     "orto_period": 232896,
+     "share_modern": 0.032
+    },
+    {
+     "place": "Wilno",
+     "title": "Kuryer Litewski",
+     "orto_modern": 6200,
+     "orto_period": 233965,
+     "share_modern": 0.0258
+    },
+    {
+     "place": "Kraków",
+     "title": "Nowa Reforma (numer poranny)",
+     "orto_modern": 8817,
+     "orto_period": 214001,
+     "share_modern": 0.0396
+    },
+    {
+     "place": "Kraków",
+     "title": "Przegląd Lekarski",
+     "orto_modern": 5132,
+     "orto_period": 208810,
+     "share_modern": 0.024
+    },
+    {
+     "place": "Warszawa",
+     "title": "Prawda",
+     "orto_modern": 46220,
+     "orto_period": 151447,
+     "share_modern": 0.2338
+    }
+   ]
+  }
+ }
+}
