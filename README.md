@@ -12,7 +12,7 @@ the Romantic/Positivist worldview make the effect audible from the first sentenc
 
 | | |
 |---|---|
-| Corpus | [SKocur/polish-pre1918-corpus](https://huggingface.co/datasets/SKocur/polish-pre1918-corpus), 294,369 documents, 6,745,956,943 tokens |
+| Corpus | [SKocur/polish-pre1918-corpus](https://huggingface.co/datasets/SKocur/polish-pre1918-corpus), 294,369 documents, about 3.1 billion words (6,745,956,943 tokens) |
 | Model | [SKocur/wieszcz-xix-349m](https://huggingface.co/SKocur/wieszcz-xix-349m), safetensors, loads with `AutoModelForCausalLM` |
 | Corpus record | [doi:10.5281/zenodo.22099302](https://doi.org/10.5281/zenodo.22099302), the provenance ledger, exclusions and rights review |
 | Weights record | [doi:10.5281/zenodo.22099358](https://doi.org/10.5281/zenodo.22099358), all nine checkpoints of the ladder |
@@ -152,7 +152,10 @@ the corpus record on Zenodo.
             and Temporally Bounded Language Models Trained From Scratch},
   author = {Kocur, Szymon},
   year   = {2026},
-  doi    = {10.5281/zenodo.21745210},
+  eprint = {2610.10592},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url    = {https://arxiv.org/abs/2610.10592},
 }
 ```
 
