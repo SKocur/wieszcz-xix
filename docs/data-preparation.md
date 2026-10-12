@@ -268,15 +268,19 @@ rate from 4.04 s/item to 1.69 s/item.
 
 ## Known limitations (documented, not hidden)
 
-- **Press is thin.** Daily newspapers: the best source of everyday register and world
-  events, live mostly on the auth-gated Polona, so the breadth here is books, not press.
+- **Polona's press is absent.** The National Library's holdings, the richest source of
+  period press, sit behind an auth-gated endpoint. The periodicals in the corpus are those
+  the other libraries digitised; they are still most of it, 94.2% of documents and 81.2%
+  of bytes in the frozen build.
 - **OCR noise remains** in accepted IA files (period typefaces mangle letters). Measured at
-  **≈2.8% of words**, line-local rather than document-local, see the OCR-corruption audit
-  below. The gates remove the *worst files*, not the noise; that is the deliberate
-  breadth-vs-cleanliness trade-off, and the fix is line/character-level, not word-deletion.
-- **No cross-source dedup yet.** A public-domain work (e.g. Mickiewicz) can appear in both
-  Wolne Lektury (clean) and Internet Archive (OCR). Left in for now: the two versions
-  differ in spelling, but a dedup-by-author/title step is the next candidate.
+  **1.57% of words** above the false-positive floor on the frozen build, line-local rather
+  than document-local, see the OCR-corruption audit below. The gates remove the *worst
+  files*, not the noise; that is the deliberate breadth-vs-cleanliness trade-off, and the
+  fix is line/character-level, not word-deletion.
+- **Editions in different spellings are not deduplicated.** MinHash deduplication
+  (`scripts/dedup_corpus.py`) runs over both sources together, but a clean Wolne Lektury
+  transcription and an OCR'd Internet Archive scan of the same work in period orthography
+  share little literal overlap, so both stay in.
 
 ## OCR corruption: measured, not guessed
 
@@ -286,16 +290,21 @@ whitespace token with cheap character heuristics (noise symbol inside a word; di
 to a letter; interior uppercase after a lowercase, e.g. `SoKoła`; a ≥4-letter word with no
 vowel) and reports rates by source, per-document histograms, and a drop-threshold table.
 
-**Result (full corpus, 333.9M words):**
+**Result on the frozen build (every document, `metrics/corruption_per_document_2026-10-05.json`):**
 
 | Source | words | suspicious | rate |
 |--------|------:|-----------:|-----:|
-| ia (OCR) | 309.5M | 9.42M | **3.05%** |
-| wl (clean) | 24.4M | 63.7k | 0.26% |
+| ia (OCR) | 3.11B | 56.9M | **1.83%** |
+| wl (clean) | 23.4M | 60.1k | 0.26% |
 
 The 0.26% on the clean Wolne-Lektury half is the detectors' false-positive floor, so true
-OCR corruption is **≈2.8%**. By type: symbol 2.02%, midcaps 0.73%, digit-in-word 0.28%,
-no-vowel 0.05%.
+OCR corruption is **1.57%**. By type, in overlapping categories: symbol 1.32%, midcaps
+0.35%, digit-in-word 0.18%, no-vowel 0.03%. Over the 291,140 IA documents of at least 50
+words the per-document rate has median 1.59%, 90th percentile 3.30% and worst 20.89%.
+
+The rest of this section comes from the first audit, on the 333.9M-word build of July
+2026: IA 3.05% against the same 0.26% floor, ≈2.8% true corruption (symbol 2.02%, midcaps
+0.73%, digit-in-word 0.28%, no-vowel 0.05%). The shape it found held on the frozen build.
 
 **The corruption is line-local, not document-local.** The per-document histogram is not
 bimodal: most IA docs sit at 1–5%, a tail of ~100 sit at 10–25%, and the *dirtiest single

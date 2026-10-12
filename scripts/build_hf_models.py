@@ -49,7 +49,7 @@ from model import GPT  # noqa: E402
 
 BUNDLES = REPO.parent / "models"
 CORPUS_REPO = "SKocur/polish-pre1918-corpus"
-DOI_PAPER = "10.5281/zenodo.21745210"
+ARXIV_PAPER = "2610.10592"
 DOI_CORPUS = "10.5281/zenodo.22099302"
 DOI_WEIGHTS = "10.5281/zenodo.22099358"
 
@@ -293,9 +293,14 @@ audit section gives the counts.
   title  = {{Wieszcz-XIX: A 3.1-Billion-Word Corpus of Pre-1918 Polish and Temporally Bounded Language Models Trained From Scratch}},
   author = {{Kocur, Szymon}},
   year   = {{2026}},
-  doi    = {{{DOI_PAPER}}},
+  eprint = {{{ARXIV_PAPER}}},
+  archivePrefix = {{arXiv}},
+  primaryClass  = {{cs.CL}},
+  url    = {{https://arxiv.org/abs/{ARXIV_PAPER}}},
 }}
 ```
+
+Paper: [arXiv:{ARXIV_PAPER}](https://arxiv.org/abs/{ARXIV_PAPER}).
 
 Corpus: [doi:{DOI_CORPUS}](https://doi.org/{DOI_CORPUS}).
 Weights archive with all nine checkpoints: [doi:{DOI_WEIGHTS}](https://doi.org/{DOI_WEIGHTS}).

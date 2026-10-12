@@ -228,7 +228,19 @@ At 22 GB, `streaming=True` is usually what you want.
 }
 ```
 
-The accompanying paper carries doi:10.5281/zenodo.21745210.
+The accompanying paper is [arXiv:2610.10592](https://arxiv.org/abs/2610.10592):
+
+```bibtex
+@misc{kocur2026wieszcz,
+  title  = {Wieszcz-XIX: A 3.1-Billion-Word Corpus of Pre-1918 Polish and Temporally Bounded Language Models Trained From Scratch},
+  author = {Kocur, Szymon},
+  year   = {2026},
+  eprint = {2610.10592},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url    = {https://arxiv.org/abs/2610.10592},
+}
+```
 
 ## See also
 
