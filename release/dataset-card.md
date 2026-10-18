@@ -23,7 +23,7 @@ configs:
 
 # Polish pre-1918 corpus
 
-**294,369 documents, 22.77 GB of Polish text published between 1800 and 1918**, assembled
+**294,369 documents, 22.77 GB of Polish text catalogued as published between 1800 and 1918**, assembled
 by a fully code-driven pipeline for training temporally bounded ("time-capsule") language
 models from scratch. Every filter is a documented function, each cleaning step writes a
 machine-readable report with the hash of the script that produced it, and the corpus's
@@ -43,7 +43,7 @@ This is the corpus behind the `wieszcz-xix` model ladder (47M / 107M / 349M para
 | Text | 22.77 GB (UTF-8) |
 | Tokens | 6,745,956,943 under the corpus's own 8k byte-level BPE |
 | On disk | 10.93 GB in 43 shards as zstd-compressed parquet |
-| Period | publication dates 1800–1918 |
+| Period | catalogued publication dates 1800–1918, 1918 included; 90 Wolne Lektury documents are later text (see [Known limitations](#known-limitations)) |
 | Language | Polish, **original orthography preserved** in the Internet Archive text (no normalisation to post-1936 spelling); the Wolne Lektury transcriptions are in modernised spelling |
 | Sources | Internet Archive 291,655 documents (22.60 GB) · Wolne Lektury 2,714 (0.17 GB) |
 
@@ -79,12 +79,10 @@ the **3,733 documents** removed at that point, 2.47% of the pre-exclusion crawl 
 under a rule that trades precision for safety. The list ships with the data, so the
 decision can be audited.
 
-The exclusion battery is calibrated against period-legitimate controls, because the naive
-version of this filter is worse than useless. *Czołg* (1918), *lotnisko* (1911),
-*aeroplan*, *automobil* and *samolot* are period words; so is *komputer*, which in
-nineteenth-century Polish means a register or roll, from Latin *computus*. A rule that
-excluded on those would have thrown out legitimate press and left the actual
-twentieth-century material in place.
+The exclusion battery is calibrated against period-legitimate controls. *Czołg*,
+*lotnisko* and *samolot* are attested by 1918, *telefon* appears in 72,719 documents of
+the raw freeze and *aeroplan* in 6,391, and hand-reading candidate contexts removed more
+terms from the battery than it admitted.
 
 ## How it was built
 
@@ -123,39 +121,32 @@ for the period, and counting them as errors would overstate the noise.
 **Eleven passages could be corrected: CER 0.68%, WER 4.71%.**
 **Nine, 45% of the sample, could not be corrected at all.**
 
-The second number matters more. In those nine passages the corruption *removes* text
-instead of garbling it: columns interleaved line by line, a fragment carried in from a
-neighbouring article, a clause ending mid-word. Context does not determine what the page
-said.
-
-So 0.68% is the error rate **conditional on the text being legible as running prose**, and
-that condition fails on nine of the twenty passages. The corpus's problem is occasional
-total loss of structure more than frequent small misreadings. Read the CER figure as a
-description of the legible fraction rather than of the whole corpus.
+In those nine passages the corruption *removes* text instead of garbling it: columns
+interleaved line by line, a fragment carried in from a neighbouring article, a clause
+ending mid-word. Context does not determine what the page said. 0.68% is the error rate
+**conditional on the text being legible as running prose**, and that condition fails on
+nine of the twenty passages.
 
 The sample is twenty passages read by one annotator.
 
 ## Content warning
 
-A corpus of nineteenth-century print is faithful to the period in every respect, including
-its prejudices. **This corpus contains antisemitic, nationalist, colonial and misogynist
-discourse**, at times as the explicit subject of a text and at times as unremarked
-background. It is present in the press material especially.
-
-The prejudice comes from the material itself; the cleaning did not introduce it and was
-not designed to remove it. A period corpus scrubbed of it would describe a century that
-never existed and would be useless for the historical and linguistic work this resource
-exists for.
+**This corpus contains antisemitic, nationalist, colonial and misogynist discourse**, at
+times as the explicit subject of a text and at times as unremarked background. It is
+present in the press material especially. The prejudice comes from the material itself;
+the cleaning did not introduce it and was not designed to remove it.
 
 Models trained on it reproduce that content. If you train on this corpus, that is a
 property of what you build, and it is yours to disclose.
 
 ## Rights
 
-The texts were published between 1800 and 1918. The catalogue records of 93% of the
-Internet Archive documents (84% of their bytes) carry the holding library's public-domain
-statement. Author death dates were not checked document by document, so a work whose
-author died after 1955 may still be protected where the term is life plus 70 years.
+The Internet Archive texts are catalogued as published from 1800 to 1918. The catalogue
+records of 93% of those documents (84% of their bytes) carry the holding library's
+public-domain statement. Author death dates were not checked document by document, so a
+work whose author died after 1955 may still be protected where the term is life plus 70
+years. The catalogue names a creator who died in 1956 or later for 915 documents, 849 of
+them periodical issues whose named creator is an editor.
 The **Public Domain Mark** applies where the holding library states public domain, and to
 the Wolne Lektury documents that library records as public domain. The other Internet
 Archive documents (7% of them, 16% of the bytes) carry no rights mark. 79 Wolne Lektury
@@ -176,10 +167,9 @@ database right. The per-source rights review is archived with the provenance rec
 The full text lives here and not in the archival record for exactly this reason: a Zenodo
 version is effectively immutable, so the archival deposit (doi:10.5281/zenodo.22099302)
 holds only facts (identifiers, checksums, reviews) while the texts sit where a verified
-claim can actually remove one. The temporal audit exists because catalogue metadata is
-wrong often enough to matter; on the predecessor build it let an in-copyright
-twentieth-century work through. We assume the current rule has a residue too, and would
-rather hear about it than claim there is none.
+claim can actually remove one. The temporal audit has a known residue, 90 to 1,116 Wolne
+Lektury documents (0.04 to 0.38% of the corpus bytes, see Known limitations), and a
+residual risk beyond it.
 
 *Not legal advice. For publication or commercial use, consult a specialist.*
 
@@ -202,7 +192,9 @@ rather hear about it than claim there is none.
   work. 696 of its 2,714 documents are translations, and 90 documents (0.04% of the corpus
   bytes) are certainly later than 1918: 79 translations still in copyright, which the
   library publishes under CC BY-SA 3.0 or the Free Art Licence 1.3, and eleven volumes of
-  Proust in Boy-Żeleński's translation. 141 documents are in other languages. The
+  Proust in Boy-Żeleński's translation. Counting every translation or work by someone who
+  lived past 1918 gives an upper bound of 1,116 documents, 0.38% of the corpus bytes.
+  141 documents are in other languages. The
   per-document table in this repository marks each of them.
 
 ## Loading

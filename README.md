@@ -1,12 +1,12 @@
 # wieszcz-xix
 
-A small language model trained **from scratch** on **Polish text published between 1800 and
-1918**: a "time capsule" model that speaks in the authentic voice, spelling, and
-worldview of the era, and knows nothing of the world after its cutoff.
+A small language model trained **from scratch** on **Polish text catalogued as published
+between 1800 and 1918**: a "time capsule" model that writes in the language, spelling and
+worldview of the era, trained on text audited for anything printed after 1918.
 
 Inspired by [TimeCapsuleLLM](https://github.com/haykgrigo/TimeCapsuleLLM) and its
-*Selective Temporal Training* idea, ported to Polish, where pre-1936 orthography and
-the Romantic/Positivist worldview make the effect audible from the first sentence.
+*Selective Temporal Training* idea, ported to the Polish print of Romanticism and
+Positivism.
 
 ## The release
 
@@ -25,24 +25,26 @@ tok = AutoTokenizer.from_pretrained(name)
 net = AutoModelForCausalLM.from_pretrained(name, trust_remote_code=True)
 ```
 
-## The core rule
+## The temporal bound
 
-**Nothing after the cutoff.** The corpus is bounded by **publication date: 1800–1918**,
-enforced at the crawl and then audited by content and provenance before tokenisation;
-3,733 documents held by the crawl were excluded from the frozen build. A measured residue
-remains in the transcribed Wolne Lektury part (0.7% of the corpus, in modernised spelling):
-90 documents there are certainly later text, 0.04% of the corpus bytes. That constraint *is* the project, and any leak of modern data
-defeats the purpose.
+The corpus is bounded by **publication date, 1800 to 1918 with 1918 included**, enforced at
+the crawl and then audited by content and provenance before tokenisation; 3,733 documents
+held by the crawl were excluded from the frozen build. A known residue remains in the
+transcribed Wolne Lektury part (0.7% of the corpus, in modernised spelling): 90 documents
+there are certainly later text, 0.04% of the corpus bytes, and counting every translation
+or work by someone who lived past 1918 gives an upper bound of 1,116 documents, 0.38% of
+the bytes. Post-1918 text that avoids modern vocabulary and dated self-reference can pass
+the audit.
 
-Two dates get confused here, so both are stated: **1918** is the bound on the corpus, and
-**1936** is the orthographic reform. Pre-1918 print is written in pre-reform spelling as a
-consequence. The reform is why the register is audible; the 1918 bound is what the corpus
-actually enforces.
+Spelling is a separate matter. The 1918 rules of the Academy of Learning made *-cja* the
+standard form over *-cya*, and the 1936 reform set the present norm. Both spellings were in
+print long before 1918, so spelling does not date a text; the 1918 bound is what the corpus
+enforces.
 
 ## Scope
 
-- **Period:** publication 1800–1918 (Romanticism, Positivism, early Young Poland), in
-  pre-1936 orthography.
+- **Period:** catalogued publication 1800–1918 (Romanticism, Positivism, early Young
+  Poland).
 - **Language:** Polish, original spelling preserved in the scanned text (no normalization);
   the Wolne Lektury transcriptions are in modernised spelling.
 - **Model:** decoder-only Transformer. A matched ladder at 47M, 107M and 349M parameters,
@@ -52,16 +54,17 @@ actually enforces.
 - **Architecture:** RoPE · RMSNorm (pre+post, Gemma-2 sandwich) · QK-Norm · SwiGLU ·
   Grouped-Query Attention · FlashAttention (via SDPA) · weight tying, scaled residual init.
 - **Optimizer:** Muon (Newton-Schulz orthogonalized momentum) on hidden weights + AdamW on
-  embeddings/norms, currently the fastest known recipe at nanoGPT scale.
-  Left out because they would hurt at this scale: MoE, sliding-window attention, soft-capping.
+  embeddings/norms. MoE, sliding-window attention and soft-capping are not used.
 
 ## Pipeline
 
-1. **Collect**: public-domain texts: clean transcriptions from Wolne Lektury, then the
-   Internet Archive at scale. See `src/prepare_data.py`.
-2. **Clean**: deduplicate, strip editorial apparatus, keep original orthography.
-3. **Tokenize**: train a dedicated BPE tokenizer on the historical corpus
-   (a modern tokenizer would shred pre-reform spelling). See `src/train_tokenizer.py`.
+1. **Collect**: clean transcriptions from Wolne Lektury, then OCR text from the Internet
+   Archive at scale. See `src/prepare_data.py`.
+2. **Clean**: filter OCR and layout noise, remove near-identical duplicates, strip
+   editorial apparatus, keep each source's spelling (original in the scanned text,
+   modernised in Wolne Lektury).
+3. **Tokenize**: train a dedicated byte-level BPE tokenizer on the corpus. See
+   `src/train_tokenizer.py`.
 4. **Train**: next-token pretraining, nanoGPT-style. See `src/train.py`.
 5. **Sample**: eyeball generations for period coherence.
 
@@ -93,9 +96,6 @@ sample of the corpus.
 - [`docs/training.md`](docs/training.md): the environments the ladder was trained and
   evaluated on, right-sizing a run to the corpus, VRAM arithmetic, context length, and
   what a healthy loss curve looks like.
-- [`docs/run-log.md`](docs/run-log.md): the first campaign end to end: laptop validation,
-  the 3080 run with loss numbers, the KV-cache masking bug that produced garbage, and what
-  the working model actually learned.
 
 ## Hardware
 
@@ -106,11 +106,11 @@ one pass over the text.
 
 ## Content warning
 
-A model trained only on 19th-century text is faithful to the period in every respect,
-including its prejudices. **The models reproduce antisemitic, nationalist and colonial
-content of the era, and so does the corpus.** The prejudice comes from the material, and
-the training preserved it, because a time-capsule model cleaned of it would model a
-century that never existed.
+A model trained only on period text reproduces the period's prejudices along with its
+language. **The corpus contains antisemitic, nationalist, colonial and misogynist
+discourse, and the models reproduce period prejudice, including antisemitic statements.**
+The prejudice comes from the material; the cleaning did not introduce it and was not
+designed to remove it.
 
 Two places in this repository contain such text verbatim, because measuring the problem
 required reading it:
@@ -128,10 +128,12 @@ filtering layer and visible framing.
 
 ## Data licensing
 
-The texts were published between 1800 and 1918, and the catalogue records of 93% of the
-Internet Archive documents carry the holding library's public-domain statement. Author
-death dates were not checked document by document, so a work whose author died after 1955
-may still be protected where the term is life plus 70 years. The Public Domain Mark is
+The Internet Archive texts are catalogued as published from 1800 to 1918, and the catalogue
+records of 93% of those documents carry the holding library's public-domain statement.
+Author death dates were not checked document by document, so a work whose author died
+after 1955 may still be protected where the term is life plus 70 years. The catalogue
+names a creator who died in 1956 or later for 915 documents, 849 of them periodical issues
+whose named creator is an editor. The Public Domain Mark is
 applied only where a library states public domain; documents without a statement carry no
 rights mark. 79 Wolne Lektury translations are still in copyright and keep the licence that
 library publishes them under (CC BY-SA 3.0 or the Free Art Licence 1.3).

@@ -160,15 +160,13 @@ datasets:
 # wieszcz-xix-{rung}
 
 A {params_m:.0f}M-parameter decoder-only language model trained **from scratch** on a corpus
-of Polish text published between 1800 and 1918. It writes in the language of that period,
-in pre-reform orthography. It is a base model: it continues text and does not answer
-questions.
+of Polish text catalogued as published between 1800 and 1918. It writes in the language of
+that period and keeps the period spelling of the text it continues. It is a base model:
+it continues text and does not answer questions.
 
 This is the {rung.upper()} rung of a three-model ladder ({", ".join(RUNGS).upper()}) trained on one
 frozen corpus with the same steps, batch and seed, so the rungs differ only in parameter
-count. The smaller rungs write the same period Polish but lose track of what they are
-talking about within a few sentences, so this repository carries the rung worth using;
-the whole ladder, including the pre-decay and epoch-one checkpoints the paper's epochs
+count. This repository carries the largest rung; the whole ladder, including the pre-decay and epoch-one checkpoints the paper's epochs
 table reads, is archived at [doi:{DOI_WEIGHTS}](https://doi.org/{DOI_WEIGHTS}). The corpus
 is [{CORPUS_REPO}](https://huggingface.co/datasets/{CORPUS_REPO}).
 
@@ -204,8 +202,8 @@ and AdamW on embeddings and norm gains.
 | Context | {cfg["block_size"]} tokens |
 | Vocabulary | {cfg["vocab_size"]}, byte-level BPE trained on this corpus |
 
-The tokenizer is part of the model. It was trained on nineteenth-century Polish, and a
-modern Polish tokenizer shreds pre-reform spelling, so it ships here in both forms:
+The tokenizer is part of the model. It was trained on this corpus and ships here in both
+forms:
 `tokenizer.json` for `AutoTokenizer`, and the `vocab.json` and `merges.txt` it was built
 from. All three are hashed in `SHA256SUMS`.
 
@@ -263,8 +261,7 @@ scaling and data-constraint experiments.
 
 **This model reproduces antisemitic, nationalist, colonial and misogynist discourse that
 was ordinary in nineteenth-century Polish print.** The prejudice comes from the sources,
-and the training preserved it, because a model of a period that had been cleaned of its
-prejudices would model a century that never existed. The accompanying paper documents
+and the training preserved it. The accompanying paper documents
 unprompted prejudiced output from these checkpoints and reports a first prevalence
 estimate.
 
