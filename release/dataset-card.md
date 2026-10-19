@@ -210,17 +210,7 @@ At 22 GB, `streaming=True` is usually what you want.
 
 ## Citation
 
-```bibtex
-@dataset{kocur2026corpus,
-  title     = {Polish pre-1918 corpus (wieszcz-xix)},
-  author    = {Kocur, Szymon},
-  year      = {2026},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.22099302},
-}
-```
-
-The accompanying paper is [arXiv:2610.10592](https://arxiv.org/abs/2610.10592):
+If you use this corpus, cite the paper, [arXiv:2610.10592](https://arxiv.org/abs/2610.10592):
 
 ```bibtex
 @misc{kocur2026wieszcz,
@@ -231,6 +221,18 @@ The accompanying paper is [arXiv:2610.10592](https://arxiv.org/abs/2610.10592):
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
   url    = {https://arxiv.org/abs/2610.10592},
+}
+```
+
+To cite the exact data release, add the archival record:
+
+```bibtex
+@dataset{kocur2026corpus,
+  title     = {Polish pre-1918 corpus (wieszcz-xix)},
+  author    = {Kocur, Szymon},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22099302},
 }
 ```
 
